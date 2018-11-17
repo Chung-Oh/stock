@@ -1,0 +1,122 @@
+/*** Mobile iphone-4 480px ***/
+@media(max-width: 480px) {
+	.interface {
+		background: url(../../img/stock-small-320.png) no-repeat 50% 20%;
+	}
+	.title-shake {
+		height: 10%;
+		position: absolute;
+		left: 30%;
+		top: 2%;
+	}
+	.title-fly {
+		
+	}
+	/* Animação título */
+	@keyframes shake {
+		0% {
+			top: 10px;
+		}
+		10% {
+			transform: rotate(3deg);
+		}
+		15% {
+			transform: rotate(-3deg);
+		}
+		100% {
+			top: -5px;
+		}
+	}
+	@keyframes flying {
+		from {
+			top: 0px;
+		}
+		to {
+			top: -15px;
+		}
+	}
+	@keyframes run {
+		from {
+			left: -800px;
+		}
+		to {
+			left: 0px;
+		}
+	}
+	h1 {
+		display: inline-block;
+		font-size: 125%;
+		width: 220%;
+	}
+	form {
+		display: block;
+		position: absolute;
+		left: 20%;
+		top: 41%;
+		width: 60%;
+		height: 40%;
+	}
+	.cel-name, .cel-password {font-size: 50%;}
+	.btn-primary {font-size: 50%;}
+}
+
+/*** Mobile iphone-4 320px ***/
+@media(max-width: 320px) {
+	.interface {
+		background: url(../../img/stock-small-320.png) no-repeat 50% 16%;
+	}
+	.title-shake {
+		height: 10%;
+		position: absolute;
+		left: 30%;
+		top: 2%;
+	}
+	.title-fly {
+		
+	}
+	/* Animação título */
+	@keyframes shake {
+		0% {
+			top: 10px;
+		}
+		10% {
+			transform: rotate(3deg);
+		}
+		15% {
+			transform: rotate(-3deg);
+		}
+		100% {
+			top: -5px;
+		}
+	}
+	@keyframes flying {
+		from {
+			top: 0px;
+		}
+		to {
+			top: -15px;
+		}
+	}
+	@keyframes run {
+		from {
+			left: -800px;
+		}
+		to {
+			left: 0px;
+		}
+	}
+	h1 {
+		display: inline-block;
+		font-size: 125%;
+		width: 220%;
+	}
+	form {
+		display: block;
+		position: absolute;
+		left: 13%;
+		top: 35%;
+		width: 75%;
+	}
+	.cel-name, .cel-password {font-size: 75%;}
+	.btn-primary {font-size: 75%;}
+}
