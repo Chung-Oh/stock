@@ -1,0 +1,18 @@
+/*** iPed 768px portrait ***/
+@media screen and (max-width: 768px) and (max-height: 1024px) {
+	.interface {
+		background: url(../../img/stock-large-original.png) no-repeat 50% 25%;
+	}
+	.title-shake {
+    height: 10%;
+}
+	.title-fly {
+    height: 100%;
+}
+	h1 {}
+	form {
+		width: 80%;
+		height: 35%;
+		margin-top: 40%;
+	}	
+}

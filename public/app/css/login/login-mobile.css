@@ -1,16 +1,14 @@
-/*** Mobile iphone-4 480px ***/
-@media(max-width: 480px) {
+/*** Mobile iPhone-4 480px landscape ***/
+@media screen and (max-width: 480px) and (max-height: 320px) {
 	.interface {
 		background: url(../../img/stock-small-320.png) no-repeat 50% 20%;
 	}
 	.title-shake {
-		height: 10%;
+		width: 30%;
+		height: 20%;
 		position: absolute;
-		left: 30%;
+		left: 35%;
 		top: 2%;
-	}
-	.title-fly {
-		
 	}
 	/* Animação título */
 	@keyframes shake {
@@ -46,38 +44,40 @@
 	h1 {
 		display: inline-block;
 		font-size: 125%;
-		width: 220%;
+		width: 100%;
 	}
 	form {
 		display: block;
 		position: absolute;
 		left: 20%;
-		top: 41%;
+		top: 46%;
 		width: 60%;
 		height: 40%;
 	}
 	.cel-name, .cel-password {font-size: 50%;}
+	.cel-icon i {top: 32%;left: 6%;}
 	.btn-primary {font-size: 50%;}
 }
 
-/*** Mobile iphone-4 320px ***/
-@media(max-width: 320px) {
+/*** Mobile iPhone-4 320px portrait ***/
+@media screen and (max-width: 320px) and (max-height: 480px) {
 	.interface {
-		background: url(../../img/stock-small-320.png) no-repeat 50% 16%;
+		background: url(../../img/stock-small-320.png) no-repeat 50% 22%;
 	}
 	.title-shake {
+		width: 47%;
 		height: 10%;
 		position: absolute;
 		left: 30%;
-		top: 2%;
+		top: 5%;
 	}
 	.title-fly {
-		
+		width: 95%;
 	}
 	/* Animação título */
 	@keyframes shake {
 		0% {
-			top: 10px;
+			top: 25px;
 		}
 		10% {
 			transform: rotate(3deg);
@@ -86,7 +86,7 @@
 			transform: rotate(-3deg);
 		}
 		100% {
-			top: -5px;
+			top: 5px;
 		}
 	}
 	@keyframes flying {
@@ -108,13 +108,13 @@
 	h1 {
 		display: inline-block;
 		font-size: 125%;
-		width: 220%;
+		width: 95%;
 	}
 	form {
 		display: block;
 		position: absolute;
 		left: 13%;
-		top: 35%;
+		top: 40%;
 		width: 75%;
 	}
 	.cel-name, .cel-password {font-size: 75%;}
