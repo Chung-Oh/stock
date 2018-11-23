@@ -7,13 +7,10 @@
             "email": "danielvchung@hotmail.com"
         }
     ],
+    "require": {},
     "autoload": {
-    	"psr-4": {
-    		"App\\": "app/",
-    		"Src\\": "src/"
-    	}
-    },
-    "require": {
-        "monolog/monolog": "^1.24"
+        "psr-4": {
+            "Src\\": "public/src"
+        }
     }
 }

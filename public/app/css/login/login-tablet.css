@@ -44,15 +44,31 @@
 	h1 {
 		padding: 0;
 	}
+	.alert-danger {
+		top: 350px;
+		position: relative;
+		font-size: 150%;
+	}
+	.alert-success {
+	    top: 52%;
+	    font-size: 180%;
+	}
 	form {
 		height: 35%;
 		margin-top: 50%;
 	}	
+	.btn-return {
+	    top: 52%;
+	    height: 10%;
+	}
+	.btn-return p a {
+	    width: 50%;
+	    font-size: 150%;
+	}
 }
 
 /*** iPad 1024px landscape ***/
 @media only screen and (max-device-width: 1024px) and (max-device-height: 768px) {
-	.title-shake {}
 	.title-fly {
 		height: 100%;
 		display: flex;
@@ -88,12 +104,24 @@
 			left: 0px;
 		}
 	}
-	h1 {}
+	.alert-danger {
+		top: 3%;
+		position: relative;
+		font-size: 150%;
+	}
+	.alert-success {
+	    font-size: 180%;
+	    top: 25%;
+	}
 	form {
 		width: 60%;
 	}	
 	.cel-icon i {
 		left: 7%;
 		top: 36%;
+	}
+	.btn-return p a {
+	    width: 35%;
+	    font-size: 150%;
 	}
 }

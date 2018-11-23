@@ -96,6 +96,28 @@ h1 {
 }
 /** Fim da animação **/
 
+/* Alerta */
+.alert-danger {
+	position: relative;
+	top: 5%;
+	font-family: Lucinda SANS-SERIF;
+	font-weight: bold;
+	font-size: 135%;
+	text-align: center;
+	color: #db1e1edd;
+}
+
+.alert-success {
+    height: 5%;
+    text-align: center;
+    font-size: 150%;
+    font-family: Lucinda SANS-SERIF;
+    font-weight: bold;
+    position: relative;
+    top: 25%;
+    color: #444;
+}
+
 form {
 	width: 35%;
 	height: 50%;
@@ -154,9 +176,7 @@ tr {
 	box-shadow: 0 0 1em 0 dodgerblue;
 }
 
-.cel-icon {
-	position: relative;
-}
+.cel-icon {position: relative;}
 
 .cel-icon i {
 	position: absolute;
@@ -181,7 +201,7 @@ tr {
 	height: 45%;
 	border-radius: .5em;
 	background-color: #222;
-	color: white;
+	color: #FFF;
 	font-weight: bold;
 	font-family: "Verdana", sans-serif;
 	font-size: 1em;
@@ -198,19 +218,59 @@ tr {
 	box-shadow: 0 0 1.25em #000;
 }
 
-@media screen and (max-width: 1000px) {
-	form {
-	}
+/* Botão retornar ao Sistema */
+.btn-return {
+	text-align: center;
+	text-decoration: none;
+	height: 10%;
+	position: relative;
+	top: 65%;
+}
+
+.btn-return p {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-return p a {
+    align-self: center;
+    text-decoration: none;
+    height: 75%;
+    width: 20%;
+    background-color: #222;
+    color: #FFF;
+    font-weight: bold;
+    font-family: "Verdana", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: .7;
+    transition: 1s;
+    border-radius: .5em;
+}
+
+.btn-return p a:hover {
+	background-color: #000;
+	box-shadow: 0 0 1.25em #000;
+}
+
+.btn-return p a:focus {
+	background-color: #000;
+	box-shadow: 0 0 1.25em #000;
 }
 
 @media screen and (max-width: 800px) {
+	.alert-success {}
 	form {
 		width: 60%;
+	}
+	.btn-return p a {
+	    font-size: 70%;
 	}
 }
 
 @media screen and (max-width: 675px) {
-	.title-shake {}
 	.title-fly {
 		height: 100%;
 		display: flex;
@@ -220,7 +280,11 @@ tr {
 		font-size: 2em;
 		padding: 1em 0;
 	}
+	.alert-success {}
 	form {
 		width: 60%;
+	}
+	.btn-return p a {
+		font-size: 50%;
 	}
 }

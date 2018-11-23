@@ -48,6 +48,16 @@
 		font-size: 125%;
 		width: 95%;
 	}
+	/* Alerta */
+	.alert-danger {
+		font-size: 80%;
+		top: 205px;
+		position: relative;
+	}
+	.alert-success {
+	    font-size: 80%;
+	    top: 44%;
+	}
 	form {
 		display: block;
 		position: absolute;
@@ -55,8 +65,19 @@
 		top: 15%;
 		width: 75%;
 	}
-	.cel-name, .cel-password {font-size: 51%;}
-	.btn-primary {font-size: 52%;}
+	.cel-name, .cel-password {
+		font-size: 51%;
+	}
+	.btn-primary {
+		font-size: 52%;
+	}
+	.btn-return {
+	    top: 43%;
+	}
+	.btn-return p a {
+	    width: 50%;
+	    font-size: 75%;
+	}
 }
 
 /*** Mobile iPhone-4 480px landscape ***/
@@ -106,6 +127,16 @@
 		font-size: 125%;
 		width: 100%;
 	}
+	/* Alerta */
+	.alert-danger {
+	    font-size: 80%;
+	    position: relative;
+	    top: 85px;
+	}
+	.alert-success {
+	    font-size: 80%;
+	    top: 27%;
+	}
 	form {
 		display: block;
 		position: absolute;
@@ -114,8 +145,22 @@
 		height: 40%;
 		margin-top: 10%;
 	}
-	.cel-name, .cel-password {font-size: 50%;}
-	.cel-icon i {top: 32%;left: 6%;}
-	.btn-primary {font-size: 50%;}
+	.cel-name, .cel-password {
+		font-size: 50%;
+	}
+	.cel-icon i {
+		top: 32%;
+		left: 6%;
+	}
+	.btn-primary {
+		font-size: 50%;
+	}
+	.btn-return {
+		top: 65%;
+	}
+	.btn-return p a {
+	    width: 35%;
+	    font-size: 75%;
+	}
 }
 

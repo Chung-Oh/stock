@@ -1,4 +1,59 @@
 <?php 
-require_once '../vendor/autoload.php';
-require '../Src/view/loginView.php';
+require_once 'src/Helpers/user-session.php';
+require_once 'src/Helpers/show-alert.php';
+//var_dump($_SESSION);
 ?>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<title>Controle Estoque</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="app/css/reset.css">
+	<link rel="stylesheet" href="app/css/login/login-desk.css">
+	<link rel="stylesheet" href="app/css/login/login-tablet.css">    
+	<link rel="stylesheet" href="app/css/login/login-mobile.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+</head>
+<body>
+	<div class="interface">
+		<?php showAlert('success'); ?>			
+		<?php if(!userIsLogged()) : ?>
+			<div class="title-shake">
+				<div class="title-fly">
+					<h1>Bem vindo</h1>			
+				</div>			
+			</div>
+			<?php showAlert('danger'); ?>
+			<form action="src/Route/login-enter.php" method="post">
+				<table class="table-form">
+					<tbody class="table-body">
+						<tr>
+							<td class="cel-name cel-icon">
+								<input class="name input-icon" type="text" name="name" placeholder="Usuário" pattern="[a-zA-Z]{4,}" title="Mínimo 4 letras" autocomplete="off" required>
+								<i class="fas fa-user"></i>
+							</td>
+						</tr>
+						<tr>
+							<td class="cel-password cel-icon">
+								<input class="password input-icon" type="password" name="password" placeholder="Senha" required>
+								<i class="fas fa-lock"></i>
+							</td>					
+						</tr>
+						<tr>
+							<td class="btn">
+								<input class="btn-primary" type="submit" value="LOGIN">
+							</td>
+						</tr>					
+					</tbody>
+				</table>
+			</form>
+		<?php else : ?>
+			<div class="btn-return">
+				<p><a href="src/View/home.php">Retornar ao Sistema</a></p>
+			</div>
+		<?php endif ?>
+	</div>
+</body>
+</html>
