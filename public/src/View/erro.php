@@ -1,10 +1,11 @@
+<link rel="stylesheet" href="../../app/css/erro.css">
 <div class="row">
-    <div class="col-md-12">
+    <div class="message-title">
         <h2>Erro</h2>
     </div>
 </div>
 <div class="row">
-    <div class="col-md-6 col-md-offset-3">
+    <div class="message-erro">
         <?php echo $e->getMessage(); ?>
     </div>
 </div>

@@ -1,8 +1,8 @@
 <?php 
 
-require_once '../Config/Erro.php';
 require_once '../Config/conf.php';
 require_once '../Config/Connection.php';
+require_once '../Config/Erro.php';
 require_once '../Dao/UserDao.php';
 require_once '../Helpers/user-session.php';
 

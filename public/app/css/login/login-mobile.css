@@ -1,4 +1,4 @@
-/*** Mobile iPhone-4 320px portrait ***/
+/*** iPhone-4 320px portrait ***/
 @media only screen and (max-device-width: 320px) and (max-device-height: 480px) {
 	.interface {
 		background: url(../../img/stock-small-320.png) no-repeat 50% 22%;
@@ -80,7 +80,7 @@
 	}
 }
 
-/*** Mobile iPhone-4 480px landscape ***/
+/*** iPhone-4 480px landscape ***/
 @media only screen and (max-device-width: 480px) and (max-device-height: 320px) {
 	.interface {
 		background: url(../../img/stock-small-320.png) no-repeat 50% 50%;

@@ -1,8 +1,4 @@
 /*** Desktop ***/
-* {
-	box-sizing: border-box;
-}
-
 html {
 	background-color: #EEE;
 	height: 100%;

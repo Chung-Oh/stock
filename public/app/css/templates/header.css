@@ -1,0 +1,74 @@
+.top-nav {
+	overflow: hidden;
+	background-color: #333;
+}
+
+.top-nav a {
+	float: left;
+	display: block;
+	padding: 14px 16px;
+	color: #F2F2F2;
+	text-decoration: none;
+}
+
+.top-nav a:hover {
+	background-color: #DDD;
+	color: black;
+}
+.top-nav .icon {
+    display: none;
+}
+.active {
+    background-color: dodgerblue;
+}
+
+/*** iPad 768px portrait ***/
+@media screen and (max-width: 768px) and (max-height: 1024px) {
+	header {
+	    height: 5%;
+	}
+}
+
+/*** iPhone-4 480px landscape ***/
+@media screen and (max-width: 480px) and (max-height: 320px) {
+	header {
+	    height: 14%;
+	}
+	.top-nav .page-action:nth-child(4) {
+		float: right;
+	}
+}
+
+/*** iPhone-4 320px portrait ***/
+@media screen and (max-width: 320px) and (max-height: 480px) {
+	header {
+	    height: 10%;
+	}
+	.page-action a {
+		display: none;
+	}
+	.top-nav a.icon {
+		float: right;
+		display: block;
+	}
+	.top-nav.responsive {
+		position: relative;
+	}
+	.top-nav.responsive .icon {
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+	.top-nav.responsive a {
+		float: none;
+	    display: block;
+	    text-align: left;
+	}
+}
+
+/*** Botão de sair ***/
+@media screen and (max-width: 1368px) {
+	.top-nav .page-action:nth-child(4) {
+		float: right;
+	}
+}
