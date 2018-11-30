@@ -1,3 +1,71 @@
+/*** iPad 1024px landscape ***/
+@media only screen and (max-device-width: 1024px) and (max-device-height: 768px) {
+	.title-fly {
+		height: 100%;
+		display: flex;
+		flex-direction: column-reverse;
+	}
+	@keyframes shake {
+		0% {
+			top: 0px;
+		}
+		10% {
+			transform: rotate(3deg);
+		}
+		15% {
+			transform: rotate(-3deg);
+		}
+		100% {
+			top: -40px;
+		}
+	}
+	@keyframes flying {
+		from {
+			top: 0px;
+		}
+		to {
+			top: -45px;
+		}
+	}
+	@keyframes run {
+		from {
+			left: -800px;
+		}
+		to {
+			left: 0px;
+		}
+	}
+	.alert-danger {
+		top: 5%;
+		font-size: 150%;
+	}
+	.alert-success {
+	    font-size: 180%;
+	    top: 25%;
+	}
+	form {
+		height: 47%;
+		width: 60%;
+		margin-top: 6%;
+	}
+	.name, .password {
+		font-size: 150%;
+	}
+	.cel-icon i {
+	    top: 34%;
+	}
+	.btn-primary {
+	    font-size: 119%;
+	}
+	.btn-return {
+	    top: 65%;
+	}
+	.btn-return p a {
+	    width: 40%;
+	    font-size: 150%;
+	}
+}
+
 /*** iPed 768px portrait ***/
 @media only screen and (max-device-width: 768px) and (max-device-height: 1024px) {
 	.interface {
@@ -43,85 +111,35 @@
 	}
 	h1 {
 		padding: 0;
+		font-size: 3em;
 	}
 	.alert-danger {
-		top: 350px;
-		position: relative;
+		top: 34%;
 		font-size: 150%;
 	}
 	.alert-success {
-	    top: 52%;
+	    top: 47%;
 	    font-size: 180%;
 	}
 	form {
 		height: 35%;
-		margin-top: 50%;
+		margin-top: 47%;
 	}	
+	.name, .password {
+		font-size: 150%;
+	} 
+	.cel-icon i {
+	    top: 32%;
+	}
+	.btn-primary {
+	    font-size: 125%;
+	}
 	.btn-return {
-	    top: 52%;
 	    height: 10%;
+	    top: 50%;
 	}
 	.btn-return p a {
 	    width: 50%;
-	    font-size: 150%;
-	}
-}
-
-/*** iPad 1024px landscape ***/
-@media only screen and (max-device-width: 1024px) and (max-device-height: 768px) {
-	.title-fly {
-		height: 100%;
-		display: flex;
-		flex-direction: column-reverse;
-	}
-	@keyframes shake {
-		0% {
-			top: 0px;
-		}
-		10% {
-			transform: rotate(3deg);
-		}
-		15% {
-			transform: rotate(-3deg);
-		}
-		100% {
-			top: -40px;
-		}
-	}
-	@keyframes flying {
-		from {
-			top: 0px;
-		}
-		to {
-			top: -45px;
-		}
-	}
-	@keyframes run {
-		from {
-			left: -800px;
-		}
-		to {
-			left: 0px;
-		}
-	}
-	.alert-danger {
-		top: 3%;
-		position: relative;
-		font-size: 150%;
-	}
-	.alert-success {
-	    font-size: 180%;
-	    top: 25%;
-	}
-	form {
-		width: 60%;
-	}	
-	.cel-icon i {
-		left: 7%;
-		top: 36%;
-	}
-	.btn-return p a {
-	    width: 35%;
 	    font-size: 150%;
 	}
 }

@@ -1,0 +1,50 @@
+/*** Samsung-S5 640px landscape ***/
+@media screen and (max-width: 640px) and (max-height: 360px) {
+	main {
+	    margin-top: 45px;
+	}
+	.col-12 {
+	    display: block;
+	}
+	.col-12 p {
+	    font-size: 90%;
+	}
+	.btn {
+	    height: 8%;
+	}
+	.new-category {
+	    border: 1px solid #57a1ea;
+	    border-radius: 5px;
+	    height: 100%;
+	    width: 38%;
+	    font-size: 120%;
+	}
+	.btn-primary {
+		font-size: 75%;
+	}
+	.container {
+	    height: 73%;
+	}
+	.table {
+	    display: flex;
+	    justify-content: center;
+	}
+}
+
+/*** Samsung-S5 360px portrait ***/
+@media screen and (max-width: 360px) and (max-height: 640px) {
+	.col-12 {
+		display: block;
+	}
+	.col-12	p {
+		font-size: 100%;
+	}
+	.down {
+	    margin-top: 55%;
+	    transition: margin-top .5s;
+	}
+	.new-category {
+	    height: 100%;
+	    width: 50%;
+	}
+}

@@ -1,14 +1,87 @@
-/*** iPhone-4 320px portrait ***/
-@media only screen and (max-device-width: 320px) and (max-device-height: 480px) {
+/*** Samsung-S5 640px landscape ***/
+@media only screen and (max-device-width: 640px) and (max-device-height: 360px) {
+	.interface {
+		background: url(../../img/stock-small-320.png) no-repeat 50% 50%;
+	}
+	@keyframes shake {
+		0% {
+			top: 10px;
+		}
+		10% {
+			transform: rotate(3deg);
+		}
+		15% {
+			transform: rotate(-3deg);
+		}
+		100% {
+			top: -5px;
+		}
+	}
+	@keyframes flying {
+		from {
+			top: 0px;
+		}
+		to {
+			top: -15px;
+		}
+	}
+	@keyframes run {
+		from {
+			left: -800px;
+		}
+		to {
+			left: 0px;
+		}
+	}
+	h1 {
+		font-size: 150%;
+	}
+	/* Alerta */
+	.alert-danger {
+	    top: 11%;
+	    font-size: 90%;
+	}
+	.alert-success {
+	    top: 26%;
+	    font-size: 90%;
+	}
+	form {
+		height: 50%;
+		width: 50%;
+		margin-top: 8%;
+	}
+	.table-form {
+	    height: 100%;
+	}
+	.cel-name, .cel-password {
+		font-size: 60%;
+	}
+	.name, .password {
+	    font-size: 120%;
+	}
+	.cel-icon i {
+		top: 35%;
+	}
+	.btn-primary {
+		font-size: 65%;
+	}
+	.btn-return {
+		top: 65%;
+	}
+	.btn-return p a {
+	    width: 35%;
+	    font-size: 75%;
+	}
+}
+
+/*** Samsung-S5 360px portrait ***/
+@media only screen and (max-device-width: 360px) and (max-device-height: 640px) {
 	.interface {
 		background: url(../../img/stock-small-320.png) no-repeat 50% 22%;
 	}
 	.title-shake {
-		width: 47%;
 		height: 10%;
-		position: absolute;
-		left: 26%;
-		top: 5%;
+		width: 60%;
 	}
 	.title-fly {
 		width: 100%;
@@ -44,123 +117,32 @@
 		}
 	}
 	h1 {
-		display: inline-block;
-		font-size: 125%;
-		width: 95%;
+		font-size: 170%;
 	}
 	/* Alerta */
 	.alert-danger {
-		font-size: 80%;
-		top: 205px;
-		position: relative;
-	}
-	.alert-success {
-	    font-size: 80%;
-	    top: 44%;
-	}
-	form {
-		display: block;
-		position: absolute;
-		left: 13%;
-		top: 15%;
-		width: 75%;
-	}
-	.cel-name, .cel-password {
-		font-size: 51%;
-	}
-	.btn-primary {
-		font-size: 52%;
-	}
-	.btn-return {
-	    top: 43%;
-	}
-	.btn-return p a {
-	    width: 50%;
-	    font-size: 75%;
-	}
-}
-
-/*** iPhone-4 480px landscape ***/
-@media only screen and (max-device-width: 480px) and (max-device-height: 320px) {
-	.interface {
-		background: url(../../img/stock-small-320.png) no-repeat 50% 50%;
-	}
-	.title-shake {
-		width: 30%;
-		height: 20%;
-		position: absolute;
-		left: 35%;
-		top: 2%;
-	}
-	@keyframes shake {
-		0% {
-			top: 10px;
-		}
-		10% {
-			transform: rotate(3deg);
-		}
-		15% {
-			transform: rotate(-3deg);
-		}
-		100% {
-			top: -5px;
-		}
-	}
-	@keyframes flying {
-		from {
-			top: 0px;
-		}
-		to {
-			top: -15px;
-		}
-	}
-	@keyframes run {
-		from {
-			left: -800px;
-		}
-		to {
-			left: 0px;
-		}
-	}
-	h1 {
-		display: inline-block;
-		font-size: 125%;
-		width: 100%;
-	}
-	/* Alerta */
-	.alert-danger {
-	    font-size: 80%;
-	    position: relative;
-	    top: 85px;
-	}
-	.alert-success {
-	    font-size: 80%;
-	    top: 27%;
-	}
-	form {
-		display: block;
-		position: absolute;
-		left: 20%;
-		top: 18%;
-		height: 40%;
-		margin-top: 10%;
-	}
-	.cel-name, .cel-password {
-		font-size: 50%;
-	}
-	.cel-icon i {
 		top: 32%;
-		left: 6%;
+		font-size: 100%;
+	}
+	.alert-success {
+	    top: 41%;
+	    font-size: 100%;
+	}
+	form {
+		width: 75%;
+		margin-top: 60%;
+	}
+	.cel-name, .cel-password {
+		font-size: 75%;
 	}
 	.btn-primary {
-		font-size: 50%;
+		font-size: 85%;
 	}
 	.btn-return {
-		top: 65%;
+	    top: 45%;
 	}
 	.btn-return p a {
-	    width: 35%;
-	    font-size: 75%;
+	    width: 60%;
+	    font-size: 100%;
 	}
 }
-

@@ -1,0 +1,61 @@
+main {
+	height: 100%;
+	transition: margin-top .5s;
+	overflow: auto;
+}
+
+/* Mensagem na Home */
+.msg-home {
+    padding-top: 3.3%;
+}
+/* Fim */
+
+.col-12 h2 {
+	font-size: 125%;
+	font-weight: 500;
+}
+
+.col-12 p {
+    font-size: 100%;
+    text-align: center;
+    padding: 2%;
+}
+
+.container {}
+
+thead {
+    background-color: #333;
+    color: white;
+}
+
+tbody tr:nth-child(odd) {
+	background-color: #fbfbfb;
+}
+
+tbody a {
+	color: black;
+}
+
+th, td {
+	padding: 5px;
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+
+th {
+	font-weight: bold;
+}
+
+td {
+    text-align: center;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+/*** Desk 1366px width ***/
+@media screen and (min-width: 1366px) {
+	.col-12 h2 {
+	    text-align: center;
+	    padding: 2%;
+	}
+	.col-12 p {}
+}
+

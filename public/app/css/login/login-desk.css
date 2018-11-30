@@ -1,7 +1,7 @@
 /*** Desktop ***/
 html {
-	background-color: #EEE;
 	height: 100%;
+	background-color: #EEE;
 }
 
 body {
@@ -20,9 +20,9 @@ body {
 /** Título com animação **/
 /* Animação chacoalhar */
 .title-shake {
-	position: relative;
-	width: 40%;
 	height: 20%;
+	width: 90%;
+	position: relative;
 	margin: auto;
 	animation: shake 1s infinite;
 	animation-delay: 20s;
@@ -48,9 +48,8 @@ body {
 }
 
 /* Animação voar */
-.title-fly {
+.title-fly {	
 	position: relative;
-	width: 100%;
 	margin: auto;
 	animation: flying 2s 5;
 	animation-delay: 10s;
@@ -75,9 +74,9 @@ h1 {
 	font-family: 'FonteLogo', sans-serif;
 	font-size: 2.5em;
 	color: #3e4444;
+	text-align: center;
 	text-shadow: .05em .05em .25em rgba(0,0,0,.6);
 	padding: 1em;
-	text-align: center;
 	position: relative;
 	animation: run 4s;
 }
@@ -93,30 +92,34 @@ h1 {
 /** Fim da animação **/
 
 /* Alerta */
-.alert-danger {
-	position: relative;
-	top: 5%;
-	font-family: Lucinda SANS-SERIF;
+[class*="alert-"] {
+	font-family: 'Lucinda', sans-serif;
 	font-weight: bold;
-	font-size: 135%;
 	text-align: center;
+	position: relative;
+}
+
+.alert-danger {
+	top: 5%;
+	font-size: 100%;
 	color: #db1e1edd;
 }
 
 .alert-success {
-    height: 5%;
-    text-align: center;
-    font-size: 150%;
-    font-family: Lucinda SANS-SERIF;
     font-weight: bold;
-    position: relative;
-    top: 25%;
+    top: 26%;
     color: #444;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 form {
-	width: 35%;
 	height: 50%;
+	width: 470px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	margin: auto;
 	margin-top: 4%;
 	border: 0.034em solid #888;
@@ -125,15 +128,14 @@ form {
 }
 
 .table-form {
-	height: 100%;
-	width: 75%;
-	margin: auto;
+	height: 90%;
+	width: 90%;
 	opacity: 0.7;
 }
 
 .table-body {
-	width: 90%;
 	height: 100%;
+	width: 90%;
 }
 
 tr {
@@ -143,18 +145,18 @@ tr {
 
 .cel-name, 
 .cel-password {
+	text-align: center;
 	padding: 0.15em;
 	vertical-align: middle;
-	text-align: center;
 }
 
 .name,
 .password {
+	height: 51%;
 	width: 95%;
-	height: 50%;
-	border-radius: 2em;
-	font-size: 1.3em;
+	font-size: 120%;
 	text-align: center;
+	border-radius: 2em;
 	box-shadow: .25em .25em .5em #333;
 	transition: .35s;
 }
@@ -172,15 +174,17 @@ tr {
 	box-shadow: 0 0 1em 0 dodgerblue;
 }
 
-.cel-icon {position: relative;}
+.cel-icon {
+	position: relative;
+}
 
 .cel-icon i {
 	position: absolute;
+	top: 32%;
 	left: 7%;
-	top: 35%;
 	padding: .5em .5em;
-	transition: .3s;
 	color: #333;
+	transition: .3s;
 }
 
 .cel-icon .input-icon:focus + i {
@@ -193,14 +197,14 @@ tr {
 }
 
 .btn-primary {
-	width: 95%;
 	height: 45%;
+	width: 95%;
+	font-weight: bold;
+	font-family: 'Verdana', sans-serif;
+	font-size: 100%;
 	border-radius: .5em;
 	background-color: #222;
 	color: #FFF;
-	font-weight: bold;
-	font-family: "Verdana", sans-serif;
-	font-size: 1em;
 	transition: 1s;
 }
 
@@ -216,11 +220,11 @@ tr {
 
 /* Botão retornar ao Sistema */
 .btn-return {
+	height: 10%;
 	text-align: center;
 	text-decoration: none;
-	height: 10%;
 	position: relative;
-	top: 65%;
+	top: 70%;
 }
 
 .btn-return p {
@@ -230,17 +234,17 @@ tr {
 }
 
 .btn-return p a {
-    align-self: center;
-    text-decoration: none;
     height: 75%;
-    width: 20%;
-    background-color: #222;
-    color: #FFF;
+    width: 240px;
     font-weight: bold;
-    font-family: "Verdana", sans-serif;
+    font-family: 'Verdana', sans-serif;
+    text-decoration: none;
     display: flex;
     justify-content: center;
     align-items: center;
+    align-self: center;
+    background-color: #222;
+    color: #FFF;
     opacity: .7;
     transition: 1s;
     border-radius: .5em;
@@ -256,13 +260,18 @@ tr {
 	box-shadow: 0 0 1.25em #000;
 }
 
+@media screen and (max-width: 950px) {
+	.alert-success {
+	    top: 22%;
+	}
+}
+
 @media screen and (max-width: 800px) {
-	.alert-success {}
+	.alert-danger {
+	    top: 2%;
+	}
 	form {
 		width: 60%;
-	}
-	.btn-return p a {
-	    font-size: 70%;
 	}
 }
 
@@ -275,12 +284,5 @@ tr {
 	h1 {
 		font-size: 2em;
 		padding: 1em 0;
-	}
-	.alert-success {}
-	form {
-		width: 60%;
-	}
-	.btn-return p a {
-		font-size: 50%;
 	}
 }
