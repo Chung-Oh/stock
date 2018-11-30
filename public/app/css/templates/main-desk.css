@@ -1,5 +1,6 @@
 main {
 	height: 100%;
+	margin-top: 3.3%;
 	transition: margin-top .5s;
 	overflow: auto;
 }
@@ -20,8 +21,6 @@ main {
     text-align: center;
     padding: 2%;
 }
-
-.container {}
 
 thead {
     background-color: #333;
@@ -45,17 +44,67 @@ th {
 	font-weight: bold;
 }
 
-td {
-    text-align: center;
-    border-bottom: 1px solid #dbdbdb;
+.filter {
+	transition: .7s;	
 }
 
-/*** Desk 1366px width ***/
-@media screen and (min-width: 1366px) {
+.filter:hover {
+	font-weight: bold;
+	background-color: #DDD;
+	color: #000;
+	border: 1px solid #000;
+	transition: .7s;
+}
+
+td {
+	font-weight: bolder;
+	text-align: center;
+	border-bottom: 1px solid #dbdbdb;
+}
+
+/*** Desktop ***/
+@media screen and (min-width: 300px) {
 	.col-12 h2 {
 	    text-align: center;
+	    text-shadow: 1px 1px 3px #555;
 	    padding: 2%;
 	}
-	.col-12 p {}
+	.btn {
+		height: 5%;
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	}
+	.new-category {
+		height: 30px;
+		width: 240px;
+		padding: 0;
+	}
+	.btn-primary {
+		height: 100%;
+		width: 100%;
+		font-size: 100%;
+		text-decoration: none;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: #a2c8ec;
+		color: black;
+		border: 1px solid #57a1ea;
+		box-shadow: 0 0 6px #357795;
+		border-radius: 5px;
+		padding: 0;
+		transition: .7s;
+	}
+	.btn-primary:hover {
+		background-color: #DDD;
+		border: 1px solid #000;
+		box-shadow: 1px 1px 10px #000;
+		transition: .7s;		
+	}
+	.table-category {
+	    width: 100%;
+	    box-shadow: 1px 1px 5px #555;
+	}
 }
 

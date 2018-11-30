@@ -1,7 +1,7 @@
+/* Barra de navegação */
 .top-nav {
 	overflow: hidden;
 	background-color: #333;
-	/*position: relative;*/
 	position: fixed;
 	top: 0;
 	width: 100%;
@@ -14,11 +14,13 @@
 	padding: 14px 16px;
 	color: #F2F2F2;
 	text-decoration: none;
+	transition: .7s;
 }
 
 .top-nav a:hover {
 	background-color: #DDD;
 	color: black;
+	transition: .7s;
 }
 .top-nav .icon {
     display: none;

@@ -9,8 +9,7 @@
 }
 /*** Desk 1366px ***/
 @media screen and (max-width: 1366px) {
-	.foot {
-}
+	.foot {}
 }
 
 /*** iPad 1024px landscape ***/

@@ -15,13 +15,13 @@ if (userIsLogged()) : ?>
 				<a class="btn-primary" href="category-create.php">Criar Nova Categoria</a>
 			</div>
 		</div>
-		<div class="row container">
+		<div class="row">
 			<div class="col-12 table">
 				<table class="table-category">
 					<thead>
 						<tr>
-							<th>Id</th>
-							<th>Nome</th>
+							<th class="filter">Id</th>
+							<th class="filter">Nome</th>
 							<th>Editar</th>
 							<th>Excluir</th>
 						</tr>

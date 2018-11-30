@@ -13,8 +13,8 @@
 	    height: 8%;
 	}
 	.new-category {
-	    border: 1px solid #57a1ea;
-	    border-radius: 5px;
+	    /* border: 1px solid #57a1ea; */
+	    /* border-radius: 5px; */
 	    height: 100%;
 	    width: 38%;
 	    font-size: 120%;
@@ -34,7 +34,10 @@
 /*** Samsung-S5 360px portrait ***/
 @media screen and (max-width: 360px) and (max-height: 640px) {
 	.col-12 {
-		display: block;
+		/* display: block; */
+	}
+	.col-12 h2 {
+		/* font-size: 150%; */
 	}
 	.col-12	p {
 		font-size: 100%;
@@ -45,6 +48,6 @@
 	}
 	.new-category {
 	    height: 100%;
-	    width: 50%;
+	    width: 60%;
 	}
 }
