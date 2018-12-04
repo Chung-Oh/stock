@@ -1,10 +1,11 @@
+/* Barra nagegação Mobile */
 function topNavAnimation() {
-	var navBar = document.getElementById("topNavResponsive");
-	var main = document.querySelector("main");
+	let navBar = document.getElementById("topNavResponsive");
+	let main = document.querySelector("main");
 	
 	if (navBar.className === "top-nav") {
 		navBar.className += " responsive";
-		main.className = "down";
+		main.className = "main-down";
 	} else {
 		navBar.className = "top-nav";
 		main.className = "";

@@ -1,8 +1,5 @@
 <?php 
-
-require_once '../Config/conf.php';
-require_once '../Config/Connection.php';
-require_once '../Config/Erro.php';
+require_once '../global.php';
 require_once '../Dao/UserDao.php';
 require_once '../Helpers/user-session.php';
 
@@ -20,6 +17,6 @@ try {
 		header("Location: ../View/home.php");
 		die();
 	}
-} catch (Exception $e) {
+} catch (PDOException $e) {
 	Erro::handler($e);
 }

@@ -1,4 +1,4 @@
-/* Barra de navegação */
+/** Barra de navegação **/
 .top-nav {
 	overflow: hidden;
 	background-color: #333;
@@ -22,27 +22,28 @@
 	color: black;
 	transition: .7s;
 }
+.top-nav a:focus {
+	background-color: #DDD;
+	color: black;
+	transition: .7s;
+}
+
+/* Botão de Sair */
+.top-nav .page-action:nth-child(4) {
+	float: right;
+}
+
 .top-nav .icon {
     display: none;
 }
+
 .active {
     background-color: dodgerblue;
 }
+/** Fim Navegação **/
 
-/*** iPad 768px portrait ***/
-@media screen and (max-width: 768px) and (max-height: 1024px) {
-	
-}
-
-/*** Samsung-S5  640px landscape ***/
-@media screen and (max-width: 640px) and (max-height: 360px) {
-	.top-nav .page-action:nth-child(4) {
-		float: right;
-	}
-}
-
-/*** Samsung-S5 360px portrait ***/
-@media screen and (max-width: 360px) and (max-height: 640px) {
+/*** Desktop ***/
+@media screen and (max-width: 450px) {
 	/* Animação navegação */
 	.top-nav {
 		height: 45px;
@@ -71,9 +72,19 @@
 	}
 }
 
-/*** Botão de sair ***/
-@media screen and (max-width: 1368px) {
+/*** iPad 768px portrait ***/
+@media screen and (max-width: 768px) and (max-height: 1024px) {
+	
+}
+
+/*** Samsung-S5  640px landscape ***/
+@media screen and (max-width: 640px) and (max-height: 360px) {
 	.top-nav .page-action:nth-child(4) {
 		float: right;
 	}
+}
+
+/*** Samsung-S5 360px portrait ***/
+@media screen and (max-width: 360px) and (max-height: 640px) {
+	
 }
