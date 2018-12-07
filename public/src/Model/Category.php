@@ -15,6 +15,11 @@ class Category
 		return $this->id;
 	}
 
+	public function setId($newId)
+	{
+		$this->id = $newId;
+	}
+
 	public function getName()
 	{
 		return $this->name;

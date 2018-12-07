@@ -1,7 +1,7 @@
-<div id="categoryForm">
+<section id="categoryForm">
 	<div class="row btn">
 		<div class="col-6 new-category new-category_danger">
-			<a class="btn-danger" onclick="hiddenForm()" href="#">Cancelar</a>
+			<button class="btn-danger" onclick="hiddenForm()">Cancelar</button>
 		</div>
 	</div>
 	<div class="row form-create">
@@ -12,4 +12,4 @@
 			</form>
 		</div>
 	</div>	
-</div>
+</section>

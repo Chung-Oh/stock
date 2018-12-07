@@ -1,4 +1,4 @@
-/* Barra nagegação Mobile */
+/* Barra navegação Mobile */
 function topNavAnimation() {
 	let navBar = document.getElementById("topNavResponsive");
 	let main = document.querySelector("main");

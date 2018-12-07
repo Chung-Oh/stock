@@ -118,7 +118,13 @@ span {
     box-shadow: 0 0 10px dodgerblue;
     transition: .7s;
 }
-/* Fim do Formulário Cadastro de Categoria */
+/* Fim Formulário Cadastro de Categoria */
+
+/* Formulário Editar Categoria */
+.category-form-edit {
+    display: none;
+}
+/* Fim Formulário Editar Categoria */
 
 thead {
     background-color: #333;
@@ -129,10 +135,30 @@ tbody tr:nth-child(odd) {
 	background-color: #fbfbfb;
 }
 
+tbody tr:hover {
+	background-color: #e3e3e3;
+}
+
 tbody a {
 	color: black;
 }
+/* Botões da tabela */
+tbody a:hover {
+	color: dodgerblue;
+}
 
+tbody a:focus {
+	color: dodgerblue;
+}
+
+tbody button:hover {
+	color: dodgerblue;
+}
+
+tbody button:focus {
+	color: dodgerblue;
+}
+/* Fim botões */
 th, td {
 	padding: 5px;
 	font-family: 'Open Sans Condensed', sans-serif;
@@ -152,6 +178,11 @@ th {
 	color: #000;
 	border: 1px solid #000;
 	transition: .7s;
+}
+
+.filter:active {
+	background-color: #000;
+	color: #fff;
 }
 
 td {

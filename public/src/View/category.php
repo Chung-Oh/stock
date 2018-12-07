@@ -3,7 +3,17 @@ require_once '../global.php';
 require_once '../Dao/CategoryDao.php';
 require_once '../Helpers/user-session.php';
 require_once '../Helpers/show-alert.php';
-
+/*
+$cat = CategoryDao::list();
+foreach ($cat as $lin) {
+	$c = $lin;
+}
+echo '<pre>';
+print_r($c->getName());
+//echo '=========================================================================================';
+//print_r();
+die();
+*/
 try {
 	$categorys = CategoryDao::list();
 } catch (PDOException $e) {
@@ -15,18 +25,19 @@ if (userIsLogged()) : ?>
 <?php require_once 'Templates/header.php' ?>
 	<main>
 		<?php showAlert('success'); showAlert('danger') ?>
-		<div class="row">
+		<section class="row">
 			<div class="col-12">
 				<h2>Categorias</h2>
 			</div>			
-		</div>
-		<div id="callForm" class="row btn">
+		</section>
+		<section id="callFormCreate" class="row btn">
 			<div class="col-6 new-category">
-				<a class="btn-primary" onclick="showForm()" href="#">Criar Nova Categoria</a>
+				<button class="btn-primary" onclick="showForm()">Criar Nova Categoria</button>
 			</div>
-		</div>
+		</section>
 		<?php require_once 'Templates/main-category-form.php' ?>
-		<div class="row">
+		<?php require_once 'Templates/main-category-form-edit.php' ?>
+		<section class="row">
 			<div class="col-12 table">
 				<table class="table-category">
 					<thead>
@@ -40,16 +51,26 @@ if (userIsLogged()) : ?>
 					<tbody>
 						<?php foreach ($categorys as $category) : ?>
 							<tr>
-								<td><?php echo $category['id'] ?></td>
-								<td><a href="#"><?php echo $category['name'] ?></a></td>
-								<td><a href="#"><i class="fas fa-pencil-alt"></i></a></td>
-								<td><a href="#"><i class="fas fa-trash-alt"></i></a></i></td>
+								<td id="id"><?php echo $category->getId() ?></td>
+								<td id="name"><a href="#"><?php echo substr($category->getName(), 0, 50) ?></a></td>
+								<td>
+									<button id="edit" class="fas fa-pencil-alt">
+										<input class="test" type="hidden" name="name" value="<?php echo $category->getName() ?>">
+									</button>
+								</td>
+								<td>
+									<form action="../Route/category-delete.php" method="post">
+										<input type="hidden" name="id" value="<?php echo $category->getId() ?>">
+										<input type="hidden" name="name" value="<?php echo $category->getName() ?>">
+										<button class="fas fa-trash-alt"></button>		
+									</form>
+								</td>
 							</tr>
 						<?php endforeach ?>
 					</tbody>
 				</table>
 			</div>
-		</div>
+		</section>
 	</main>
 <?php require_once 'Templates/footer.php' ?>
 

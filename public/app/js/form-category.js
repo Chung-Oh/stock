@@ -1,14 +1,14 @@
-let btnCreate = document.getElementById('callForm');
-let form = document.getElementById('categoryForm');
-let data = document.querySelector('.category');
-
+let btnCreate = document.getElementById("callFormCreate");
+let form = document.getElementById("categoryForm");
+let data = document.querySelector(".category");
+// Chama Form de cadastrar e esconde botão que o invocou
 function showForm() {
 	fadeOut(btnCreate, 1);
 	setTimeout(function() {
 		fadeIn(form, 1);
 	}, 700);
 }
-
+// Esconde Form e reaparece o botão que o invocou
 function hiddenForm() {
 	data.value = '';
 	fadeOut(form, 1);
@@ -27,15 +27,15 @@ function fadeOut(element, time) {
 
 function process(element, time, initial, end) {
 	if (initial == 0) {
-		increment = 2;
+		var increment = 2;
 		testClassName(element);		
 	} else {
 		increment = -2;
 	}
 
-	opc = initial;
+	let opc = initial;
 	// A mágica acontece aqui, efeito de opacidade e o display none no fim
-	interval = setInterval(function() {
+	let interval = setInterval(function() {
 		if (opc == end) {
 			if (end == 0) {
 				element.style.display = "none";
