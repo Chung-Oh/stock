@@ -12,7 +12,7 @@ try {
 	die();		
 } catch (PDOException $e) {
 	// Classe Erro debugar
-	// Erro::handler($e);
+	Erro::handler($e);
 	$_SESSION['danger'] = "<span>{$_POST['name']}</span> não foi cadastrado";
 	header("Location: ../View/category.php");
 }

@@ -16,7 +16,7 @@ try {
 	}
 	die();
 } catch (PDOException $e) {
-	//Erro::handler($e);
+	Erro::handler($e);
 	$_SESSION['danger'] = "<span>{$_POST['name']}</span> não foi atualizado";
 	header("Location: ../View/category.php");
 }

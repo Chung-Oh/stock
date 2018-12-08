@@ -7,9 +7,9 @@ class CategoryDao
 {
 	private $category;
 
-	public function __construct($name)
+	public function __construct($name, $id = null)
 	{
-		$this->category = new Category($name);
+		$this->category = new Category($name, $id);
 	}
 
 	public static function list()

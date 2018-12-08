@@ -1,6 +1,6 @@
 <section id="categoryForm">
 	<div class="row btn">
-		<div class="col-6 new-category new-category_danger">
+		<div class="col-6 new-item new-item_danger">
 			<button class="btn-danger" onclick="hiddenForm()">Cancelar</button>
 		</div>
 	</div>

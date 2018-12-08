@@ -1,19 +1,18 @@
-let btnCreate = document.getElementById("callFormCreate");
-let form = document.getElementById("categoryForm");
+// btnFormCreate e formCreate do arquivo form-category-edit
 let data = document.querySelector(".category");
-// Chama Form de cadastrar e esconde botão que o invocou
+
 function showForm() {
-	fadeOut(btnCreate, 1);
+	fadeOut(btnFormCreate, 1);
 	setTimeout(function() {
-		fadeIn(form, 1);
+		fadeIn(formCreate, 1);
 	}, 700);
 }
-// Esconde Form e reaparece o botão que o invocou
+
 function hiddenForm() {
 	data.value = '';
-	fadeOut(form, 1);
+	fadeOut(formCreate, 1);
 	setTimeout(function() {
-		fadeIn(btnCreate, 1);
+		fadeIn(btnFormCreate, 1);
 	}, 700);
 }
 
@@ -27,7 +26,7 @@ function fadeOut(element, time) {
 
 function process(element, time, initial, end) {
 	if (initial == 0) {
-		var increment = 2;
+		increment = 2;
 		testClassName(element);		
 	} else {
 		increment = -2;
@@ -44,7 +43,7 @@ function process(element, time, initial, end) {
 		} else {
 			opc += increment;
 			element.style.opacity = opc/100;
-			element.style.filter = "alpha(opacity="+opc+")";
+			element.style.filter = "alpha(opacity=" + opc + ")";
 		}
 	}, time * 10);
 }

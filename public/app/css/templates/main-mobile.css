@@ -19,7 +19,7 @@
 	.btn {
 	    height: 8%;
 	}
-	.new-category {
+	.new-item {
 	    width: 50%;
 	}
 	.btn-primary {
@@ -39,7 +39,7 @@
 	span {
 	    margin-right: 2%;
 	}
-	.new-category_danger {
+	.new-item_danger {
 	    width: 50%;
 	    font-size: 100%;
 	}
