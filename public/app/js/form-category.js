@@ -3,7 +3,7 @@ let data = document.querySelector(".category");
 
 function showForm() {
 	fadeOut(btnFormCreate, 1);
-	setTimeout(function() {
+	setTimeout(() => {
 		fadeIn(formCreate, 1);
 	}, 700);
 }
@@ -11,7 +11,7 @@ function showForm() {
 function hiddenForm() {
 	data.value = '';
 	fadeOut(formCreate, 1);
-	setTimeout(function() {
+	setTimeout(() => {
 		fadeIn(btnFormCreate, 1);
 	}, 700);
 }
@@ -34,7 +34,7 @@ function process(element, time, initial, end) {
 
 	let opc = initial;
 	// A mágica acontece aqui, efeito de opacidade e o display none no fim
-	let interval = setInterval(function() {
+	let interval = setInterval(() => {
 		if (opc == end) {
 			if (end == 0) {
 				element.style.display = "none";

@@ -9,9 +9,9 @@ print_r($x);
 die();
 */
 try {
-	$category = new CategoryDao($_POST['name']);
-	if ($category->update($_POST['id'])) {
-		$_SESSION['success'] = "<span>{$_POST['name']}</span> alterado com sucesso ";
+	$category = new CategoryDao($_POST['name'], $_POST['id']);
+	if ($category->update()) {
+		$_SESSION['success'] = "<span>{$_POST['name']}</span> alterado com sucesso";
 		header("Location: ../View/category.php");
 	}
 	die();

@@ -11,6 +11,7 @@
 	<link rel="stylesheet" href="../../app/css/base.css">
 	<link rel="stylesheet" href="../../app/css/templates/header.css">
 	<link rel="stylesheet" href="../../app/css/templates/main-desk.css">
+	<link rel="stylesheet" href="../../app/css/templates/main-desk-category.css">
 	<link rel="stylesheet" href="../../app/css/templates/main-tablet.css">
 	<link rel="stylesheet" href="../../app/css/templates/main-mobile.css">
 	<link rel="stylesheet" href="../../app/css/templates/footer.css">

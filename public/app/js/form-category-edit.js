@@ -6,20 +6,16 @@ let formCreate = document.getElementById("categoryForm");
 let formEdit = document.querySelector(".category-form-edit");
 // Botão invoca o Form
 let btnEdit = document.querySelectorAll("#edit");
-// Lista de id da tabela
-let id = document.querySelectorAll("#id");
-// Lista de nome da tabela
-let names = document.querySelectorAll("#name");
 // ID da categoria a ser alterado dentro do Form
 let inputId = document.getElementById("idFormEdit");
 // Novo nome no Form
 let inputName = document.getElementById("newName");
 
 btnEdit.forEach(btn => {
-	btn.addEventListener("click", function(event) {
+	btn.addEventListener("click", event => {
 		// Botão chama Form criação
 		fadeOut(btnFormCreate, 1);
-		setTimeout(function() {
+		setTimeout(() => {
 			fadeIn(formEdit, 1);
 			let target = event.target;
 			let dad = target.parentNode.parentNode;
@@ -34,7 +30,7 @@ btnEdit.forEach(btn => {
 function hiddenFormEdit() {
 	data.value = '';
 	fadeOut(formEdit, 1);
-	setTimeout(function() {
+	setTimeout(() => {
 		fadeIn(btnFormCreate, 1);
 	}, 700);
 }

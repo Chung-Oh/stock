@@ -20,8 +20,7 @@ class CategoryDao
 		$list = array();
 		
 		foreach ($result->fetchAll() as $category_array) {
-			$category = new Category($category_array['name']);
-			$category->setId($category_array['id']);	
+			$category = new Category($category_array['name'], $category_array['id']);
 			array_push($list, $category);
 		}
 		return $list;
@@ -54,14 +53,14 @@ class CategoryDao
 		}
 	}
 
-	public function delete($id)
+	public function delete()
 	{
-		if (filter_var($id, FILTER_VALIDATE_REGEXP, 
+		if (filter_var($this->category->getId(), FILTER_VALIDATE_REGEXP, 
 				array("options" => array("regexp" => "/(\d)/")))) {
 					$query = "DELETE FROM category WHERE id = :id";
 					$conn = Connection::getConn();
 					$stmt = $conn->prepare($query);
-					$stmt->bindValue(':id', $id);
+					$stmt->bindValue(':id', $this->category->getId());
 					$stmt->execute();
 					return true;			
 		} else {
@@ -70,7 +69,7 @@ class CategoryDao
 		}
 	}
 
-	public function update($id)
+	public function update()
 	{
 		if (filter_var($this->category->getName(), 
 				FILTER_VALIDATE_REGEXP, 
@@ -78,7 +77,7 @@ class CategoryDao
 						$query = "UPDATE category SET name = :name WHERE id = :id";
 						$conn = Connection::getConn();
 						$stmt = $conn->prepare($query);
-						$stmt->bindValue(':id', $id);
+						$stmt->bindValue(':id', $this->category->getId());
 						$stmt->bindValue(':name', $this->category->getName());
 						$newName = $stmt->execute();
 						return $newName;			

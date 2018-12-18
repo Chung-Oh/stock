@@ -14,7 +14,6 @@ span {
 	justify-content: flex-end;
 	align-items: center;
 }
-
 /* Mensagem da Session */
 .alert-success,
 .alert-danger {
@@ -35,68 +34,17 @@ span {
 	background-color: #e3a0ba;
 	border: 1px solid #cf6479;
 }
-/* Fim */
-
 /* Mensagem na Home */
 .msg-home {
     padding-top: 3.3%;
 }
-/* Fim */
-
+/* Parágrafo na Home */
 .col-12 p {
     font-size: 100%;
     text-align: center;
     padding: 2%;
 }
-
-/* Formulário de cadastro Categoria */
-.form-create {
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.create-category {
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: lavender;
-    border: 1px solid #999;
-    box-shadow: 1px 1px 5px #555;
-}
-
-.category {
-    font-family: 'Open Sans Condensed', sans-serif;
-    text-align: center;
-    margin-top: 40px;
-    transition: .7s;
-}
-
-.category:hover {
-    box-shadow: 1px 1px 15px #000 inset;
-    transition: .7s;
-}
-
-.category:focus {
-    box-shadow: 1px 1px 15px #000 inset;
-    transition: .7s;
-}
-
-.create-category form {
-    height: 100%;
-    width: 70%;
-}
-
-.create-category input {
-    height: 25%;
-    width: 100%;
-    font-size: 100%;
-    font-weight: bold;
-    display: block;
-}
-
+ /* Botão do Form */
 .btn-create {
     background-color: #a2c8ec;
     border: 1px solid #57a1ea;
@@ -118,13 +66,6 @@ span {
     box-shadow: 0 0 10px dodgerblue;
     transition: .7s;
 }
-/* Fim Formulário Cadastro de Categoria */
-
-/* Formulário Editar Categoria */
-.category-form-edit {
-    display: none;
-}
-/* Fim Formulário Editar Categoria */
 
 thead {
     background-color: #333;
@@ -167,12 +108,12 @@ th, td {
 th {
 	font-weight: bold;
 }
-
-.filter {
+/* Ordena coluna Tabela */
+.order {
 	transition: .7s;	
 }
 
-.filter:hover {
+.order:hover {
 	font-weight: bold;
 	background-color: #DDD;
 	color: #000;
@@ -180,15 +121,36 @@ th {
 	transition: .7s;
 }
 
-.filter:active {
+.order:active {
 	background-color: #000;
 	color: #fff;
 }
-
+/* Fim */
 td {
 	font-weight: bolder;
 	text-align: center;
 	border-bottom: 1px solid #dbdbdb;
+}
+/* Mensagem de página vazia */
+.empty {
+    height: 10%;
+    margin-top: 5%;
+}
+
+.msg-empty {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.msg-empty-title {
+    height: 30%;
+    color: #de2929;
+    text-shadow: 0 0 3px #333;
+    display: flex;
+    align-items: center;
 }
 
 @media screen and (min-width: 100px) {
@@ -243,9 +205,6 @@ td {
 	    border: 1px solid #357795;
 	    box-shadow: 0 0 10px dodgerblue;
 	    transition: .7s;		
-	}
-	#categoryForm {
-		display: none;
 	}
 	.btn-danger {
 		height: 100%;

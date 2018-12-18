@@ -25,12 +25,12 @@
 	.btn-primary {
 		font-size: 100%;
 	}
-	.container {
-	    height: 73%;
-	}
 	.table {
 	    display: flex;
 	    justify-content: center;
+	}
+	.msg-empty {
+	    display: flex;
 	}
 }
 
@@ -42,5 +42,10 @@
 	.new-item_danger {
 	    width: 50%;
 	    font-size: 100%;
+	}
+	.msg-empty-title {
+	    height: 100%;
+	    width: 80%;
+	    text-align: center;
 	}
 }

@@ -1,0 +1,57 @@
+/* Formulário de cadastro Categoria */
+#categoryForm {
+	display: none;
+}
+
+.form-create {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.create-category {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lavender;
+    border: 1px solid #999;
+    box-shadow: 1px 1px 5px #555;
+}
+
+.category {
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-align: center;
+    margin-top: 40px;
+    transition: .7s;
+}
+
+.category:hover {
+    box-shadow: 1px 1px 15px #000 inset;
+    transition: .7s;
+}
+
+.category:focus {
+    box-shadow: 1px 1px 15px #000 inset;
+    transition: .7s;
+}
+
+.create-category form {
+    height: 100%;
+    width: 70%;
+}
+
+.create-category input {
+    height: 25%;
+    width: 100%;
+    font-size: 100%;
+    font-weight: bold;
+    display: block;
+}
+/* Fim Formulário Cadastro de Categoria */
+
+/* Formulário Editar Categoria */
+.category-form-edit {
+    display: none;
+}

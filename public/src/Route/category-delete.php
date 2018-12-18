@@ -2,14 +2,10 @@
 require_once '../global.php';
 require_once '../Dao/CategoryDao.php';
 require_once '../Helpers/user-session.php';
-/*
-echo '<pre>';
-print_r($_POST);
-die();
-*/
+
 try {
-	$category = new CategoryDao($_POST['name']);
-	if ($category->delete($_POST['id'])) {
+	$category = new CategoryDao($_POST['name'], $_POST['id']);
+	if ($category->delete()) {
 		$_SESSION['success'] = "<span>{$_POST['name']}</span> removido com sucesso";
 		header("Location: ../View/category.php");
 	}

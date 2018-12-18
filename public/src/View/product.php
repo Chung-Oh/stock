@@ -1,14 +1,14 @@
 <?php 
 require_once '../global.php';
-//require_once '../Dao/ProductDao.php';
+require_once '../Dao/ProductDao.php';
 require_once '../Helpers/user-session.php';
 require_once '../Helpers/show-alert.php';
 
-// try {
-// 	$products = ProductDao::list();
-// } catch (PDOException $e) {
-// 	Erro::handler($e);
-// }
+try {
+	$products = ProductDao::list();
+} catch (PDOException $e) {
+	Erro::handler($e);
+}
 
 if (userIsLogged()) : ?>
 
@@ -31,12 +31,12 @@ if (userIsLogged()) : ?>
 			<table class="table-items">	
 				<thead>
 					<tr>
-						<th class="filter">Id</th>
-						<th class="filter">Nome</th>
+						<th class="order">Id</th>
+						<th class="order">Nome</th>
 						<th>Descrição</th>
-						<th class="filter">Peso</th>
+						<th class="order">Peso</th>
 						<th>Dimensão</th>
-						<th class="filter">Categoria</th>
+						<th class="order">Categoria</th>
 						<th>Editar</th>
 						<th>Excluir</th>
 					</tr>
@@ -46,7 +46,7 @@ if (userIsLogged()) : ?>
 						<tr>
 							<td id="idProduct"><?php echo $product->getId() ?></td>
 							<td id="nameProduct">
-								<a href="../Route/product-select.php/?id=<?php echo substr($product->getName(), 0, 50) ?>"></a>
+								<a href="../Route/product-select.php/?id=<?php echo $product->getName() ?>"><?php echo $product->getName() ?></a>
 							</td>
 							<td><?php echo substr($product->getDesc(), 0, 50) ?></td>
 							<td><?php echo $product->getWeight() ?></td>
