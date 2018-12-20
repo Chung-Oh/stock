@@ -25,8 +25,7 @@ idOrder.addEventListener("click", () => {
 			return temp2 - temp1; 
 		});		
 	} else {
-		toogle = false;
-		listCategory.reverse();
+		listReverse();
 	}
 	tbManipulateCategory();
 });
@@ -40,8 +39,7 @@ nameOrder.addEventListener("click", () => {
 				((b.children[1].textContent > a.children[1].textContent) ? -1 : 0);
 		});		
 	} else {
-		toogle = false;
-		listCategory.reverse();
+		listReverse();
 	}
 	tbManipulateCategory();
 });
@@ -52,6 +50,11 @@ function runListCategory() {
 		copy = row.cloneNode(true);
 		listCategory.push(copy);
 	});	
+}
+
+function listReverse() {
+	toogle = false;
+	listCategory.reverse();
 }
 
 function tbManipulateCategory() {

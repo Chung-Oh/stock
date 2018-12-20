@@ -5,11 +5,15 @@ require_once '../Helpers/user-session.php';
 
 try {
 	$category = new CategoryDao($_POST['name']);
-	if ($category->new()) {
-		$_SESSION['success'] = "<span>{$_POST['name']}</span> cadastrado com sucesso";
+	if (!$category->verifyNameExist()) {
+		if ($category->new()) {
+			$_SESSION['success'] = "<span>{$_POST['name']}</span> cadastrado com sucesso";
+			header("Location: ../View/category.php");
+		} 		
+	} else {
+		$_SESSION['danger'] = "<span>{$_POST['name']}</span> já existe em nosso sistema";
 		header("Location: ../View/category.php");
-	} 
-	die();		
+	}	
 } catch (PDOException $e) {
 	// Classe Erro debugar
 	Erro::handler($e);

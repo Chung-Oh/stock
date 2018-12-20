@@ -2,19 +2,24 @@
 require_once '../global.php';
 require_once '../Dao/CategoryDao.php';
 require_once '../Helpers/user-session.php';
-/*
-$x = new CategoryDao(33);
-echo '<pre>';
-print_r($x);
-die();
-*/
+
 try {
+	$testExist = new CategoryDao($_POST['oldName'], $_POST['id']);
 	$category = new CategoryDao($_POST['name'], $_POST['id']);
-	if ($category->update()) {
-		$_SESSION['success'] = "<span>{$_POST['name']}</span> alterado com sucesso";
+	if ($testExist->verifyCategoryExist()) {
+		if (!$category->verifyNameExist()) {
+			if ($category->update()) {
+				$_SESSION['success'] = "<span>{$_POST['name']}</span> alterado com sucesso";
+				header("Location: ../View/category.php");
+			}		
+		} else {
+			$_SESSION['danger'] = "<span>{$_POST['name']}</span> já existe em nosso sistema";
+			header("Location: ../View/category.php");
+		}		
+	} else {
+		$_SESSION['danger'] = "Categoria <span>{$_POST['oldName']}</span> inválido";
 		header("Location: ../View/category.php");
 	}
-	die();
 } catch (PDOException $e) {
 	Erro::handler($e);
 	$_SESSION['danger'] = "<span>{$_POST['name']}</span> não foi atualizado";

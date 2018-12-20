@@ -15,7 +15,7 @@ class ProductDao
 	public static function list()
 	{
 		$query = "SELECT p.id, p.name, p.description, p.weight, p.dimension, c.name AS category_name
-					FROM product AS p JOIN category AS c ON p.category_id = c.id";
+					FROM products AS p JOIN categorys AS c ON p.category_id = c.id";
 		$conn = Connection::getConn();
 		$result = $conn->query($query);
 		$list = array();

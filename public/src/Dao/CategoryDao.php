@@ -14,11 +14,10 @@ class CategoryDao
 
 	public static function list()
 	{
-		$query = "SELECT id, name FROM category";
+		$query = "SELECT id, name FROM categorys ORDER BY id";
 		$conn = Connection::getConn();
 		$result = $conn->query($query);
 		$list = array();
-		
 		foreach ($result->fetchAll() as $category_array) {
 			$category = new Category($category_array['name'], $category_array['id']);
 			array_push($list, $category);
@@ -28,20 +27,44 @@ class CategoryDao
 	
  	public function load($id)
 	{
-		$query = "SELECT id, name FROM category WHERE id = :id";
+		$query = "SELECT id, name FROM categorys WHERE id = :id";
 		$conn = Connection::getConn();
 		$stmt = $conn->prepare($query);
 		$stmt->bindValue(':id', $id);
 		$stmt->execute();
-		$this->category = $stmt->fetch();
+		$result = $stmt->fetch();
+		return $result;
+	}
+
+	public function verifyNameExist()
+	{
+		$query = "SELECT id, name FROM categorys WHERE name = :name";
+		$conn = Connection::getConn();
+		$stmt = $conn->prepare($query);
+		$stmt->bindValue(':name', $this->category->getName());
+		$stmt->execute();
+		$result = $stmt->fetch();
+		return $result;
+	}
+
+	public function verifyCategoryExist()
+	{
+		$query = "SELECT id, name FROM categorys WHERE id = :id AND name = :name";
+		$conn = Connection::getConn();
+		$stmt = $conn->prepare($query);
+		$stmt->bindValue(':id', $this->category->getId());
+		$stmt->bindValue(':name', $this->category->getName());
+		$stmt->execute();
+		$result = $stmt->fetch();
+		return $result;
 	}
 
 	public function new()
 	{
 		if (filter_var($this->category->getName(), 
 				FILTER_VALIDATE_REGEXP, array("options" => 
-					array("regexp" => "/([A-Za-z]{2,50})/")))) {
-						$query = "INSERT INTO category (name) VALUES (:name)";
+					array("regexp" => "/^([A-Z][\w\s\dáâéêíóôú].{0,50})/")))) {
+						$query = "INSERT INTO categorys (name) VALUES (:name)";
 						$conn = Connection::getConn();
 						$stmt = $conn->prepare($query);
 						$stmt->bindValue(':name', $this->category->getName());
@@ -53,28 +76,12 @@ class CategoryDao
 		}
 	}
 
-	public function delete()
-	{
-		if (filter_var($this->category->getId(), FILTER_VALIDATE_REGEXP, 
-				array("options" => array("regexp" => "/(\d)/")))) {
-					$query = "DELETE FROM category WHERE id = :id";
-					$conn = Connection::getConn();
-					$stmt = $conn->prepare($query);
-					$stmt->bindValue(':id', $this->category->getId());
-					$stmt->execute();
-					return true;			
-		} else {
-			$_SESSION['danger'] = "<span>Categoria</span> não pode ser removida";
-			header("Location: ../View/category.php");
-		}
-	}
-
 	public function update()
 	{
 		if (filter_var($this->category->getName(), 
 				FILTER_VALIDATE_REGEXP, 
-					array("options" => array("regexp" => "/[A-Za-z]{2,50}/")))) {
-						$query = "UPDATE category SET name = :name WHERE id = :id";
+					array("options" => array("regexp" => "/^([A-Z][\w\s\dáâéêíóôú].{0,50})/")))) {
+						$query = "UPDATE categorys SET name = :name WHERE id = :id";
 						$conn = Connection::getConn();
 						$stmt = $conn->prepare($query);
 						$stmt->bindValue(':id', $this->category->getId());
@@ -82,7 +89,23 @@ class CategoryDao
 						$newName = $stmt->execute();
 						return $newName;			
 		} else {
-			$_SESSION['danger'] = "<span>Categoria</span> não pode ser alterada";
+			$_SESSION['danger'] = "<span>Categoria</span> não conrresponde como exigido";
+			header("Location: ../View/category.php");
+		}
+	}
+
+	public function delete()
+	{
+		if (filter_var($this->category->getId(), FILTER_VALIDATE_REGEXP, 
+				array("options" => array("regexp" => "/(\d)/")))) {
+					$query = "DELETE FROM categorys WHERE id = :id";
+					$conn = Connection::getConn();
+					$stmt = $conn->prepare($query);
+					$stmt->bindValue(':id', $this->category->getId());
+					$stmt->execute();
+					return true;			
+		} else {
+			$_SESSION['danger'] = "<span>Categoria</span> não pode ser removida";
 			header("Location: ../View/category.php");
 		}
 	}

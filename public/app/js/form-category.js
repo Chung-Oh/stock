@@ -1,4 +1,8 @@
-// btnFormCreate e formCreate do arquivo form-category-edit
+// Botão da seção callFormCreate
+let btnFormCreate = document.getElementById("callFormCreate");
+// Form de criação 
+let formCreate = document.getElementById("categoryForm");
+// Input do Form para nova Categoria
 let data = document.querySelector(".category");
 
 function showForm() {
@@ -33,7 +37,7 @@ function process(element, time, initial, end) {
 	}
 
 	let opc = initial;
-	// A mágica acontece aqui, efeito de opacidade e o display none no fim
+	// A mágica acontece aqui, efeito de opacidade e o display NONE no fim
 	let interval = setInterval(() => {
 		if (opc == end) {
 			if (end == 0) {

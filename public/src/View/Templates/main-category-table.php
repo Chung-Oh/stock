@@ -16,11 +16,7 @@
 						<td class="info-name">
 							<a href="../Route/category-select.php/?id=<?php echo $category->getName() ?>"><?php echo substr($category->getName(), 0, 50) ?></a>
 						</td>
-						<td>
-							<button id="edit" class="fas fa-pencil-alt">
-								<input type="hidden" name="name" value="<?php echo $category->getName() ?>">
-							</button>
-						</td>
+						<td><button id="edit" class="fas fa-pencil-alt"></button></td>
 						<td>
 							<form action="../Route/category-delete.php" method="post">
 								<input type="hidden" name="id" value="<?php echo $category->getId() ?>">
