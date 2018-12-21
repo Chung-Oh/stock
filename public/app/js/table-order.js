@@ -60,7 +60,7 @@ function listReverse() {
 function tbManipulateCategory() {
 	count = 0;
 	infoRow.forEach(row => {
-		row.children[0].innerHTML = listCategory[count].children[0].textContent;
+		row.children[0].innerHTML = listCategory[count].children[0].outerHTML;
 		row.children[1].innerHTML = listCategory[count].children[1].outerHTML;
 		row.children[2].innerHTML = listCategory[count].children[2].outerHTML;
 		row.children[3].innerHTML = listCategory[count].children[3].outerHTML;

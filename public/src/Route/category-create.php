@@ -11,7 +11,7 @@ try {
 			header("Location: ../View/category.php");
 		} 		
 	} else {
-		$_SESSION['danger'] = "<span>{$_POST['name']}</span> já existe em nosso sistema";
+		$_SESSION['danger'] = "<span>{$_POST['name']}</span> já existe no sistema";
 		header("Location: ../View/category.php");
 	}	
 } catch (PDOException $e) {
