@@ -210,12 +210,12 @@ tr {
 
 .btn-primary:hover {
 	background-color: #000;
-	box-shadow: 0 0 1.25em #000;
+	box-shadow: 0 1px 1.25em #000;
 }
 
 .btn-primary:focus {
 	background-color: #000;
-	box-shadow: 0 0 1.25em #000;
+	box-shadow: 0 1px 1.25em #000;
 }
 
 /* Botão retornar ao Sistema */

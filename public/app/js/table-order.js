@@ -15,34 +15,38 @@ let count;
 // Verifica se já foi ordenado 
 let toogle = false;
 
-idOrder.addEventListener("click", () => {
-	runListCategory();
-	if (!toogle) {
-		toogle = true;
-		listCategory.sort((a, b) => {
-			temp1 = parseInt(a.children[0].textContent, 10);
-			temp2 = parseInt(b.children[0].textContent, 10);
-			return temp2 - temp1; 
-		});		
-	} else {
-		listReverse();
-	}
-	tbManipulateCategory();
-});
+if (idOrder) {
+	idOrder.addEventListener("click", () => {
+		runListCategory();
+		if (!toogle) {
+			toogle = true;
+			listCategory.sort((a, b) => {
+				temp1 = parseInt(a.children[0].textContent, 10);
+				temp2 = parseInt(b.children[0].textContent, 10);
+				return temp2 - temp1; 
+			});		
+		} else {
+			listReverse();
+		}
+		tbManipulateCategory();
+	});
+}
 
-nameOrder.addEventListener("click", () => {
-	runListCategory();
-	if (!toogle) {
-		toogle = true;
-		listCategory.sort((a, b) => {
-			return a.children[1].textContent > b.children[1].textContent ? 1 : 
-				((b.children[1].textContent > a.children[1].textContent) ? -1 : 0);
-		});		
-	} else {
-		listReverse();
-	}
-	tbManipulateCategory();
-});
+if (nameOrder) {
+	nameOrder.addEventListener("click", () => {
+		runListCategory();
+		if (!toogle) {
+			toogle = true;
+			listCategory.sort((a, b) => {
+				return a.children[1].textContent > b.children[1].textContent ? 1 : 
+					((b.children[1].textContent > a.children[1].textContent) ? -1 : 0);
+			});		
+		} else {
+			listReverse();
+		}
+		tbManipulateCategory();
+	});	
+}
 
 function runListCategory() {
 	listCategory = [];
