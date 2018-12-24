@@ -17,17 +17,12 @@
 	transition: .7s;
 }
 
-.top-nav a:hover {
-	background-color: #DDD;
-	color: black;
-	transition: .7s;
-}
+.top-nav a:hover,
 .top-nav a:focus {
 	background-color: #DDD;
 	color: black;
 	transition: .7s;
 }
-
 /* Botão de Sair */
 .top-nav .page-action:nth-child(4) {
 	float: right;

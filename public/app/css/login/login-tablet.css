@@ -48,7 +48,8 @@
 		width: 60%;
 		margin-top: 6%;
 	}
-	.name, .password {
+	.name, 
+	.password {
 		font-size: 150%;
 	}
 	.cel-icon i {
@@ -125,7 +126,8 @@
 		height: 35%;
 		margin-top: 47%;
 	}	
-	.name, .password {
+	.name, 
+	.password {
 		font-size: 150%;
 	} 
 	.cel-icon i {

@@ -1,9 +1,11 @@
 body {
     background-image: radial-gradient(#AAA, #BBB, #DDD);
 }
+
 .row {
     height: 15%;
 }
+
 .message-title {
     height: 100%;
     width: 100%;
@@ -12,10 +14,12 @@ body {
     display: flex;
     align-items: center;
 }
+
 .message-title h2 {
     font-size: 2.5em;
     margin-left: .5em;
 }
+
 .message-erro {
     height: 100%;
     display: flex;

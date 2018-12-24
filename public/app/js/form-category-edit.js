@@ -1,6 +1,6 @@
 /** btnFormCreate(botão seção callFormCreate) e formCreate(Form criação) do arquivo form-category **/
 // Form de edição
-let formEdit = document.querySelector(".category-form-edit");
+let formEdit = document.getElementById("categoryFormEdit");
 // Corpo da Tabela, onde vai escutar os eventos
 let tbody = document.querySelector("tbody");
 // ID da categoria a ser alterado dentro do Form
@@ -19,9 +19,9 @@ if (tbody) {
 			setTimeout(() => {
 				let currentTarget = target.parentNode.parentNode;
 				fadeIn(formEdit, 1);
-				inputId.value = currentTarget.children[0].textContent;
-				oldName.value = currentTarget.children[1].children[0].textContent;
-				newName.value = currentTarget.children[1].children[0].textContent;
+				inputId.value = currentTarget.children[0].textContent.trim();
+				oldName.value = currentTarget.children[1].children[0].textContent.trim();
+				newName.value = currentTarget.children[1].children[0].textContent.trim();
 			}, 700);
 			// Form criação
 			fadeOut(formCreate);
@@ -30,7 +30,7 @@ if (tbody) {
 }
 
 function hiddenFormEdit() {
-	data.value = '';
+	data.value = "";
 	fadeOut(formEdit, 1);
 	setTimeout(() => {
 		fadeIn(btnFormCreate, 1);

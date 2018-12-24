@@ -1,0 +1,30 @@
+/* Mensagem da Session */
+.alert-success,
+.alert-danger {
+	height: 5%;
+	font-family: 'Raleway', sans-serif;
+	margin-top: 3%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.alert-success {
+	background-color: #5de19e;
+	border: 1px solid #17a05a;
+}
+
+.alert-danger {
+	background-color: #e3a0ba;
+	border: 1px solid #cf6479;
+}
+/* Mensagem na Home */
+.msg-home {
+	padding-top: 3.3%;
+}
+/* Parágrafo na Home */
+.col-12 p {
+	font-size: 100%;
+	text-align: center;
+	padding: 2%;
+}

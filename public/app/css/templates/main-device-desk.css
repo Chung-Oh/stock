@@ -1,0 +1,122 @@
+main {
+	height: 100%;
+	margin-top: 45px;
+	transition: margin-top .5s;
+	overflow: auto;
+}
+
+span {
+	height: 100%;
+	font-family: sans-serif;
+	font-weight: bold;
+	margin: 0 .5%;
+	overflow: hidden;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+/* Mensagem de página vazia */
+.empty {
+	height: 10%;
+	margin-top: 5%;
+}
+
+.msg-empty {
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0;
+}
+
+.msg-empty-title {
+	height: 30%;
+	color: #de2929;
+	text-shadow: 0 0 3px #333;
+	display: flex;
+	align-items: center;
+}
+
+@media screen and (min-width: 100px) {
+	.col-12 h2 {
+		font-size: 150%;
+		font-weight: 500;
+		text-align: center;
+		text-shadow: 1px 1px 3px #555;
+		padding: 2%;
+	}
+	.main-down {
+		margin-top: 177px;
+		transition: margin-top .5s;
+	}
+	.btn {
+		height: 5%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: 1s;
+	}
+	.new-item {
+		height: 30px;
+		width: 240px;
+		padding: 0;
+	}
+	.btn-primary {
+		height: 100%;
+		width: 100%;
+		font-size: 100%;
+		font-weight: 700;
+		text-decoration: none;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: #a2c8ec;
+		color: black;
+		border: 1px solid #57a1ea;
+		box-shadow: 0 0 5px #357795;
+		border-radius: 5px;
+		padding: 0;
+		transition: .7s;
+	}
+	.btn-primary:hover,
+	.btn-primary:focus {
+		background-color: #57a1ea;
+		border: 1px solid #357795;
+		box-shadow: 0 0 10px dodgerblue;
+		transition: .7s;
+	}
+	.btn-danger {
+		height: 100%;
+		width: 100%;
+		font-size: 100%;
+		font-weight: bold;
+		text-decoration: none;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: #e37777;
+		color: black;
+		border: 1px solid #d65d5d;
+		box-shadow: 0 0 6px #aa7070;
+		border-radius: 5px;
+		padding: 0;
+		transition: .7s;
+	}
+	.btn-danger:hover,
+	.btn-danger:focus {
+		background-color: #f05555;
+		border: 1px solid #da2003;
+		box-shadow: 0 0 10px #f00;
+		transition: .7s;
+	}
+	.table-items {
+		width: 100%;
+		box-shadow: 1px 1px 5px #555;
+	}
+}
+
+@media screen and (min-width: 451px) {
+	.main-down {
+		margin-top: 45px;
+	}
+}

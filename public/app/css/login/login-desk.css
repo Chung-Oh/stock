@@ -10,13 +10,11 @@ body {
 	border-top: 0.3em solid #444;
 	background-image: radial-gradient(#AAA, #BBB, #DDD);
 }
-
 /* Inserir imagem no centro da tela */
 .interface {
 	height: 100%;
 	background: url(../../img/stock-large-original.png) no-repeat 50% 50%;
 }
-
 /** Título com animação **/
 /* Animação chacoalhar */
 .title-shake {
@@ -46,7 +44,6 @@ body {
 		top: -15px;
 	}
 }
-
 /* Animação voar */
 .title-fly {	
 	position: relative;
@@ -67,7 +64,6 @@ body {
 		top: -15px;
 	}
 }
-
 /* Animação correr */
 h1 {
 	width: 100%;
@@ -160,16 +156,9 @@ tr {
 	box-shadow: .25em .25em .5em #333;
 	transition: .35s;
 }
-
 /* Configurar ícone no input */
-.name:hover,
-.password:hover {
-	border-color: dodgerblue;
-	box-shadow: 0 0 1em 0 dodgerblue;
-}
-
-.name:focus,
-.password:focus {
+.name:hover, .name:focus,
+.password:hover, .password:focus {
 	border-color: dodgerblue;
 	box-shadow: 0 0 1em 0 dodgerblue;
 }
@@ -187,10 +176,9 @@ tr {
 	transition: .3s;
 }
 
-.cel-icon .input-icon:focus + i {
+.input-icon:focus + i {
 	color: dodgerblue;
 }
-
 /* Botão */
 .btn {
 	vertical-align: middle;
@@ -208,16 +196,11 @@ tr {
 	transition: 1s;
 }
 
-.btn-primary:hover {
-	background-color: #000;
-	box-shadow: 0 1px 1.25em #000;
-}
-
+.btn-primary:hover,
 .btn-primary:focus {
 	background-color: #000;
 	box-shadow: 0 1px 1.25em #000;
 }
-
 /* Botão retornar ao Sistema */
 .btn-return {
 	height: 10%;
@@ -250,11 +233,7 @@ tr {
     border-radius: .5em;
 }
 
-.btn-return p a:hover {
-	background-color: #000;
-	box-shadow: 0 0 1.25em #000;
-}
-
+.btn-return p a:hover,
 .btn-return p a:focus {
 	background-color: #000;
 	box-shadow: 0 0 1.25em #000;

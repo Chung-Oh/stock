@@ -1,0 +1,149 @@
+/* Formulário de Categoria */
+#categoryFormDelete {
+    height: 93%;
+    width: 100%;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 6.7%;
+}
+
+#categoryForm,
+#categoryFormEdit,
+#categoryFormDelete {
+    display: none;
+}
+
+.container {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lavender;
+    border: 1px solid #999;
+    box-shadow: 1px 1px 5px #555;
+}
+
+.form form {
+    height: 100%;
+    width: 70%;
+}
+
+.form input {
+    height: 25%;
+    width: 100%;
+    font-size: 100%;
+    font-weight: bold;
+    display: block;
+}
+
+.data {
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-align: center;
+    margin-top: 40px;
+    transition: .7s;
+}
+
+.data:hover,
+.data:focus {
+    box-shadow: 1px 1px 15px #000 inset;
+    transition: .7s;
+}
+
+.btn-form {
+    background-color: #a2c8ec;
+    border: 1px solid #57a1ea;
+    box-shadow: 0 0 6px #357795;
+    color: black;
+    transition: .7s;
+}
+
+.btn-form:hover,
+.btn-form:focus {
+    background-color: #57a1ea;
+    border: 1px solid #357795;
+    box-shadow: 0 0 10px dodgerblue;
+    transition: .7s;
+}
+
+.form-delete {
+    height: 170px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.delete-category {
+    width: 35%;
+    text-align: center;
+    background-color: lavender;
+    border: 1px solid #999;
+    box-shadow: 1px 1px 5px #111;
+}
+
+.msg-delete {
+    height: 30%;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 120%;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: .7em 1em;
+}
+
+.options {
+    height: 30%;
+    display: flex;
+    justify-content: center;
+}
+
+.not {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e37777;
+    border: 1px solid #d65d5d;
+    box-shadow: 0 0 10px #aa7070;
+    border-radius: 30px 0 0 30px;
+    transition: .7s;
+}
+
+.not:hover, 
+.not:focus {
+    background-color: #f05555;
+    border: 1px solid #da2003;
+    box-shadow: 0 0 10px #f00;
+    transition: .7s;
+}
+
+.yes {
+    font-size: 100%;
+    background-color: #a2c8ec;
+    border: 1px solid #57a1ea;
+    border-radius: 0 30px 30px 0;
+    box-shadow: 0 0 6px #357795;
+    transition: .7s;
+}
+
+.yes:hover,
+.yes:focus {
+    background-color: #57a1ea;
+    border: 1px solid #357795;
+    box-shadow: 0 0 7px dodgerblue;
+    transition: .7s;
+}
+
+.not,
+.yes {
+    width: 30%;
+}

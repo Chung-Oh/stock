@@ -3,7 +3,7 @@ let btnFormCreate = document.getElementById("callFormCreate");
 // Form de criação 
 let formCreate = document.getElementById("categoryForm");
 // Input do Form para nova Categoria
-let data = document.querySelector(".category");
+let data = document.querySelector(".data");
 
 function showForm() {
 	fadeOut(btnFormCreate, 1);
@@ -13,7 +13,7 @@ function showForm() {
 }
 
 function hiddenForm() {
-	data.value = '';
+	data.value = "";
 	fadeOut(formCreate, 1);
 	setTimeout(() => {
 		fadeIn(btnFormCreate, 1);
