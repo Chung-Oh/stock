@@ -1,7 +1,7 @@
 // Botão da seção callFormCreate
 let btnFormCreate = document.getElementById("callFormCreate");
 // Form de criação 
-let formCreate = document.getElementById("categoryForm");
+let formCreate = document.getElementById("categoryFormCreate");
 // Input do Form para nova Categoria
 let data = document.querySelector(".data");
 

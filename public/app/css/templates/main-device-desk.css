@@ -58,8 +58,13 @@ span {
 	}
 	.new-item {
 		height: 30px;
-		width: 240px;
+		width: 20%;
 		padding: 0;
+		display: flex;
+		justify-content: center;
+	}
+	.new-item_danger {
+	    width: 90%;
 	}
 	.btn-primary {
 		height: 100%;

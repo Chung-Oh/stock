@@ -1,4 +1,12 @@
 /* Formulário de Categoria */
+#categoryFormCreate,
+#categoryFormEdit {
+    position: fixed;
+    width: 50%;
+    top: 30%;
+    left: 25%;
+}
+
 #categoryFormDelete {
     height: 93%;
     width: 100%;
@@ -10,7 +18,7 @@
     top: 6.7%;
 }
 
-#categoryForm,
+#categoryFormCreate,
 #categoryFormEdit,
 #categoryFormDelete {
     display: none;
@@ -25,6 +33,7 @@
 
 .form {
     height: 200px;
+    width: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -47,7 +56,7 @@
 }
 
 .data {
-    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: 'Raleway', sans-serif;
     text-align: center;
     margin-top: 40px;
     transition: .7s;
@@ -90,15 +99,28 @@
     box-shadow: 1px 1px 5px #111;
 }
 
+.title-delete,
 .msg-delete {
-    height: 30%;
-    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: 'Open Sans Condensed', sans-serif;   
+}
+
+.title-delete {
+    height: 25%;
     font-size: 120%;
     font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: .7em 1em;
+}
+
+.msg-delete {
+    height: 25%;
+    font-weight: bold;
+    text-decoration: underline;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1em;
 }
 
 .options {

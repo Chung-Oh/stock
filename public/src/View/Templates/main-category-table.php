@@ -17,7 +17,7 @@
 							<a href="../Route/category-select.php/?id=<?php echo $category->getName() ?>"><?php echo substr($category->getName(), 0, 50) ?></a>
 						</td>
 						<td><button id="edit" class="fas fa-pencil-alt"></button></td>
-						<td><button class="fas fa-trash-alt"></button></td>
+						<td><button id="delete" class="fas fa-trash-alt"></button></td>
 					</tr>
 				<?php endforeach ?>
 			</tbody>

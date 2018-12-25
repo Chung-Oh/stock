@@ -13,12 +13,12 @@ try {
 if (userIsLogged()) : ?>
 
 	<?php require_once 'Templates/header.php' ?>
+	<?php require_once 'Templates/main-category-form.php' ?>
+	<?php require_once 'Templates/main-category-form-edit.php' ?>
 	<?php require_once 'Templates/main-category-form-delete.php' ?>
 	<main>
 		<?php showAlert('success'); showAlert('danger') ?>
 		<?php require_once 'Templates/main-category-top.php' ?>
-		<?php require_once 'Templates/main-category-form.php' ?>
-		<?php require_once 'Templates/main-category-form-edit.php' ?>
 		<?php if (count($categorys) > 0) : ?>
 			<?php require_once 'Templates/main-category-table.php' ?>
 		<?php else : ?>

@@ -1,5 +1,9 @@
 /*** Samsung-S5 640px landscape ***/
 @media screen and (max-width: 640px) and (max-height: 360px) {
+	#categoryFormCreate,
+	#categoryFormEdit {
+	    top: 29%;
+	}
 	#categoryFormDelete {
 	    top: 12.5%;
 	}
@@ -23,7 +27,10 @@
 	    height: 8%;
 	}
 	.new-item {
-	    width: 50%;
+	    width: 40%;
+	}
+	.new-item_danger {
+	    width: 90%;
 	}
 	.btn-primary {
 		font-size: 100%;
@@ -39,6 +46,12 @@
 
 /*** Samsung-S5 360px portrait ***/
 @media screen and (max-width: 360px) and (max-height: 640px) {
+	#categoryFormCreate,
+	#categoryFormEdit {
+	    width: 75%;
+	    top: 28%;
+	    left: 12%;
+	}
 	#categoryFormDelete {
 	    height: 93%;
 	    top: 7%;
@@ -49,8 +62,11 @@
 	span {
 	    margin-right: 2%;
 	}
+	.new-item {
+	    width: 60%;
+	}
 	.new-item_danger {
-	    width: 50%;
+	    width: 90%;
 	    font-size: 100%;
 	}
 	.msg-empty-title {

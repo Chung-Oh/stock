@@ -13,11 +13,11 @@ let newName = document.getElementById("newName");
 if (tbody) {
 	tbody.addEventListener("click", event => {
 		let target = event.target;
+		let currentTarget = target.parentNode.parentNode;
 		if (target.id == "edit") {
 			// Botão chama Form criação
 			fadeOut(btnFormCreate, 1);
 			setTimeout(() => {
-				let currentTarget = target.parentNode.parentNode;
 				fadeIn(formEdit, 1);
 				inputId.value = currentTarget.children[0].textContent.trim();
 				oldName.value = currentTarget.children[1].children[0].textContent.trim();
