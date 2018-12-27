@@ -53,3 +53,24 @@ td {
 	text-align: center;
 	border-bottom: 1px solid #dbdbdb;
 }
+/* Mensagem de Busca que não existe */
+.msg-table-search {
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-table-search {
+    height: 100%;
+    width: 100%;
+    color: #de2929;
+    text-shadow: 0 0 3px #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Para filtrar na Busca */
+.invisible {
+	display: none;
+}

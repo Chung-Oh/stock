@@ -17,7 +17,15 @@ span {
 }
 /* Caixa de Pesquisa */
 .search-box {
+	background-color: #333;
+    padding: 10px;
+    margin-bottom: 1em;
 	display: none;
+}
+
+.fas.fa-search {
+    top: 15px;
+    left: 370px;
 }
 /* Mensagem de página vazia */
 .empty {
@@ -122,7 +130,7 @@ span {
 		box-shadow: 1px 1px 5px #555;
 	}
 }
-
+/* Corrigir layout Desk */
 @media only screen and (min-width: 451px) {
 	.main-down {
 		margin-top: 45px;
