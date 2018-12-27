@@ -9,9 +9,9 @@
 	<link rel="icon" href="../../favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="../../app/css/reset.css">
 	<link rel="stylesheet" href="../../app/css/base.css">
-	<link rel="stylesheet" href="../../app/css/templates/main-form-category.css">
 	<link rel="stylesheet" href="../../app/css/templates/header.css">
 	<link rel="stylesheet" href="../../app/css/templates/main-message.css">
+	<link rel="stylesheet" href="../../app/css/templates/main-form-category.css">
 	<link rel="stylesheet" href="../../app/css/templates/main-device-desk.css">
 	<link rel="stylesheet" href="../../app/css/templates/main-device-tablet.css">
 	<link rel="stylesheet" href="../../app/css/templates/main-device-mobile.css">
@@ -24,9 +24,13 @@
 <body>
 	<header id="topNavResponsive" class="top-nav">
 		<nav>
-			<a href="../View/home.php" class="active">Controle Estoque</a></li>
-			<a class="page-action" href="category.php">Categoria</a></li>
-			<a class="page-action" href="product.php">Produto</a></li>
+			<a href="../View/home.php" class="active">Controle Estoque</a>
+			<a class="page-action" href="category.php">Categoria</a>
+			<a class="page-action" href="product.php">Produto</a>
+			<a class="page-action">
+				<input class="search" type="text" placeholder="Pesquisar...">
+				<i class="fas fa-search"></i>
+			</a>
 			<a class="page-action" href="../Route/login-out.php"><i class="fas fa-sign-out-alt"></i></a>
 			<a class="icon" onclick="topNavAnimation()"><i class="fas fa-bars"></i></a>
 		</nav>

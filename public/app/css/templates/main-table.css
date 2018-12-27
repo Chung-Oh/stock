@@ -15,10 +15,10 @@ tbody a {
 	color: black;
 }
 /* Botões da tabela */
-tbody a:hover,
 tbody a:focus,
-tbody button:hover,
-tbody button:focus {
+tbody a:hover,
+tbody button:focus,
+tbody button:hover {
 	color: dodgerblue;
 }
 /* Fim botões */

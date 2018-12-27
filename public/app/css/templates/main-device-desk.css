@@ -15,10 +15,13 @@ span {
 	justify-content: flex-end;
 	align-items: center;
 }
+/* Caixa de Pesquisa */
+.search-box {
+	display: none;
+}
 /* Mensagem de página vazia */
 .empty {
 	height: 10%;
-	margin-top: 5%;
 }
 
 .msg-empty {
@@ -37,7 +40,7 @@ span {
 	align-items: center;
 }
 
-@media screen and (min-width: 100px) {
+@media only screen and (min-width: 100px) {
 	.col-12 h2 {
 		font-size: 150%;
 		font-weight: 500;
@@ -58,7 +61,7 @@ span {
 	}
 	.new-item {
 		height: 30px;
-		width: 20%;
+		width: 100%;
 		padding: 0;
 		display: flex;
 		justify-content: center;
@@ -68,7 +71,7 @@ span {
 	}
 	.btn-primary {
 		height: 100%;
-		width: 100%;
+		width: 250px;
 		font-size: 100%;
 		font-weight: 700;
 		text-decoration: none;
@@ -83,8 +86,8 @@ span {
 		padding: 0;
 		transition: .7s;
 	}
-	.btn-primary:hover,
-	.btn-primary:focus {
+	.btn-primary:focus,
+	.btn-primary:hover {
 		background-color: #57a1ea;
 		border: 1px solid #357795;
 		box-shadow: 0 0 10px dodgerblue;
@@ -107,8 +110,8 @@ span {
 		padding: 0;
 		transition: .7s;
 	}
-	.btn-danger:hover,
-	.btn-danger:focus {
+	.btn-danger:focus,
+	.btn-danger:hover {
 		background-color: #f05555;
 		border: 1px solid #da2003;
 		box-shadow: 0 0 10px #f00;
@@ -120,7 +123,7 @@ span {
 	}
 }
 
-@media screen and (min-width: 451px) {
+@media only screen and (min-width: 451px) {
 	.main-down {
 		margin-top: 45px;
 	}

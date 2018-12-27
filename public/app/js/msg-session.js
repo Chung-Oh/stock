@@ -1,11 +1,13 @@
-// Mensagens das sessions
-let msgDanger = document.querySelector(".alert-danger");
-let msgSuccess = document.querySelector(".alert-success");
+(function alertSession() {
+	// Mensagens das sessions
+	let msgDanger = document.querySelector(".alert-danger");
+	let msgSuccess = document.querySelector(".alert-success");
 
-if (msgDanger) {
-	fadeOut(msgDanger, 15);
-}
+	if (msgDanger) {
+		fadeOut(msgDanger, 15);
+	}
 
-if (msgSuccess) {
-	fadeOut(msgSuccess, 15);	
-}
+	if (msgSuccess) {
+		fadeOut(msgSuccess, 15);	
+	}	
+})();

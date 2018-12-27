@@ -13,7 +13,7 @@ try {
 if (userIsLogged()) : ?>
 
 	<?php require_once 'Templates/header.php' ?>
-	<?php require_once 'Templates/main-category-form.php' ?>
+	<?php require_once 'Templates/main-category-form-create.php' ?>
 	<?php require_once 'Templates/main-category-form-edit.php' ?>
 	<?php require_once 'Templates/main-category-form-delete.php' ?>
 	<main>
