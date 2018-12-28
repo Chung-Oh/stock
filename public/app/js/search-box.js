@@ -1,3 +1,4 @@
+// Ocultar input na Home
 (function showSearchBox() {
 	let navBar = document.querySelectorAll(".page-action");
 	if (window.location.href == "http://localhost:8000/src/View/home.php") {
@@ -18,6 +19,7 @@
 					let expression = new RegExp(this.value, "i");		
 					if (!expression.test(name)) {
 						row.classList.add("invisible");
+						messageTableEmpty();
 					} else {
 						row.classList.remove("invisible");
 					}
@@ -31,7 +33,7 @@
 		});	
 	});
 })();
-
+// Limpar input de Pesquisa
 function cleanSearch() {
 	let inputs = document.querySelectorAll(".search");
 	let rows = document.querySelectorAll(".info-row");
@@ -40,14 +42,18 @@ function cleanSearch() {
 		for (let i = 0; i < rows.length; i++) {
 			let row = rows[i];
 			row.classList.remove("invisible");
+			messageTableEmpty();
 		}
 	});
 }
-
-(function messageTableEmpty() {
-	let inputs = document.querySelectorAll(".search");
-	let rows = document.querySelector(".info-row .invisible");
-	inputs.forEach(search => {
-		console.log();		
-	})
-})();
+// Mensagem quando nome da Pesquisa não existe
+function messageTableEmpty() {
+	let info = document.querySelectorAll(".info-row");
+	let invisible = document.querySelectorAll(".info-row.invisible");
+	let msg = document.querySelector(".msg-table-search");
+	if (info.length == invisible.length) {
+		msg.classList.remove("invisible");
+	} else {
+		msg.classList.add("invisible");
+	}
+}
