@@ -1,22 +1,34 @@
+import {fadeIn, fadeOut} from './helpers/manipulate-form.js';
 /* Barra navegação Mobile */
-function topNavAnimation() {
-	let navBar = document.getElementById("topNavResponsive");
-	let main = document.querySelector("main");
-	// Ícone caixa Pesquisa
-	let iconSearch = document.querySelector(".icon-search");
-	
+const btn = document.querySelector(".icon");
+const navBar = document.getElementById("topNavResponsive");
+const main = document.querySelector("main");
+const iconSearch = document.querySelector(".icon-search");
+
+btn.addEventListener("click", () => topNavAnimation());
+
+function topNavAnimation() {	
 	if (navBar.className === "top-nav") {
 		navBar.className += " responsive";
 		main.className = "main-down";
-		// Ajuste ícone
-		iconSearch.style.display = "none";
-		fadeIn(iconSearch, 2);
-		iconSearch.style.top = "264px";
+		iconTop();
 	} else {
 		navBar.className = "top-nav";
 		main.className = "";
-		// Ajuste ícone
+		iconDown();
+	}
+}
+
+function iconTop() {
+	if (iconSearch) {
 		fadeIn(iconSearch, 2);
-		iconSearch.style.top = "132px";
+		iconSearch.style.top = "264px";			
+	}
+}
+
+function iconDown() {
+	if (iconSearch) {
+		fadeIn(iconSearch, 4);
+		iconSearch.style.top = "132px";			
 	}
 }

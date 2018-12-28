@@ -32,6 +32,6 @@
 				<i class="fas fa-search"></i>
 			</a>
 			<a class="page-action" href="../Route/login-out.php"><i class="fas fa-sign-out-alt"></i></a>
-			<a class="icon" onclick="topNavAnimation()"><i class="fas fa-bars"></i></a>
+			<a class="icon"><i class="fas fa-bars"></i></a>
 		</nav>
 	</header>

@@ -9,6 +9,6 @@
 </section>
 <section id="callFormCreate" class="row btn">
 	<div class="col-6 new-item">
-		<button class="btn-primary" onclick="showForm()">Criar Nova Categoria</button>
+		<button id="callForm" class="btn-primary">Criar Nova Categoria</button>
 	</div>
 </section>
