@@ -22,8 +22,8 @@
 				<?php endforeach ?>
 			</tbody>
 		</table>
-		<div class="msg-table-search invisible">
-			<h3 class="title-table-search">Essa categoria não existe no nosso banco de dados.</h3>
-		</div>
 	</div>
+</section>
+<section class="msg-table-search invisible">
+	<h3 class="title-table-search">Essa categoria não existe no banco de dados.</h3>
 </section>
