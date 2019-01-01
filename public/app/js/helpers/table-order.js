@@ -1,8 +1,8 @@
 // Linhas Tabela
-const infoRow = document.querySelectorAll(".info-row");
+export const rowsTable = document.querySelectorAll(".info-row");
 // Coleção de Linhas Tabela
 let list = [];
-// Variável onde recebe Clone do infoRow
+// Variável onde recebe Clone do rowsTable
 let copy;
 // Contador para Manipulação das Tabelas
 let count;
@@ -39,7 +39,7 @@ export function orderByName() {
 function runList() {
 	list = [];
 	toogle = true;
-	infoRow.forEach(row => {
+	rowsTable.forEach(row => {
 		copy = row.cloneNode(true);
 		list.push(copy);
 	});	
@@ -52,7 +52,7 @@ function listReverse() {
 
 function tbManipulate() {
 	count = 0;
-	infoRow.forEach(row => {
+	rowsTable.forEach(row => {
 		row.children[0].innerHTML = list[count].children[0].outerHTML;
 		row.children[1].innerHTML = list[count].children[1].outerHTML;
 		row.children[2].innerHTML = list[count].children[2].outerHTML;

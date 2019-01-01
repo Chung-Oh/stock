@@ -6,6 +6,7 @@
 	<script type="module" src="../../app/js/form-category.js"></script>
 	<script type="module" src="../../app/js/form-category-edit.js"></script>
 	<script type="module" src="../../app/js/form-category-delete.js"></script>
+	<script type="module" src="../../app/js/message-table-empty.js"></script>
 	<script type="module" src="../../app/js/table-listens.js"></script>
 	<script type="module" src="../../app/js/msg-session.js"></script>
 </body>

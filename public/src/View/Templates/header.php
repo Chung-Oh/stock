@@ -28,7 +28,7 @@
 			<a class="page-action" href="category.php">Categoria</a>
 			<a class="page-action" href="product.php">Produto</a>
 			<a class="page-action">
-				<input class="search" type="text" placeholder="Pesquisar..." onfocus="cleanSearch()">
+				<input class="search" type="text" placeholder="Pesquisar...">
 				<i class="fas fa-search"></i>
 			</a>
 			<a class="page-action" href="../Route/login-out.php"><i class="fas fa-sign-out-alt"></i></a>

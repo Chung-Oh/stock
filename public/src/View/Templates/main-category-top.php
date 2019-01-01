@@ -3,7 +3,7 @@
 		<h2>Categorias</h2>
 	</div>			
 	<div class="col-12 search-box">
-		<input class="search" type="text" placeholder="Pesquisar..." onfocus="cleanSearch()">
+		<input class="search" type="text" placeholder="Pesquisar...">
 		<i class="fas fa-search icon-search"></i>
 	</div>
 </section>
