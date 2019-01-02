@@ -7,14 +7,14 @@ class ProductDao
 {
 	private $product;
 
-	public function __construct($name, $description, $weight, $dimension, $category_id, $id = null)
+	public function __construct($name, $description, $weight, $color, $category_id, $id = null)
 	{
-		$this->product = new Product($name, $description, $weight, $dimension, $category_id, $id);
+		$this->product = new Product($name, $description, $weight, $color, $category_id, $id);
 	}
 
 	public static function list()
 	{
-		$query = "SELECT p.id, p.name, p.description, p.weight, p.dimension, c.name AS category_name
+		$query = "SELECT p.id, p.name, p.description, p.weight, p.color, c.name AS category_name
 					FROM products AS p JOIN categorys AS c ON p.category_id = c.id";
 		$conn = Connection::getConn();
 		$result = $conn->query($query);
@@ -22,7 +22,7 @@ class ProductDao
 
 		foreach ($result->fetchAll() as $product_array) {
 			$product = new Product($product_array['name'], $product_array['description'], 
-				$product_array['weight'], $product_array['dimension'], 
+				$product_array['weight'], $product_array['color'], 
 					$product_array['category_name'], $product_array['id']);
 			array_push($list, $product);	
 		}

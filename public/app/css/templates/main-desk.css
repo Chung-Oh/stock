@@ -1,5 +1,6 @@
 main {
 	height: 100%;
+	width: 100%;
 	margin-top: 45px;
 	transition: margin-top .5s;
 	overflow: auto;
@@ -61,14 +62,14 @@ span {
 		transition: margin-top .5s;
 	}
 	.btn {
-		height: 5%;
+		height: 30px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		transition: 1s;
 	}
 	.new-item {
-		height: 30px;
+		height: 100%;
 		width: 100%;
 		padding: 0;
 		display: flex;

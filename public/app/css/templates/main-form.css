@@ -1,10 +1,16 @@
-/* Formulário de Categoria */
+/* Form Category */
 #categoryFormCreate,
-#categoryFormEdit {
+#categoryFormEdit,
+#productFormCreate {
     position: fixed;
     width: 50%;
     top: 30%;
     left: 25%;
+}
+
+#categoryFormCreate,
+#categoryFormEdit {
+    height: 35%; 
 }
 
 #categoryFormDelete {
@@ -23,16 +29,21 @@
 #categoryFormDelete {
     display: none;
 }
+/* Form Product */
+#productFormCreate {
+    height: 50%;
+}
 
 .container {
-    height: 200px;
+    height: 85%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.form {
-    height: 200px;
+.form-category,
+.form-product {
+    height: 100%;
     width: 90%;
     display: flex;
     justify-content: center;
@@ -42,13 +53,15 @@
     box-shadow: 1px 1px 5px #555;
 }
 
-.form form {
+.form-category form,
+.form-product form {
     height: 100%;
     width: 70%;
 }
 
-.form input {
-    height: 25%;
+.form-category input,
+.form-product input {
+    height: 40px;
     width: 100%;
     font-size: 100%;
     font-weight: bold;
@@ -56,16 +69,36 @@
 }
 
 .data {
-    font-family: 'Raleway', sans-serif;
     text-align: center;
-    margin-top: 40px;
-    transition: .7s;
+}
+
+.data:first-child {
+    margin-top: 3px;
+}
+
+.data,
+select {
+    font-family: 'Raleway', sans-serif;
+    transition: .7s;    
 }
 
 .data:focus,
-.data:hover {
+.data:hover,
+select:focus,
+select:hover {
     box-shadow: 1px 1px 15px #000 inset;
     transition: .7s;
+}
+
+select {
+    height: 40px;
+    width: 100%;
+    font-size: 110%;
+    font-weight: bold;
+}
+
+.data-category:first-child {
+    margin-top: 40px;
 }
 
 .btn-form {

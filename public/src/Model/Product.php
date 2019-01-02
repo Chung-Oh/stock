@@ -6,15 +6,15 @@ class Product
 	private $name;
 	private $description;
 	private $weight;
-	private $dimension;
+	private $color;
 	private $category_id;
 
-	public function __construct($name, $description, $weight, $dimension, $category_id, $id = null)
+	public function __construct($name, $description, $weight, $color, $category_id, $id = null)
 	{
 		$this->name = $name;
 		$this->description = $description;
 		$this->weight = $weight;
-		$this->dimension = $dimension;
+		$this->color = $color;
 		$this->category_id = $category_id;
 		$this->id = $id;
 	}
@@ -59,14 +59,14 @@ class Product
 		$this->weight = $newWeight;
 	}
 
-	public function getDimension()
+	public function getColor()
 	{
-		return $this->dimension;
+		return $this->color;
 	}
 
-	public function setDimension($newDimension)
+	public function setColor($newColor)
 	{
-		$this->dimension = $newDimension;
+		$this->color = $newColor;
 	}
 
 	public function getCategoryId()

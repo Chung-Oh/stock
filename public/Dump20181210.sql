@@ -53,7 +53,7 @@ CREATE TABLE `products` (
   `name` varchar(50) NOT NULL,
   `description` varchar(250) NOT NULL,
   `weight` varchar(100) DEFAULT NULL,
-  `dimension` varchar(100) DEFAULT NULL,
+  `color` varchar(25) DEFAULT NULL,
   `category_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `category_id` (`category_id`),
@@ -67,7 +67,7 @@ CREATE TABLE `products` (
 
 LOCK TABLES `products` WRITE;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
-INSERT INTO `products` VALUES (1,'Samsung Galaxy S5','8GB RAM, 32GB INTERNO, OCTACORE','160 GRAMA','16CM X 22CM',3),(2,'Bermuda','Jeans cor azul','320 GRAMA','160CM X 75CM',5);
+INSERT INTO `products` VALUES (1,'Samsung Galaxy S5','8GB RAM, 32GB INTERNO, OCTACORE','160 GRAMA','Preto',3),(2,'Bermuda','Jeans cor azul','320 GRAMA','Azul',5);
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 UNLOCK TABLES;
 
