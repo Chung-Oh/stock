@@ -1,0 +1,20 @@
+/* Mensagem de página vazia */
+.empty {
+	height: 10%;
+}
+
+.msg-empty {
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0;
+}
+
+.msg-empty-title {
+	height: 30%;
+	color: #de2929;
+	text-shadow: 0 0 3px #333;
+	display: flex;
+	align-items: center;
+}

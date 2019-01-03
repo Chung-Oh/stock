@@ -15,7 +15,7 @@ if (userIsLogged()) : ?>
 	<?php require_once 'Templates/header.php' ?>
 	<?php require_once 'Templates/main-category-form-create.php' ?>
 	<?php require_once 'Templates/main-category-form-edit.php' ?>
-	<?php require_once 'Templates/main-category-form-delete.php' ?>
+	<?php require_once 'Templates/main-form-delete.php' ?>
 	<main>
 		<?php showAlert('success'); showAlert('danger') ?>
 		<?php require_once 'Templates/main-category-top.php' ?>

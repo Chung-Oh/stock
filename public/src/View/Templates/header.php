@@ -9,14 +9,16 @@
 	<link rel="icon" href="../../favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="../../app/css/reset.css">
 	<link rel="stylesheet" href="../../app/css/base.css">
-	<link rel="stylesheet" href="../../app/css/templates/header.css">
-	<link rel="stylesheet" href="../../app/css/templates/main-message.css">
-	<link rel="stylesheet" href="../../app/css/templates/main-form.css">
-	<link rel="stylesheet" href="../../app/css/templates/main-desk.css">
-	<link rel="stylesheet" href="../../app/css/templates/main-tablet.css">
-	<link rel="stylesheet" href="../../app/css/templates/main-mobile.css">
-	<link rel="stylesheet" href="../../app/css/templates/main-table.css">
-	<link rel="stylesheet" href="../../app/css/templates/footer.css">
+	<link rel="stylesheet" href="../../app/css/header.css">
+	<link rel="stylesheet" href="../../app/css/search-box.css">
+	<link rel="stylesheet" href="../../app/css/form.css">
+	<link rel="stylesheet" href="../../app/css/msg-alert.css">
+	<link rel="stylesheet" href="../../app/css/main-desk.css">
+	<link rel="stylesheet" href="../../app/css/main-tablet.css">
+	<link rel="stylesheet" href="../../app/css/main-mobile.css">
+	<link rel="stylesheet" href="../../app/css/table.css">
+	<link rel="stylesheet" href="../../app/css/templates/msg-category-empty.css">
+	<link rel="stylesheet" href="../../app/css/footer.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300">
 	<link href="https://fonts.googleapis.com/css?family=Barlow+Condensed|Raleway" rel="stylesheet">

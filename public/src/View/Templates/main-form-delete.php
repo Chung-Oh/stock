@@ -1,4 +1,4 @@
-<section id="categoryFormDelete">
+<section id="formDelete">
 	<div class="row form-delete">
 		<form class="col-6 delete-category" action="../Route/category-delete.php" method="post">
 			<h3 class="title-delete">Deseja realmente excluir?</h3>

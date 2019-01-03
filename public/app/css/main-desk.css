@@ -1,4 +1,4 @@
-main {
+/*main {
 	height: 100%;
 	width: 100%;
 	margin-top: 45px;
@@ -15,9 +15,9 @@ span {
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
-}
+}*/
 /* Caixa de Pesquisa */
-.search-box {
+/*.search-box {
 	background-color: #333;
     padding: 10px;
     margin-bottom: 1em;
@@ -27,9 +27,9 @@ span {
 .fas.fa-search {
     top: 15px;
     left: 370px;
-}
+}*/
 /* Mensagem de página vazia */
-.empty {
+/*.empty {
 	height: 10%;
 }
 
@@ -47,9 +47,9 @@ span {
 	text-shadow: 0 0 3px #333;
 	display: flex;
 	align-items: center;
-}
+}*/
 
-@media only screen and (min-width: 100px) {
+/*@media only screen and (min-width: 100px) {
 	.col-12 h2 {
 		font-size: 150%;
 		font-weight: 500;
@@ -130,10 +130,10 @@ span {
 		width: 100%;
 		box-shadow: 1px 1px 5px #555;
 	}
-}
+}*/
 /* Corrigir layout Desk */
-@media only screen and (min-width: 451px) {
+/*@media only screen and (min-width: 451px) {
 	.main-down {
 		margin-top: 45px;
 	}
-}
+}*/

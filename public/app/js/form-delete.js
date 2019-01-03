@@ -1,7 +1,7 @@
 import {fadeIn, fadeOut} from './helpers/manipulate-form.js';
 import {tbody} from './form-category-edit.js';
 // Form delete
-const formDelete = document.getElementById("categoryFormDelete");
+const formDelete = document.getElementById("formDelete");
 // Nome categoria Mensagem deleção
 const msgDelete = document.querySelector(".msg-delete");
 // Botão cancelar deleção

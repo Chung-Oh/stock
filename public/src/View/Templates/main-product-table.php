@@ -1,6 +1,6 @@
 <section class="row">
 	<div class="col-12 table">
-		<table class="table-items">	
+		<table class="table-items table-product">	
 			<thead>
 				<tr>
 					<th class="order">Id</th>

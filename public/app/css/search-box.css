@@ -1,0 +1,12 @@
+/* Caixa de Pesquisa */
+.search-box {
+	background-color: #333;
+    padding: 10px;
+    margin-bottom: 1em;
+	display: none;
+}
+
+.fas.fa-search {
+    top: 15px;
+    left: 370px;
+}
