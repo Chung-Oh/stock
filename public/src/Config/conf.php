@@ -1,7 +1,6 @@
 <?php 
 //Configurações de tratamento de erros
 define('DEBUG', false);
-
 //Configurações do Banco
 define('DB_DRIVER', 'mysql');
 define('HOSTNAME', '127.0.0.1');

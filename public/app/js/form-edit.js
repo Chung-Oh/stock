@@ -1,7 +1,7 @@
-import {btnFormCreate, formCreate, btnCancel} from './form-category.js';
+import {btnFormCreate, formCreate, btnCancel} from './form-create.js';
 import {fadeIn, fadeOut} from './helpers/manipulate-form.js';
-// Form de edição
-const formEdit = document.getElementById("categoryFormEdit");
+// Form edição
+const formEdit = document.getElementById("formEdit");
 // Corpo da Tabela, onde vai escutar os eventos
 export const tbody = document.querySelector("tbody");
 // ID da categoria a ser alterado dentro do Form

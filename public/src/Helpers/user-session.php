@@ -1,5 +1,4 @@
 <?php 
-
 session_start();
 //Verifica se é usuário
 function isUser()

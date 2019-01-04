@@ -1,4 +1,4 @@
-<section id="categoryFormEdit">
+<section id="formEdit" class="category-form-edit">
 	<div class="row btn">
 		<div class="col-6 new-item new-item_danger">
 			<button class="btn-danger">Cancelar</button>

@@ -13,16 +13,16 @@ try {
 if (userIsLogged()) : ?>
 
 	<?php require_once 'Templates/header.php' ?>
-	<?php require_once 'Templates/category-form-create.php' ?>
-	<?php require_once 'Templates/category-form-edit.php' ?>
+	<?php require_once 'Category/category-form-create.php' ?>
+	<?php require_once 'Category/category-form-edit.php' ?>
 	<?php require_once 'Templates/form-delete.php' ?>
 	<main>
 		<?php showAlert('success'); showAlert('danger') ?>
-		<?php require_once 'Templates/main-category-top.php' ?>
+		<?php require_once 'Category/main-category-top.php' ?>
 		<?php if (count($categorys) > 0) : ?>
-			<?php require_once 'Templates/main-category-table.php' ?>
+			<?php require_once 'Category/main-category-table.php' ?>
 		<?php else : ?>
-			<?php require_once 'Templates/main-category-empty.php' ?>
+			<?php require_once 'Category/main-category-empty.php' ?>
 		<?php endif ?>
 	</main>
 	<?php require_once 'Templates/footer.php' ?>

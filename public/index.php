@@ -1,7 +1,6 @@
 <?php 
 require_once 'src/Helpers/user-session.php';
 require_once 'src/Helpers/show-alert.php';
-//var_dump($_SESSION);
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">

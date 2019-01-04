@@ -1,53 +1,45 @@
-#categoryFormCreate,
-#categoryFormEdit {
-    height: 35%; 
+.product-form-create {
+    height: 50%;
 }
 
-.data-category:first-child {
-    margin-top: 40px;
+.data:first-child {
+    margin-top: 3px;
 }
 /*** Corrigir Layout do Desk ***/
 @media only screen and (min-width: 100px) and (max-width: 770px) and (max-height: 641px) {
-    #categoryFormCreate,
-    #categoryFormEdit {
+    .product-form-create {
 	    top: 28%;
 	}
 }
 @media only screen and (max-width: 500px) {
-	#categoryFormCreate,
-	#categoryFormEdit {
-	    width: 320px;
-	    left: 10%;
+	.product-form-create {
+		width: 320px;
+		left: 10%;
 	}
 }
 /*** iPad 1024px landscape ***/
 @media only screen and (max-width: 1024px) and (min-height: 768px) {
-	#categoryFormCreate,
-	#categoryFormEdit {
-	    height: 30%;
+	.product-form-create {
+	    height: 43%;
 	}
 }
 /*** iPad 768px portrait ***/
 @media only screen and (min-height: 1024px) and (max-width: 768px) {
-	#categoryFormCreate,
-	#categoryFormEdit {
-	    height: 23%;
+	.product-form-create {
+	    height: 33%;
 	    width: 60%;
-	    top: 20%;
 	    left: 20%;
 	}
 }
 /*** Samsung-S5 640px landscape ***/
 @media only screen and (max-width: 640px) and (max-height: 360px) {
-	#categoryFormCreate,
-	#categoryFormEdit {
-		height: 64%;
+	.product-form-create {
+	    height: 68%;
 	}
 }
 /*** Samsung-S5 360px portrait ***/
 @media only screen and (max-width: 360px) and (max-height: 640px) {
-	#categoryFormCreate,
-	#categoryFormEdit {
-		height: 36%;
+	.product-form-create {
+	    height: 52%;
 	}
 }

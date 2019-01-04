@@ -8,19 +8,19 @@
 	<meta name="author" content="Daniel Chung">
 	<link rel="icon" href="../../favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="../../app/css/reset.css">
-	<link rel="stylesheet" href="../../app/css/base.css">
-	<link rel="stylesheet" href="../../app/css/header.css">
-	<link rel="stylesheet" href="../../app/css/templates/msg-home.css">
-	<link rel="stylesheet" href="../../app/css/templates/main-top.css">
-	<link rel="stylesheet" href="../../app/css/templates/search-box.css">
-	<link rel="stylesheet" href="../../app/css/templates/form-delete.css">
-	<link rel="stylesheet" href="../../app/css/templates/forms-product.css">
-	<link rel="stylesheet" href="../../app/css/templates/forms-category.css">
-	<link rel="stylesheet" href="../../app/css/templates/forms.css">
-	<link rel="stylesheet" href="../../app/css/msg-alert.css">
-	<link rel="stylesheet" href="../../app/css/templates/table.css">
-	<link rel="stylesheet" href="../../app/css/templates/msg-category-empty.css">
-	<link rel="stylesheet" href="../../app/css/footer.css">
+	<link rel="stylesheet" href="../../app/css/templates/base.css">
+	<link rel="stylesheet" href="../../app/css/templates/header.css">
+	<link rel="stylesheet" href="../../app/css/modules/msg-home.css">
+	<link rel="stylesheet" href="../../app/css/modules/main-top.css">
+	<link rel="stylesheet" href="../../app/css/modules/search-box.css">
+	<link rel="stylesheet" href="../../app/css/modules/form-delete.css">
+	<link rel="stylesheet" href="../../app/css/modules/forms.css">
+	<link rel="stylesheet" href="../../app/css/modules/forms-product.css">
+	<link rel="stylesheet" href="../../app/css/modules/forms-category.css">
+	<link rel="stylesheet" href="../../app/css/templates/msg-alert.css">
+	<link rel="stylesheet" href="../../app/css/modules/table.css">
+	<link rel="stylesheet" href="../../app/css/modules/msg-category-empty.css">
+	<link rel="stylesheet" href="../../app/css/templates/footer.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300">
 	<link href="https://fonts.googleapis.com/css?family=Barlow+Condensed|Raleway" rel="stylesheet">

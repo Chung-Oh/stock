@@ -15,15 +15,15 @@ try {
 if (userIsLogged()) : ?>
 
 	<?php require_once 'Templates/header.php' ?>
-	<?php require_once 'Templates/product-form-create.php' ?>
+	<?php require_once 'Product/product-form-create.php' ?>
 	<!-- Aqui Formulários -->
 	<main>
 		<?php showAlert('success'); showAlert('danger') ?>
-		<?php require_once 'Templates/main-product-top.php' ?>
+		<?php require_once 'Product/main-product-top.php' ?>
 		<?php if (count($products) > 0) : ?>
-			<?php require_once 'Templates/main-product-table.php' ?>
+			<?php require_once 'Product/main-product-table.php' ?>
 		<?php else : ?>
-			<?php require_once 'Templates/main-product-empty.php' ?>
+			<?php require_once 'Product/main-product-empty.php' ?>
 		<?php endif ?>
 	</main>
 	<?php require_once 'Templates/footer.php' ?>

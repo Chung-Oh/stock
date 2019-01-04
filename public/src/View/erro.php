@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="../../app/css/erro.css">
+<link rel="stylesheet" href="../../app/css/templates/erro.css">
 <div class="row">
     <div class="message-title">
         <h2>Erro</h2>

@@ -22,18 +22,8 @@
 						<td><?php echo $product->getWeight() ?></td>
 						<td><?php echo $product->getColor() ?></td>
 						<td><?php echo $product->getCategoryId() ?></td>
-						<td>
-							<button id="edit" class="fas fa-pencil-alt">
-								<input type="hidden" name="name" value="<?php echo $product->getName() ?>">
-							</button>
-						</td>
-						<td>
-							<form action="../Route/product-delete.php" method="post">
-								<input type="hidden" name="id" value="<?php echo $product->getId() ?>">
-								<input type="hidden" name="name" value="<?php echo $product->getName() ?>">
-								<button class="fas fa-trash-alt"></button>		
-							</form>
-						</td>
+						<td><button id="edit" class="fas fa-pencil-alt"></button></td>
+						<td><button id="delete" class="fas fa-trash-alt"></button></td>
 					</tr>
 				<?php endforeach ?>
 			</tbody>

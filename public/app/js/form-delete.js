@@ -1,5 +1,5 @@
 import {fadeIn, fadeOut} from './helpers/manipulate-form.js';
-import {tbody} from './form-category-edit.js';
+import {tbody} from './form-edit.js';
 // Form delete
 const formDelete = document.getElementById("formDelete");
 // Nome categoria Mensagem deleção

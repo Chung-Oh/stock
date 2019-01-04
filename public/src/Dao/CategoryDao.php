@@ -1,5 +1,4 @@
 <?php 
-
 require_once '../Model/Category.php';
 require_once '../Helpers/user-session.php';
 
