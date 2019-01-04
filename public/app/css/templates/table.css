@@ -55,22 +55,35 @@ td {
 }
 /* Mensagem de Busca que não existe */
 .msg-table-search {
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	height: 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .title-table-search {
-    height: 100%;
-    width: 100%;
-    color: #de2929;
-    text-shadow: 0 0 3px #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	height: 100%;
+	width: 100%;
+	color: #de2929;
+	text-shadow: 0 0 3px #333;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
-/* Para filtrar na Busca */
+/* Filtrar na Busca */
 .invisible {
 	display: none;
+}
+/*** Desk ***/
+@media only screen and (min-width: 100px) {
+	.table-items {
+		width: 100%;
+		box-shadow: 1px 1px 5px #555;
+	}
+}
+/*** Samsung-S5 360px portrait ***/
+@media only screen and (max-width: 360px) and (max-height: 640px) {
+	.table-product {
+		font-size: 78%;
+	}
 }

@@ -10,13 +10,15 @@
 	<link rel="stylesheet" href="../../app/css/reset.css">
 	<link rel="stylesheet" href="../../app/css/base.css">
 	<link rel="stylesheet" href="../../app/css/header.css">
-	<link rel="stylesheet" href="../../app/css/search-box.css">
-	<link rel="stylesheet" href="../../app/css/form.css">
+	<link rel="stylesheet" href="../../app/css/templates/msg-home.css">
+	<link rel="stylesheet" href="../../app/css/templates/main-top.css">
+	<link rel="stylesheet" href="../../app/css/templates/search-box.css">
+	<link rel="stylesheet" href="../../app/css/templates/form-delete.css">
+	<link rel="stylesheet" href="../../app/css/templates/forms-product.css">
+	<link rel="stylesheet" href="../../app/css/templates/forms-category.css">
+	<link rel="stylesheet" href="../../app/css/templates/forms.css">
 	<link rel="stylesheet" href="../../app/css/msg-alert.css">
-	<link rel="stylesheet" href="../../app/css/main-desk.css">
-	<link rel="stylesheet" href="../../app/css/main-tablet.css">
-	<link rel="stylesheet" href="../../app/css/main-mobile.css">
-	<link rel="stylesheet" href="../../app/css/table.css">
+	<link rel="stylesheet" href="../../app/css/templates/table.css">
 	<link rel="stylesheet" href="../../app/css/templates/msg-category-empty.css">
 	<link rel="stylesheet" href="../../app/css/footer.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">

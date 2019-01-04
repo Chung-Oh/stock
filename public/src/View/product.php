@@ -15,7 +15,7 @@ try {
 if (userIsLogged()) : ?>
 
 	<?php require_once 'Templates/header.php' ?>
-	<?php require_once 'Templates/main-product-form-create.php' ?>
+	<?php require_once 'Templates/product-form-create.php' ?>
 	<!-- Aqui Formulários -->
 	<main>
 		<?php showAlert('success'); showAlert('danger') ?>

@@ -1,0 +1,10 @@
+/* Mensagem na Home */
+.msg-home {
+	padding-top: 3.3%;
+}
+/* Parágrafo na Home */
+.col-12 p {
+	font-size: 100%;
+	text-align: center;
+	padding: 2%;
+}

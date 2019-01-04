@@ -1,5 +1,5 @@
 <section class="row">
-	<div class="col-12 table">
+	<div class="col-12">
 		<table class="table-items">
 			<thead>
 				<tr>

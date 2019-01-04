@@ -52,9 +52,6 @@
 	.password {
 		font-size: 150%;
 	}
-	.cel-icon i {
-	    top: 34%;
-	}
 	.btn-primary {
 	    font-size: 119%;
 	}
@@ -66,7 +63,6 @@
 	    font-size: 150%;
 	}
 }
-
 /*** iPed 768px portrait ***/
 @media only screen and (max-device-width: 768px) and (max-device-height: 1024px) {
 	.interface {
@@ -129,9 +125,6 @@
 	.name, 
 	.password {
 		font-size: 150%;
-	} 
-	.cel-icon i {
-	    top: 32%;
 	}
 	.btn-primary {
 	    font-size: 125%;

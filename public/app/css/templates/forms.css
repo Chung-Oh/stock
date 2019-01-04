@@ -1,0 +1,167 @@
+#categoryFormCreate,
+#categoryFormEdit,
+#formDelete,
+#productFormCreate {
+    display: none;
+}
+
+#categoryFormCreate,
+#categoryFormEdit,
+#productFormCreate {
+    position: fixed;
+    width: 50%;
+    top: 30%;
+    left: 25%;
+}
+
+.container {
+    height: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-category,
+.form-product {
+    height: 100%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lavender;
+    border: 1px solid #999;
+    box-shadow: 1px 1px 5px #555;
+}
+
+.form-category form,
+.form-product form {
+    height: 100%;
+    width: 70%;
+}
+
+.form-category input,
+.form-product input {
+    height: 40px;
+    width: 100%;
+    font-size: 100%;
+    font-weight: bold;
+    display: block;
+}
+
+.data {
+    text-align: center;
+}
+/* Select Form Product */
+.data,
+select {
+    font-family: 'Raleway', sans-serif;
+    border: 1px solid #999;
+    transition: .7s;
+}
+
+.data:focus,
+.data:hover,
+select:focus,
+select:hover {
+    box-shadow: 1px 1px 15px #000 inset;
+    transition: .7s;
+}
+
+select {
+    height: 40px;
+    width: 100%;
+    font-size: 110%;
+    font-weight: bold;
+}
+
+.btn-form {
+    background-color: #a2c8ec;
+    border: 1px solid #57a1ea;
+    box-shadow: 0 0 6px #357795;
+    color: black;
+    transition: .7s;
+}
+
+.btn-form:focus,
+.btn-form:hover {
+    background-color: #57a1ea;
+    border: 1px solid #357795;
+    box-shadow: 0 0 10px dodgerblue;
+    transition: .7s;
+}
+/*** Desk ***/
+@media only screen and (min-width: 100px) {
+    .new-item_danger {
+        width: 90%;
+    }
+    .btn-danger {
+        height: 100%;
+        width: 100%;
+        font-size: 100%;
+        font-weight: bold;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #e37777;
+        color: black;
+        border: 1px solid #d65d5d;
+        box-shadow: 0 0 6px #aa7070;
+        border-radius: 5px;
+        padding: 0;
+        transition: .7s;
+    }
+    .btn-danger:focus,
+    .btn-danger:hover {
+        background-color: #f05555;
+        border: 1px solid #da2003;
+        box-shadow: 0 0 10px #f00;
+        transition: .7s;
+    }
+}
+/*** iPad 768px portrait ***/
+@media only screen and (min-height: 1024px) and (max-width: 768px) {
+    #categoryFormCreate, 
+    #categoryFormEdit, 
+    #productFormCreate {
+        width: 60%;
+        left: 20%;
+    }
+}
+/*** Samsung-S5 640px landscape ***/
+@media only screen and (max-width: 640px) and (max-height: 360px) {
+    #categoryFormCreate,
+    #categoryFormEdit,
+    #productFormCreate {
+        width: 70%;
+        top: 27%;
+        left: 15%;
+    }
+    .new-item_danger {
+        width: 90%;
+    }
+    .form-product { 
+        padding: 0;
+    }
+    .form-product input,
+    select {
+        height: 33px;
+    }
+}
+/*** Samsung-S5 360px portrait ***/
+@media only screen and (max-width: 360px) and (max-height: 640px) {
+    #categoryFormCreate,
+    #categoryFormEdit,
+    #productFormCreate {
+        width: 85%;
+        top: 35%;
+        left: 7.5%;
+    }
+    .new-item_danger {
+        width: 90%;
+        font-size: 100%;
+    }
+    select {
+        font-size: 98%;
+    }
+}

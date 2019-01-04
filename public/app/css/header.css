@@ -26,7 +26,7 @@
 .active {
     background-color: dodgerblue;
 }
- /* Caixa de Busca */
+/* Caixa de Busca */
 .page-action:nth-child(4) {
 	width: 35%;
 	padding: 5px 10px;
@@ -34,34 +34,6 @@
 
 .page-action:nth-child(4):hover {
 	background-color: #333;
-}
-
-.search {
-    height: 35px;
-    width: 100%;
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 100%;
-    font-weight: bold;
-    text-align: center;
-    border-radius: 25px;
-    transition: .7s;
-}
-
-.search:focus,
-.search:hover {
-	border-color: dodgerblue;
-    box-shadow: 0 0 1em 0 dodgerblue;
-}
-
-.search:focus + i {
-	color: dodgerblue;
-}
-
-.fas.fa-search {
-    position: absolute;
-    top: 15px;
-    left: 370px;
-    color: #333;
 }
 /* Botão de Sair */
 .page-action:nth-child(5) {

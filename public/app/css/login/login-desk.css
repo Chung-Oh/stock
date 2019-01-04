@@ -85,8 +85,6 @@ h1 {
 		left: 0px;
 	}
 }
-/** Fim da animação **/
-
 /* Alerta */
 [class*="alert-"] {
 	font-family: 'Lucinda', sans-serif;
@@ -169,7 +167,7 @@ tr {
 
 .cel-icon i {
 	position: absolute;
-	top: 32%;
+	top: 34%;
 	left: 7%;
 	padding: .5em .5em;
 	color: #333;
@@ -244,7 +242,6 @@ tr {
 	    top: 22%;
 	}
 }
-
 @media screen and (max-width: 800px) {
 	.alert-danger {
 	    top: 2%;
@@ -253,7 +250,6 @@ tr {
 		width: 60%;
 	}
 }
-
 @media screen and (max-width: 675px) {
 	.title-fly {
 		height: 100%;

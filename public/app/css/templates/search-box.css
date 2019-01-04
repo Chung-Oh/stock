@@ -1,0 +1,62 @@
+/* Caixa no Header */
+.search {
+    height: 35px;
+    width: 100%;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 100%;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 25px;
+    transition: .7s;
+}
+
+.search:focus,
+.search:hover {
+	border-color: dodgerblue;
+    box-shadow: 0 0 1em 0 dodgerblue;
+}
+
+.search:focus + i {
+	color: dodgerblue;
+}
+
+.fas.fa-search {
+    position: absolute;
+    top: 15px;
+    left: 370px;
+    color: #333;
+}
+/* Caixa no Main */
+.search-box {
+	background-color: #333;
+    padding: 10px;
+    margin-bottom: 1em;
+	display: none;
+}
+
+.fas.fa-search {
+    top: 15px;
+    left: 370px;
+}
+/*** Desk ***/
+@media only screen and (max-width: 617px) {
+	.search-box {
+		display: block;
+	}
+}
+/*** Samsung-S5 640px landscape ***/
+@media only screen and (max-width: 640px) and (max-height: 360px) {
+	.search-box {
+		display: none;
+	}
+}
+/*** Samsung-S5 360px portrait ***/
+@media only screen and (max-width: 360px) and (max-height: 640px) {
+	.search-box {
+	    display: block;
+	}
+	.fas.fa-search {
+	    top: 132px;
+	    left: 20px;
+	}
+}

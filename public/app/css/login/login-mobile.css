@@ -76,7 +76,6 @@
 	    font-size: 75%;
 	}
 }
-
 /*** Samsung-S5 360px portrait ***/
 @media only screen and (max-device-width: 360px) and (max-device-height: 640px) {
 	.interface {
@@ -138,6 +137,9 @@
 	.cel-name, 
 	.cel-password {
 		font-size: 75%;
+	}
+	.cel-icon i {
+		top: 33%;
 	}
 	.btn-primary {
 		font-size: 85%;
