@@ -8,7 +8,9 @@ export const btnCancel = document.querySelectorAll(".btn-danger");
 // Form de criação 
 export const formCreate = document.getElementById("formCreate");
 // Input do Form para nova Categoria
-const data = document.querySelector(".data");
+export const data = document.querySelectorAll(".data");
+// Select
+export const select = document.querySelector("select");
 
 if (btnAction && btnCancel) {
 	btnAction.addEventListener("click", () => showForm());
@@ -23,9 +25,16 @@ function showForm() {
 }
 
 function hiddenForm() {
-	data.value = "";
+	data.forEach(d => d.value = "");
+	testSelect();
 	fadeOut(formCreate, 1);
 	setTimeout(() => {
 		fadeIn(btnFormCreate, 1);
 	}, 700);
+}
+
+export function testSelect() {
+	if (select) {
+		select.value = 0;
+	}
 }

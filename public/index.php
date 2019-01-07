@@ -30,13 +30,13 @@ require_once 'src/Helpers/show-alert.php';
 					<tbody class="table-body">
 						<tr>
 							<td class="cel-name cel-icon">
-								<input class="name input-icon" type="text" name="name" placeholder="Usuário" pattern="[a-zA-Z]{4,}" title="Mínimo 4 letras" autocomplete="off" required>
+								<input class="name input-icon" type="text" name="name" placeholder="Usuário" pattern="[a-zA-Z]{4,50}" title="Mín 4 Máx 50 letras. Ex: Bill" autocomplete="off" required>
 								<i class="fas fa-user"></i>
 							</td>
 						</tr>
 						<tr>
 							<td class="cel-password cel-icon">
-								<input class="password input-icon" type="password" name="password" placeholder="Senha" required>
+								<input class="password input-icon" type="password" name="password" placeholder="Senha" pattern="\w{3,50}" title="Mín 3 Máx 50 caracteres. Ex: test123" required>
 								<i class="fas fa-lock"></i>
 							</td>					
 						</tr>
