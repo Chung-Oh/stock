@@ -1,7 +1,7 @@
 <?php 
-require_once 'user-validate.php';
-require_once 'category-validate.php';
-require_once 'product-validate.php';
+require_once 'validate-user.php';
+require_once 'validate-category.php';
+require_once 'validate-product.php';
 /*** Usuário ***/
 function validateLogIn($consult)
 {

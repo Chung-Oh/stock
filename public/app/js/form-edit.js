@@ -1,17 +1,25 @@
 import {btnFormCreate, formCreate, btnCancel} from './form-create.js';
 import {fadeIn, fadeOut} from './helpers/manipulate-form.js';
-// Form edição
-const formEdit = document.getElementById("formEdit");
 // Corpo da Tabela, onde vai escutar os eventos
 export const tbody = document.querySelector("tbody");
-// ID da categoria a ser alterado dentro do Form
-const inputId = document.getElementById("idFormEdit");
-// Nome velho
-const oldName = document.getElementById("oldName");
-// Novo nome no Form
+// Form edição
+const formEdit = document.getElementById("formEdit");
+// Novos dados no Form abaixo
 const newName = document.getElementById("newName");
+const newDesc = document.getElementById("newDesc");
+const newWeight = document.getElementById("newWeight");
+const newColor = document.getElementById("newColor");
+const newCategoryId = document.getElementById("newCategoryId");
+// ID da categoria a ser alterado dentro do Form
+const id = document.getElementById("id");
+// Dados que irão ser editado abaixo
+const oldName = document.getElementById("oldName");
+const oldDesc = document.getElementById("oldDesc");
+const oldWeight = document.getElementById("oldWeight");
+const oldColor = document.getElementById("oldColor");
+const oldCategoryName = document.getElementById("oldCategoryName");
 
-if (tbody) {
+function showForm(typeForm) {
 	btnCancel[1].addEventListener("click", () => hiddenForm());	
 	tbody.addEventListener("click", event => {
 		let target = event.target;
@@ -20,9 +28,7 @@ if (tbody) {
 			fadeOut(btnFormCreate, 1);
 			setTimeout(() => {
 				fadeIn(formEdit, 1);
-				inputId.value = currentTarget.children[0].textContent.trim();
-				oldName.value = currentTarget.children[1].children[0].textContent.trim();
-				newName.value = currentTarget.children[1].children[0].textContent.trim();
+				typeForm(currentTarget);
 			}, 700);
 			fadeOut(formCreate);
 		}
@@ -34,4 +40,32 @@ function hiddenForm() {
 	setTimeout(() => {
 		fadeIn(btnFormCreate, 1);
 	}, 700);
+}
+
+function category(target) {
+	newName.value = target.children[1].children[0].textContent.trim();
+	id.value = target.children[0].textContent.trim();
+	oldName.value = target.children[1].children[0].textContent.trim();
+}
+
+function product(target) {
+	// Abaixo dados a ser editado
+	newName.value = target.children[1].textContent.trim();
+	newDesc.value = target.children[2].textContent.trim();
+	newWeight.value = target.children[3].textContent.trim();
+	newColor.value = target.children[4].textContent.trim();
+	newCategoryId.children[0].innerHTML = target.children[5].outerHTML;
+	// Abaixo dados que está na tabela
+	id.value = target.children[0].textContent.trim();
+	oldName.value = target.children[1].textContent.trim();
+	oldDesc.value = target.children[2].textContent.trim();
+	oldWeight.value = target.children[3].textContent.trim();
+	oldColor.value = target.children[4].textContent.trim();
+	oldCategoryName.value = target.children[5].textContent.trim();
+}
+
+if (tbody.id == "table-category") {
+	showForm(category);
+} else {
+	showForm(product);
 }

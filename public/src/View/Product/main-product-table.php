@@ -7,21 +7,21 @@
 					<th class="order">Nome</th>
 					<th>Descrição</th>
 					<th class="order">Peso</th>
-					<th>Cor</th>
+					<th class="order">Cor</th>
 					<th class="order">Categoria</th>
 					<th>Editar</th>
 					<th>Excluir</th>
 				</tr>
 			</thead>
-			<tbody>
+			<tbody id="table-product">
 				<?php foreach ($products as $product) : ?>
-					<tr>
-						<td id="idProduct"><?php echo $product->getId() ?></td>
-						<td id="nameProduct"><?php echo substr($product->getName(), 0, 50) ?></td>
-						<td><?php echo substr($product->getDesc(), 0, 50) ?></td>
-						<td><?php echo $product->getWeight() ?></td>
-						<td><?php echo $product->getColor() ?></td>
-						<td><?php echo $product->getCategoryId() ?></td>
+					<tr class="info-row">
+						<td class="info-id"><?php echo $product->getId() ?></td>
+						<td class="info-name"><?php echo substr($product->getName(), 0, 50) ?></td>
+						<td class="info-desc"><?php echo substr($product->getDesc(), 0, 50) ?></td>
+						<td class="info-weight"><?php echo $product->getWeight() ?></td>
+						<td class="info-color"><?php echo $product->getColor() ?></td>
+						<td class="info-category-id"><?php echo $product->getCategoryId() ?></td>
 						<td><button id="edit" class="fas fa-pencil-alt"></button></td>
 						<td><button id="delete" class="fas fa-trash-alt"></button></td>
 					</tr>

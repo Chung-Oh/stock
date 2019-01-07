@@ -35,11 +35,13 @@
 @media only screen and (max-width: 640px) and (max-height: 360px) {
 	.product-form-create {
 	    height: 68%;
+	    top: 27%;
 	}
 }
 /*** Samsung-S5 360px portrait ***/
 @media only screen and (max-width: 360px) and (max-height: 640px) {
 	.product-form-create {
 	    height: 52%;
+	    left: 5.5%;
 	}
 }

@@ -1,4 +1,5 @@
 import {fadeIn, fadeOut} from './helpers/manipulate-form.js';
+import {select, testSelect} from './helpers/select.js';
 // Seção callFormCreate
 export const btnFormCreate = document.getElementById("callFormCreate");
 // Botão da seção acima que invoca o Form
@@ -9,8 +10,7 @@ export const btnCancel = document.querySelectorAll(".btn-danger");
 export const formCreate = document.getElementById("formCreate");
 // Input do Form para nova Categoria
 export const data = document.querySelectorAll(".data");
-// Select
-export const select = document.querySelector("select");
+
 
 if (btnAction && btnCancel) {
 	btnAction.addEventListener("click", () => showForm());
@@ -31,10 +31,4 @@ function hiddenForm() {
 	setTimeout(() => {
 		fadeIn(btnFormCreate, 1);
 	}, 700);
-}
-
-export function testSelect() {
-	if (select) {
-		select.value = 0;
-	}
 }

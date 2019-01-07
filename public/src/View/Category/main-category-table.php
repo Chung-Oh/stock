@@ -9,7 +9,7 @@
 					<th>Excluir</th>
 				</tr>
 			</thead>
-			<tbody>
+			<tbody id="table-category">
 				<?php foreach ($categorys as $category) : ?>
 					<tr class="info-row">
 						<td class="info-id"><?php echo $category->getId() ?></td>
