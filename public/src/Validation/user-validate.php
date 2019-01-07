@@ -1,20 +1,20 @@
 <?php 
-require_once 'option.php';
+// require_once 'option.php';
 require_once '../Helpers/user-session.php';
 
-function validateNameLength($consult, $name, $password)
+function validateUserNameLength($consult)
 {
-	if (strlen($name) <= 50) {
-		validatePasswordLength($consult, $password);
+	if (strlen($_POST['name']) <= 50) {
+		validatePasswordLength($consult);
 	} else {
 		$_SESSION['danger'] = 'Nome inválido, acima do exigido. Máximo 50 letras.';
 		header("Location: ../../index.php");
 	}
 }
 
-function validatePasswordLength($consult, $password)
+function validatePasswordLength($consult)
 {
-	if (strlen($password) <= 50) {
+	if (strlen($_POST['password']) <= 50) {
 		validateUserExist($consult);
 	} else {
 		$_SESSION['danger'] = 'Senha inválida, acima do exigido. Máximo 50 letras.';

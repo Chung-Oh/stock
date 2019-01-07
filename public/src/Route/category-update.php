@@ -7,7 +7,7 @@ require_once '../Validation/register.php';
 try {
 	$category = new CategoryDao($_POST['name'], $_POST['id']);
 	$old = new CategoryDao($_POST['oldName'], $_POST['id']);
-	validateUpdateCategory(2, $category, $old, $_POST['name'], $_POST['id']);
+	validateUpdateCategory(2, $category, $old);
 } catch (PDOException $e) {
 	Erro::handler($e);
 	$_SESSION['danger'] = "<span>{$_POST['name']}</span> não foi atualizado";

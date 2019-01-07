@@ -1,23 +1,29 @@
 <?php 
 require_once 'user-validate.php';
 require_once 'category-validate.php';
-
-function validateLogIn($consult, $name, $password)
+require_once 'product-validate.php';
+/*** Usuário ***/
+function validateLogIn($consult)
 {
-	validateNameLength($consult, $name, $password);
+	validateUserNameLength($consult);
+}
+/*** Categoria ***/
+function validateNewCategory($op, $current) 
+{
+	validateCategoryIsNull($op, $current);
 }
 
-function validateNewCategory($op, $current, $name) 
+function validateUpdateCategory($op, $current, $old)
 {
-	validateLength($op, $current, $name);
+	validateCategoryIfExist($op, $current, $old);
 }
 
-function validateUpdateCategory($op, $current, $old, $name, $id)
+function validateDeleteCategory($op, $current)
 {
-	validateIfExist($op, $current, $old, $name, $id);
+	validateCategoryId($op, $current);
 }
-
-function validateDeleteCategory($op, $current, $name, $id)
+/*** Produto ***/
+function validateNewProduct($op, $current)
 {
-	validateId($op, $current, $name, $id);
+	validateProductIfExist($op, $current);
 }

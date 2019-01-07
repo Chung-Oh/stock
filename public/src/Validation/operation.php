@@ -1,5 +1,5 @@
 <?php 
-
+/*** Categoria ***/
 function newCategory($current)
 {
 	if ($current->new()) {
@@ -22,4 +22,12 @@ function deleteCategory($current)
 		$_SESSION['success'] = "<span>{$_POST['name']}</span> removido com sucesso";
 		header("Location: ../View/category.php");
 	}	
+}
+/*** Produto ***/
+function newProduct($current)
+{
+	if ($current->new()) {
+		$_SESSION['success'] = "<span>{$_POST['name']}</span> cadastrado com sucesso";
+		header("Location: ../View/product.php");	
+	}
 }
