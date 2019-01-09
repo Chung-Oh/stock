@@ -1,12 +1,9 @@
-export function fadeIn(element, time) {
-	process(element, time, 0, 100);
-}
+export const fadeIn = (element, time) => process(element, time, 0, 100);
 
-export function fadeOut(element, time) {
-	process(element, time, 100, 0);
-}
+export const fadeOut = (element, time) => process(element, time, 100, 0);
 
-function process(element, time, initial, end) {
+const process = (element, time, initial, end) => {
+	let opc = initial;
 	let increment = 0;
 	if (initial == 0) {
 		increment = 2;
@@ -14,14 +11,10 @@ function process(element, time, initial, end) {
 	} else {
 		increment = -2;
 	}
-
-	let opc = initial;
 	// A mágica acontece aqui, efeito de opacidade e o display NONE no fim
-	let interval = setInterval(() => {
+	const interval = setInterval(() => {
 		if (opc == end) {
-			if (end == 0) {
-				element.style.display = "none";
-			}
+			end == 0 ? element.style.display = "none" : null;
 			clearInterval(interval);
 		} else {
 			opc += increment;
@@ -31,7 +24,7 @@ function process(element, time, initial, end) {
 	}, time * 10);
 }
 
-function testClassName(element) {
+const testClassName = element => {
 	element.className == "row btn" 
 		? element.style.display = "flex" 
 		: element.style.display = "block";	

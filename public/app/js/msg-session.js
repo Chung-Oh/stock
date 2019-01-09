@@ -1,17 +1,11 @@
-import {fadeIn, fadeOut} from './helpers/manipulate-form.js';
+import {fadeIn, fadeOut} from './services/fade-elements.js';
 
-function alertSession() {
+const  alertSession = () => {
 	// Mensagens das sessions
-	let msgDanger = document.querySelector(".alert-danger");
-	let msgSuccess = document.querySelector(".alert-success");
-
-	if (msgDanger) {
-		fadeOut(msgDanger, 15);
-	}
-
-	if (msgSuccess) {
-		fadeOut(msgSuccess, 15);	
-	}	
+	const msgDanger = document.querySelector(".alert-danger");
+	const msgSuccess = document.querySelector(".alert-success");
+	msgDanger ? fadeOut(msgDanger, 15) : null;
+	msgSuccess ? fadeOut(msgSuccess, 15) : null;
 }
 
 alertSession();

@@ -1,20 +1,36 @@
-import {orderById, orderByName} from './helpers/table-order.js';
+import {orderBy} from './helpers/table-order.js';
+// Linhas Tabela
+export const rowsTable = document.querySelectorAll(".info-row");
 // Cabeçalho Tabela onde ordena colunas
 const tbHead = document.querySelectorAll(".order");
-// Coluna ID cabeçalho
+// Coluna cabeçalho abaixo
 const idListens = tbHead[0];
-// Coluna Nome cabeçalho
 const nameListens = tbHead[1];
-// Linhas Tabela
+const weightListens = tbHead[2];
+const colorListens = tbHead[3];
+const categoryListens = tbHead[4];
 
-if (idListens) {
-	idListens.addEventListener("click", () => {
-		orderById();
-	});
-}
+idListens 
+	? idListens.addEventListener("click", () => 
+		orderBy(tbHead, rowsTable, 0))
+	: null;
 
-if (nameListens) {
-	nameListens.addEventListener("click", () => {
-		orderByName();
-	});	
-}
+nameListens 
+	? nameListens.addEventListener("click", () => 
+		orderBy(tbHead, rowsTable, 1))	
+	: null;
+
+weightListens 
+	? weightListens.addEventListener("click", () => 
+		orderBy(tbHead, rowsTable, 3))
+	: null;
+
+colorListens
+	? colorListens.addEventListener("click", () => 
+		orderBy(tbHead, rowsTable, 4))
+	: null;
+
+categoryListens
+	? categoryListens.addEventListener("click", () => 
+		orderBy(tbHead, rowsTable, 5))
+	: null;

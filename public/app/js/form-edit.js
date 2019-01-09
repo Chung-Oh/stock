@@ -1,5 +1,5 @@
-import {btnFormCreate, formCreate, btnCancel} from './form-create.js';
-import {fadeIn, fadeOut} from './helpers/manipulate-form.js';
+import {btnCallFormCreate, formCreate, btnCancel} from './form-create.js';
+import {fadeIn, fadeOut} from './services/fade-elements.js';
 // Corpo da Tabela, onde vai escutar os eventos
 export const tbody = document.querySelector("tbody");
 // Form edição
@@ -19,13 +19,13 @@ const oldWeight = document.getElementById("oldWeight");
 const oldColor = document.getElementById("oldColor");
 const oldCategoryName = document.getElementById("oldCategoryName");
 
-function showForm(typeForm) {
+const showForm = typeForm => {
 	btnCancel[1].addEventListener("click", () => hiddenForm());	
 	tbody.addEventListener("click", event => {
-		let target = event.target;
-		let currentTarget = target.parentNode.parentNode;
+		const target = event.target;
+		const currentTarget = target.parentNode.parentNode;
 		if (target.id == "edit") {
-			fadeOut(btnFormCreate, 1);
+			fadeOut(btnCallFormCreate, 1);
 			setTimeout(() => {
 				fadeIn(formEdit, 1);
 				typeForm(currentTarget);
@@ -35,20 +35,20 @@ function showForm(typeForm) {
 	});		
 }
 
-function hiddenForm() {
+const hiddenForm = () => {
 	fadeOut(formEdit, 1);
 	setTimeout(() => {
-		fadeIn(btnFormCreate, 1);
+		fadeIn(btnCallFormCreate, 1);
 	}, 700);
 }
 
-function category(target) {
+const category = target => {
 	newName.value = target.children[1].children[0].textContent.trim();
 	id.value = target.children[0].textContent.trim();
 	oldName.value = target.children[1].children[0].textContent.trim();
 }
 
-function product(target) {
+const product = target => {
 	// Abaixo dados a ser editado
 	newName.value = target.children[1].textContent.trim();
 	newDesc.value = target.children[2].textContent.trim();
@@ -64,8 +64,14 @@ function product(target) {
 	oldCategoryName.value = target.children[5].textContent.trim();
 }
 
-if (tbody.id == "table-category") {
-	showForm(category);
-} else {
-	showForm(product);
+const pageAnalysis = () => {
+	if (!tbody) {
+		console.log('Desenvolver Dashboard');
+	} else if (tbody.id == "table-category") {
+		showForm(category);
+	} else if (tbody.id == "table-product") {
+		showForm(product);
+	}		
 }
+
+pageAnalysis();
