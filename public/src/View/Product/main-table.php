@@ -21,7 +21,10 @@
 						<td class="info-desc"><?php echo substr($product->getDesc(), 0, 50) ?></td>
 						<td class="info-weight"><?php echo $product->getWeight() ?></td>
 						<td class="info-color"><?php echo $product->getColor() ?></td>
-						<td class="info-category-id"><?php echo $product->getCategoryId() ?></td>
+						<td class="info-category-name"><?php echo $product->getCategoryName() ?></td>
+						<td class="info-category-id" hidden>
+							<input type="hidden" value="<?php echo $product->getCategoryId() ?>">
+						</td>
 						<td><button id="edit" class="fas fa-pencil-alt"></button></td>
 						<td><button id="delete" class="fas fa-trash-alt"></button></td>
 					</tr>

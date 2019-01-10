@@ -13,8 +13,8 @@ class ProductDao
 
 	public static function list()
 	{
-		$query = "SELECT p.id, p.name, p.description, p.weight, p.color, c.name AS category_name
-					FROM products AS p JOIN categorys AS c ON p.category_id = c.id";
+		$query = "SELECT p.id, p.name, p.description, p.weight, p.color, p.category_id, c.name 
+					AS category_name FROM products AS p JOIN categorys AS c ON p.category_id = c.id";
 		$conn = Connection::getConn();
 		$result = $conn->query($query);
 		$list = array();
@@ -22,7 +22,8 @@ class ProductDao
 		foreach ($result->fetchAll() as $product_array) {
 			$product = new Product($product_array['name'], $product_array['description'], 
 				$product_array['weight'], $product_array['color'], 
-					$product_array['category_name'], $product_array['id']);
+					$product_array['category_id'], $product_array['id']);
+			$product->setCategoryName($product_array['category_name']);
 			array_push($list, $product);	
 		}
 		return $list;
@@ -69,6 +70,17 @@ class ProductDao
 		$stmt->bindValue(':weight', $this->product->getWeight());
 		$stmt->bindValue(':color', $this->product->getColor());
 		$stmt->bindValue(':category_id', $this->product->getCategoryId());
+		$result = $stmt->execute();
+		return true;
+	}
+
+	public function delete()
+	{
+		$query = "DELETE FROM products WHERE id = :id AND name = :name";
+		$conn = Connection::getConn();
+		$stmt = $conn->prepare($query);
+		$stmt->bindValue(':id', $this->product->getId());
+		$stmt->bindValue(':name', $this->product->getName());
 		$result = $stmt->execute();
 		return true;
 	}

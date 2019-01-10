@@ -97,10 +97,11 @@ class CategoryDao
 	{
 		if (filter_var($this->category->getId(), FILTER_VALIDATE_REGEXP, 
 				array("options" => array("regexp" => "/(\d)/")))) {
-					$query = "DELETE FROM categorys WHERE id = :id";
+					$query = "DELETE FROM categorys WHERE id = :id AND name = :name";
 					$conn = Connection::getConn();
 					$stmt = $conn->prepare($query);
 					$stmt->bindValue(':id', $this->category->getId());
+					$stmt->bindValue(':name', $this->category->getName());
 					$stmt->execute();
 					return true;			
 		} else {

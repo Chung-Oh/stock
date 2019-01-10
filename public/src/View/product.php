@@ -8,6 +8,9 @@ require_once '../Helpers/show-alert.php';
 try {
 	$categorys = CategoryDao::list();
 	$products = ProductDao::list();
+	// echo '<pre>';
+	// print_r($products);
+	// die();
 } catch (PDOException $e) {
 	Erro::handler($e);
 }
@@ -15,16 +18,16 @@ try {
 if (userIsLogged()) : ?>
 
 	<?php require_once 'Templates/header.php' ?>
-	<?php require_once 'Product/product-form-create.php' ?>
-	<?php require_once 'Product/product-form-edit.php' ?>
-	<!-- Aqui Formulários -->
+	<?php require_once 'Product/form-create.php' ?>
+	<?php require_once 'Product/form-edit.php' ?>
+	<?php require_once 'Product/form-delete.php' ?>
 	<main>
 		<?php showAlert('success'); showAlert('danger') ?>
-		<?php require_once 'Product/main-product-top.php' ?>
+		<?php require_once 'Product/main-top.php' ?>
 		<?php if (count($products) > 0) : ?>
-			<?php require_once 'Product/main-product-table.php' ?>
+			<?php require_once 'Product/main-table.php' ?>
 		<?php else : ?>
-			<?php require_once 'Product/main-product-empty.php' ?>
+			<?php require_once 'Product/main-empty.php' ?>
 		<?php endif ?>
 	</main>
 	<?php require_once 'Templates/footer.php' ?>

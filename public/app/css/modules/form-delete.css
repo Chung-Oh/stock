@@ -16,7 +16,8 @@
 	justify-content: center;
 }
 
-.delete-category {
+.delete-category,
+.delete-product {
 	width: 35%;
 	text-align: center;
 	background-color: lavender;
@@ -96,7 +97,8 @@
 }
 /*** Desk ***/
 @media only screen and (max-width: 617px) {
-	.delete-category {
+	.delete-category,
+	.delete-product {
 		width: 50%;
 	}
 }
@@ -113,7 +115,8 @@
 	    height: 96%;
 	    top: 4.5%;
 	}
-	.delete-category {
+	.delete-category,
+	.delete-product {
 	    width: 50%;
 	}
 }
@@ -122,7 +125,8 @@
 	#formDelete {
 	    top: 12.5%;
 	}
-	.delete-category {
+	.delete-category,
+	.delete-product {
 		width: 60%;
 	}
 }
@@ -132,7 +136,8 @@
 	    height: 93%;
 	    top: 7%;
 	}
-	.delete-category {
+	.delete-category,
+	.delete-product {
 	    width: 75%;
 	}
 }

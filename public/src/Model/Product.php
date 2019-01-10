@@ -8,6 +8,7 @@ class Product
 	private $weight;
 	private $color;
 	private $category_id;
+	private $category_name;
 
 	public function __construct($name, $description, $weight, $color, $category_id, $id = null)
 	{
@@ -74,8 +75,18 @@ class Product
 		return $this->category_id;
 	}
 
-	public function setCategoryId($newCategory)
+	public function setCategoryId($newCategoryId)
 	{
-		$this->category_id = $newCategory;
+		$this->category_id = $newCategoryId;
+	}
+
+	public function getCategoryName()
+	{
+		return $this->category_name;
+	}
+
+	public function setCategoryName($newCategoryName)
+	{
+		$this->category_name = $newCategoryName;
 	}
 }

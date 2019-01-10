@@ -17,7 +17,7 @@ const oldName = document.getElementById("oldName");
 const oldDesc = document.getElementById("oldDesc");
 const oldWeight = document.getElementById("oldWeight");
 const oldColor = document.getElementById("oldColor");
-const oldCategoryName = document.getElementById("oldCategoryName");
+const oldCategoryId = document.getElementById("oldCategoryId");
 
 const showForm = typeForm => {
 	btnCancel[1].addEventListener("click", () => hiddenForm());	
@@ -49,6 +49,7 @@ const category = target => {
 }
 
 const product = target => {
+	console.log(target.children[6]);
 	// Abaixo dados a ser editado
 	newName.value = target.children[1].textContent.trim();
 	newDesc.value = target.children[2].textContent.trim();
@@ -61,7 +62,7 @@ const product = target => {
 	oldDesc.value = target.children[2].textContent.trim();
 	oldWeight.value = target.children[3].textContent.trim();
 	oldColor.value = target.children[4].textContent.trim();
-	oldCategoryName.value = target.children[5].textContent.trim();
+	oldCategoryId.value = target.children[6].children[0].value;
 }
 
 const pageAnalysis = () => {
