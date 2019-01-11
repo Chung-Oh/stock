@@ -27,3 +27,8 @@ function validateNewProduct($op, $current)
 {
 	validateProductIfExist($op, $current);
 }
+
+function validateUpdateProduct($op, $current, $old)
+{
+	validateProductOldIsValid($op, $current, $old);
+}

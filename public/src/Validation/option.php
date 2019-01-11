@@ -5,18 +5,27 @@ function option($op, $current)
 {
 	switch ($op) {
 		/*** Categoria ***/
-		case '1':
+		case 1:
+			loadCategory($current);
+			break;
+		case 2:
 			newCategory($current);
 			break;
-		case '2':
+		case 3:
 			updateCategory($current);
 			break;
-		case '3':
+		case 4:
 			deleteCategory($current);
 			break;
 		/*** Produto ***/
-		case '4':
+		case 5:
 			newProduct($current);
+			break;
+		case 6:
+			updateProduct($current);
+			break;
+		case 7:
+			deleteProduct($current);
 			break;
 	}
 }

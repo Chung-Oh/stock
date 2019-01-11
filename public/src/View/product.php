@@ -8,9 +8,6 @@ require_once '../Helpers/show-alert.php';
 try {
 	$categorys = CategoryDao::list();
 	$products = ProductDao::list();
-	// echo '<pre>';
-	// print_r($products);
-	// die();
 } catch (PDOException $e) {
 	Erro::handler($e);
 }

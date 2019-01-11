@@ -1,6 +1,16 @@
 <?php 
 require_once 'option.php';
 
+function validateProductOldIsValid($op, $current, $old)
+{
+	if ($old->verifyProductExist() && is_numeric($_POST['id'])) {
+		validateProductIfExist($op, $current);
+	} else {
+		$_SESSION['danger'] = "Formulário <span>violado,</span> produto não existe no sistema";
+		header("Location: ../View/product.php");		
+	}
+}
+
 function validateProductIfExist($op, $current)
 {
 	if (!$current->verifyProductExist()) {
@@ -100,7 +110,7 @@ function validateProductColorLength($op, $current)
 		header("Location: ../View/product.php");	
 	}
 }
-// Verifica se é numérico
+// Verifica se Categoria é numérico
 function validateProductCategoryId($op, $current)
 {
 	if (is_numeric($_POST['category_id'])) {
@@ -108,5 +118,15 @@ function validateProductCategoryId($op, $current)
 	} else {
 		$_SESSION['danger'] = "<span>Categoria</span> não conrresponde. Formulário <span>violado</span>";
 		header("Location: ../View/product.php");
+	}
+}
+// Remoção
+function validateProductToRemove($op, $current)
+{
+	if ($current->verifyProductExist()) {
+		validateProductCategoryId($op, $current);
+	} else {
+		$_SESSION['danger'] = "Formulário <span>violado,</span> não foi possível remover";
+		header("Location: ../View/product.php");		
 	}
 }

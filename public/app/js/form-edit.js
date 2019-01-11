@@ -49,14 +49,14 @@ const category = target => {
 }
 
 const product = target => {
-	console.log(target.children[6]);
 	// Abaixo dados a ser editado
 	newName.value = target.children[1].textContent.trim();
 	newDesc.value = target.children[2].textContent.trim();
 	newWeight.value = target.children[3].textContent.trim();
 	newColor.value = target.children[4].textContent.trim();
-	newCategoryId.children[0].innerHTML = target.children[5].outerHTML;
-	// Abaixo dados que está na tabela
+	newCategoryId.children[0].textContent = target.children[5].textContent.trim();
+	// Abaixo coloca o Value da categoria na tag option
+	newCategoryId.children[0].setAttribute("value",target.children[6].children[0].value);
 	id.value = target.children[0].textContent.trim();
 	oldName.value = target.children[1].textContent.trim();
 	oldDesc.value = target.children[2].textContent.trim();
