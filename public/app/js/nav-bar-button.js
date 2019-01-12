@@ -1,4 +1,4 @@
-import {fadeIn, fadeOut} from './services/fade-elements.js';
+import {fadeIn, fadeOut} from './helpers/fade-elements.js';
 /* Barra navegação Mobile */
 const btn = document.querySelector(".icon");
 const navBar = document.getElementById("topNavResponsive");

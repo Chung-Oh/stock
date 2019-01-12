@@ -1,4 +1,4 @@
-import {fadeIn, fadeOut} from './services/fade-elements.js';
+import {fadeIn, fadeOut} from './helpers/fade-elements.js';
 import {tbody} from './form-edit.js';
 // Form delete
 const formDelete = document.getElementById("formDelete");
@@ -41,11 +41,11 @@ const product = () => {
 					fadeIn(formDelete, 1);
 					msgDelete.innerHTML = currentTarget.children[1].textContent.trim();
 					idDelete.value = currentTarget.children[0].textContent.trim();
-					nameDelete.value = currentTarget.children[1].textContent.trim();
-					descFormDelete.value = currentTarget.children[2].textContent.trim();
-					weightFormDelete.value = currentTarget.children[3].textContent.trim();
-					colorFormDelete.value = currentTarget.children[4].textContent.trim();
-					categoryIdFormDelete.value = currentTarget.children[6].children[0].value;
+					nameDelete.value = currentTarget.children[2].textContent.trim();
+					descFormDelete.value = currentTarget.children[4].textContent.trim();
+					weightFormDelete.value = currentTarget.children[5].textContent.trim();
+					colorFormDelete.value = currentTarget.children[6].textContent.trim();
+					categoryIdFormDelete.value = currentTarget.children[8].children[0].value;
 					formDelete.style.display="flex";
 				}, 700);
 			}})

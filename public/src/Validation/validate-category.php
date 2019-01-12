@@ -4,11 +4,23 @@ require_once 'option.php';
 function validateCategoryIfExist($op, $current, $old)
 {
 	if ($old->verifyCategoryExist() && is_numeric($_POST['id'])) {
-		validateCategoryIsNull($op, $current);
+		validateCategorySpecialChars($op, $current);
 	} else {
 		$_SESSION['danger'] = "Formulário <span>violado</span>, categoria não conrresponde com o sistema";
 		header("Location: ../View/category.php");
 	}
+}
+// Filtrar caracteres epeciais
+function validateCategorySpecialChars($op, $current)
+{
+	if (filter_var($_POST['name'], 
+				FILTER_VALIDATE_REGEXP, array("options" => 
+					array("regexp" => "/^([\w\s\dáâéêíóôú].{0,50})/")))) {
+						validateCategoryIsNull($op, $current);	
+		} else {
+			$_SESSION['danger'] = "<span>Categoria</span> não conrresponde como exigido";
+			header("Location: ../View/category.php");
+		}
 }
 
 function validateCategoryIsNull($op, $current)

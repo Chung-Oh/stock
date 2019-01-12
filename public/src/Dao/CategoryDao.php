@@ -60,53 +60,33 @@ class CategoryDao
 
 	public function new()
 	{
-		if (filter_var($this->category->getName(), 
-				FILTER_VALIDATE_REGEXP, array("options" => 
-					array("regexp" => "/^([A-Z][\w\s\dáâéêíóôú].{0,50})/")))) {
-						$query = "INSERT INTO categorys (name) VALUES (:name)";
-						$conn = Connection::getConn();
-						$stmt = $conn->prepare($query);
-						$stmt->bindValue(':name', $this->category->getName());
-						$stmt->execute();
-						return true;			
-		} else {
-			$_SESSION['danger'] = "<span>Categoria</span> não conrresponde como exigido";
-			header("Location: ../View/category.php");
-		}
+		$query = "INSERT INTO categorys (name) VALUES (:name)";
+		$conn = Connection::getConn();
+		$stmt = $conn->prepare($query);
+		$stmt->bindValue(':name', $this->category->getName());
+		$stmt->execute();
+		return true;
 	}
 
 	public function update()
 	{
-		if (filter_var($this->category->getName(), 
-				FILTER_VALIDATE_REGEXP, 
-					array("options" => array("regexp" => "/^([A-Z][\w\s\dáâéêíóôú].{0,50})/")))) {
-						$query = "UPDATE categorys SET name = :name WHERE id = :id";
-						$conn = Connection::getConn();
-						$stmt = $conn->prepare($query);
-						$stmt->bindValue(':id', $this->category->getId());
-						$stmt->bindValue(':name', $this->category->getName());
-						$newName = $stmt->execute();
-						return $newName;			
-		} else {
-			$_SESSION['danger'] = "<span>Categoria</span> não conrresponde como exigido";
-			header("Location: ../View/category.php");
-		}
+		$query = "UPDATE categorys SET name = :name WHERE id = :id";
+		$conn = Connection::getConn();
+		$stmt = $conn->prepare($query);
+		$stmt->bindValue(':id', $this->category->getId());
+		$stmt->bindValue(':name', $this->category->getName());
+		$newName = $stmt->execute();
+		return $newName;			
 	}
 
 	public function delete()
 	{
-		if (filter_var($this->category->getId(), FILTER_VALIDATE_REGEXP, 
-				array("options" => array("regexp" => "/(\d)/")))) {
-					$query = "DELETE FROM categorys WHERE id = :id AND name = :name";
-					$conn = Connection::getConn();
-					$stmt = $conn->prepare($query);
-					$stmt->bindValue(':id', $this->category->getId());
-					$stmt->bindValue(':name', $this->category->getName());
-					$stmt->execute();
-					return true;			
-		} else {
-			$_SESSION['danger'] = "<span>Categoria</span> não pode ser removida";
-			header("Location: ../View/category.php");
-		}
+		$query = "DELETE FROM categorys WHERE id = :id AND name = :name";
+		$conn = Connection::getConn();
+		$stmt = $conn->prepare($query);
+		$stmt->bindValue(':id', $this->category->getId());
+		$stmt->bindValue(':name', $this->category->getName());
+		$stmt->execute();
+		return true;
 	}
 }

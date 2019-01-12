@@ -13,7 +13,7 @@ try {
 		afterFirst($_POST['color']), 
 		$_POST['category_id']
 	);
-	validateNewProduct(5, $product);
+	registerNewProduct(5, $product);
 } catch (PDOException $e) {
 	Erro::handler($e);
 	$_SESSION['danger'] = "<span>{$_POST['name']}</span> não foi cadastrado";

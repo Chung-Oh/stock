@@ -13,7 +13,7 @@ try {
 		$_POST['category_id'], 
 		$_POST['id']
 	);
-	validateProductToRemove(7, $product);
+	registerDeleteProduct(7, $product);
 } catch (PDOException $e) {
 	Erro::handler($e);
 	$_SESSION['danger'] = "<span>{$_POST['name']}</span> não foi removido";

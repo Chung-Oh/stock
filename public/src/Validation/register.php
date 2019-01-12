@@ -3,32 +3,37 @@ require_once 'validate-user.php';
 require_once 'validate-category.php';
 require_once 'validate-product.php';
 /*** Usuário ***/
-function validateLogIn($consult)
+function registerLogIn($consult)
 {
 	validateUserNameLength($consult);
 }
 /*** Categoria ***/
-function validateNewCategory($op, $current) 
+function registerNewCategory($op, $current) 
 {
 	validateCategoryIsNull($op, $current);
 }
 
-function validateUpdateCategory($op, $current, $old)
+function registerUpdateCategory($op, $current, $old)
 {
 	validateCategoryIfExist($op, $current, $old);
 }
 
-function validateDeleteCategory($op, $current)
+function registerDeleteCategory($op, $current)
 {
 	validateCategoryId($op, $current);
 }
 /*** Produto ***/
-function validateNewProduct($op, $current)
+function registerNewProduct($op, $current)
 {
 	validateProductIfExist($op, $current);
 }
 
-function validateUpdateProduct($op, $current, $old)
+function registerUpdateProduct($op, $current, $old)
 {
 	validateProductOldIsValid($op, $current, $old);
+}
+
+function registerDeleteProduct($op, $current)
+{
+	validateProductToRemove($op, $current);
 }

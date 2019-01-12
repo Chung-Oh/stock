@@ -6,7 +6,7 @@ require_once '../Validation/register.php';
 
 try {
 	$category = new CategoryDao($_POST['name'], $_POST['id']);
-	validateDeleteCategory(4, $category);
+	registerDeleteCategory(4, $category);
 } catch (PDOException $e) {
 	Erro::handler($e);
 	$_SESSION['danger'] = "<span>{$_POST['name']}</span> não foi removido";

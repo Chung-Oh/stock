@@ -1,4 +1,4 @@
-import {fadeIn, fadeOut} from './services/fade-elements.js';
+import {fadeIn, fadeOut} from './helpers/fade-elements.js';
 import {select, testSelect} from './helpers/select.js';
 // Seção callFormCreate, botão chama Form create
 export const btnCallFormCreate = document.getElementById("callFormCreate");

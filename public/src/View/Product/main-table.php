@@ -17,8 +17,10 @@
 				<?php foreach ($products as $product) : ?>
 					<tr class="info-row">
 						<td class="info-id"><?php echo $product->getId() ?></td>
-						<td class="info-name"><?php echo substr($product->getName(), 0, 50) ?></td>
-						<td class="info-desc"><?php echo substr($product->getDesc(), 0, 50) ?></td>
+						<td class="info-name"><?php echo customName($product->getName()) ?></td>
+						<td class="info-name" hidden><?php echo $product->getName() ?></td>
+						<td class="info-desc"><?php echo customName($product->getDesc()) ?></td>
+						<td class="info-desc" hidden><?php echo $product->getDesc() ?></td>
 						<td class="info-weight"><?php echo $product->getWeight() ?></td>
 						<td class="info-color"><?php echo $product->getColor() ?></td>
 						<td class="info-category-name"><?php echo $product->getCategoryName() ?></td>

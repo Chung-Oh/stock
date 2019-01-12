@@ -3,7 +3,7 @@
 function showAlert($type)
 {
 	if (isset($_SESSION[$type])) {?>
-		<p class="alert-<?= $type ?>"><?= $_SESSION[$type] ?></p>
+		<p class="alert-<?php echo $type ?>"><?php echo $_SESSION[$type] ?></p>
 		<?php unset($_SESSION[$type]);	
 	}
 }

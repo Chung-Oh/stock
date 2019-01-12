@@ -1,4 +1,4 @@
-import {messageTableEmpty} from './msg-table-empty.js';
+import {messageTableEmpty} from './helpers/msg-table-empty.js';
 import {rowsTable} from './table-listens.js';
 
 const inputs = document.querySelectorAll(".search");

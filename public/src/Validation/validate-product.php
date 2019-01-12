@@ -14,11 +14,23 @@ function validateProductOldIsValid($op, $current, $old)
 function validateProductIfExist($op, $current)
 {
 	if (!$current->verifyProductExist()) {
-		validateProductNameIsNull($op, $current);
+		validateProductSpecialChars($op, $current);
 	} else {
 		$_SESSION['danger'] = "Esse <span>produto</span> já existe no sistema";
 		header("Location: ../View/product.php");		
 	}
+}
+// Filtrar caracteres epeciais
+function validateProductSpecialChars($op, $current)
+{
+	if (filter_var($_POST['name'], 
+				FILTER_VALIDATE_REGEXP, array("options" => 
+					array("regexp" => "/^([\w\s\dáâãéêíóõôúç].{0,50})/")))) {
+						validateProductNameIsNull($op, $current);	
+		} else {
+			$_SESSION['danger'] = "<span>Produto</span> não conrresponde como exigido";
+			header("Location: ../View/product.php");
+		}
 }
 // Verificar campo vazio
 function validateProductNameIsNull($op, $current)

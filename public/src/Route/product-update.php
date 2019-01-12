@@ -22,7 +22,16 @@ try {
 		$_POST['oldCategoryId'], 
 		$_POST['id']
 	);
-	validateUpdateProduct(6, $product, $old);
+
+	// echo '<pre>';
+	// echo 'NOVO<br>';
+	// print_r($product);
+	// echo '<br>==========================================<br>';
+	// echo 'VELHO<br>';
+	// print_r($old);
+	// die();
+
+	registerUpdateProduct(6, $product, $old);
 } catch (PDOException $e) {
 	Erro::handler($e);
 	$_SESSION['danger'] = "<span>{$_POST['name']}</span> não foi atualizado";

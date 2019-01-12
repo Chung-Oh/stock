@@ -5,7 +5,7 @@ require_once '../Validation/register.php';
 
 try {
 	$consult = new UserDao($_POST['name'], $_POST['password']);
-	validateLogIn($consult);
+	registerLogIn($consult);
 } catch (PDOException $e) {
 	Erro::handler($e);
 }
