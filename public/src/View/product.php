@@ -3,10 +3,12 @@ require_once '../global.php';
 require_once '../Dao/CategoryDao.php';
 require_once '../Dao/ProductDao.php';
 require_once '../Helpers/convert.php';
-require_once '../Helpers/user-session.php';
 require_once '../Helpers/show-alert.php';
+require_once '../Helpers/user-session.php';
+require_once '../Helpers/category-session.php';
 
 try {
+	cleanSessionCategory();
 	$categorys = CategoryDao::list();
 	$products = ProductDao::list();
 } catch (PDOException $e) {

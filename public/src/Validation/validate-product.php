@@ -105,7 +105,7 @@ function validateProductDescLength($op, $current)
 
 function validateProductWeightLength($op, $current)
 {
-	if (strlen($_POST['weight']) <= 100) {
+	if (strlen($_POST['weight']) <= 50) {
 		validateProductColorLength($op, $current);
 	} else {
 		$_SESSION['danger'] = "<span>Peso</span> acima do exigido, máximo 100 caracteres";

@@ -8,6 +8,11 @@ function registerLogIn($consult)
 	validateUserNameLength($consult);
 }
 /*** Categoria ***/
+function registerSelectCategory($op, $current)
+{
+	validateCategoryIdSelect($op, $current);
+}
+
 function registerNewCategory($op, $current) 
 {
 	validateCategoryIsNull($op, $current);

@@ -1,10 +1,11 @@
 <?php 
+require_once 'ProductDao.php';
 require_once '../Model/Category.php';
-require_once '../Helpers/user-session.php';
 
 class CategoryDao
 {
 	private $category;
+	public $products;
 
 	public function __construct($name, $id = null)
 	{
@@ -24,7 +25,7 @@ class CategoryDao
 		return $list;
 	}
 	
- 	public function load($id)
+ 	public static function load($id)
 	{
 		$query = "SELECT id, name FROM categorys WHERE id = :id";
 		$conn = Connection::getConn();
@@ -32,7 +33,14 @@ class CategoryDao
 		$stmt->bindValue(':id', $id);
 		$stmt->execute();
 		$result = $stmt->fetch();
-		return $result;
+		$category = new Category($result['name'], $result['id']);
+		return $category;
+	}
+
+	public function loadDetails()
+	{
+		$this->products = ProductDao::load($this->category->getId());
+		return $this;
 	}
 
 	public function verifyNameExist()
@@ -64,8 +72,8 @@ class CategoryDao
 		$conn = Connection::getConn();
 		$stmt = $conn->prepare($query);
 		$stmt->bindValue(':name', $this->category->getName());
-		$stmt->execute();
-		return true;
+		$result = $stmt->execute();
+		return $result;
 	}
 
 	public function update()
@@ -86,7 +94,7 @@ class CategoryDao
 		$stmt = $conn->prepare($query);
 		$stmt->bindValue(':id', $this->category->getId());
 		$stmt->bindValue(':name', $this->category->getName());
-		$stmt->execute();
-		return true;
+		$result = $stmt->execute();
+		return $result;
 	}
 }

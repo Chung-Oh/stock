@@ -2,7 +2,6 @@
 require_once '../global.php';
 require_once '../Dao/ProductDao.php';
 require_once '../Helpers/convert.php';
-require_once '../Helpers/user-session.php';
 require_once '../Validation/register.php';
 
 try {
@@ -22,18 +21,9 @@ try {
 		$_POST['oldCategoryId'], 
 		$_POST['id']
 	);
-
-	// echo '<pre>';
-	// echo 'NOVO<br>';
-	// print_r($product);
-	// echo '<br>==========================================<br>';
-	// echo 'VELHO<br>';
-	// print_r($old);
-	// die();
-
 	registerUpdateProduct(6, $product, $old);
 } catch (PDOException $e) {
-	Erro::handler($e);
+	// Erro::handler($e);
 	$_SESSION['danger'] = "<span>{$_POST['name']}</span> não foi atualizado";
 	header("Location: ../View/product.php");
 }

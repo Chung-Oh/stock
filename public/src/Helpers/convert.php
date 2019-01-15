@@ -12,10 +12,10 @@ function afterFirst($target)
 	return $first .= $afterFirst;
 }
 
-function customName($target)
+function customString($target, $length)
 {
-	if (strlen($target) > 50) {
-		$current = substr($target, 0, 50);
+	if (strlen($target) > $length) {
+		$current = substr($target, 0, $length);
 		$current .= "...";
 		return $current;
 	} else {

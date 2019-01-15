@@ -1,6 +1,5 @@
 <?php 
 require_once '../Model/Product.php';
-require_once '../Helpers/user-session.php';
 
 class ProductDao
 {
@@ -18,27 +17,44 @@ class ProductDao
 		$conn = Connection::getConn();
 		$result = $conn->query($query);
 		$list = array();
-
 		foreach ($result->fetchAll() as $product_array) {
-			$product = new Product($product_array['name'], $product_array['description'], 
-				$product_array['weight'], $product_array['color'], 
-				$product_array['category_id'], $product_array['id']);
+			$product = new Product(
+				$product_array['name'], 
+				$product_array['description'], 
+				$product_array['weight'], 
+				$product_array['color'], 
+				$product_array['category_id'], 
+				$product_array['id']
+			);
 			$product->setCategoryName($product_array['category_name']);
 			array_push($list, $product);	
 		}
 		return $list;
 	}
 
-	public function load($id)
+	public static function load($category_id)
 	{
-		$query = "SELECT p.id, p.name, p.description, p.weight, p.color, c.name AS category_name 
-			FROM products AS p JOIN categorys AS c ON p.category_id = c.id WHERE p.id = :id";
+		$query = "SELECT p.id, p.name, p.description, p.weight, p.color, p.category_id, c.name AS category_name 
+			FROM products AS p JOIN categorys AS c ON p.category_id = c.id WHERE c.id = :category_id";
 		$conn = Connection::getConn();
 		$stmt = $conn->prepare($query);
-		$stmt->bindValue(':id', $id);
+		$stmt->bindValue(':category_id', $category_id);
 		$stmt->execute();
-		$result = $stmt->fetch();
-		return $result;
+		$result = $stmt->fetchAll();
+		$list = array();
+		foreach($result as $product_array) {
+			$product = new Product(
+				$product_array['name'], 
+				$product_array['description'], 
+				$product_array['weight'], 
+				$product_array['color'], 
+				$product_array['category_id'], 
+				$product_array['id']
+			);
+			$product->setCategoryName($product_array['category_name']);
+			array_push($list, $product);	
+		}
+		return $list;
 	}
 
 	public function verifyProductExist()

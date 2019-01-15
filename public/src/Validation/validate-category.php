@@ -1,12 +1,12 @@
 <?php
 require_once 'option.php';
-
+// Abaixo para adição e edição
 function validateCategoryIfExist($op, $current, $old)
 {
 	if ($old->verifyCategoryExist() && is_numeric($_POST['id'])) {
 		validateCategorySpecialChars($op, $current);
 	} else {
-		$_SESSION['danger'] = "Formulário <span>violado</span>, categoria não conrresponde com o sistema";
+		$_SESSION['danger'] = "Formulário <span>violado,</span> categoria não conrresponde com o sistema";
 		header("Location: ../View/category.php");
 	}
 }
@@ -15,12 +15,12 @@ function validateCategorySpecialChars($op, $current)
 {
 	if (filter_var($_POST['name'], 
 				FILTER_VALIDATE_REGEXP, array("options" => 
-					array("regexp" => "/^([\w\s\dáâéêíóôú].{0,50})/")))) {
+					array("regexp" => "/^([\w\s\dáâãéêíóõôúç].{0,50})/")))) {
 						validateCategoryIsNull($op, $current);	
-		} else {
-			$_SESSION['danger'] = "<span>Categoria</span> não conrresponde como exigido";
-			header("Location: ../View/category.php");
-		}
+	} else {
+		$_SESSION['danger'] = "<span>Categoria</span> não conrresponde como exigido";
+		header("Location: ../View/category.php");
+	}
 }
 
 function validateCategoryIsNull($op, $current)
@@ -50,6 +50,25 @@ function validateCategoryName($op, $current)
 	} else {
 		$_SESSION['danger'] = "<span>{$_POST['name']}</span> já existe no sistema";
 		header("Location: ../View/category.php");
+	}
+}
+// Abaixo para seleção
+function validateCategoryIdSelect($op, $current)
+{
+	if (is_numeric($_GET['id'])) {
+		validateCategoryIfDependency($op, $current);
+	} else {
+		$_SESSION['danger'] = "Formulário <span>violado,</span> categoria não conrresponde com o sistema";
+		header("Location: ../../View/category.php");
+	}
+}
+
+function validateCategoryIfDependency($op, $current)
+{
+	if (empty(ProductDao::load($current)) != 1) {
+		option($op, $current);
+	} else {
+		header("Location: ../../View/category-details.php");
 	}
 }
 // Abaixo para Remoção

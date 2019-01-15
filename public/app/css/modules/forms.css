@@ -166,4 +166,7 @@ select > option:first-child {
         width: 90%;
         font-size: 100%;
     }
+    select {
+        font-size: 100%;
+    }
 }

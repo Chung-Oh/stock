@@ -1,8 +1,10 @@
 import {fadeIn, fadeOut} from './helpers/fade-elements.js';
-/* Barra navegação Mobile */
+import {msgDanger, msgSuccess, screenHeight} from './msg-session.js';
+// Barra navegação Mobile
 const btn = document.querySelector(".icon");
 const navBar = document.getElementById("topNavResponsive");
 const main = document.querySelector("main");
+// Ícone no input dentro do Main
 const iconSearch = document.querySelector(".icon-search");
 
 const topNavAnimation = () => {	
@@ -19,15 +21,19 @@ const topNavAnimation = () => {
 
 const iconTop = () => {
 	if (iconSearch) {
-		fadeIn(iconSearch, 2);
-		iconSearch.style.top = "264px";			
+		if (screenHeight != 657) {
+			fadeIn(iconSearch, 2);
+			iconSearch.style.top = "264px";						
+		}
 	}
 }
 
 const iconDown = () => {
 	if (iconSearch) {
-		fadeIn(iconSearch, 4);
-		iconSearch.style.top = "132px";			
+		if (screenHeight != 657) {
+			fadeIn(iconSearch, 4);
+			iconSearch.style.top = "132px";						
+		}
 	}
 }
 

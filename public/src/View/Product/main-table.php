@@ -16,17 +16,18 @@
 			<tbody id="table-product">
 				<?php foreach ($products as $product) : ?>
 					<tr class="info-row">
-						<td class="info-id"><?php echo $product->getId() ?></td>
-						<td class="info-name"><?php echo customName($product->getName()) ?></td>
-						<td class="info-name" hidden><?php echo $product->getName() ?></td>
-						<td class="info-desc"><?php echo customName($product->getDesc()) ?></td>
-						<td class="info-desc" hidden><?php echo $product->getDesc() ?></td>
-						<td class="info-weight"><?php echo $product->getWeight() ?></td>
-						<td class="info-color"><?php echo $product->getColor() ?></td>
-						<td class="info-category-name"><?php echo $product->getCategoryName() ?></td>
-						<td class="info-category-id" hidden>
+						<td class="info-id"><?php echo $product->getId() ?></td><!-- 0 -->
+						<td class="info-name"><?php echo $product->getName() ?></td><!-- 1 -->
+						<td class="info-desc"><?php echo customString($product->getDesc(), 50) ?></td><!-- 2 -->
+						<td class="info-weight"><?php echo $product->getWeight() ?></td><!-- 3 -->
+						<td class="info-color"><?php echo $product->getColor() ?></td><!-- 4 -->
+						<td class="info-category-name"><?php echo customString($product->getCategoryName(), 25) ?></td><!-- 5 -->
+						<!-- Abaixo para Form -->
+						<td class="info-desc" hidden><?php echo $product->getDesc() ?></td><!-- 6 -->
+						<td class="info-category-id" hidden><!-- 7 -->
 							<input type="hidden" value="<?php echo $product->getCategoryId() ?>">
 						</td>
+						<!-- Fim -->
 						<td><button id="edit" class="fas fa-pencil-alt"></button></td>
 						<td><button id="delete" class="fas fa-trash-alt"></button></td>
 					</tr>

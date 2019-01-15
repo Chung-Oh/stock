@@ -36,12 +36,15 @@
 
 .fas.fa-search {
     top: 15px;
-    left: 370px;
+    left: 340px;
 }
 /*** Desk ***/
 @media only screen and (max-width: 617px) {
 	.search-box {
 		display: block;
+	}
+	.fas.fa-search {
+	    display: none;
 	}
 }
 /*** Samsung-S5 640px landscape ***/
@@ -56,6 +59,7 @@
 	    display: block;
 	}
 	.fas.fa-search {
+	    display: block;
 	    top: 132px;
 	    left: 20px;
 	}

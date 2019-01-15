@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-	<title>Controle Estoque</title>
+	<title>StockSystem</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -28,7 +28,7 @@
 <body>
 	<header id="topNavResponsive" class="top-nav">
 		<nav>
-			<a href="../View/home.php" class="active">Controle Estoque</a>
+			<a href="../View/home.php" class="active">StockSystem</a>
 			<a class="page-action" href="category.php">Categoria</a>
 			<a class="page-action" href="product.php">Produto</a>
 			<a class="page-action">

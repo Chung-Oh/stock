@@ -5,7 +5,7 @@ require_once 'src/Helpers/show-alert.php';
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-	<title>Controle Estoque</title>
+	<title>StockSystem</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" href="favicon.ico" type="image/x-icon">

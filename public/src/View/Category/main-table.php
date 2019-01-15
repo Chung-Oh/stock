@@ -14,7 +14,7 @@
 					<tr class="info-row">
 						<td class="info-id"><?php echo $category->getId() ?></td>
 						<td class="info-name">
-							<a href="../Route/category-select.php/?id=<?php echo $category->getName() ?>"><?php echo substr($category->getName(), 0, 50) ?></a>
+							<a href="../Route/category-select.php/?id=<?php echo $category->getId() ?>"><?php echo $category->getName() ?></a>
 						</td>
 						<td><button id="edit" class="fas fa-pencil-alt"></button></td>
 						<td><button id="delete" class="fas fa-trash-alt"></button></td>

@@ -1,6 +1,6 @@
 <?php 
-require_once '../Helpers/user-session.php';
 require_once '../Helpers/show-alert.php';
+require_once '../Helpers/user-session.php';
 
 if (userIsLogged()) : ?>
 
@@ -9,7 +9,7 @@ if (userIsLogged()) : ?>
 		<?php showAlert('success'); showAlert('danger') ?>
 		<div class="row msg-home">
 			<div class="col-12">
-				<h2>Bem-vindo ao Sistema de Controle de Estoque.</h2>
+				<h2>Bem-vindo ao StockSystem.</h2>
 				<p>Selecione uma das opções do Menu para começar a usar o Sistema.</p>
 			</div>
 		</div>

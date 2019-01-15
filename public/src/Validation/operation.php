@@ -1,18 +1,20 @@
 <?php 
+require_once '../Helpers/convert.php';
+require_once '../Helpers/category-session.php';
 /*** Categoria ***/
 function loadCategory($current)
 {
-	if ($current->load()) {
-		echo 'Desenvolver Página de Detalhes';
-		print_r($current);
-		die();
-	} 	
+	$category = CategoryDao::load($current);
+	setCategory($category->getId(), $category->getName());
+	$_SESSION['success'] = "Segue abaixo lista detalhada de <span>{$category->getName()}</span>";
+	header("Location: ../../View/category-details.php"); 	
 }
 
 function newCategory($current)
 {
 	if ($current->new()) {
-		$_SESSION['success'] = "<span>{$_POST['name']}</span> cadastrado com sucesso";
+		$name = customString($_POST['name'], 20);
+		$_SESSION['success'] = "<span>{$name}</span> cadastrado com sucesso";
 		header("Location: ../View/category.php");
 	} 	
 }
@@ -20,7 +22,8 @@ function newCategory($current)
 function updateCategory($current)
 {
 	if ($current->update()) {
-		$_SESSION['success'] = "<span>{$_POST['name']}</span> alterado com sucesso";
+		$name = customString($_POST['name'], 20);
+		$_SESSION['success'] = "<span>{$name}</span> alterado com sucesso";
 		header("Location: ../View/category.php");
 	}
 }
@@ -28,7 +31,8 @@ function updateCategory($current)
 function deleteCategory($current)
 {
 	if ($current->delete()) {
-		$_SESSION['success'] = "<span>{$_POST['name']}</span> removido com sucesso";
+		$name = customString($_POST['name'], 20);
+		$_SESSION['success'] = "<span>{$name}</span> removido com sucesso";
 		header("Location: ../View/category.php");
 	}	
 }
@@ -36,7 +40,8 @@ function deleteCategory($current)
 function newProduct($current)
 {
 	if ($current->new()) {
-		$_SESSION['success'] = "<span>{$_POST['name']}</span> cadastrado com sucesso";
+		$name = customString($_POST['name'], 20);
+		$_SESSION['success'] = "<span>{$name}</span> cadastrado com sucesso";
 		header("Location: ../View/product.php");	
 	}
 }
@@ -44,7 +49,8 @@ function newProduct($current)
 function updateProduct($current)
 {
 	if ($current->update()) {
-		$_SESSION['success'] = "<span>{$_POST['name']}</span> alterado com sucesso";
+		$name = customString($_POST['name'], 20);
+		$_SESSION['success'] = "<span>{$name}</span> alterado com sucesso";
 		header("Location: ../View/product.php");	
 	}	
 }
@@ -52,7 +58,8 @@ function updateProduct($current)
 function deleteProduct($current)
 {
 	if ($current->delete()) {
-		$_SESSION['success'] = "<span>{$_POST['name']}</span> removido com sucesso";
+		$name = customString($_POST['name'], 20);
+		$_SESSION['success'] = "<span>{$name}</span> removido com sucesso";
 		header("Location: ../View/product.php");	
 	}
 }

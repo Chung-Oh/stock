@@ -50,19 +50,19 @@ const category = target => {
 
 const product = target => {
 	// Abaixo dados a ser editado
-	newName.value = target.children[2].textContent.trim();
-	newDesc.value = target.children[4].textContent.trim();
-	newWeight.value = target.children[5].textContent.trim();
-	newColor.value = target.children[6].textContent.trim();
-	newCategoryId.children[0].textContent = target.children[7].textContent.trim();
+	newName.value = target.children[1].textContent.trim();
+	newDesc.value = target.children[2].textContent.trim();
+	newWeight.value = target.children[3].textContent.trim();
+	newColor.value = target.children[4].textContent.trim();
+	newCategoryId.children[0].textContent = target.children[5].textContent.trim();
 	// Abaixo coloca o Value da categoria na tag option
-	newCategoryId.children[0].setAttribute("value",target.children[8].children[0].value);
+	newCategoryId.children[0].setAttribute("value",target.children[7].children[0].value);
 	id.value = target.children[0].textContent.trim();
-	oldName.value = target.children[2].textContent.trim();
-	oldDesc.value = target.children[4].textContent.trim();
-	oldWeight.value = target.children[5].textContent.trim();
-	oldColor.value = target.children[6].textContent.trim();
-	oldCategoryId.value = target.children[8].children[0].value;
+	oldName.value = target.children[1].textContent.trim();
+	oldDesc.value = target.children[6].textContent.trim();
+	oldWeight.value = target.children[3].textContent.trim();
+	oldColor.value = target.children[4].textContent.trim();
+	oldCategoryId.value = target.children[7].children[0].value;
 }
 
 const pageAnalysis = () => {
