@@ -15,7 +15,7 @@
 }
 
 .container {
-    height: 85%;
+    height: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,7 +24,7 @@
 .form-category,
 .form-product {
     height: 100%;
-    width: 90%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,7 +36,7 @@
 .form-category form,
 .form-product form {
     height: 100%;
-    width: 70%;
+    width: 80%;
 }
 
 .form-category input,
@@ -97,7 +97,7 @@ select > option:first-child {
 /*** Desk ***/
 @media only screen and (min-width: 100px) {
     .new-item_danger {
-        width: 90%;
+        width: 100%;
     }
     .btn-danger {
         height: 100%;
@@ -142,11 +142,14 @@ select > option:first-child {
         top: 27%;
         left: 15%;
     }
-    .new-item_danger {
-        width: 90%;
+    .container {
+        height: 88%;
     }
     .form-product { 
         padding: 0;
+    }
+    .form-product input:first-child {
+        margin-top: 5px;
     }
     .form-product input,
     select {
@@ -163,7 +166,6 @@ select > option:first-child {
         left: 7.5%;
     }
     .new-item_danger {
-        width: 90%;
         font-size: 100%;
     }
     select {

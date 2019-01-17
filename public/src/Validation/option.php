@@ -27,5 +27,15 @@ function option($op, $current)
 		case 7:
 			deleteProduct($current);
 			break;
+		/*** Detalhe ***/
+		case 8:
+			newProductDetail($current);
+			break;
+		case 9:
+			updateProductDetail($current);
+			break;
+		case 10:
+			deleteProductDetail($current);
+			break;
 	}
 }

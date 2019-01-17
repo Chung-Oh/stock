@@ -1,19 +1,11 @@
-<section class="row">
-	<div class="col-12">
-		<div class="col-1">
-			<p>Id:</p>			
-		</div>
-		<div class="col-2">
-			<p><?php echo $_SESSION['id'] ?></p>
-		</div>
-		<div class="col-2">
-			<p>Categoria:</p>
-		</div>
-		<div class="col-4">
-			<p><?php echo $_SESSION['name'] ?></p>
-		</div>
-		<div>
-			
-		</div>
+<section class="row detail-head">
+	<div class="info-head">
+		<p><strong class="info-head-strong">Id:</strong><?php echo $_SESSION['id'] ?></p>			
+	</div>
+	<div class="info-head">
+		<p><strong class="info-head-strong">Categoria:</strong><?php echo $_SESSION['name'] ?></p>
+	</div>	
+	<div class="info-head">
+		<p><strong class="info-head-strong">Produtos:</strong><?php echo count($catList->products) ?></p>
 	</div>
 </section>

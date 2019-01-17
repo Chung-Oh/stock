@@ -23,7 +23,7 @@
 .fas.fa-search {
     position: absolute;
     top: 15px;
-    left: 370px;
+    left: 335px;
     color: #333;
 }
 /* Caixa no Main */
@@ -33,18 +33,18 @@
     margin-bottom: 1em;
 	display: none;
 }
-
-.fas.fa-search {
-    top: 15px;
-    left: 340px;
-}
 /*** Desk ***/
 @media only screen and (max-width: 617px) {
 	.search-box {
 		display: block;
+		padding: 15px 10px 0 10px;
 	}
 	.fas.fa-search {
-	    display: none;
+	    width: 18px;
+	    display: block;
+	    position: relative;
+	    top: -25px;
+	    left: 10px;
 	}
 }
 /*** Samsung-S5 640px landscape ***/
@@ -56,11 +56,13 @@
 /*** Samsung-S5 360px portrait ***/
 @media only screen and (max-width: 360px) and (max-height: 640px) {
 	.search-box {
-	    display: block;
+		padding: 15px 10px 0 10px;
 	}
 	.fas.fa-search {
-	    display: block;
-	    top: 132px;
-	    left: 20px;
+		width: 18px;
+		position: relative;
+		display: block;
+		top: -24px;
+		left: 10px;
 	}
 }

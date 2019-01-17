@@ -48,7 +48,7 @@ function validateCategoryName($op, $current)
 	if (!$current->verifyNameExist()) {
 		option($op, $current);
 	} else {
-		$_SESSION['danger'] = "<span>{$_POST['name']}</span> já existe no sistema";
+		$_SESSION['danger'] = "<span>{$_POST['name']}</span> já existe";
 		header("Location: ../View/category.php");
 	}
 }
