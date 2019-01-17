@@ -70,6 +70,12 @@ td {
 	justify-content: center;
 	align-items: center;
 }
+#delete:focus,
+#delete:hover,
+#edit:focus,
+#edit:hover {
+	color: dodgerblue;
+}
 /* Filtrar na Busca */
 .invisible {
 	display: none;
@@ -84,6 +90,6 @@ td {
 /*** Samsung-S5 360px portrait ***/
 @media only screen and (max-width: 360px) and (max-height: 640px) {
 	.table-product {
-		font-size: 70%;
+		font-size: 65%;
 	}
 }

@@ -95,7 +95,7 @@ function validateProductNameLength($op, $current)
 
 function validateProductDescLength($op, $current)
 {
-	if (strlen($_POST['description']) <= 250) {
+	if (strlen($_POST['description']) <= 500) {
 		validateProductWeightLength($op, $current);
 	} else {
 		$_SESSION['danger'] = "<span>Descrição</span> acima do exigido, máximo 250 caracteres";

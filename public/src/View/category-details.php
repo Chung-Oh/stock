@@ -25,10 +25,13 @@ if (userIsLogged()) : ?>
 		<?php require_once 'Detail/main-top.php' ?>
 		<?php if (empty($catList->products)) : ?>
 			<?php require_once 'Detail/main-create.php' ?>
-			<?php require_once 'Product/form-create.php' ?>
+			<?php require_once 'Detail/form-create.php' ?>
 			<?php require_once 'Detail/main-empty.php' ?>
 		<?php else : ?>
+			<?php require_once 'Detail/form-edit.php' ?>
+			<?php require_once 'Detail/form-delete.php' ?>
 			<?php require_once 'Detail/main-info-head.php' ?>
+			<?php require_once 'Detail/main-info-body.php' ?>
 		<?php endif ?>
 	</main>
 	<?php require_once 'Templates/footer.php' ?>

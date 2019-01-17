@@ -17,6 +17,8 @@
 	<link rel="stylesheet" href="../../app/css/modules/forms.css">
 	<link rel="stylesheet" href="../../app/css/modules/forms-product.css">
 	<link rel="stylesheet" href="../../app/css/modules/forms-category.css">
+	<link rel="stylesheet" href="../../app/css/modules/detail-info-head.css">
+	<link rel="stylesheet" href="../../app/css/modules/detail-info-body.css">
 	<link rel="stylesheet" href="../../app/css/templates/msg-alert.css">
 	<link rel="stylesheet" href="../../app/css/modules/table.css">
 	<link rel="stylesheet" href="../../app/css/modules/msg-category-empty.css">
