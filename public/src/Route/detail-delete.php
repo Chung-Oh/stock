@@ -1,5 +1,6 @@
 <?php 
 require_once '../global.php';
+require_once '../Dao/CategoryDao.php';
 require_once '../Dao/ProductDao.php';
 require_once '../Validation/register.php';
 

@@ -6,9 +6,10 @@ require_once '../Validation/register.php';
 
 try {
 	$category = new CategoryDao(afterFirst($_POST['name']));
+	$name = customString($_POST['name'], 25);
 	registerNewCategory(2, $category);
 } catch (PDOException $e) {
 	// Erro::handler($e);
-	$_SESSION['danger'] = "<span>{$_POST['name']}</span> não foi cadastrado";
+	$_SESSION['danger'] = "<span>{$name}</span> não foi cadastrado";
 	header("Location: ../View/category.php");
 }
