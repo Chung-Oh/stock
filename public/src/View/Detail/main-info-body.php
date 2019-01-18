@@ -1,7 +1,7 @@
 <section class="row detail-body">
 	<div class="info-body">
 		<?php foreach($catList->products as $product) : ?>
-			<details>
+			<details class="info-row">
 				<summary><?php echo $product->getName() ?></summary>
 				<p><strong class="info-body-strong">Id :</strong><em><?php echo $product->getId() ?></em></p>
 				<p><strong class="info-body-strong">Descrição :</strong><em><?php echo $product->getDesc() ?></em></p>
@@ -14,4 +14,7 @@
 			</details>
 		<?php endforeach ?>
 	</div>
+</section>
+<section class="msg-table-search invisible">
+	<h3 class="title-table-search">Esse produto não existe no banco de dados.</h3>
 </section>
