@@ -68,7 +68,7 @@ function validateCategoryIfDependency($op, $current)
 	if (empty(ProductDao::load($current)) != 1) {
 		option($op, $current);
 	} else {
-		header("Location: ../../View/category-details.php");
+		header("Location: ../../View/detail.php");
 	}
 }
 // Abaixo para Remoção

@@ -1,5 +1,3 @@
-<section class="row empty">
-	<div class="col-12 msg-empty">
-		<h3 class="msg-empty-title">Nenhuma categoria encontrada, cadastre uma por favor.</h3>			
-	</div>
-</section>
+<?php require_once './Templates/main-empty-top.php' ?>
+	<h3 class="msg-empty-title">Nenhuma categoria encontrada, cadastre uma por favor.</h3>			
+<?php require_once './Templates/main-empty-bottom.php' ?>

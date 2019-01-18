@@ -10,7 +10,7 @@ function loadCategory($current)
 	// Setando id e nome na session, abaixo
 	setCategory($category->getId(), $category->getName());
 	$_SESSION['success'] = "Segue abaixo lista detalhada de <span>{$name}</span>";
-	header("Location: ../../View/category-details.php");
+	header("Location: ../../View/detail.php");
 }
 
 function newCategory($current)
@@ -74,7 +74,7 @@ function newProductDetail($current)
 		setCategory($category->getId(), $category->getName());
 		$name = customString($_POST['name'], 25);
 		$_SESSION['success'] = "<span>{$name}</span> cadastrado com sucesso";
-		header("Location: ../View/category-details.php");
+		header("Location: ../View/detail.php");
 	}
 }
 function updateProductDetail($current)
@@ -84,7 +84,7 @@ function updateProductDetail($current)
 		setCategory($category->getId(), $category->getName());
 		$name = customString($_POST['name'], 25);
 		$_SESSION['success'] = "<span>{$name}</span> alterado com sucesso";
-		header("Location: ../View/category-details.php");	
+		header("Location: ../View/detail.php");	
 	}
 }
 
@@ -95,6 +95,6 @@ function deleteProductDetail($current)
 		setCategory($category->getId(), $category->getName());
 		$name = customString($_POST['name'], 25);
 		$_SESSION['success'] = "<span>{$name}</span> removido com sucesso";
-		header("Location: ../View/category-details.php");
+		header("Location: ../View/detail.php");
 	}
 }

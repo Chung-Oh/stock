@@ -8,6 +8,7 @@ require_once '../Helpers/user-session.php';
 require_once '../Helpers/category-session.php';
 
 try {
+	$_SESSION['path'] = basename(__FILE__);
 	cleanSessionCategory();
 	$categorys = CategoryDao::list();
 	$products = ProductDao::list();

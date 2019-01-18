@@ -21,7 +21,7 @@
 						<td class="info-desc"><?php echo customString($product->getDesc(), 150) ?></td><!-- 2 -->
 						<td class="info-weight"><?php echo $product->getWeight() ?></td><!-- 3 -->
 						<td class="info-color"><?php echo $product->getColor() ?></td><!-- 4 -->
-						<td class="info-category-name"><?php echo customString($product->getCategoryName(), 25) ?></td><!-- 5 -->
+						<td class="info-category-name"><?php echo $product->getCategoryName() ?></td><!-- 5 -->
 						<!-- Abaixo para Form -->
 						<td class="info-desc" hidden><?php echo $product->getDesc() ?></td><!-- 6 -->
 						<td class="info-category-id" hidden><!-- 7 -->

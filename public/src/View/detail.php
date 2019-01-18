@@ -6,6 +6,7 @@ require_once '../Helpers/user-session.php';
 require_once '../Helpers/category-session.php';
 
 try {
+	$_SESSION['path'] = basename(__FILE__);
 	$categorys = CategoryDao::list();
 	if (haveSessionCategory()) {
 		$catList = new CategoryDao($_SESSION['name'], $_SESSION['id']);
@@ -26,7 +27,7 @@ if (userIsLogged()) : ?>
 		<?php if (empty($catList->products)) : ?>
 			<?php require_once 'Detail/main-create.php' ?>
 			<?php require_once 'Detail/form-create.php' ?>
-			<?php require_once 'Detail/main-empty.php' ?>
+			<?php require_once 'Product/main-empty.php' ?>
 		<?php else : ?>
 			<?php require_once 'Detail/form-edit.php' ?>
 			<?php require_once 'Detail/form-delete.php' ?>
