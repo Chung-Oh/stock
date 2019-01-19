@@ -32,6 +32,7 @@ if (userIsLogged()) : ?>
 			<?php require_once 'Detail/form-edit.php' ?>
 			<?php require_once 'Detail/form-delete.php' ?>
 			<?php require_once 'Detail/main-info-head.php' ?>
+			<?php require_once 'Detail/main-info-button.php' ?>
 			<?php require_once 'Detail/main-info-body.php' ?>
 		<?php endif ?>
 	</main>

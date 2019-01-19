@@ -5,7 +5,7 @@
 .data:first-child {
     margin-top: 10px;
 }
-/*** Corrigir Layout do Desk ***/
+/*** Desk ***/
 @media only screen and (min-width: 100px) and (max-width: 770px) and (max-height: 641px) {
     .product-form-create {
 	    top: 28%;

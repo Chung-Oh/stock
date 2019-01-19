@@ -9,6 +9,7 @@
 	<script type="module" src="../../app/js/form-create.js"></script>
 	<script type="module" src="../../app/js/form-edit.js"></script>
 	<script type="module" src="../../app/js/form-delete.js"></script>
+	<script type="module" src="../../app/js/button-panel.js"></script>
 	<script type="module" src="../../app/js/msg-session.js"></script>
 </body>
 </html>

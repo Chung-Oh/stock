@@ -66,7 +66,7 @@
 	    font-size: 95%;
 	}
 }
-/*** Corrigir Layout do Desk ***/
+/*** Desk ***/
 @media only screen and (min-width: 100px) and (max-width: 770px) and (max-height: 641px) {
     .detail-head {
 	    height: 15%;

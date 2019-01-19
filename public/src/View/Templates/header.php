@@ -18,6 +18,7 @@
 	<link rel="stylesheet" href="../../app/css/modules/forms-product.css">
 	<link rel="stylesheet" href="../../app/css/modules/forms-category.css">
 	<link rel="stylesheet" href="../../app/css/modules/detail-info-head.css">
+	<link rel="stylesheet" href="../../app/css/modules/detail-button-panel.css">
 	<link rel="stylesheet" href="../../app/css/modules/detail-info-body.css">
 	<link rel="stylesheet" href="../../app/css/templates/msg-alert.css">
 	<link rel="stylesheet" href="../../app/css/modules/table.css">
@@ -25,7 +26,7 @@
 	<link rel="stylesheet" href="../../app/css/templates/footer.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300">
-	<link href="https://fonts.googleapis.com/css?family=Barlow+Condensed|Raleway" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow+Condensed|Raleway">
 </head>
 <body>
 	<header id="topNavResponsive" class="top-nav">

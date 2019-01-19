@@ -1,0 +1,93 @@
+.detail-button {
+    height: 3%;
+    margin-top: 1em;
+}
+
+.button-panel {
+    height: 100%;
+    font-size: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.open {
+	height: 100%;
+	width: 150px;
+	font-size: 80%;
+	font-weight: bold;
+	text-shadow: 1px 1px 1px #888;
+	background-color: #ccc;
+	border: 1px solid #333;
+	border-radius: 3px;
+	box-shadow: 2px 2px 5px #333;
+}
+
+.open:focus,
+.open:hover {
+	color: dodgerblue;
+	border-color: dodgerblue;
+    box-shadow: 0 0 1em 0 dodgerblue;
+}
+
+.open {
+    margin-right: 1em;
+}
+/*** iPad 768px portrait ***/
+@media only screen and (max-width: 768px) and (max-height: 1024px) {
+	.detail-button {
+		height: 2%;
+	}
+}
+/*** Desk ***/
+@media only screen and (min-width: 100px) and (max-width: 770px) and (max-height: 641px) {
+    .detail-button {
+	    height: 4%;
+	}
+	.open {
+		width: 80%;
+		border-top: 2px solid #333;
+		border-right: 2px solid #333;
+		border-left: 2px solid #333;
+		border-bottom: 0;
+		border-radius: 50px 50px 0 0;
+		margin: 0;
+	}
+}
+/*** Samsung-S5  640px landscape ***/
+@media only screen and (max-width: 640px) and (max-height: 360px) {
+	.detail-button {
+	    height: 7%;
+	}
+	.button-panel {
+	    font-size: 85%;
+	}
+	.open {
+		width: 67%;
+		border-top: 2px solid #333;
+		border-right: 2px solid #333;
+		border-left: 2px solid #333;
+		border-bottom: 0;
+		border-radius: 50px 50px 0 0;
+		margin: 0;
+	}
+}
+/*** Samsung-S5 360px portrait ***/
+@media only screen and (max-width: 360px) and (max-height: 640px) {
+	.detail-button {
+	    height: 4%;
+	}
+	.button-panel {
+	    font-size: 85%;
+	}
+	.open {
+		width: 85%;
+		border-top: 2px solid #333;
+	    border-right: 2px solid #333;
+	    border-left: 2px solid #333;
+		border-bottom: 0;
+	    border-radius: 50px 50px 0 0;
+	    margin: 0;
+	}
+}

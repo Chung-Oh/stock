@@ -16,12 +16,12 @@ if (userIsLogged()) : ?>
 
 	<?php require_once 'Templates/header.php' ?>
 	<?php require_once 'Category/form-create.php' ?>
-	<?php require_once 'Category/form-edit.php' ?>
-	<?php require_once 'Category/form-delete.php' ?>
 	<main>
 		<?php showAlert('success'); showAlert('danger') ?>
 		<?php require_once 'Category/main-top.php' ?>
 		<?php if (count($categorys) > 0) : ?>
+			<?php require_once 'Category/form-edit.php' ?>
+			<?php require_once 'Category/form-delete.php' ?>
 			<?php require_once 'Category/main-table.php' ?>
 		<?php else : ?>
 			<?php require_once 'Category/main-empty.php' ?>
