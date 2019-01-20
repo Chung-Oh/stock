@@ -77,9 +77,9 @@ const pageAnalysis = () => {
 		showForm(productDetails);
 	} else if (!tbody) {
 		console.log('Desenvolver Dashboard');
-	} else if (tbody.id == "table-category") {
+	} else if (tbody.parentNode.classList.contains("table-category")) {
 		showForm(category);
-	} else if (tbody.id == "table-product") {
+	} else if (tbody.parentNode.classList.contains("table-product")) {
 		showForm(product);
 	}
 }

@@ -1,0 +1,35 @@
+html, body, 
+.interface {
+	height: 100%;
+}
+html {
+	background-color: #EEE;
+}
+
+body {
+	width: 100%;
+	border-top: 0.3em solid #444;
+	background-image: radial-gradient(#AAA, #BBB, #DDD);
+}
+/* Inserir imagem no centro da tela */
+.interface {
+	background: url(../../img/stock-large-original.png) no-repeat 50% 50%;
+}
+/*** iPed 768px portrait ***/
+@media only screen and (max-device-width: 768px) and (max-device-height: 1024px) {
+	.interface {
+		background: url(../../img/stock-large-original.png) no-repeat 50% 25%;
+	}
+}
+/*** Samsung-S5 640px landscape ***/
+@media only screen and (max-device-width: 640px) and (max-device-height: 360px) {
+	.interface {
+		background: url(../../img/stock-small-320.png) no-repeat 50% 50%;
+	}
+}
+/*** Samsung-S5 360px portrait ***/
+@media only screen and (max-device-width: 360px) and (max-device-height: 640px) {
+	.interface {
+		background: url(../../img/stock-small-320.png) no-repeat 50% 22%;
+	}
+}

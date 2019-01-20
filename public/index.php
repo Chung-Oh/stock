@@ -10,9 +10,11 @@ require_once 'src/Helpers/show-alert.php';
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="app/css/reset.css">
-	<link rel="stylesheet" href="app/css/login/login-desk.css">
-	<link rel="stylesheet" href="app/css/login/login-tablet.css">    
-	<link rel="stylesheet" href="app/css/login/login-mobile.css">
+	<link rel="stylesheet" href="app/css/login/login-base.css">
+	<link rel="stylesheet" href="app/css/login/login-title.css">
+	<link rel="stylesheet" href="app/css/login/login-alert.css">
+	<link rel="stylesheet" href="app/css/login/login-form.css">
+	<link rel="stylesheet" href="app/css/login/login-button.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 </head>
 <body>
@@ -42,9 +44,9 @@ require_once 'src/Helpers/show-alert.php';
 						</tr>
 						<tr>
 							<td class="btn">
-								<input class="btn-primary" type="submit" value="LOGIN">
+								<button>LOGIN</button>
 							</td>
-						</tr>					
+						</tr>
 					</tbody>
 				</table>
 			</form>

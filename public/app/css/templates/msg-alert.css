@@ -13,7 +13,7 @@ span {
 .alert-success,
 .alert-danger {
 	height: 5%;
-	font-family: 'Raleway', sans-serif;
+	font-family: "Raleway", sans-serif;
 	margin-top: 3%;
 	display: flex;
 	justify-content: center;
@@ -21,13 +21,13 @@ span {
 }
 
 .alert-success {
-	background-color: #5de19e;
-	border: 1px solid #17a05a;
+	background-color: #5DE19E;
+	border: 1px solid #17A05A;
 }
 
 .alert-danger {
-	background-color: #e3a0ba;
-	border: 1px solid #cf6479;
+	background-color: #E3A0BA;
+	border: 1px solid #CF6479;
 }
 /*** iPad 768px portrait ***/
 @media only screen and (min-height: 1024px) and (max-width: 768px) {

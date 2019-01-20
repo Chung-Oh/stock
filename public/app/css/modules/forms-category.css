@@ -13,6 +13,7 @@
 	    top: 28%;
 	}
 }
+/*** Corrigir Layout do Desk ***/
 @media only screen and (max-width: 500px) {
 	.category-form-create,
 	.category-form-edit {

@@ -8,8 +8,8 @@
 .category-form-create,
 .category-form-edit,
 .product-form-create {
-    position: fixed;
     width: 50%;
+    position: fixed;
     top: 30%;
     left: 25%;
 }
@@ -52,9 +52,8 @@
     text-align: center;
 }
 /* Select Form Product */
-.data,
-select {
-    font-family: 'Raleway', sans-serif;
+.data, select {
+    font-family: "Raleway", sans-serif;
     border: 1px solid #999;
     transition: .7s;
 }
@@ -76,20 +75,21 @@ select {
 
 select > option:first-child {
     background-color: #888;
-    color: #fff;
+    color: #FFF;
 }
 
 .btn-form {
-    background-color: #a2c8ec;
-    border: 1px solid #57a1ea;
+    background-color: #A2C8EC;
+    border: 1px solid #57A1EA;
     box-shadow: 0 0 6px #357795;
     color: black;
     transition: .7s;
+    cursor: pointer;
 }
 
 .btn-form:focus,
 .btn-form:hover {
-    background-color: #57a1ea;
+    background-color: #57A1EA;
     border: 1px solid #357795;
     box-shadow: 0 0 10px dodgerblue;
     transition: .7s;
@@ -108,19 +108,20 @@ select > option:first-child {
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: #e37777;
+        background-color: #E37777;
         color: black;
-        border: 1px solid #d65d5d;
-        box-shadow: 0 0 6px #aa7070;
+        border: 1px solid #E65D5D;
+        box-shadow: 0 0 6px #AA7070;
         border-radius: 5px;
         padding: 0;
         transition: .7s;
+        cursor: pointer;
     }
     .btn-danger:focus,
     .btn-danger:hover {
-        background-color: #f05555;
-        border: 1px solid #da2003;
-        box-shadow: 0 0 10px #f00;
+        background-color: #F05555;
+        border: 1px solid #DA2003;
+        box-shadow: 0 0 10px #F00;
         transition: .7s;
     }
 }
@@ -151,8 +152,7 @@ select > option:first-child {
     .form-product input:first-child {
         margin-top: 5px;
     }
-    .form-product input,
-    select {
+    .form-product input, select {
         height: 33px;
     }
 }

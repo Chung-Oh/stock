@@ -27,7 +27,7 @@
 
 .title-delete,
 .msg-delete {
-	font-family: 'Open Sans Condensed', sans-serif;   
+	font-family: "Open Sans Condensed", sans-serif;   
 }
 
 .title-delete {
@@ -59,25 +59,25 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: #e37777;
-	border: 1px solid #d65d5d;
-	box-shadow: 0 0 10px #aa7070;
+	background-color: #E37777;
+	border: 1px solid #D65D5D;
+	box-shadow: 0 0 10px #AA7070;
 	border-radius: 30px 0 0 30px;
 	transition: .7s;
 }
 
 .not:focus, 
 .not:hover {
-	background-color: #f05555;
-	border: 1px solid #da2003;
-	box-shadow: 0 0 10px #f00;
+	background-color: #F05555;
+	border: 1px solid #DA2003;
+	box-shadow: 0 0 10px #F00;
 	transition: .7s;
 }
 
 .yes {
 	font-size: 100%;
-	background-color: #a2c8ec;
-	border: 1px solid #57a1ea;
+	background-color: #A2C8EC;
+	border: 1px solid #57A1EA;
 	border-radius: 0 30px 30px 0;
 	box-shadow: 0 0 6px #357795;
 	transition: .7s;
@@ -85,15 +85,15 @@
 
 .yes:focus,
 .yes:hover {
-	background-color: #57a1ea;
+	background-color: #57A1EA;
 	border: 1px solid #357795;
 	box-shadow: 0 0 7px dodgerblue;
 	transition: .7s;
 }
 
-.not,
-.yes {
+.not, .yes {
 	width: 30%;
+	cursor: pointer;
 }
 /*** Desk ***/
 @media only screen and (max-width: 617px) {

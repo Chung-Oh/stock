@@ -31,17 +31,18 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		background-color: #a2c8ec;
+		background-color: #A2C8EC;
 		color: black;
-		border: 1px solid #57a1ea;
+		border: 1px solid #57A1EA;
 		box-shadow: 0 0 5px #357795;
 		border-radius: 5px;
 		padding: 0;
 		transition: .7s;
+		cursor: pointer;
 	}
 	.btn-primary:focus,
 	.btn-primary:hover {
-		background-color: #57a1ea;
+		background-color: #57A1EA;
 		border: 1px solid #357795;
 		box-shadow: 0 0 10px dodgerblue;
 		transition: .7s;

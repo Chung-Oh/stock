@@ -10,6 +10,7 @@
 	<link rel="stylesheet" href="../../app/css/reset.css">
 	<link rel="stylesheet" href="../../app/css/templates/base.css">
 	<link rel="stylesheet" href="../../app/css/templates/header.css">
+	<link rel="stylesheet" href="../../app/css/templates/msg-alert.css">
 	<link rel="stylesheet" href="../../app/css/modules/msg-home.css">
 	<link rel="stylesheet" href="../../app/css/modules/main-top.css">
 	<link rel="stylesheet" href="../../app/css/modules/search-box.css">
@@ -20,9 +21,9 @@
 	<link rel="stylesheet" href="../../app/css/modules/detail-info-head.css">
 	<link rel="stylesheet" href="../../app/css/modules/detail-button-panel.css">
 	<link rel="stylesheet" href="../../app/css/modules/detail-info-body.css">
-	<link rel="stylesheet" href="../../app/css/templates/msg-alert.css">
 	<link rel="stylesheet" href="../../app/css/modules/table.css">
 	<link rel="stylesheet" href="../../app/css/modules/msg-category-empty.css">
+	<link rel="stylesheet" href="../../app/css/templates/button-go-top.css">
 	<link rel="stylesheet" href="../../app/css/templates/footer.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300">

@@ -1,0 +1,135 @@
+form {
+	height: 50%;
+	width: 470px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+	margin-top: 4%;
+	border: 0.034em solid #888;
+	border-radius: .5em;
+	box-shadow: 1em 0.5em 1.5em #999;
+}
+
+.table-form {
+	height: 90%;
+	width: 90%;
+	opacity: 0.7;
+}
+
+.table-body {
+	height: 100%;
+	width: 90%;
+}
+
+tr {
+	height: 33%;
+	text-align: center;
+}
+
+.cel-name, 
+.cel-password {
+	text-align: center;
+	padding: 0.15em;
+	vertical-align: middle;
+}
+
+.name,
+.password {
+	height: 51%;
+	width: 95%;
+	font-size: 120%;
+	text-align: center;
+	border-radius: 2em;
+	box-shadow: .25em .25em .5em #333;
+	transition: .35s;
+}
+/* Configurar ícone no input */
+.name:hover, .name:focus,
+.password:hover, .password:focus {
+	border-color: dodgerblue;
+	box-shadow: 0 0 1em 0 dodgerblue;
+}
+
+.cel-icon {
+	position: relative;
+}
+
+.cel-icon i {
+	position: absolute;
+	top: 34%;
+	left: 7%;
+	padding: .5em .5em;
+	color: #333;
+	transition: .3s;
+}
+
+.input-icon:focus + i {
+	color: dodgerblue;
+}
+/*** iPad 1024px landscape ***/
+@media only screen and (max-device-width: 1024px) and (max-device-height: 768px) {
+	form {
+		height: 47%;
+		width: 60%;
+		margin-top: 6%;
+	}
+	.name, 
+	.password {
+		font-size: 150%;
+	}
+}
+/*** iPed 768px portrait ***/
+@media only screen and (max-device-width: 768px) and (max-device-height: 1024px) {
+	form {
+		height: 35%;
+		margin-top: 47%;
+	}	
+	.name, 
+	.password {
+		font-size: 150%;
+	}
+}
+/*** Desk ***/
+@media only screen and (max-width: 800px) {
+	form {
+		width: 60%;
+	}
+}
+/*** Samsung-S5 640px landscape ***/
+@media only screen and (max-device-width: 640px) and (max-device-height: 360px) {
+	form {
+		height: 50%;
+		width: 50%;
+		margin-top: 8%;
+	}
+	.table-form {
+	    height: 100%;
+	}
+	.cel-name, 
+	.cel-password {
+		font-size: 60%;
+		text-align:;
+	}
+	.name, 
+	.password {
+	    font-size: 120%;
+	}
+	.cel-icon i {
+		top: 35%;
+	}
+}
+/*** Samsung-S5 360px portrait ***/
+@media only screen and (max-device-width: 360px) and (max-device-height: 640px) {
+	form {
+		width: 75%;
+		margin-top: 60%;
+	}
+	.cel-name, 
+	.cel-password {
+		font-size: 75%;
+	}
+	.cel-icon i {
+		top: 33%;
+	}
+}

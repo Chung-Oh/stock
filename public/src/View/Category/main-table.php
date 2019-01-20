@@ -1,6 +1,6 @@
-<section class="row">
+<section class="row table">
 	<div class="col-12">
-		<table class="table-items">
+		<table class="table-items table-category">
 			<thead>
 				<tr>
 					<th class="order">Id</th>
@@ -9,7 +9,7 @@
 					<th>Excluir</th>
 				</tr>
 			</thead>
-			<tbody id="table-category">
+			<tbody>
 				<?php foreach ($categorys as $category) : ?>
 					<tr class="info-row">
 						<td class="info-id"><?php echo $category->getId() ?></td>

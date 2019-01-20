@@ -18,10 +18,11 @@
 	font-size: 80%;
 	font-weight: bold;
 	text-shadow: 1px 1px 1px #888;
-	background-color: #ccc;
+	background-color: #CCC;
 	border: 1px solid #333;
 	border-radius: 3px;
 	box-shadow: 2px 2px 5px #333;
+	cursor: pointer;
 }
 
 .open:focus,
@@ -29,10 +30,6 @@
 	color: dodgerblue;
 	border-color: dodgerblue;
     box-shadow: 0 0 1em 0 dodgerblue;
-}
-
-.open {
-    margin-right: 1em;
 }
 /*** iPad 768px portrait ***/
 @media only screen and (max-width: 768px) and (max-height: 1024px) {

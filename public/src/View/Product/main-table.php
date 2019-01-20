@@ -1,4 +1,4 @@
-<section class="row">
+<section class="row table">
 	<div class="col-12">
 		<table class="table-items table-product">	
 			<thead>
@@ -13,7 +13,7 @@
 					<th>Excluir</th>
 				</tr>
 			</thead>
-			<tbody id="table-product">
+			<tbody>
 				<?php foreach ($products as $product) : ?>
 					<tr class="info-row">
 						<td class="info-id"><?php echo $product->getId() ?></td><!-- 0 -->

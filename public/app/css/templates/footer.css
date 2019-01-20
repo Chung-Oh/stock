@@ -9,7 +9,7 @@
 }
 
 .foot a {
-    color: #fff;
+    color: #FFF;
     text-decoration: none;
 }
 /*** iPad 1024px landscape ***/
@@ -23,6 +23,13 @@
     .foot {
         height: 3%;
         font-size: 90%;
+    }
+}
+/*** Desk ***/
+@media only screen and (max-height: 640px) and (max-width: 1024px) {
+    .foot {
+        height: 4%;
+        font-size: 70%;
     }
 }
 /*** Samsung-S5 640px landscape ***/

@@ -27,6 +27,7 @@ if (userIsLogged()) : ?>
 			<?php require_once 'Category/main-empty.php' ?>
 		<?php endif ?>
 	</main>
+	<?php require_once 'Templates/button-go-top.php' ?>
 	<?php require_once 'Templates/footer.php' ?>
 
 <?php else : header("Location: ../../index.php") ?>
