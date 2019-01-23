@@ -12,6 +12,8 @@
 	<link rel="stylesheet" href="../../app/css/templates/header.css">
 	<link rel="stylesheet" href="../../app/css/templates/msg-alert.css">
 	<link rel="stylesheet" href="../../app/css/modules/msg-home.css">
+	<link rel="stylesheet" href="../../app/css/modules/home-dash-top.css">
+	<link rel="stylesheet" href="../../app/css/modules/home-dash-body.css">
 	<link rel="stylesheet" href="../../app/css/modules/main-top.css">
 	<link rel="stylesheet" href="../../app/css/modules/search-box.css">
 	<link rel="stylesheet" href="../../app/css/modules/form-delete.css">

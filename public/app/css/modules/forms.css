@@ -12,7 +12,7 @@
 .product-form-edit {
     width: 50%;
     position: fixed;
-    top: 30%;
+    top: 20%;
     left: 25%;
 }
 
@@ -25,7 +25,6 @@
 
 .form-category,
 .form-product {
-    height: 100%;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -33,6 +32,14 @@
     background-color: lavender;
     border: 1px solid #999;
     box-shadow: 1px 1px 5px #555;
+}
+
+.form-category {
+    padding: 3em 0;
+}
+
+.form-product {
+    padding: 1.5em 0;
 }
 
 .form-category form,
@@ -43,7 +50,7 @@
 
 .form-category input,
 .form-product input {
-    height: 40px;
+    height: 45px;
     width: 100%;
     font-size: 100%;
     font-weight: bold;
@@ -114,7 +121,7 @@ select > option:first-child {
         color: black;
         border: 1px solid #E65D5D;
         box-shadow: 0 0 6px #AA7070;
-        border-radius: 5px;
+        border-radius: 40px 40px 0 0;
         padding: 0;
         transition: .7s;
         cursor: pointer;
@@ -150,14 +157,13 @@ select > option:first-child {
     .container {
         height: 88%;
     }
-    .form-product { 
-        padding: 0;
+    .form-product {
+        padding: 1em 0;
     }
     .form-product input:first-child {
-        margin-top: 5px;
     }
     .form-product input, select {
-        height: 33px;
+        height: 35px;
     }
 }
 /*** Samsung-S5 360px portrait ***/
@@ -169,6 +175,9 @@ select > option:first-child {
         width: 85%;
         top: 35%;
         left: 7.5%;
+    }
+    .form-product {
+        padding: 1em 0;
     }
     .new-item_danger {
         font-size: 100%;
