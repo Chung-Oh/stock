@@ -25,7 +25,7 @@ const process = (element, time, initial, end) => {
 }
 
 const testClassName = element => {
-	element.className == "" 
+	element.className == ""
 		? element.style.display = "flex" 
 		: element.style.display = "block";	
 }

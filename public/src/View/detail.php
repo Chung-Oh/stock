@@ -22,7 +22,6 @@ if (userIsLogged()) : ?>
 
 	<?php require_once 'Templates/header.php' ?>
 	<main>
-		<?php showAlert('success'); showAlert('danger') ?>
 		<?php require_once 'Detail/main-top.php' ?>
 		<?php if (empty($catList->products)) : ?>
 			<?php require_once 'Detail/main-create.php' ?>

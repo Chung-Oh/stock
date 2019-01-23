@@ -70,7 +70,10 @@ const product = () => {
 		: null;
 }
 // Verifica qual tipo de Tabela
-const typeFormDelete = () => tbody.id == "table-category" ? category() : product();
+const typeFormDelete = () => 
+	tbody.parentNode.classList.contains("table-category") 
+		? category() 
+		: product();
 // Caso não tenha Tabela retornar função Product(acima)
 tbody ? typeFormDelete() : product();
 

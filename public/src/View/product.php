@@ -21,7 +21,6 @@ if (userIsLogged()) : ?>
 	<?php require_once 'Templates/header.php' ?>
 	<?php require_once 'Product/form-create.php' ?>
 	<main>
-		<?php showAlert('success'); showAlert('danger') ?>
 		<?php require_once 'Product/main-top.php' ?>
 		<?php if (count($products) > 0) : ?>
 			<?php require_once 'Product/form-edit.php' ?>

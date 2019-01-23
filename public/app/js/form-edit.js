@@ -76,7 +76,7 @@ const pageAnalysis = () => {
 	if (details) {
 		showForm(productDetails);
 	} else if (!tbody) {
-		console.log('Desenvolver Dashboard');
+		console.log('No table');
 	} else if (tbody.parentNode.classList.contains("table-category")) {
 		showForm(category);
 	} else if (tbody.parentNode.classList.contains("table-product")) {

@@ -110,7 +110,7 @@
 	}
 }
 /*** iPad 768px portrait ***/
-@media only screen and (min-height: 1024px) and (max-width: 768px) {
+@media only screen and (max-width: 768px) and (min-height: 1024px) {
 	#formDelete {
 	    height: 96%;
 	    top: 4.5%;

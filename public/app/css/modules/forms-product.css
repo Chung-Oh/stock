@@ -25,7 +25,7 @@
 	}
 }
 /*** iPad 768px portrait ***/
-@media only screen and (min-height: 1024px) and (max-width: 768px) {
+@media only screen and (max-width: 768px) and (min-height: 1024px) {
 	.product-form-create {
 	    height: 33%;
 	    width: 60%;

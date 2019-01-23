@@ -1,10 +1,9 @@
 /* Mensagem página vazia */
 .empty {
-	height: 10%;
+	padding: 3em;
 }
 
 .msg-empty {
-	height: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -12,14 +11,13 @@
 }
 
 .msg-empty-title {
-	height: 30%;
 	color: #DE2929;
 	text-shadow: 0 0 3px #333;
 	display: flex;
 	align-items: center;
 }
 /*** Samsung-S5 640px landscape ***/
-@media only screen and (max-width: 640px) and (max-height: 360px) {
+@media only screen and and (max-width: 640px) (max-height: 360px) {
 	.empty {
 	    margin-top: 5%;
 	}
@@ -33,7 +31,6 @@
 	    margin-top: 20%;
 	}
 	.msg-empty-title {
-	    height: 100%;
 	    width: 90%;
 	    text-align: center;
 	}

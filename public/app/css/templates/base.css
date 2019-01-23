@@ -7,11 +7,9 @@ body {
 }
 
 main {
-	height: 100%;
 	width: 100%;
-	margin-top: 45px;
+	margin-bottom: 3em;
 	transition: margin-top .5s;
-	overflow: auto;
 }
 /** grid abordagem de 12 Colunas**/
 .col-1 { width: 8.33%; }
@@ -37,14 +35,18 @@ main {
 	clear: both;
 	display: table;
 }
+
+.title-top {
+	padding: 0 0 15px 0;
+}
 /*** Desk ***/
 @media only screen and (min-width: 100px) {
 	.main-down {
-		margin-top: 177px;
+		margin-top: 178px;
 		transition: margin-top .5s;
 	}
 }
-/* Corrigir layout Desk */
+/*** Corrigir layout Desk ***/
 @media only screen and (min-width: 451px) {
 	.main-down {
 		margin-top: 45px;
