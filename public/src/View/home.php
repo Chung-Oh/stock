@@ -4,15 +4,11 @@ require_once '../Dao/CategoryDao.php';
 require_once '../Dao/ProductDao.php';
 require_once '../Helpers/show-alert.php';
 require_once '../Helpers/user-session.php';
+require_once '../Helpers/services.php';
 
 try {
 	$categorys = CategoryDao::list();
 	$products = ProductDao::list();
-	// echo '<pre>';
-	// print_r($categorys);
-	// echo '<br>=====================================================<br>';
-	// print_r($_SESSION);
-	// die();
 } catch (PDOException $e) {
 	Erro::handler($e);
 }

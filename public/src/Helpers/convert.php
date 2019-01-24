@@ -22,3 +22,13 @@ function customString($target, $length)
 		return $target;
 	}
 }
+
+function customNumber($target, $length)
+{
+	if (strlen($target) > $length) {
+		$current = substr($target, 0, $length);
+		return $current;
+	} else {
+		return $target;
+	}
+}

@@ -8,8 +8,8 @@ require_once '../Helpers/user-session.php';
 require_once '../Helpers/category-session.php';
 
 try {
+	// Session abaixo serve para redirecionar os Form criação e edição
 	$_SESSION['path'] = basename(__FILE__);
-	cleanSessionCategory();
 	$categorys = CategoryDao::list();
 	$products = ProductDao::list();
 } catch (PDOException $e) {

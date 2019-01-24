@@ -8,7 +8,7 @@ body {
 
 main {
 	width: 100%;
-	margin-bottom: 3em;
+	margin-bottom: 5em;
 	transition: margin-top .5s;
 }
 /** grid abordagem de 12 Colunas**/

@@ -6,7 +6,6 @@ require_once '../Helpers/user-session.php';
 require_once '../Helpers/category-session.php';
 
 try {
-	cleanSessionCategory();
 	$categorys = CategoryDao::list();
 } catch (PDOException $e) {
 	Erro::handler($e);

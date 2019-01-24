@@ -1,4 +1,5 @@
 <?php 
+require_once 'convert.php';
 
 function testPath($path, $msg)
 {
@@ -9,4 +10,19 @@ function testPath($path, $msg)
 		$_SESSION['danger'] = $msg;
 		header("Location: ../View/detail.php");
 	}
+}
+
+function countProduct($name, $id)
+{
+	$category = new CategoryDao($name, $id);
+	$list = $category->loadDetails();
+	return count($list->products);
+}
+
+function percentage($name, $id, $total)
+{
+	$quantity = countProduct($name, $id);
+	$products = count($total);
+	$result = ($quantity / $products) * 100;
+	return customNumber($result, 3);
 }
