@@ -125,7 +125,7 @@ function validateProductNameLength($op, $current)
 
 function validateProductDescLength($op, $current)
 {
-	if (strlen($_POST['description']) <= 500) {
+	if (strlen($_POST['description']) <= 255) {
 		validateProductWeightLength($op, $current);
 	} else {
 		testPath(

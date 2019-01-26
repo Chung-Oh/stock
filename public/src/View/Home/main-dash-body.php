@@ -3,21 +3,21 @@
 		<table>
 			<thead>
 				<tr>
-					<th class="order">Categoria</th>
 					<th class="order">Qtd</th>
-					<th class="order">%</th>
+					<th class="order">Categoria</th>
 					<th>Produto</th>
+					<th>%</th>
 				</tr>			
 			</thead>
 			<tbody>
 				<?php foreach ($categorys as $cat) : ?>
 					<tr class="info-row">
-						<td><?php echo $cat->getName() ?></td>
 						<td><?php echo countProduct($cat->getName(), $cat->getId()) ?></td>
-						<td><?php echo percentage($cat->getName(), $cat->getId(), $products) ?></td>
+						<td><?php echo $cat->getName() ?></td>
 						<td>
 							<meter min="0" max="<?php echo count($products) ?>" value="<?php echo countProduct($cat->getName(), $cat->getId()) ?>"></meter>
 						</td>
+						<td><?php echo percentage($cat->getName(), $cat->getId(), $products) ?></td>
 					</tr>
 				<?php endforeach ?>
 			</tbody>

@@ -3,9 +3,19 @@ require_once 'validate-user.php';
 require_once 'validate-category.php';
 require_once 'validate-product.php';
 /*** Usuário ***/
-function registerLogIn($consult)
+function registerLogUser($op, $current)
 {
-	validateUserNameLength($consult);
+	validateUserNameLength($op, $current);
+}
+
+function registerLogOutUser($op, $current)
+{
+	validateLogOut($op, $current);
+}
+
+function registerRedefineUser($op, $current)
+{
+	// Lógica
 }
 /*** Categoria ***/
 function registerSelectCategory($op, $current)

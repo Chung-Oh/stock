@@ -12,7 +12,7 @@ try {
 		$_POST['category_id'], 
 		$_POST['id']
 	);
-	registerDeleteProduct(7, $product);
+	registerDeleteProduct(10, $product);
 } catch (PDOException $e) {
 	// Erro::handler($e);
 	$_SESSION['danger'] = "<span>{$_POST['name']}</span> não foi removido";

@@ -33,9 +33,11 @@ DROP TABLE IF EXISTS `categorys`;
 CREATE TABLE `categorys` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `name` (`name`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -44,8 +46,34 @@ CREATE TABLE `categorys` (
 
 LOCK TABLES `categorys` WRITE;
 /*!40000 ALTER TABLE `categorys` DISABLE KEYS */;
-INSERT INTO `categorys` VALUES (2,'Brinquedo'),(3,'Calçado'),(5,'Filme'),(4,'Livro'),(7,'Notebook'),(9,'Quadrinho'),(8,'Salgado'),(1,'Smartphone'),(6,'Tabuleiro');
 /*!40000 ALTER TABLE `categorys` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `logger`
+--
+
+DROP TABLE IF EXISTS `logger`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `logger` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `login` timestamp NULL DEFAULT NULL,
+  `logout` timestamp NULL DEFAULT NULL,
+  `user_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `user_id` (`user_id`),
+  CONSTRAINT `logger_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `logger`
+--
+
+LOCK TABLES `logger` WRITE;
+/*!40000 ALTER TABLE `logger` DISABLE KEYS */;
+/*!40000 ALTER TABLE `logger` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -58,14 +86,16 @@ DROP TABLE IF EXISTS `products`;
 CREATE TABLE `products` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) NOT NULL,
-  `description` varchar(250) NOT NULL,
-  `weight` varchar(100) NOT NULL,
+  `description` varchar(255) NOT NULL,
+  `weight` varchar(50) NOT NULL,
   `color` varchar(25) NOT NULL,
   `category_id` int(11) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `category_id` (`category_id`),
   CONSTRAINT `products_ibfk_1` FOREIGN KEY (`category_id`) REFERENCES `categorys` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -74,7 +104,6 @@ CREATE TABLE `products` (
 
 LOCK TABLES `products` WRITE;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
-INSERT INTO `products` VALUES (1,'Samsung Galaxy S5','2GB RAM, 16GB INTERNO, OCTACORE','350 gramas','Lilás',1),(2,'John Wick','Filme de ação com Keanu Reaves','100 gramas','Branco',5),(3,'Dell FR377','8GB RAM, 1TB HD e processador i7','1,3 kg','Preto',7),(4,'Senhor dos Anéis - As duas torres','Segundo filme da mais conhecida trilogia de fantasia','450 gramas','Amarelo',4),(5,'Adidas Trecsion','Modelo para correr','1 kg','Laranja',3);
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -89,6 +118,8 @@ CREATE TABLE `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -99,7 +130,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'daniel','202cb962ac59075b964b07152d234b70');
+INSERT INTO `users` VALUES (1,'daniel','202cb962ac59075b964b07152d234b70','2019-01-26 16:36:11',NULL);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -112,4 +143,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-01-11 22:46:44
+-- Dump completed on 2019-01-26 14:52:53

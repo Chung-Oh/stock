@@ -1,4 +1,5 @@
 <?php 
+
 session_start();
 //Verifica se é usuário
 function isUser()
@@ -20,12 +21,13 @@ function userLogged()
 	return $_SESSION['user_logged'];
 }
 //Loga usuário
-function logUser($name)
+function logUser($id, $name)
 {
+	$_SESSION['user_id'] = $id;
 	$_SESSION['user_logged'] = $name;
 }
 
-function logout()
+function userLogOut()
 {
 	session_destroy();
 	session_start();

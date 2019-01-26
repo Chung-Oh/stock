@@ -21,8 +21,13 @@ function countProduct($name, $id)
 
 function percentage($name, $id, $total)
 {
-	$quantity = countProduct($name, $id);
-	$products = count($total);
-	$result = ($quantity / $products) * 100;
-	return customNumber($result, 3);
+	// Verifica se Array está vazio
+	if (count($total) == 0) {
+		return 0;
+	} else {
+		$quantity = countProduct($name, $id);
+		$products = count($total);
+		$result = ($quantity / $products) * 100;
+		return customNumber($result, 3);		
+	}
 }

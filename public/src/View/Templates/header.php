@@ -37,6 +37,7 @@
 			<a href="../View/home.php" class="active">StockSystem</a>
 			<a class="page-action" href="category.php">Categoria</a>
 			<a class="page-action" href="product.php">Produto</a>
+			<a class="page-action" href="user.php">Usuário</a>
 			<a class="page-action">
 				<input class="search" type="text" placeholder="Pesquisar...">
 				<i class="fas fa-search"></i>

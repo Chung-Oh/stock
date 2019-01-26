@@ -9,6 +9,8 @@ class Product
 	private $color;
 	private $category_id;
 	private $category_name;
+	private $created_at;
+	private $updated_at;
 
 	public function __construct($name, $description, $weight, $color, $category_id, $id = null)
 	{
@@ -88,5 +90,25 @@ class Product
 	public function setCategoryName($newCategoryName)
 	{
 		$this->category_name = $newCategoryName;
+	}
+
+	public function getCreatedAt()
+	{
+		return $this->created_at;
+	}
+
+	public function setCreatedAt($create)
+	{
+		$this->created_at = $create;
+	}
+
+	public function getUpdatedAt()
+	{
+		return $this->updated_at;
+	}
+
+	public function setUpdatedAt($update)
+	{
+		$this->updated_at = $update;
 	}
 }

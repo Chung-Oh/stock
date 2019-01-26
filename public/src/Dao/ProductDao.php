@@ -34,8 +34,9 @@ class ProductDao
 
 	public static function load($category_id)
 	{
-		$query = "SELECT p.id, p.name, p.description, p.weight, p.color, p.category_id, c.name AS category_name 
-			FROM products AS p JOIN categorys AS c ON p.category_id = c.id WHERE c.id = :category_id ORDER BY p.id";
+		$query = "SELECT p.id, p.name, p.description, p.weight, p.color, p.category_id, c.name AS category_name, 
+			p.created_at, p.updated_at FROM products AS p JOIN categorys AS c ON p.category_id = c.id 
+			WHERE c.id = :category_id ORDER BY p.id";
 		$conn = Connection::getConn();
 		$stmt = $conn->prepare($query);
 		$stmt->bindValue(':category_id', $category_id);
@@ -52,7 +53,9 @@ class ProductDao
 				$product_array['id']
 			);
 			$product->setCategoryName($product_array['category_name']);
-			array_push($list, $product);	
+			$product->setCreatedAt($product_array['created_at']);
+			$product->setUpdatedAt($product_array['updated_at']);
+			array_push($list, $product);
 		}
 		return $list;
 	}
@@ -77,8 +80,8 @@ class ProductDao
 
 	public function new()
 	{
-		$query = "INSERT INTO products (name, description, weight, color, category_id) 
-			VALUES (:name, :description, :weight, :color, :category_id)";
+		$query = "INSERT INTO products (name, description, weight, color, category_id, created_at) 
+			VALUES (:name, :description, :weight, :color, :category_id, current_timestamp())";
 		$conn = Connection::getConn();
 		$stmt = $conn->prepare($query);
 		$stmt->bindValue(':name', $this->product->getName());
@@ -93,7 +96,7 @@ class ProductDao
 	public function update()
 	{
 		$query = "UPDATE products SET name = :name, description = :description, weight = :weight, 
-			color = :color, category_id = :category_id WHERE id = :id";
+			color = :color, category_id = :category_id, updated_at = current_timestamp() WHERE id = :id";
 		$conn = Connection::getConn();
 		$stmt = $conn->prepare($query);
 		$stmt->bindValue(':id', $this->product->getId());

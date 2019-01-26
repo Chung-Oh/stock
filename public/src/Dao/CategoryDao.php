@@ -14,12 +14,14 @@ class CategoryDao
 
 	public static function list()
 	{
-		$query = "SELECT id, name FROM categorys ORDER BY id";
+		$query = "SELECT id, name, created_at, updated_at FROM categorys ORDER BY id";
 		$conn = Connection::getConn();
 		$result = $conn->query($query);
 		$list = array();
 		foreach ($result->fetchAll() as $category_array) {
 			$category = new Category($category_array['name'], $category_array['id']);
+			$category->setCreatedAt($category_array['created_at']);
+			$category->setUpdatedAt($category_array['updated_at']);
 			array_push($list, $category);
 		}
 		return $list;
@@ -27,13 +29,15 @@ class CategoryDao
 	
  	public static function load($id)
 	{
-		$query = "SELECT id, name FROM categorys WHERE id = :id";
+		$query = "SELECT id, name, created_at, updated_at FROM categorys WHERE id = :id";
 		$conn = Connection::getConn();
 		$stmt = $conn->prepare($query);
 		$stmt->bindValue(':id', $id);
 		$stmt->execute();
 		$result = $stmt->fetch();
 		$category = new Category($result['name'], $result['id']);
+		$category->setCreatedAt($result['created_at']);
+		$category->setUpdatedAt($result['updated_at']);
 		return $category;
 	}
 
@@ -68,7 +72,7 @@ class CategoryDao
 
 	public function new()
 	{
-		$query = "INSERT INTO categorys (name) VALUES (:name)";
+		$query = "INSERT INTO categorys (name, created_at) VALUES (:name, current_timestamp())";
 		$conn = Connection::getConn();
 		$stmt = $conn->prepare($query);
 		$stmt->bindValue(':name', $this->category->getName());
@@ -78,7 +82,7 @@ class CategoryDao
 
 	public function update()
 	{
-		$query = "UPDATE categorys SET name = :name WHERE id = :id";
+		$query = "UPDATE categorys SET name = :name, updated_at = current_timestamp() WHERE id = :id";
 		$conn = Connection::getConn();
 		$stmt = $conn->prepare($query);
 		$stmt->bindValue(':id', $this->category->getId());

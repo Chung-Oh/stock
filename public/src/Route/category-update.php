@@ -8,7 +8,7 @@ try {
 	$category = new CategoryDao(afterFirst($_POST['name']), $_POST['id']);
 	$old = new CategoryDao($_POST['oldName'], $_POST['id']);
 	$name = customString($_POST['name'], 25);
-	registerUpdateCategory(3, $category, $old);
+	registerUpdateCategory(6, $category, $old);
 } catch (PDOException $e) {
 	// Erro::handler($e);
 	$_SESSION['danger'] = "<span>{$name}</span> não foi atualizado";

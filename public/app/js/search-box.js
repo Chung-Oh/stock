@@ -6,8 +6,9 @@ const inputs = document.querySelectorAll(".search");
 // Ocultar input na Home
 (function showSearchBox() {
 	const navBar = document.querySelectorAll(".page-action");
-	window.location.pathname == "/src/View/home.php" 
-		? navBar[2].style.display="none"
+	(window.location.pathname == "/src/View/home.php" 
+		|| window.location.pathname == "/src/View/user.php")
+		? navBar[3].style.display="none"
 		: null;
 })();
 

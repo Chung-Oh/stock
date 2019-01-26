@@ -1,6 +1,35 @@
 <?php 
 require_once '../Helpers/convert.php';
-require_once '../Helpers/category-session.php';
+require_once '../Session/log-session.php';
+require_once '../Session/user-session.php';
+require_once '../Session/category-session.php';
+/*** Usuário ***/
+function logInUser($current)
+{
+	// Registra entrada do Usuário
+	beginAccess();
+	$user = $current->verifyUser();
+	$_SESSION['success'] = "Usuário <span>{$_POST['name']}</span> logado com sucesso.";
+	// Setando nome e id na Seção
+	logUser($user->getUser()->getId(), $user->getUser()->getName());
+	header("Location: ../View/home.php");
+}
+
+function logOutUser($current)
+{
+	// Registra saída do Usuário
+	endAccess();
+	$current->out($_SESSION['log_out']);
+	// Destrói a sessão do Usuário
+	userLogOut();
+	$_SESSION['success'] = 'Deslogado com sucesso.';
+	header("Location: ../../index.php");
+}
+
+function redefineUser($current)
+{
+	// LOGICA
+}
 /*** Categoria ***/
 function loadCategory($current)
 {

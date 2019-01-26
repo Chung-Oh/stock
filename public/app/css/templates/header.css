@@ -14,6 +14,7 @@
 	color: #F2F2F2;
 	text-decoration: none;
 	transition: .7s;
+	cursor: pointer;
 }
 
 .top-nav a:focus,
@@ -27,16 +28,17 @@
     background-color: dodgerblue;
 }
 /* Caixa de Busca */
-.page-action:nth-child(4) {
+.page-action:nth-child(5) {
 	width: 35%;
 	padding: 5px 10px;
+	cursor: default;
 }
 
-.page-action:nth-child(4):hover {
+.page-action:nth-child(5):hover {
 	background-color: #333;
 }
 /* Botão de Sair */
-.page-action:nth-child(5) {
+.page-action:nth-child(6) {
     float: right;
     padding: 14px;
 }
@@ -45,7 +47,7 @@
     display: none;
 }
 /*** Desk ***/
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 465px) {
 	/* Animação navegação */
 	.top-nav {
 		height: 45px;
@@ -73,42 +75,51 @@
 		text-align: left;
 	}
 }
-/*** Desk ***/
-@media only screen and (max-width: 617px) {
-	.top-nav.responsive {
-	    height: 177px;
-	}
-	.top-nav .page-action:nth-child(4) {
-		display: none;
-	}
-	.top-nav .page-action:nth-child(5) {
-		float: right;
-	}
-}
 /*** iPad 1024px landscape ***/
 @media only screen and (max-width: 1024px) and (max-height: 768px) {
-	.top-nav .page-action:nth-child(4) {
+	.top-nav .page-action:nth-child(5) {
 	    width: 45%;
 	}
 }
 /*** iPad 768px portrait ***/
 @media only screen and (max-width: 768px) and (max-height: 1024px) {
-	.top-nav .page-action:nth-child(4) {
+	.top-nav .page-action:nth-child(5) {
+	    width: 40%;
+	}
+}
+/*** Desk 832px ***/
+@media only screen and (max-width: 832px) and (max-height: 640px) {
+	.top-nav .page-action:nth-child(5) {
 	    width: 35%;
+	}
+}
+/*** Desk 710px ***/
+@media only screen and (max-width: 710px) and (max-height: 640px) {
+	.top-nav .page-action:nth-child(5) {
+	    display: none;
+	}
+	.top-nav .page-action:nth-child(6) {
+	    float: right;
 	}
 }
 /*** Samsung-S5  640px landscape ***/
 @media only screen and (max-width: 640px) and (max-height: 360px) {
-	.top-nav .page-action:nth-child(4) {
-		width: 39%;
+	.top-nav .page-action {
+	    font-size: 85%;
+	    padding: 16px;
 	}
 	.top-nav .page-action:nth-child(5) {
+		width: 34%;
+		display: flex;
+		padding: 5px;
+	}
+	.top-nav .page-action:nth-child(6) {
 		float: right;
 	}
 }
 /*** Samsung-S5 360px portrait ***/
 @media only screen and (max-width: 360px) and (max-height: 640px) {
-	.top-nav .page-action:nth-child(5) {
+	.top-nav .page-action:nth-child(6) {
 		float: right;
 	}
 }

@@ -2,8 +2,8 @@
 require_once '../global.php';
 require_once '../Dao/CategoryDao.php';
 require_once '../Helpers/show-alert.php';
-require_once '../Helpers/user-session.php';
-require_once '../Helpers/category-session.php';
+require_once '../Session/user-session.php';
+require_once '../Session/category-session.php';
 
 try {
 	// Session abaixo serve para redirecionar os Form criação e edição
@@ -23,18 +23,26 @@ if (userIsLogged()) : ?>
 
 	<?php require_once 'Templates/header.php' ?>
 	<main>
-		<?php require_once 'Detail/main-top.php' ?>
-		<?php if (empty($catList->products)) : ?>
-			<?php require_once 'Detail/main-create.php' ?>
-			<?php require_once 'Detail/form-create.php' ?>
-			<?php require_once 'Product/main-empty.php' ?>
+		<!-- Verifica se tem Categoria -->
+		<?php if (count($categorys) > 0) : ?>
+			<?php require_once 'Detail/main-top.php' ?>
+			<!-- Verifica se tem Produto -->
+			<?php if (empty($catList->products)) : ?>
+				<?php require_once 'Detail/main-create.php' ?>
+				<?php require_once 'Detail/form-create.php' ?>
+				<?php require_once 'Product/main-product-empty.php' ?>
+			<?php else : ?>
+				<?php require_once 'Detail/form-edit.php' ?>
+				<?php require_once 'Detail/form-delete.php' ?>
+				<?php require_once 'Detail/main-info-head.php' ?>
+				<?php require_once 'Detail/main-info-button.php' ?>
+				<?php require_once 'Detail/main-info-body.php' ?>
+			<?php endif ?>
+			<!-- Fim Produto -->
 		<?php else : ?>
-			<?php require_once 'Detail/form-edit.php' ?>
-			<?php require_once 'Detail/form-delete.php' ?>
-			<?php require_once 'Detail/main-info-head.php' ?>
-			<?php require_once 'Detail/main-info-button.php' ?>
-			<?php require_once 'Detail/main-info-body.php' ?>
+			<?php require_once 'Product/main-category-empty.php' ?>
 		<?php endif ?>
+		<!-- Fim Categoria -->
 	</main>
 	<?php require_once 'Templates/button-go-top.php' ?>
 	<?php require_once 'Templates/footer.php' ?>

@@ -1,6 +1,6 @@
 <?php 
-require_once 'src/Helpers/user-session.php';
 require_once 'src/Helpers/show-alert.php';
+require_once 'src/Session/user-session.php';
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">

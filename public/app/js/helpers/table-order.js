@@ -19,8 +19,9 @@ const processOrderBy = (tbHead, rowsTable, column) => {
 				let temp2 = parseInt(b.children[column].textContent, 10);
 				return temp2 - temp1; 
 			} else {
-				return a.children[column].textContent > b.children[column].textContent ? 1 : 
-				((b.children[column].textContent > a.children[column].textContent) ? -1 : 0);
+				return a.children[column].textContent > b.children[column].textContent 
+					? 1 
+					: ((b.children[column].textContent > a.children[column].textContent) ? -1 : 0);
 			}
 		});		
 	} else {

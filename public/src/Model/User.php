@@ -5,6 +5,8 @@ class User
 	private $id;
 	private $name;
 	private $password;
+	private $created_at;
+	private $updated_at;
 
 	public function __construct($name, $password)
 	{
@@ -40,5 +42,25 @@ class User
 	public function setPassword($newPassword)
 	{
 		$this->password = $newPassword;
+	}
+
+	public function getCreatedAt()
+	{
+		return $this->created_at;
+	}
+
+	public function setCreatedAt($create)
+	{
+		$this->created_at = $create;
+	}
+
+	public function getUpdatedAt()
+	{
+		return $this->updated_at;
+	}
+
+	public function setUpdatedAt($update)
+	{
+		$this->updated_at = $update;
 	}
 }

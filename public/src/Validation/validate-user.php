@@ -1,36 +1,39 @@
-<?php 
-// require_once 'option.php';
-require_once '../Helpers/user-session.php';
+<?php
+require_once 'option.php';
+// require_once '../Session/user-session.php';
 
-function validateUserNameLength($consult)
+function validateUserNameLength($op, $consult)
 {
 	if (strlen($_POST['name']) <= 50) {
-		validatePasswordLength($consult);
+		validatePasswordLength($op, $consult);
 	} else {
-		$_SESSION['danger'] = 'Nome inválido, acima do exigido. Máximo 50 letras.';
+		$_SESSION['danger'] = "Nome inválido, acima do exigido. Máximo 50 letras.";
 		header("Location: ../../index.php");
 	}
 }
 
-function validatePasswordLength($consult)
+function validatePasswordLength($op, $consult)
 {
 	if (strlen($_POST['password']) <= 50) {
-		validateUserExist($consult);
+		validateUserExist($op, $consult);
 	} else {
-		$_SESSION['danger'] = 'Senha inválida, acima do exigido. Máximo 50 letras.';
+		$_SESSION['danger'] = "Senha inválida, acima do exigido. Máximo 50 letras.";
 		header("Location: ../../index.php");
 	}
 }
 
-function validateUserExist($consult)
+function validateUserExist($op, $consult)
 {
 	$user = $consult->verifyUser();
 	if ($user->getUser()->getId() == null) {
-		$_SESSION['danger'] = 'Usuário ou senha inválida.';
+		$_SESSION['danger'] = "Usuário ou senha inválida.";
 		header("Location: ../../index.php");
 	} else {
-		$_SESSION['success'] = 'Usuário logado com sucesso.';
-		logUser($user->getUser()->getName());
-		header("Location: ../View/home.php");
+		option($op, $consult);
 	}
+}
+
+function validateLogOut($op, $current)
+{
+	option($op, $current);
 }

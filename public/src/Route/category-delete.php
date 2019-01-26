@@ -5,7 +5,7 @@ require_once '../Validation/register.php';
 
 try {
 	$category = new CategoryDao($_POST['name'], $_POST['id']);
-	registerDeleteCategory(4, $category);
+	registerDeleteCategory(7, $category);
 } catch (PDOException $e) {
 	// Erro::handler($e);
 	$_SESSION['danger'] = "Essa operação exige que remova produtos <span>relacionados</span> a categoria";
