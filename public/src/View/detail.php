@@ -2,12 +2,15 @@
 require_once '../global.php';
 require_once '../Dao/CategoryDao.php';
 require_once '../Helpers/show-alert.php';
+require_once '../Helpers/date.php';
 require_once '../Session/user-session.php';
 require_once '../Session/category-session.php';
 
 try {
 	// Session abaixo serve para redirecionar os Form criação e edição
 	$_SESSION['path'] = basename(__FILE__);
+	// Verifica tempo da Sessão
+	sessionExist();
 	$categorys = CategoryDao::list();
 	if (haveSessionCategory()) {
 		$catList = new CategoryDao($_SESSION['name'], $_SESSION['id']);

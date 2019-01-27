@@ -13,7 +13,8 @@ class ProductDao
 	public static function list()
 	{
 		$query = "SELECT p.id, p.name, p.description, p.weight, p.color, p.category_id, c.name 
-			AS category_name FROM products AS p JOIN categorys AS c ON p.category_id = c.id ORDER BY id";
+			AS category_name, p.created_at, p.updated_at FROM products AS p JOIN categorys AS c 
+			ON p.category_id = c.id ORDER BY id";
 		$conn = Connection::getConn();
 		$result = $conn->query($query);
 		$list = array();
@@ -27,6 +28,8 @@ class ProductDao
 				$product_array['id']
 			);
 			$product->setCategoryName($product_array['category_name']);
+			$product->setCreatedAt($product_array['created_at']);
+			$product->setUpdatedAt($product_array['updated_at']);
 			array_push($list, $product);	
 		}
 		return $list;

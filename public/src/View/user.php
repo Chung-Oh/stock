@@ -5,10 +5,8 @@ require_once '../Helpers/show-alert.php';
 require_once '../Session/user-session.php';
 
 try {
-	// $date = date("d/m/Y");
-	// $hour = date("H:i:s");
-	// echo "Data: " . $date . "<br>" . "Horas : " . $hour;
-	// die();
+	// Verifica tempo da Sessão
+	sessionExist();
 } catch (PDOException $e) {
 	Erro::handler($e);
 }

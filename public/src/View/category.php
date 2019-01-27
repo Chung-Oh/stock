@@ -7,6 +7,8 @@ require_once '../Session/category-session.php';
 
 try {
 	cleanSessionCategory();
+	// Verifica tempo da Sessão
+	sessionExist();
 	$categorys = CategoryDao::list();
 } catch (PDOException $e) {
 	Erro::handler($e);

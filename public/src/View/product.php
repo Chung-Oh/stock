@@ -10,6 +10,8 @@ require_once '../Session/category-session.php';
 try {
 	// Session abaixo serve para redirecionar os Form criação e edição
 	$_SESSION['path'] = basename(__FILE__);
+	// Verifica tempo da Sessão
+	sessionExist();
 	$categorys = CategoryDao::list();
 	$products = ProductDao::list();
 } catch (PDOException $e) {

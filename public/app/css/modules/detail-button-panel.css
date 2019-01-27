@@ -20,6 +20,7 @@
 	border: 1px solid #333;
 	border-radius: 3px;
 	box-shadow: 2px 2px 5px #333;
+	transition: .7s;
 	cursor: pointer;
 }
 
@@ -28,6 +29,7 @@
 	color: dodgerblue;
 	border-color: dodgerblue;
     box-shadow: 0 0 1em 0 dodgerblue;
+    transition: .7s;
 }
 /*** Desk ***/
 @media only screen and (min-width: 100px) and (max-width: 770px) and (max-height: 641px) {

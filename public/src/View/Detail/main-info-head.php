@@ -1,11 +1,20 @@
 <section class="row detail-head">
-	<div class="info-head">
-		<p><strong class="info-head-strong">Id:</strong><?php echo $_SESSION['id'] ?></p>			
+	<div class="info info-head">
+		<p><strong class="info-head-strong">Id:</strong><?php echo $catList->category->getId() ?></p>			
 	</div>
-	<div class="info-head">
-		<p><strong class="info-head-strong">Categoria:</strong><?php echo $_SESSION['name'] ?></p>
+	<div class="info info-head">
+		<p><strong class="info-head-strong">Categoria:</strong><?php echo $catList->category->getName() ?></p>
 	</div>	
-	<div class="info-head">
+	<div class="info info-head">
 		<p><strong class="info-head-strong">Produtos:</strong><?php echo count($catList->products) ?></p>
+	</div>
+</section>
+<!-- Detalhes da Data -->
+<section class="row detail-head date">
+	<div class="info info-date">
+		<p><strong class="info-head-strong">Criado:</strong><?php echo dateFull($catList->category->getCreatedAt()) ?></p>
+	</div>
+	<div class="info info-date">
+		<p><strong class="info-head-strong">Atualizado:</strong><?php echo dateFull($catList->category->getUpdatedAt()) ?></p>
 	</div>
 </section>

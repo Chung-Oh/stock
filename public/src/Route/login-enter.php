@@ -1,6 +1,7 @@
 <?php
 require_once '../global.php';
 require_once '../Dao/UserDao.php';
+require_once '../Dao/LoggerDao.php';
 require_once '../Validation/register.php';
 
 try {

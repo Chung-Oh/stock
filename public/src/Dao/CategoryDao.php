@@ -4,12 +4,16 @@ require_once '../Model/Category.php';
 
 class CategoryDao
 {
-	private $category;
+	public $category;
 	public $products;
 
 	public function __construct($name, $id = null)
 	{
-		$this->category = new Category($name, $id);
+		if ($this->load($id)) {
+			$this->category = $this->load($id);
+		} else {
+			$this->category = new Category($name, $id);			
+		}
 	}
 
 	public static function list()

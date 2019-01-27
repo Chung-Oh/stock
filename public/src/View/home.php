@@ -7,6 +7,8 @@ require_once '../Helpers/services.php';
 require_once '../Session/user-session.php';
 
 try {
+	// Verifica tempo da Sessão
+	sessionExist();
 	$categorys = CategoryDao::list();
 	$products = ProductDao::list();
 } catch (PDOException $e) {
