@@ -151,6 +151,7 @@ h1 {
 		font-size: 3em;
 	}
 }
+/*** Desk 675px ***/
 @media only screen and (max-width: 675px) {
 	.title-fly {
 		align-items: center;

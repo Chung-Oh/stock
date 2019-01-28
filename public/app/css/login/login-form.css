@@ -90,7 +90,7 @@ tr {
 		font-size: 150%;
 	}
 }
-/*** Desk ***/
+/*** Desk 800px ***/
 @media only screen and (max-width: 800px) {
 	form {
 		width: 60%;

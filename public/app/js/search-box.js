@@ -3,14 +3,6 @@ import {rowsTable} from './table-listens.js';
 import {details} from './form-edit.js';
 
 const inputs = document.querySelectorAll(".search");
-// Ocultar input na Home
-(function showSearchBox() {
-	const navBar = document.querySelectorAll(".page-action");
-	(window.location.pathname == "/src/View/home.php" 
-		|| window.location.pathname == "/src/View/user.php")
-		? navBar[3].style.display="none"
-		: null;
-})();
 
 const empty = (row, context) => {
 	row.classList.add("invisible");

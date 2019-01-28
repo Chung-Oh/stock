@@ -17,7 +17,7 @@ function getOut()
 
 function getTime()
 {
-	$_SESSION['session_time'] = time() + 360;
+	$_SESSION['session_time'] = time() + 3600;
 }
 
 function timeOver()

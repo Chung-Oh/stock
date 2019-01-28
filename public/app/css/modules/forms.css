@@ -131,7 +131,7 @@ select > option:first-child {
         background-color: #F05555;
         border: 1px solid #DA2003;
         box-shadow: 0 0 10px #F00;
-        transition: .7s;
+        transition: .5s;
     }
 }
 /*** iPad 768px portrait ***/

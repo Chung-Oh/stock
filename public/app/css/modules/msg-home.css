@@ -8,7 +8,7 @@
 	text-align: center;
 	padding: 1em;
 }
-/*** Desk ***/
+/*** Desk 450px ***/
 @media only screen and (max-width: 450px) and (min-height: 640px) {
 	.msg-home {
 		margin-top: 45px;

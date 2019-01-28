@@ -30,6 +30,7 @@
 /* Caixa de Busca */
 .page-action:nth-child(5) {
 	width: 35%;
+	display: block;
 	padding: 5px 10px;
 	cursor: default;
 }
@@ -46,7 +47,7 @@
 .top-nav .icon {
     display: none;
 }
-/*** Desk ***/
+/*** Desk 465px ***/
 @media only screen and (max-width: 465px) {
 	/* Animação navegação */
 	.top-nav {
@@ -88,13 +89,13 @@
 	}
 }
 /*** Desk 832px ***/
-@media only screen and (max-width: 832px) and (max-height: 640px) {
+@media only screen and (max-width: 832px) and (max-height: 657px) {
 	.top-nav .page-action:nth-child(5) {
 	    width: 35%;
 	}
 }
 /*** Desk 710px ***/
-@media only screen and (max-width: 710px) and (max-height: 640px) {
+@media only screen and (max-width: 710px) and (max-height: 657px) {
 	.top-nav .page-action:nth-child(5) {
 	    display: none;
 	}

@@ -16,7 +16,6 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		transition: 1s;
 	}
 	.new-item {
 		height: 100%;

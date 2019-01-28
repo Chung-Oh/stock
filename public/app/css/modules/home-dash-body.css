@@ -21,7 +21,7 @@ meter {
 		width: 80%;
 	}
 }
-/*** Desk ***/
+/*** Desk 640px ***/
 @media only screen and (max-width: 600px) and (max-height: 640px) {
 	.info-table table {
 		width: 100%;

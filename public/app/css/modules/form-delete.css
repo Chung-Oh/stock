@@ -95,7 +95,7 @@
 	width: 30%;
 	cursor: pointer;
 }
-/*** Desk ***/
+/*** Desk 617px ***/
 @media only screen and (max-width: 617px) {
 	.delete-category,
 	.delete-product {

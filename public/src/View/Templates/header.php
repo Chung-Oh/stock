@@ -24,6 +24,9 @@
 	<link rel="stylesheet" href="../../app/css/modules/detail-button-panel.css">
 	<link rel="stylesheet" href="../../app/css/modules/detail-info-body.css">
 	<link rel="stylesheet" href="../../app/css/modules/table.css">
+	<link rel="stylesheet" href="../../app/css/modules/user-info.css">
+	<link rel="stylesheet" href="../../app/css/modules/user-button.css">
+	<link rel="stylesheet" href="../../app/css/modules/user-form.css">
 	<link rel="stylesheet" href="../../app/css/modules/msg-category-empty.css">
 	<link rel="stylesheet" href="../../app/css/templates/button-go-top.css">
 	<link rel="stylesheet" href="../../app/css/templates/footer.css">

@@ -13,7 +13,7 @@ function messageDefault()
 {
 	echo "N/D";
 }
-
+// Converte para Data
 function manipulateDate($arg)
 {
 	if (testArg($arg)) {
@@ -27,7 +27,7 @@ function manipulateDate($arg)
 		messageDefault();
 	}
 }
-
+// Converte para Horas
 function manipulateTime($arg)
 {
 	if (testArg($arg)) {
@@ -37,15 +37,49 @@ function manipulateTime($arg)
 		messageDefault();
 	}
 }
-
+// Converte para Data completa
 function dateFull($arg)
 {
 	if (testArg($arg)) {
 		$time = manipulateTime($arg);
 		$date = manipulateDate($arg);
-		$full = $time . " - " . $date;
+		$full = $date . " - " . $time;
 		return $full;		
 	} else {
 		messageDefault();
+	}
+}
+// Retorna Início da Sessão
+function initAccess($arg)
+{
+	$index = count($arg) - 1;
+	$log = $arg[$index];
+	$result = manipulateTime($log->getLogin());
+	return $result;
+}
+// Verifica se está vazio
+function isEmpty($arg)
+{
+	// 1º Cond. para primeiro acesso
+	if (empty($arg->getLogin()) && empty($arg->getLogout())) {
+		echo "N/D";
+	} elseif (!empty($arg->getLogout())) {
+		echo dateFull($arg->getLogout());
+	} else {
+		// Caso não tenha gravado último logout pega login
+		echo dateFull($arg->getLogin());
+	}
+}
+// Retorna Último acesso
+function lastAccess($arg)
+{
+	if (count($arg) == 1) {
+		$index = count($arg) - 1;
+		$log = $arg[$index];
+		isEmpty($log);
+	} else {
+		$index = count($arg) - 2;
+		$log = $arg[$index];
+		isEmpty($log);
 	}
 }

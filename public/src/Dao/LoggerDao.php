@@ -33,6 +33,27 @@ class LoggerDao
 		return $result;
 	}
 
+	public static function load($user_id)
+	{
+		$query = "SELECT id, login, logout, user_id FROM logger WHERE user_id = :user_id";
+		$conn = Connection::getConn();
+		$stmt = $conn->prepare($query);
+		$stmt->bindValue(':user_id', $user_id);
+		$stmt->execute();
+		$result = $stmt->fetchAll();
+		$list = array();
+		foreach($result as $log) {
+			$temp = new Logger(
+				$log['user_id'],
+				$log['login'],
+				$log['logout']
+			);
+			$temp->setId($log['id']);
+			array_push($list, $temp);
+		}
+		return $list;
+	}
+
 	public function getLogger()
 	{
 		return $this->log;

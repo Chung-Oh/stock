@@ -2,15 +2,14 @@
     margin-top: 1em;
 }
 
-.button-panel {
+.detail-btn-panel {
     font-size: 85%;
     display: flex;
     justify-content: center;
-    align-items: center;
     padding: 0;
 }
 
-.open {
+.open-close {
 	width: 150px;
 	font-size: 80%;
 	font-weight: bold;
@@ -24,8 +23,8 @@
 	cursor: pointer;
 }
 
-.open:focus,
-.open:hover {
+.open-close:focus,
+.open-close:hover {
 	color: dodgerblue;
 	border-color: dodgerblue;
     box-shadow: 0 0 1em 0 dodgerblue;
@@ -33,7 +32,7 @@
 }
 /*** Desk ***/
 @media only screen and (min-width: 100px) and (max-width: 770px) and (max-height: 641px) {
-   .open {
+   .open-close {
 		width: 80%;
 		border-top: 2px solid #333;
 		border-right: 2px solid #333;
@@ -45,7 +44,7 @@
 }
 /*** Samsung-S5  640px landscape ***/
 @media only screen and (max-width: 640px) and (max-height: 360px) {
-	.open {
+	.open-close {
 		width: 67%;
 		border-top: 2px solid #333;
 		border-right: 2px solid #333;
@@ -57,7 +56,7 @@
 }
 /*** Samsung-S5 360px portrait ***/
 @media only screen and (max-width: 360px) and (max-height: 640px) {
-	.open {
+	.open-close {
 		width: 85%;
 		border-top: 2px solid #333;
 	    border-right: 2px solid #333;

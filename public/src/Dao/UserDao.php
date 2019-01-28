@@ -25,6 +25,21 @@ class UserDao
 		return $this;
 	}
 
+	public static function load($id)
+	{
+		$query = "SELECT id, name, password, created_at, updated_at FROM users WHERE id = :id";
+		$conn = Connection::getConn();
+		$stmt = $conn->prepare($query);
+		$stmt->bindValue(':id', $id);
+		$stmt->execute();
+		$result = $stmt->fetch();
+		$user = new User($result['name'], $result['password']);
+		$user->setId($result['id']);
+		$user->setCreatedAt($result['created_at']);
+		$user->setUpdatedAt($result['updated_at']);
+		return $user;
+	}
+
 	public function getUser()
 	{
 		return $this->user;

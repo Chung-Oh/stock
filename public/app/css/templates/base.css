@@ -46,7 +46,7 @@ main {
 		transition: margin-top .5s;
 	}
 }
-/*** Corrigir layout Desk ***/
+/*** Desk 451px ***/
 @media only screen and (min-width: 451px) {
 	.main-down {
 		margin-top: 45px;

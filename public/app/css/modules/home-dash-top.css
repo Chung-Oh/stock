@@ -51,7 +51,7 @@
 		border-radius: 0 20px 20px 0;
 	}
 }
-/*** Desk ***/
+/*** Desk 640px ***/
 @media only screen and (max-width: 600px) and (max-height: 640px) {
 	.dash-top {
 		align-items: center;
