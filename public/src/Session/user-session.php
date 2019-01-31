@@ -5,8 +5,8 @@ session_start();
 function isUser()
 {
 	if (!userLogged()) {
-		$_SESSION['danger'] = 'Você não tem acesso.';
 		header("Location: index.php");
+		$_SESSION['danger'] = 'Você não tem acesso.';
 		die();
 	}
 }

@@ -1,5 +1,6 @@
 .user-form {
 	width: 50%;
+	display: none;
 	position: fixed;
 	top: 34%;
 	left: 25%;
@@ -133,9 +134,16 @@
 	.fa-lock {
 	    left: 58px;
 	}
+	.user-form .btn-danger,
+	.form-user input {
+		font-size: 90%;
+	}
 }
 /*** Desk 500px ***/
 @media only screen and (max-width: 500px) and (max-height: 657px) {
+	.fa-user, .fa-lock {
+		font-size: 90%;
+	}
 	.fa-user {
 	    left: 65px;
 	}

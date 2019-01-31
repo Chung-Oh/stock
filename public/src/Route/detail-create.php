@@ -13,9 +13,9 @@ try {
 		afterFirst($_POST['color']), 
 		$_POST['category_id']
 	);
-	registerNewProduct(11, $product);
+	registerNewProduct(12, $product);
 } catch (PDOException $e) {
 	// Erro::handler($e);
-	$_SESSION['danger'] = "<span>{$_POST['name']}</span> não foi cadastrado";
 	header("Location: ../View/product.php");
+	$_SESSION['danger'] = "<span>{$_POST['name']}</span> não foi cadastrado";
 }

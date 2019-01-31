@@ -1,6 +1,8 @@
 <?php 
 require_once 'src/Helpers/show-alert.php';
 require_once 'src/Session/user-session.php';
+// Sessão usada na validação de usuário
+$_SESSION['path'] = basename(__FILE__);
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">

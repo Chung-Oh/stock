@@ -3,7 +3,7 @@ require_once 'validate-user.php';
 require_once 'validate-category.php';
 require_once 'validate-product.php';
 /*** Usuário ***/
-function registerLogUser($op, $current)
+function registerVerifyUser($op, $current)
 {
 	validateUserNameLength($op, $current);
 }
@@ -11,11 +11,6 @@ function registerLogUser($op, $current)
 function registerLogOutUser($op, $current)
 {
 	validateLogOut($op, $current);
-}
-
-function registerRedefineUser($op, $current)
-{
-	// Lógica
 }
 /*** Categoria ***/
 function registerSelectCategory($op, $current)

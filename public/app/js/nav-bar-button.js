@@ -7,13 +7,9 @@ const main = document.querySelector("main");
 const iconSearch = document.querySelector(".icon-search");
 
 const topNavAnimation = () => {	
-	if (navBar.className === "top-nav") {
-		navBar.className += " responsive";
-		main.className = "main-down";
-	} else {
-		navBar.className = "top-nav";
-		main.className = "";
-	}
+	navBar.className === "top-nav"
+		? (navBar.className += " responsive", main.className = "main-down")
+		: (navBar.className = "top-nav", main.className = "");
 }
 
 btn.addEventListener("click", () => topNavAnimation());

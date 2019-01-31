@@ -9,6 +9,8 @@ try {
 	cleanSessionCategory();
 	// Verifica tempo da Sessão
 	sessionExist();
+	// Destruindo authorized para redefinir nova senha
+	unset($_SESSION['authorized']);
 	$categorys = CategoryDao::list();
 } catch (PDOException $e) {
 	Erro::handler($e);

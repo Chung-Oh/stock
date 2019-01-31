@@ -13,9 +13,9 @@ try {
 		$_POST['category_id'], 
 		$_POST['id']
 	);
-	registerDeleteProduct(13, $product);
+	registerDeleteProduct(14, $product);
 } catch (PDOException $e) {
 	// Erro::handler($e);
-	$_SESSION['danger'] = "<span>{$_POST['name']}</span> não foi removido";
 	header("Location: ../View/product.php");
+	$_SESSION['danger'] = "<span>{$_POST['name']}</span> não foi removido";
 }

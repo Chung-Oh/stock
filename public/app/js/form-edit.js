@@ -21,15 +21,11 @@ const oldWeight = document.getElementById("oldWeight");
 const oldColor = document.getElementById("oldColor");
 const oldCategoryId = document.getElementById("oldCategoryId");
 
-const hiddenFormDetail = () => {
-	fadeOut(formEdit, 1);
-}
+const hiddenFormDetail = () => fadeOut(formEdit, 1);
 
 const hiddenForm = () => {
 	fadeOut(formEdit, 1);
-	setTimeout(() => {
-		fadeIn(btnCallFormCreate, 1);
-	}, 700);
+	setTimeout(() => fadeIn(btnCallFormCreate, 1), 700);
 }
 
 const category = target => {
@@ -71,12 +67,12 @@ const productDetails = target => {
 	oldColor.value = target.children[4].children[1].textContent.trim();
 	oldCategoryId.value = target.children[7].textContent.trim();
 }
-
+// Análisa em qual page se encontra, passando no ShowForm o Nó correto
 const pageAnalysis = () => {
 	if (details) {
 		showForm(productDetails);
 	} else if (!tbody) {
-		console.log('No table');
+		null;
 	} else if (tbody.parentNode.classList.contains("table-category")) {
 		showForm(category);
 	} else if (tbody.parentNode.classList.contains("table-product")) {
@@ -86,13 +82,13 @@ const pageAnalysis = () => {
 
 const showForm = typeForm => {
 	// Cancelar Form page Detalhe
-	if (btnCancel[0]) {
-		btnCancel[0].addEventListener("click", () => hiddenFormDetail());
-	}
+	btnCancel[0] 
+		? btnCancel[0].addEventListener("click", () => hiddenFormDetail())
+		: null;
 	// Cancelar Form page Categoria e Produto
-	if (btnCancel[1]) {
-		btnCancel[1].addEventListener("click", () => hiddenForm());			
-	}
+	btnCancel[1] 
+		? btnCancel[1].addEventListener("click", () => hiddenForm())
+		: null;			
 	// Page Categoria e Produto
 	if (tbody) {
 		tbody.addEventListener("click", event => {
@@ -122,5 +118,5 @@ const showForm = typeForm => {
 		});		
 	}
 }
-
+// Inicia função passando o Nó certo para trabalhar
 pageAnalysis();

@@ -66,19 +66,15 @@ inputs.forEach(search => {
 		inputs[1].value = "";
 		for (let i = 0; i < rowsTable.length; i++) {
 			let row = rowsTable[i];
-			if (window.location.pathname == "/src/View/detail.php") {
-				notEmpty(row, details);
-			} else {
-				notEmpty(row, rowsTable);	
-			}
+			window.location.pathname == "/src/View/detail.php"
+				? notEmpty(row, details)
+				: notEmpty(row, rowsTable);	
 		}
 	});
 });
 // Verifica qual Page está para chamar a lógica de busca
 (function search() {
-	if (window.location.pathname == "/src/View/detail.php") {
-		pageDetail();
-	} else {
-		pageCategoryProduct();
-	}
+	window.location.pathname == "/src/View/detail.php"
+		? pageDetail()
+		: pageCategoryProduct();
 })();

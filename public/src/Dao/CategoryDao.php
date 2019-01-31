@@ -9,11 +9,7 @@ class CategoryDao
 
 	public function __construct($name, $id = null)
 	{
-		if ($this->load($id)) {
-			$this->category = $this->load($id);
-		} else {
-			$this->category = new Category($name, $id);			
-		}
+		$this->category = new Category($name, $id);
 	}
 
 	public static function list()
@@ -47,6 +43,7 @@ class CategoryDao
 
 	public function loadDetails()
 	{
+		$this->category = $this->load($this->category->getId());
 		$this->products = ProductDao::load($this->category->getId());
 		return $this;
 	}
@@ -92,7 +89,7 @@ class CategoryDao
 		$stmt->bindValue(':id', $this->category->getId());
 		$stmt->bindValue(':name', $this->category->getName());
 		$newName = $stmt->execute();
-		return $newName;			
+		return $newName;
 	}
 
 	public function delete()

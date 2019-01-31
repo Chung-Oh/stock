@@ -1,6 +1,6 @@
 <section class="row user-head-top">
 	<div class="info user-head-info">
-		<p><strong class="info-head-strong">Logado como:</strong><?php echo $user->getName() ?></p>			
+		<p><strong class="info-head-strong">Logado como:</strong><?php echo afterFirst($user->getName()) ?></p>			
 	</div>
 	<div class="info user-head-info">
 		<p><strong class="info-head-strong">Criado:</strong><?php echo dateFull($user->getCreatedAt()) ?></p>

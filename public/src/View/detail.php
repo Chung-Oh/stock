@@ -11,6 +11,8 @@ try {
 	$_SESSION['path'] = basename(__FILE__);
 	// Verifica tempo da Sessão
 	sessionExist();
+	// Destruindo authorized para redefinir nova senha
+	unset($_SESSION['authorized']);
 	$categorys = CategoryDao::list();
 	if (haveSessionCategory()) {
 		$catList = new CategoryDao($_SESSION['name'], $_SESSION['id']);
@@ -31,8 +33,8 @@ if (userIsLogged()) : ?>
 			<?php require_once 'Detail/main-top.php' ?>
 			<!-- Verifica se tem Produto -->
 			<?php if (empty($catList->products)) : ?>
-				<?php require_once 'Detail/main-create.php' ?>
 				<?php require_once 'Detail/form-create.php' ?>
+				<?php require_once 'Detail/main-create.php' ?>
 				<?php require_once 'Product/main-product-empty.php' ?>
 			<?php else : ?>
 				<?php require_once 'Detail/form-edit.php' ?>

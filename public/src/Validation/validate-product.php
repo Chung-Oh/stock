@@ -8,7 +8,7 @@ function validateProductOldIsValid($op, $current, $old)
 		validateProductIfExist($op, $current);
 	} else {
 		testPath(
-			$_SESSION['path'], 
+			$_SESSION['path'],
 			"Formulário <span>violado,</span> produto não existe no sistema"
 		);
 	}

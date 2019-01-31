@@ -3,12 +3,21 @@ require_once 'convert.php';
 
 function testPath($path, $msg)
 {
-	if ($path == "product.php") {
+	if ($path == "index.php") {
+		header("Location: ../../index.php");
 		$_SESSION['danger'] = $msg;
+	} elseif ($path == "product.php") {
 		header("Location: ../View/product.php");
-	} else {
 		$_SESSION['danger'] = $msg;
+	} elseif ($path == "detail.php") {
 		header("Location: ../View/detail.php");
+		$_SESSION['danger'] = $msg;
+	} elseif ($path == "user.php") {
+		header("Location: ../View/user.php");
+		$_SESSION['danger'] = $msg;
+	} elseif ($path == "redefine.php") {
+		header("Location: ../View/user.php");
+		$_SESSION['danger'] = $msg;
 	}
 }
 

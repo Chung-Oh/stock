@@ -21,9 +21,9 @@ try {
 		$_POST['oldCategoryId'], 
 		$_POST['id']
 	);
-	registerUpdateProduct(9, $product, $old);
+	registerUpdateProduct(10, $product, $old);
 } catch (PDOException $e) {
 	// Erro::handler($e);
-	$_SESSION['danger'] = "<span>{$_POST['name']}</span> não foi atualizado";
 	header("Location: ../View/product.php");
+	$_SESSION['danger'] = "<span>{$_POST['name']}</span> não foi atualizado";
 }

@@ -12,6 +12,8 @@ try {
 	$_SESSION['path'] = basename(__FILE__);
 	// Verifica tempo da Sessão
 	sessionExist();
+	// Destruindo authorized para redefinir nova senha
+	unset($_SESSION['authorized']);
 	$categorys = CategoryDao::list();
 	$products = ProductDao::list();
 } catch (PDOException $e) {
