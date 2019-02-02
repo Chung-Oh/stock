@@ -74,7 +74,7 @@ class UserDao
 		return $result;
 	}
 	// Pegar contagem de Categorias criado pelo Usuário
-	public static function countCategory($userId)
+	public static function countCategoryCreate($userId)
 	{
 		$query = "SELECT COUNT(name) AS categorys FROM categorys WHERE created_by = :created_by";
 		$conn = Connection::getConn();
@@ -84,13 +84,35 @@ class UserDao
 		$result = $stmt->fetch();
 		return $result['categorys'];
 	}
+	// Pegar contagem de Categorias atualizado pelo Usuário
+	public static function countCategoryUpdate($userId)
+	{
+		$query = "SELECT COUNT(name) AS categorys FROM categorys WHERE updated_by = :updated_by";
+		$conn = Connection::getConn();
+		$stmt = $conn->prepare($query);
+		$stmt->bindValue(':updated_by', $userId);
+		$stmt->execute();
+		$result = $stmt->fetch();
+		return $result['categorys'];
+	}
 	// Pegar contagem de Produtos criado pelo Usuário
-	public static function countProduct($userId)
+	public static function countProductCreate($userId)
 	{
 		$query = "SELECT COUNT(name) AS products FROM products WHERE created_by = :created_by";
 		$conn = Connection::getConn();
 		$stmt = $conn->prepare($query);
 		$stmt->bindValue(':created_by', $userId);
+		$stmt->execute();
+		$result = $stmt->fetch();
+		return $result['products'];
+	}
+	// Pegar contagem de Produtos atualizado pelo Usuário
+	public static function countProductUpdate($userId)
+	{
+		$query = "SELECT COUNT(name) AS products FROM products WHERE updated_by = :updated_by";
+		$conn = Connection::getConn();
+		$stmt = $conn->prepare($query);
+		$stmt->bindValue(':updated_by', $userId);
 		$stmt->execute();
 		$result = $stmt->fetch();
 		return $result['products'];

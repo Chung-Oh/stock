@@ -28,7 +28,7 @@
 		<p><strong class="info-head-strong">Categorias criadas:</strong><?php echo $categorysCreate ?></p>
 	</div>	
 	<div class="info user-head-info">
-		<p><strong class="info-head-strong">Categorias atualizadas:</strong><?php echo 'N/D' ?></p>
+		<p><strong class="info-head-strong">Categorias atualizadas:</strong><?php echo $categorysUpdate ?></p>
 	</div>
 </section>
 <!-- Quarta linha -->
@@ -37,6 +37,6 @@
 		<p><strong class="info-head-strong">Produtos criados:</strong><?php echo $productsCreate ?></p>
 	</div>	
 	<div class="info user-head-info">
-		<p><strong class="info-head-strong">Produtos atualizados:</strong><?php echo 'N/D' ?></p>
+		<p><strong class="info-head-strong">Produtos atualizados:</strong><?php echo $productsUpdate ?></p>
 	</div>
 </section>

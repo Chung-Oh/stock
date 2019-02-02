@@ -1,7 +1,7 @@
 <section class="row table">
 	<div class="col-12">
 		<table class="table-category">
-			<caption>.: Pressione sobre nome da categoria para mais detalhes :.</caption>
+			<caption>.: Clique sobre nome da categoria para mais detalhes :.</caption>
 			<thead>
 				<tr>
 					<th class="order">Id</th>
