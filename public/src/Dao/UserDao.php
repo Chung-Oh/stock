@@ -11,7 +11,7 @@ class UserDao
 		$this->user = new User($name, md5($password));
 		$this->copy = new User($name, md5($password));
 	}
-
+	// Page Index, verificação de usuário
 	public function verifyUser()
 	{
 		$query = "SELECT id, name, password, created_at, updated_at FROM users WHERE name = :name AND password = :password";
@@ -28,11 +28,10 @@ class UserDao
 		$this->user->setUpdatedAt($result['updated_at']);
 		return $this;
 	}
-
+	// Validação
 	public function confirmUser($id)
 	{
-		$query = "SELECT id, name, password, created_at, updated_at FROM users WHERE id = :id AND name = :name 
-			AND password = :password";
+		$query = "SELECT id, name, password, created_at, updated_at FROM users WHERE id = :id AND name = :name AND password = :password";
 		$conn = Connection::getConn();
 		$stmt = $conn->prepare($query);
 		$stmt->bindValue(':id', $id);
@@ -47,7 +46,7 @@ class UserDao
 		$this->user->setUpdatedAt($result['updated_at']);
 		return $this;
 	}
-
+	// Page Usuário / Redefinição
 	public static function load($id)
 	{
 		$query = "SELECT id, name, password, created_at, updated_at FROM users WHERE id = :id";
@@ -62,7 +61,7 @@ class UserDao
 		$user->setUpdatedAt($result['updated_at']);
 		return $user;
 	}
-
+	// Operação após validação
 	public function update($id)
 	{
 		$query = "UPDATE users SET name = :name, password = :password, updated_at = current_timestamp() WHERE id = :id";
@@ -74,7 +73,29 @@ class UserDao
 		$result = $stmt->execute();
 		return $result;
 	}
-
+	// Pegar contagem de Categorias criado pelo Usuário
+	public static function countCategory($userId)
+	{
+		$query = "SELECT COUNT(name) AS categorys FROM categorys WHERE created_by = :created_by";
+		$conn = Connection::getConn();
+		$stmt = $conn->prepare($query);
+		$stmt->bindValue(':created_by', $userId);
+		$stmt->execute();
+		$result = $stmt->fetch();
+		return $result['categorys'];
+	}
+	// Pegar contagem de Produtos criado pelo Usuário
+	public static function countProduct($userId)
+	{
+		$query = "SELECT COUNT(name) AS products FROM products WHERE created_by = :created_by";
+		$conn = Connection::getConn();
+		$stmt = $conn->prepare($query);
+		$stmt->bindValue(':created_by', $userId);
+		$stmt->execute();
+		$result = $stmt->fetch();
+		return $result['products'];
+	}
+	// Acessar propriedade do Dao nas validações
 	public function getUser()
 	{
 		return $this->user;

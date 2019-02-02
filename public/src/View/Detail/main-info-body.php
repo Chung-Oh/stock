@@ -7,8 +7,14 @@
 				<p><strong class="info-body-strong">Descrição :</strong><em><?php echo $product->getDesc() ?></em></p>
 				<p><strong class="info-body-strong">Peso :</strong><em><?php echo $product->getWeight() ?></em></p>
 				<p><strong class="info-body-strong">Cor :</strong><em><?php echo $product->getColor() ?></em></p>
-				<p><strong class="info-body-strong">Criado :</strong><em><?php echo dateFull($product->getCreatedAt()) ?></em></p>
-				<p><strong class="info-body-strong">Atualizado :</strong><em><?php echo dateFull($product->getUpdatedAt()) ?></em></p>
+				<p>
+					<strong class="info-body-strong">Criado :</strong><em><?php echo dateFull($product->getCreatedAt()) ?></em>
+					<strong class="info-body-strong"> &rArr; Autor :</strong><em><?php echo afterFirst($product->getCreatedBy()) ?></em>
+				</p>
+				<p>
+					<strong class="info-body-strong">Atualizado :</strong><em><?php echo dateFull($product->getUpdatedAt()) ?></em>
+					<strong class="info-body-strong"> &rArr; Autor :</strong><em><?php echo afterFirst($product->getUpdatedBy()) ?></em>
+				</p>
 				<p hidden><?php echo $product->getCategoryId() ?></p>
 				<p hidden><?php echo $product->getCategoryName() ?></p>
 				<button id="edit" class="fas fa-pencil-alt"></button>

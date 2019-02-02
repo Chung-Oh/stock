@@ -69,7 +69,7 @@ function validateNewUserData($op, $consult)
 	if (!empty($user->getUser()->getId())) {
 		testPath(
 			$_SESSION['path'],
-			"Usuário ou senha já existe."
+			"Usuário e senha já existe."
 		);
 	} else {
 		option($op, $consult);

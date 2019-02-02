@@ -12,12 +12,12 @@ try {
 	// Setando o caminho para pegar as sessions
 	$_SESSION['path'] = basename(__FILE__);
 	$user = UserDao::load($_SESSION['user_id']);
+	// Quantidade de Categoria criado pelo usuário
+	$categorys = UserDao::countCategory($_SESSION['user_id']);
+	// Quantidade de Produto criado pelo usuário
+	$products = UserDao::countProduct($_SESSION['user_id']);
+	// Informações dos acessos
 	$logList = LoggerDao::load($_SESSION['user_id']);
-	/************************************************************/
-	// echo '<pre>';
-	// print_r($_SESSION);
-	// die();
-	/************************************************************/
 } catch (PDOException $e) {
 	Erro::handler($e);
 }

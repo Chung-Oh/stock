@@ -17,6 +17,13 @@
 	width: 100%;
 }
 
+caption {
+	font-size: 80%;
+	font-weight: bold;
+	font-style: italic;
+	padding: .5em;
+}
+
 thead {
 	background-color: #333;
 	color: white;

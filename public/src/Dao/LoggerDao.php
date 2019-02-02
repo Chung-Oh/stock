@@ -9,7 +9,7 @@ class LoggerDao
 	{
 		$this->log = new Logger($user_id, $login, $logout);
 	}
-
+	// Entrar no sistema
 	public function in()
 	{
 		$query = "INSERT INTO logger (login, user_id) VALUES (:login, :user_id)";
@@ -20,7 +20,7 @@ class LoggerDao
 		$result = $stmt->execute();
 		return $result;
 	}
-
+	// Sair do sistema
 	public function out($logout)
 	{
 		$query = "UPDATE logger SET logout = :logout WHERE login = :login AND user_id = :user_id";
@@ -32,7 +32,7 @@ class LoggerDao
 		$result = $stmt->execute();
 		return $result;
 	}
-
+	// Page Usuário / Redefinição
 	public static function load($user_id)
 	{
 		$query = "SELECT id, login, logout, user_id FROM logger WHERE user_id = :user_id";
@@ -53,7 +53,7 @@ class LoggerDao
 		}
 		return $list;
 	}
-
+	// Acessar propriedade do Dao
 	public function getLogger()
 	{
 		return $this->log;

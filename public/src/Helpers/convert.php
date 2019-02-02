@@ -7,9 +7,13 @@ function allLower($target)
 
 function afterFirst($target)
 {
-	$first = ucfirst(substr($target, 0, 1));
-	$afterFirst = mb_strtolower(substr($target, 1));
-	return $first .= $afterFirst;
+	if (!empty($target)) {
+		$first = ucfirst(substr($target, 0, 1));
+		$afterFirst = mb_strtolower(substr($target, 1));
+		return $first .= $afterFirst;
+	} else {
+		echo 'N/D';
+	}
 }
 
 function customString($target, $length)

@@ -35,16 +35,21 @@
 	margin-right: .5em;
 }
 
-.detail-date {
-	margin-top: 3px;
+.detail-update,
+.detail-create {
+	margin-top: 5px;
 }
 
-.info-date:first-child {
+.detail-create .info-sub:first-child,
+.detail-update .info-sub:first-child {
 	margin-right: 5px;
+}
+
+.detail-update .info-sub:first-child {
 	border-radius: 0 0 0 15px;
 }
 
-.info-date:last-child {
+.detail-update .info-sub:last-child {
 	border-radius: 0 0 15px 0;
 }
 /*** iPad 1024px landscape ***/
@@ -56,11 +61,11 @@
 		width: 30%;
 		border-radius: 0 30px 0 0;
 	}
-	.info-date:first-child {
+	.detail-update .info-sub:first-child {
 		margin-right: 5px;
 		border-radius: 0 0 0 30px;
 	}
-	.info-date:last-child {
+	.detail-update .info-sub:last-child {
 		border-radius: 0 0 30px 0;
 	}
 }
@@ -77,15 +82,15 @@
 	.detail-head-info p {
 		font-size: 95%;
 	}
-	.info-date:first-child {
+	.detail-update .info-sub:first-child {
 		margin-right: 5px;
 		border-radius: 0 0 0 30px;
 	}
-	.info-date:last-child {
+	.detail-update .info-sub:last-child {
 		border-radius: 0 0 30px 0;
 	}
 }
-/*** Desk ***/
+/*** Desk 770px ***/
 @media only screen and (min-width: 100px) and (max-width: 770px) and (max-height: 641px) {
 	.detail-head {
 		display: block;
@@ -106,19 +111,25 @@
 		margin-top: 2px;
 		border-radius: 0;
 	}
-	.detail-date {
+	.detail-create,
+	.detail-update {
 		margin-top: 2px;
 	}
-	.info-date:first-child {
+	.detail-update .info-sub:first-child {
+		border-radius: 0;
+	}
+	.detail-update .info-sub:last-child {
+		border-radius: 0 0 50px 50px;
+	}
+	.info-sub:first-child {
 		width: 100%;
 		border-radius: 0;
 		margin-bottom: 2px;
 	}
-	.info-date:last-child {
-		width: 100%;
-		border-radius: 0 0 40px 40px;
+	.info-sub:last-child {
+		width: 100%; 
 	}
-	.info-date p {
+	.info-sub p {
 	    font-size: 95%;
 	}
 }
@@ -126,10 +137,6 @@
 @media only screen and (max-width: 640px) and (max-height: 360px) {
 	.detail-head {
 		width: 67%;
-		display: block;
-	}
-	.detail-head-info {
-		box-shadow: 1px 1px 5px #555;
 	}
 	.detail-head-info:first-child,
 	.detail-head-info:last-child {
@@ -140,7 +147,6 @@
 	}
 	.detail-head-info:first-child {
 		margin-bottom: 2px;
-		border-radius: 40px 40px 0 0;
 	}
 	.detail-head-info:last-child {
 		margin-top: 2px;
@@ -148,19 +154,10 @@
 	.detail-head-info p {
 		font-size: 90%;
 	}
-	.detail-date {
+	.detail-update {
 		margin-top: 2px;
 	}
-	.info-date:first-child {
-		width: 100%;
-		border-radius: 0;
-		margin-bottom: 2px;
-	}
-	.info-date:last-child {
-		width: 100%;
-		border-radius: 0 0 40px 40px;
-	}
-	.info-date p {
+	.info-sub p {
 		font-size: 80%;
 	}
 }
@@ -168,10 +165,6 @@
 @media only screen and (max-width: 360px) and (max-height: 640px) {
 	.detail-head {
 		width: 85%;
-		display: block;
-	}
-	.detail-head-info {
-		box-shadow: 1px 1px 5px #555;
 	}
 	.detail-head-info:first-child,
 	.detail-head-info:last-child {
@@ -182,7 +175,6 @@
 	}
 	.detail-head-info:first-child {
 		margin-bottom: 2px;
-		border-radius: 40px 40px 0 0;
 	}
 	.detail-head-info:last-child {
 		margin-top: 2px;
@@ -190,19 +182,7 @@
 	.detail-head-info p {
 		font-size: 85%;
 	}
-	.detail-date {
-		margin-top: 2px;
-	}
-	.info-date:first-child {
-		width: 100%;
-		border-radius: 0;
-		margin-bottom: 2px;
-	}
-	.info-date:last-child {
-		width: 100%;
-		border-radius: 0 0 40px 40px;
-	}
-	.info-date p {
+	.info-sub p {
 		font-size: 85%;
 	}
 }

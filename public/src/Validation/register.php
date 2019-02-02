@@ -1,7 +1,7 @@
 <?php 
-require_once 'validate-user.php';
 require_once 'validate-category.php';
 require_once 'validate-product.php';
+require_once 'validate-user.php';
 /*** Usuário ***/
 function registerVerifyUser($op, $current)
 {

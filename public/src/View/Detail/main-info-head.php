@@ -9,12 +9,21 @@
 		<p><strong class="info-head-strong">Produtos:</strong><?php echo count($catList->products) ?></p>
 	</div>
 </section>
-<!-- Detalhes da Data -->
-<section class="row detail-head detail-date">
-	<div class="info info-date">
+<!-- Detalhes da Criação -->
+<section class="row detail-head detail-create">
+	<div class="info info-sub">
 		<p><strong class="info-head-strong">Criado:</strong><?php echo dateFull($catList->category->getCreatedAt()) ?></p>
 	</div>
-	<div class="info info-date">
+	<div class="info info-sub">
+		<p><strong class="info-head-strong">Criação autor:</strong><?php echo afterFirst($catList->category->getCreatedBy()) ?></p>
+	</div>
+</section>
+<!-- Detalhe Atualização -->
+<section class="row detail-head detail-update">
+	<div class="info info-sub">
 		<p><strong class="info-head-strong">Atualizado:</strong><?php echo dateFull($catList->category->getUpdatedAt()) ?></p>
+	</div>
+	<div class="info info-sub">
+		<p><strong class="info-head-strong">Atualização autor:</strong><?php echo afterFirst($catList->category->getUpdatedBy()) ?></p>
 	</div>
 </section>

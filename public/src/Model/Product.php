@@ -11,6 +11,8 @@ class Product
 	private $category_name;
 	private $created_at;
 	private $updated_at;
+	private $created_by;
+	private $updated_by;
 
 	public function __construct($name, $description, $weight, $color, $category_id, $id = null)
 	{
@@ -110,5 +112,25 @@ class Product
 	public function setUpdatedAt($update)
 	{
 		$this->updated_at = $update;
+	}
+
+	public function getCreatedBy()
+	{
+		return $this->created_by;
+	}
+
+	public function setCreatedBy($created_by)
+	{
+		$this->created_by = $created_by;
+	}
+
+	public function getUpdatedBy()
+	{
+		return $this->updated_by;
+	}
+
+	public function setUpdatedBy($updated_by)
+	{
+		$this->updated_by = $updated_by;
 	}
 }

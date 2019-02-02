@@ -6,6 +6,8 @@ class Category
 	private $name;
 	private $created_at;
 	private $updated_at;
+	private $created_by;
+	private $updated_by;
 
 	public function __construct($name, $id = null)
 	{
@@ -38,9 +40,9 @@ class Category
 		return $this->created_at;
 	}
 
-	public function setCreatedAt($create)
+	public function setCreatedAt($create_at)
 	{
-		$this->created_at = $create;
+		$this->created_at = $create_at;
 	}
 
 	public function getUpdatedAt()
@@ -48,8 +50,28 @@ class Category
 		return $this->updated_at;
 	}
 
-	public function setUpdatedAt($update)
+	public function setUpdatedAt($update_at)
 	{
-		$this->updated_at = $update;
+		$this->updated_at = $update_at;
+	}
+
+	public function getCreatedBy()
+	{
+		return $this->created_by;
+	}
+
+	public function setCreatedBy($created_by)
+	{
+		$this->created_by = $created_by;
+	}
+
+	public function getUpdatedBy()
+	{
+		return $this->updated_by;
+	}
+
+	public function setUpdatedBy($updated_by)
+	{
+		$this->updated_by = $updated_by;
 	}
 }

@@ -45,9 +45,6 @@ function validateCategoryNameLength($op, $current)
 
 function validateCategoryName($op, $current)
 {
-	// echo '<pre>';
-	// print_r($current);
-	// die();
 	if (!$current->verifyNameExist()) {
 		option($op, $current);
 	} else {

@@ -50,15 +50,3 @@
 		transition: .7s;
 	}
 }
-/*** Samsung-S5 640px landscape ***/
-@media only screen and (max-width: 640px) and (max-height: 360px) {
-	.title {
-	    margin-top: 45px;
-	}
-}
-/*** Samsung-S5 360px portrait ***/
-@media only screen and (max-width: 360px) and (max-height: 640px) {
-	.title {
-	    margin-top: 45px;
-	}		
-}

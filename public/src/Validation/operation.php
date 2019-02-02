@@ -1,7 +1,7 @@
 <?php 
 require_once '../Helpers/convert.php';
-require_once '../Session/user-session.php';
 require_once '../Session/category-session.php';
+require_once '../Session/user-session.php';
 /*** Usuário ***/
 function logInUser($current)
 {
@@ -127,6 +127,7 @@ function newProductDetail($current)
 		$_SESSION['success'] = "<span>{$name}</span> cadastrado com sucesso";
 	}
 }
+
 function updateProductDetail($current)
 {
 	$category = CategoryDao::load($_POST['category_id']);
