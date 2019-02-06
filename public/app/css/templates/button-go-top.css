@@ -48,12 +48,12 @@
 /*** Samsung-S5  640px landscape ***/
 @media only screen and (max-width: 640px) and (max-height: 360px) {
 	.btn-top {
-		top: 292px;
+		top: 268px;
 	}
 }
 /*** Samsung-S5 360px portrait ***/
 @media only screen and (max-width: 360px) and (max-height: 640px) {
 	.btn-top {
-		top: 570px;
+		top: 546px;
 	}
 }

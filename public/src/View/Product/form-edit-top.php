@@ -8,5 +8,5 @@
 			<button class="btn-danger">Cancelar</button>
 		</div>
 	</div>
-	<div class="row container">
+	<div class="row container-product">
 		<div class="col-6 form-product">

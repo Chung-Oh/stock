@@ -1,5 +1,5 @@
 form {
-	height: 50%;
+	height: 330px;
 	width: 470px;
 	display: flex;
 	justify-content: center;
@@ -12,13 +12,12 @@ form {
 }
 
 .table-form {
-	height: 90%;
+	height: 100%;
 	width: 90%;
 	opacity: 0.7;
 }
 
 .table-body {
-	height: 100%;
 	width: 90%;
 }
 
@@ -36,7 +35,7 @@ tr {
 
 .name,
 .password {
-	height: 51%;
+	height: 50px;
 	width: 95%;
 	font-size: 120%;
 	text-align: center;
@@ -70,9 +69,9 @@ tr {
 /*** iPad 1024px landscape ***/
 @media only screen and (max-device-width: 1024px) and (max-device-height: 768px) {
 	form {
-		height: 47%;
+		height: 350px;
 		width: 60%;
-		margin-top: 6%;
+		margin-top: 10%;
 	}
 	.name, 
 	.password {
@@ -82,11 +81,12 @@ tr {
 /*** iPed 768px portrait ***/
 @media only screen and (max-device-width: 768px) and (max-device-height: 1024px) {
 	form {
-		height: 35%;
+		height: 350px;
 		margin-top: 47%;
 	}	
 	.name, 
 	.password {
+		height: 60px;
 		font-size: 150%;
 	}
 }
@@ -99,20 +99,20 @@ tr {
 /*** Samsung-S5 640px landscape ***/
 @media only screen and (max-device-width: 640px) and (max-device-height: 360px) {
 	form {
-		height: 50%;
+		height: 180px;
 		width: 50%;
 		margin-top: 8%;
 	}
 	.table-form {
-	    height: 100%;
+	    height: 178px;
 	}
 	.cel-name, 
 	.cel-password {
 		font-size: 60%;
-		text-align:;
 	}
 	.name, 
 	.password {
+	    height: 35px;
 	    font-size: 120%;
 	}
 	.cel-icon i {
@@ -122,14 +122,21 @@ tr {
 /*** Samsung-S5 360px portrait ***/
 @media only screen and (max-device-width: 360px) and (max-device-height: 640px) {
 	form {
+		height: 240px;
 		width: 75%;
 		margin-top: 60%;
+	}
+	.table-form {
+	    height: 100%;
 	}
 	.cel-name, 
 	.cel-password {
 		font-size: 75%;
 	}
 	.cel-icon i {
-		top: 33%;
+		top: 36%;
+	}
+	.name, .password {
+	    height: 40px;
 	}
 }

@@ -1,7 +1,7 @@
 /* Nome */
 .product-form-create .fa-bookmark,
 .product-form-edit .fa-bookmark {
-    top: 85px;
+    top: 87px;
     left: 80px;
 }
 
@@ -147,40 +147,45 @@
 @media only screen and (max-width: 640px) and (max-height: 360px) {
 	.product-form-create,
 	.product-form-edit {
-	    top: 15%;
+	    top: 10%;
 	}
 	.product-form-create .fa-bookmark,
 	.product-form-edit .fa-bookmark {
-	    top: 75px;
+	    top: 64px;
 	}
 	.fa-info {
-	    top: 107px;
+	    top: 93px;
 	}
 	.fa-balance-scale {
-	    top: 143px;
+	    top: 123px;
 	}
 	.fa-broom {
-	    top: 178px;
+	    top: 153px;
 	}
 }
 /*** Samsung-S5 360px portrait ***/
 @media only screen and (max-width: 360px) and (max-height: 640px) {
 	.product-form-create,
 	.product-form-edit {
-	    width: 90%;
-	    left: 5%;
+	    width: 80%;
+	    top: 9%;
+	    left: 10%;
 	}
 	.product-form-create .fa-bookmark,
 	.product-form-edit .fa-bookmark {
-	    top: 80px;
+	    top: 63px;
+	    left: 40px;
 	}
 	.fa-info {
-	    top: 122px;
+	    top: 91px;
+	    left: 26px;
 	}
 	.fa-balance-scale {
-	    top: 168px;
+	    top: 122px;
+	    left: 8px;
 	}
 	.fa-broom {
-	    top: 215px;
+	    top: 151px;
+	    left: -17px;
 	}
 }

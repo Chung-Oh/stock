@@ -15,7 +15,7 @@
 		<p><strong class="info-head-strong">Criado:</strong><?php echo dateFull($catList->category->getCreatedAt()) ?></p>
 	</div>
 	<div class="info info-sub">
-		<p><strong class="info-head-strong">Criação autor:</strong><?php echo afterFirst($catList->category->getCreatedBy()) ?></p>
+		<p><strong class="info-head-strong">Autor criação:</strong><?php echo afterFirst($catList->category->getCreatedBy()) ?></p>
 	</div>
 </section>
 <!-- Detalhe Atualização -->
@@ -24,6 +24,6 @@
 		<p><strong class="info-head-strong">Atualizado:</strong><?php echo dateFull($catList->category->getUpdatedAt()) ?></p>
 	</div>
 	<div class="info info-sub">
-		<p><strong class="info-head-strong">Atualização autor:</strong><?php echo afterFirst($catList->category->getUpdatedBy()) ?></p>
+		<p><strong class="info-head-strong">Autor atualização:</strong><?php echo afterFirst($catList->category->getUpdatedBy()) ?></p>
 	</div>
 </section>

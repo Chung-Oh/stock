@@ -39,10 +39,10 @@
 		font-size: 150%;		
 	}
 	.alert-danger {
-		top: 5%;
+		top: 12%;
 	}
 	.alert-success {
-	    top: 25%;
+	    top: 27%;
 	}
 }
 /*** iPed 768px portrait ***/
@@ -52,7 +52,7 @@
 		font-size: 150%;		
 	}
 	.alert-danger {
-		top: 34%;
+		top: 35%;
 	}
 	.alert-success {
 	    top: 47%;
@@ -65,7 +65,7 @@
 	    font-size: 90%;		
 	}
 	.alert-danger {
-	    top: 11%;
+	    top: 13%;
 	}
 	.alert-success {
 	    top: 26%;
@@ -81,6 +81,6 @@
 		top: 32%;
 	}
 	.alert-success {
-	    top: 41%;
+	    top: 43%;
 	}
 }

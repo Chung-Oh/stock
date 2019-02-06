@@ -31,7 +31,7 @@ class CategoryDao
 	// Page Detalhes / Home
  	public static function load($id)
 	{
-		$query = "SELECT c.id, c.name, c.created_at, c.updated_at, (SELECT u.name FROM users AS u JOIN categorys AS c ON u.id = c.created_by WHERE c.id = :id) AS created_by, (SELECT u.name FROM users AS u JOIN categorys AS c ON u.id = c.updated_by WHERE c.id = :id) AS updated_by FROM categorys AS c WHERE c.id = :id";
+		$query = "SELECT c.id, c.name, c.created_at, c.updated_at, (SELECT u.name FROM users AS u JOIN categorys AS c ON u.id = c.created_by WHERE c.id = :id) AS created_by, (SELECT u.name FROM users AS u JOIN categorys AS c ON u.id = c.updated_by WHERE c.id = :id) AS updated_by FROM categorys AS c WHERE c.id = :id ORDER BY id";
 		$conn = Connection::getConn();
 		$stmt = $conn->prepare($query);
 		$stmt->bindValue(':id', $id);

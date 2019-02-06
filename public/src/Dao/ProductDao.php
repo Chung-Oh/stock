@@ -37,7 +37,7 @@ class ProductDao
 	// Page Detalhes
 	public static function load($category_id)
 	{
-		$query = "SELECT p.id, p.name, p.description, p.weight, p.color, p.category_id, c.name AS category_name, p.created_at, p.updated_at, u1.name AS created_by, u2.name AS updated_by FROM products AS p LEFT JOIN categorys AS c ON c.id = p.category_id LEFT JOIN users AS u1 ON u1.id = p.created_by LEFT JOIN users AS u2 ON u2.id = p.updated_by WHERE p.category_id = :category_id";
+		$query = "SELECT p.id, p.name, p.description, p.weight, p.color, p.category_id, c.name AS category_name, p.created_at, p.updated_at, u1.name AS created_by, u2.name AS updated_by FROM products AS p LEFT JOIN categorys AS c ON c.id = p.category_id LEFT JOIN users AS u1 ON u1.id = p.created_by LEFT JOIN users AS u2 ON u2.id = p.updated_by WHERE p.category_id = :category_id ORDER BY id";
 		$conn = Connection::getConn();
 		$stmt = $conn->prepare($query);
 		$stmt->bindValue(':category_id', $category_id);

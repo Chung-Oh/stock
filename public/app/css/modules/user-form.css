@@ -2,7 +2,7 @@
 	width: 50%;
 	display: none;
 	position: fixed;
-	top: 40%;
+	top: 35%;
 	left: 25%;
 }
 
@@ -13,13 +13,13 @@
 }
 
 .fa-user {
-	top: 95px;
-	left: 110px;
+	top: 78px;
+	left: 65px;
 }
 
 .fa-lock {
-	top: 140px;
-	left: 92px;
+	top: 123px;
+	left: 47px;
 }
 
 .form-user {
@@ -30,12 +30,12 @@
 	background-color: lavender;
 	border: 1px solid #999;
 	box-shadow: 1px 1px 5px #555;
-	padding: 2em;
+	padding: 1em;
 }
 
 .form-user form {
 	height: 100%;
-	width: 80%;
+	width: 90%;
 }
 
 .form-user input {
@@ -62,24 +62,24 @@
 /*** iPad 1024px landscape ***/
 @media only screen and (max-width: 1024px) and (max-height: 768px) {
 	.fa-user {
-	    left: 90px;
+	    left: 60px;
 	}
 	.fa-lock {
-	    left: 72px;
+	    left: 40px;
 	}
 }
 /*** iPad 768px portrait ***/
 @media only screen and (max-width: 768px) and (min-height: 1024px) {
 	.user-form {
 	    width: 60%;
-	    top: 45%;
+	    top: 50%;
 	    left: 20%;
 	}
 	.fa-user {
-	    left: 85px;
+	    left: 50px;
 	}
 	.fa-lock {
-    	left: 67px;
+    	left: 32px;
     }
 }
 /*** Desk 1260px ***/
@@ -88,28 +88,28 @@
 	    top: 52%;
 	}
 	.fa-user {
-	    left: 100px;
+	    left: 56px;
 	}
 	.fa-lock {
-	    left: 82px;
+	    left: 37px;
 	}
 }
 /*** Desk 1100px ***/
 @media only screen and (max-width: 1100px) and (max-height: 657px) {
 	.fa-user {
-	    left: 90px;
+	    left: 50px;
 	}
 	.fa-lock {
-	    left: 72px;
+	    left: 32px;
 	}
 }
 /*** Desk 900px ***/
 @media only screen and (max-width: 900px) and (max-height: 657px) {
 	.fa-user {
-	    left: 80px;
+	    left: 47px;
 	}
 	.fa-lock {
-	    left: 62px;
+	    left: 28px;
 	}
 }
 /*** Desk 770px ***/
@@ -120,19 +120,19 @@
     	left: 15%;
     }
     .fa-user {
-	    left: 85px;
+	    left: 49px;
 	}
 	.fa-lock {
-	    left: 68px;
+	    left: 30px;
 	}
 }
 /*** Desk 635px ***/
 @media only screen and (max-width: 635px) and (max-height: 657px) {
 	.fa-user {
-	    left: 77px;
+	    left: 45px;
 	}
 	.fa-lock {
-	    left: 58px;
+	    left: 26px;
 	}
 	.user-form .btn-danger,
 	.form-user input {
@@ -145,37 +145,41 @@
 		font-size: 90%;
 	}
 	.fa-user {
-	    left: 65px;
+	    left: 40px;
 	}
 	.fa-lock {
-	    left: 46px;
+	    left: 23px;
 	}
 }
 /*** Samsung-S5 640px landscape ***/
 @media only screen and (max-width: 640px) and (max-height: 360px) {
 	.user-form {
 	    width: 60%;
-	    top: 22%;
+	    top: 10%;
 	    left: 20%;
 	}
 	.fa-user {
-	    left: 75px;
+	    top: 78px;
+	    left: 45px;
 	}
 	.fa-lock {
-	    left: 57px;
+	    top: 122px;
+	    left: 27px;
 	}
 }
 /*** Samsung-S5 360px portrait ***/
 @media only screen and (max-width: 360px) and (max-height: 640px) {
 	.user-form {
-	    width: 90%;
-	    top: 50%;
-	    left: 5%;
+	    width: 80%;
+	    top: 11%;
+	    left: 10%;
 	}
 	.fa-user {
-	    left: 70px;
+	    top: 77px;
+	    left: 40px;
 	}
 	.fa-lock {
-	    left: 52px;
+	    top: 123px;
+	    left: 23px;
 	}
 }

@@ -16,11 +16,16 @@
     left: 25%;
 }
 
-.container {
-    height: 90%;
+.container,
+.container-category,
+.container-product {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center;   
+}
+
+.container-category {
+    height: 188px;
 }
 
 .form-category,
@@ -44,7 +49,6 @@
 
 .form-category form,
 .form-product form {
-    height: 100%;
     width: 80%;
 }
 
@@ -154,16 +158,15 @@ select > option:first-child {
         top: 27%;
         left: 15%;
     }
-    .container {
-        height: 88%;
+    .container-category {
+        height: 106px;
     }
+    .form-category,
     .form-product {
-        padding: 1em 0;
-    }
-    .form-product input:first-child {
+        padding: .5em 0;
     }
     .form-product input, select {
-        height: 35px;
+        height: 30px;
     }
 }
 /*** Samsung-S5 360px portrait ***/
@@ -176,13 +179,29 @@ select > option:first-child {
         top: 35%;
         left: 7.5%;
     }
+    .container-category {
+        height: 138px;
+    }
+    .container-product {
+        height: 197px;
+    }
+    .form-category input {
+        height: 45px;
+    }
+    .form-product input {
+        height: 30px;
+    }
+    .form-category {
+        padding: 1.5em 0;
+    }
     .form-product {
-        padding: 1em 0;
+        padding: .5em 0;
     }
     .new-item_danger {
         font-size: 100%;
     }
     select {
+        height: 30px;
         font-size: 100%;
     }
 }

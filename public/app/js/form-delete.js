@@ -63,7 +63,7 @@ const product = () => {
 					descFormDelete.value = currentTarget.children[2].children[1].textContent.trim();
 					weightFormDelete.value = currentTarget.children[3].children[1].textContent.trim();
 					colorFormDelete.value = currentTarget.children[4].children[1].textContent.trim();
-					categoryIdFormDelete.value = currentTarget.children[5].textContent.trim();
+					categoryIdFormDelete.value = currentTarget.children[7].textContent.trim();
 				}, 700);
 			}
 		})

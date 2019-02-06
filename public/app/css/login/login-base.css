@@ -1,7 +1,7 @@
-html, body, 
-.interface {
-	height: 100%;
+html, body {
+	height: 657px;
 }
+
 html {
 	background-color: #EEE;
 }
@@ -13,23 +13,46 @@ body {
 }
 /* Inserir imagem no centro da tela */
 .interface {
+	height: 652px;
 	background: url(../../img/stock-large-original.png) no-repeat 50% 50%;
+}
+/*** iPad 1024px landscape ***/
+@media only screen and (max-device-width: 1024px) and (max-device-height: 768px) {
+	html, body {
+		height: 768px;
+	}
+	.interface {
+		height: 763px;
+		background: url(../../img/stock-large-original.png) no-repeat 50% 50%;
+	}
 }
 /*** iPed 768px portrait ***/
 @media only screen and (max-device-width: 768px) and (max-device-height: 1024px) {
+	html, body {
+		height: 1024px;
+	}
 	.interface {
+		height: 1018px;
 		background: url(../../img/stock-large-original.png) no-repeat 50% 25%;
 	}
 }
 /*** Samsung-S5 640px landscape ***/
 @media only screen and (max-device-width: 640px) and (max-device-height: 360px) {
+	html, body {
+		height: 360px;
+	}
 	.interface {
+		height: 355px;
 		background: url(../../img/stock-small-320.png) no-repeat 50% 50%;
 	}
 }
 /*** Samsung-S5 360px portrait ***/
 @media only screen and (max-device-width: 360px) and (max-device-height: 640px) {
+	html, body {
+		height: 640px;
+	}
 	.interface {
+		height: 635px;
 		background: url(../../img/stock-small-320.png) no-repeat 50% 22%;
 	}
 }
