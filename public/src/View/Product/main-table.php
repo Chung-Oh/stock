@@ -1,7 +1,7 @@
 <section class="row table">
 	<div class="col-12">
 		<table class="table-product">
-			<caption>.: Clique sobre o cabeçalho da coluna para ordenar :.</caption>
+			<caption class="caption-product">.: Clique sobre o cabeçalho da coluna para ordenar :.</caption>
 			<thead>
 				<tr>
 					<th class="order">Id</th>
