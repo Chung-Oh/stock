@@ -9,6 +9,6 @@ try {
 	registerVerifyUser(4, $consult);
 } catch (PDOException $e) {
 	// Erro::handler($e);
-	header("Location: ../View/User.php");
+	header("Location: ../../app/view/User.php");
 	$_SESSION['danger'] = "Não foi possível fazer <span>redefinição</span> do usuário.";
 }

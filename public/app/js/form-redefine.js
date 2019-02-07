@@ -9,6 +9,6 @@ btnCancelRedefine
 		window.location.href = "user.php")
 	: null;
 
-dir == "/src/View/redefine.php"
+dir == "/app/view/redefine.php"
 	? fadeIn(formRedefine)
 	: null;

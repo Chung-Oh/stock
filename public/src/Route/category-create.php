@@ -12,6 +12,6 @@ try {
 	registerNewCategory(6, $object);
 } catch (PDOException $e) {
 	// Erro::handler($e);
-	header("Location: ../View/category.php");
+	header("Location: ../../app/view/category.php");
 	$_SESSION['danger'] = "<span>{$name}</span> não foi cadastrado";
 }

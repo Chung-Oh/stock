@@ -7,16 +7,16 @@ function testPath($path, $msg)
 		header("Location: ../../index.php");
 		$_SESSION['danger'] = $msg;
 	} elseif ($path == "product.php") {
-		header("Location: ../View/product.php");
+		header("Location: ../../app/view/product.php");
 		$_SESSION['danger'] = $msg;
 	} elseif ($path == "detail.php") {
-		header("Location: ../View/detail.php");
+		header("Location: ../../app/view/detail.php");
 		$_SESSION['danger'] = $msg;
 	} elseif ($path == "user.php") {
-		header("Location: ../View/user.php");
+		header("Location: ../../app/view/user.php");
 		$_SESSION['danger'] = $msg;
 	} elseif ($path == "redefine.php") {
-		header("Location: ../View/user.php");
+		header("Location: ../../app/view/user.php");
 		$_SESSION['danger'] = $msg;
 	}
 }

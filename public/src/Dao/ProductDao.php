@@ -1,5 +1,5 @@
 <?php 
-require_once '../Model/Product.php';
+require_once '../../src/Model/Product.php';
 
 class ProductDao
 {

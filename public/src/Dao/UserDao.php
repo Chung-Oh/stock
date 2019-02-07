@@ -1,5 +1,5 @@
 <?php 
-require_once '../Model/User.php';
+require_once '../../src/Model/User.php';
 
 class UserDao
 {

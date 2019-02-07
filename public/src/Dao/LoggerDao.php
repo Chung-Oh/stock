@@ -1,5 +1,5 @@
 <?php 
-require_once '../Model/Logger.php';
+require_once '../../src/Model/Logger.php';
 
 class LoggerDao
 {

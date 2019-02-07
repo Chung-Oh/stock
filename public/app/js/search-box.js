@@ -66,7 +66,7 @@ inputs.forEach(search => {
 		inputs[1].value = "";
 		for (let i = 0; i < rowsTable.length; i++) {
 			let row = rowsTable[i];
-			window.location.pathname == "/src/View/detail.php"
+			window.location.pathname == "/app/view/detail.php"
 				? notEmpty(row, details)
 				: notEmpty(row, rowsTable);	
 		}
@@ -74,7 +74,7 @@ inputs.forEach(search => {
 });
 // Verifica qual Page está para chamar a lógica de busca
 (function search() {
-	window.location.pathname == "/src/View/detail.php"
+	window.location.pathname == "/app/view/detail.php"
 		? pageDetail()
 		: pageCategoryProduct();
 })();

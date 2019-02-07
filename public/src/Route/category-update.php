@@ -13,6 +13,6 @@ try {
 	registerUpdateCategory(7, $object, $old);
 } catch (PDOException $e) {
 	// Erro::handler($e);
-	header("Location: ../View/category.php");
+	header("Location: ../../app/view/category.php");
 	$_SESSION['danger'] = "<span>{$name}</span> não foi atualizado";
 }

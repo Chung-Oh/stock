@@ -54,7 +54,7 @@ $_SESSION['path'] = basename(__FILE__);
 			</form>
 		<?php else : ?>
 			<div class="btn-return">
-				<p><a href="src/View/home.php">Retornar ao Sistema</a></p>
+				<p><a href="app/view/home.php">Retornar ao Sistema</a></p>
 			</div>
 		<?php endif ?>
 	</div>

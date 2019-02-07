@@ -8,6 +8,6 @@ try {
 	registerDeleteCategory(8, $category);
 } catch (PDOException $e) {
 	// Erro::handler($e);
-	header("Location: ../View/category.php");
+	header("Location: ../../app/view/category.php");
 	$_SESSION['danger'] = "Essa operação exige que remova produtos <span>relacionados</span> a categoria";
 }

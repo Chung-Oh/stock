@@ -5,7 +5,7 @@ require_once '../Session/user-session.php';
 /*** Usuário ***/
 function logInUser($current)
 {
-	header("Location: ../View/home.php");
+	header("Location: ../../app/view/home.php");
 	// Registra entrada do Usuário
 	beginAccess();
 	// Iniciando tempo da Sessão
@@ -38,8 +38,8 @@ function logOutUser($current)
 function verifyCurrentUser($current)
 {
 	// Verificando autencidade do Usuário
-	header("Location: ../View/redefine.php");		
-	$_SESSION['authorized'] = "ok";
+	header("Location: ../../app/view/redefine.php");		
+	$_SESSION['authorized'] = "OK";
 	$_SESSION['success'] = "Usuário e senha válido, redefina novo <span>nome</span> e <span>senha.</span>";
 }
 
@@ -47,14 +47,14 @@ function redefineUser($current)
 {
 	// Redefinição Nome e Senha
 	if ($current->update($_SESSION['user_id'])) {
-		header("Location: ../View/user.php");
+		header("Location: ../../app/view/user.php");
 		$_SESSION['success'] = "Redefinição do <span>Usuário</span> realizado com sucesso.";		
 	}
 }
 /*** Categoria ***/
 function loadCategory($current)
 {
-	header("Location: ../../View/detail.php");
+	header("Location: ../../../app/view/detail.php");
 	$category = CategoryDao::load($current);
 	// Personalizando retorno do nome na Session com 25 caracteres
 	$name = customString($category->getName(), 25);
@@ -66,7 +66,7 @@ function loadCategory($current)
 function newCategory($current)
 {
 	if ($current->new()) {
-		header("Location: ../View/category.php");
+		header("Location: ../../app/view/category.php");
 		$name = customString($_POST['name'], 25);
 		$_SESSION['success'] = "<span>{$name}</span> cadastrado com sucesso";
 	} 	
@@ -75,7 +75,7 @@ function newCategory($current)
 function updateCategory($current)
 {
 	if ($current->update()) {
-		header("Location: ../View/category.php");
+		header("Location: ../../app/view/category.php");
 		$name = customString($_POST['name'], 25);
 		$_SESSION['success'] = "<span>{$name}</span> alterado com sucesso";
 	}
@@ -84,7 +84,7 @@ function updateCategory($current)
 function deleteCategory($current)
 {
 	if ($current->delete()) {
-		header("Location: ../View/category.php");
+		header("Location: ../../app/view/category.php");
 		$name = customString($_POST['name'], 25);
 		$_SESSION['success'] = "<span>{$name}</span> removido com sucesso";
 	}	
@@ -93,7 +93,7 @@ function deleteCategory($current)
 function newProduct($current)
 {
 	if ($current->new()) {
-		header("Location: ../View/product.php");
+		header("Location: ../../app/view/product.php");
 		$name = customString($_POST['name'], 25);
 		$_SESSION['success'] = "<span>{$name}</span> cadastrado com sucesso";
 	}
@@ -102,7 +102,7 @@ function newProduct($current)
 function updateProduct($current)
 {
 	if ($current->update()) {
-		header("Location: ../View/product.php");
+		header("Location: ../../app/view/product.php");
 		$name = customString($_POST['name'], 25);
 		$_SESSION['success'] = "<span>{$name}</span> alterado com sucesso";
 	}
@@ -111,7 +111,7 @@ function updateProduct($current)
 function deleteProduct($current)
 {
 	if ($current->delete()) {
-		header("Location: ../View/product.php");
+		header("Location: ../../app/view/product.php");
 		$name = customString($_POST['name'], 25);
 		$_SESSION['success'] = "<span>{$name}</span> removido com sucesso";
 	}
@@ -121,7 +121,7 @@ function newProductDetail($current)
 {
 	$category = CategoryDao::load($_POST['category_id']);
 	if ($current->new()) {
-		header("Location: ../View/detail.php");
+		header("Location: ../../app/view/detail.php");
 		setCategory($category->getId(), $category->getName());
 		$name = customString($_POST['name'], 25);
 		$_SESSION['success'] = "<span>{$name}</span> cadastrado com sucesso";
@@ -132,7 +132,7 @@ function updateProductDetail($current)
 {
 	$category = CategoryDao::load($_POST['category_id']);
 	if ($current->update()) {
-		header("Location: ../View/detail.php");	
+		header("Location: ../../app/view/detail.php");	
 		setCategory($category->getId(), $category->getName());
 		$name = customString($_POST['name'], 25);
 		$_SESSION['success'] = "<span>{$name}</span> alterado com sucesso";
@@ -143,7 +143,7 @@ function deleteProductDetail($current)
 {
 	$category = CategoryDao::load($_POST['category_id']);
 	if ($current->delete()) {
-		header("Location: ../View/detail.php");
+		header("Location: ../../app/view/detail.php");
 		setCategory($category->getId(), $category->getName());
 		$name = customString($_POST['name'], 25);
 		$_SESSION['success'] = "<span>{$name}</span> removido com sucesso";

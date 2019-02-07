@@ -16,6 +16,6 @@ try {
 	registerDeleteProduct(14, $product);
 } catch (PDOException $e) {
 	// Erro::handler($e);
-	header("Location: ../View/product.php");
+	header("Location: ../../app/view/product.php");
 	$_SESSION['danger'] = "<span>{$_POST['name']}</span> não foi removido";
 }

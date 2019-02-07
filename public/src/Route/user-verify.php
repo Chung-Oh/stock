@@ -8,6 +8,6 @@ try {
 	registerVerifyUser(3, $consult);
 } catch (PDOException $e) {
 	// Erro::handler($e);
-	header("Location: ../View/User.php");
+	header("Location: ../../app/view/User.php");
 	$_SESSION['danger'] = "Usuário e senha inválido";
 }

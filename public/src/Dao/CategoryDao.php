@@ -1,6 +1,6 @@
 <?php 
 require_once 'ProductDao.php';
-require_once '../Model/Category.php';
+require_once '../../src/Model/Category.php';
 
 class CategoryDao
 {
