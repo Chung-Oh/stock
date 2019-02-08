@@ -1,0 +1,33 @@
+{
+    "name": "stock/stock",
+    "description": "Module I about stock system",
+    "authors": [
+        {
+            "name": "Daniel Chung",
+            "email": "danielvchung@hotmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+    	"psr-4": {
+    		"Src\\": "src/"
+    	},
+    	"files": [
+    		"src/global.php",
+            "src/Config/conf.php",
+            "src/Helpers/convert.php", 
+            "src/Helpers/date.php", 
+            "src/Helpers/services.php",
+            "src/Helpers/show-alert.php",
+            "src/Session/category-session.php",
+            "src/Session/log-session.php",
+            "src/Session/user-session.php",
+            "src/Validation/operation.php",
+            "src/Validation/option.php",
+            "src/Validation/register.php",
+            "src/Validation/validate-category.php",
+            "src/Validation/validate-product.php",
+            "src/Validation/validate-user.php"
+    	]
+    }
+}
