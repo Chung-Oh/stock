@@ -1,5 +1,5 @@
 // Mensagem quando nome da Pesquisa não existe
-const messageTableEmpty = context => {
+export const messageTableEmpty = context => {
 	const invisible = document.querySelectorAll(".info-row.invisible");
 	const msg = document.querySelector(".msg-table-search");
 	context.length == invisible.length

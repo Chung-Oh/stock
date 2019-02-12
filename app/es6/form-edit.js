@@ -1,7 +1,9 @@
+import { btnCallFormCreate, formCreate, btnCancel } from './form-create.js';
+import { fadeIn, fadeOut } from './helpers/fade-elements.js';
 // Corpo da Tabela, onde vai escutar os eventos
-const tbody = document.querySelector("tbody");
+export const tbody = document.querySelector("tbody");
 // Botão page Detalhes
-const details = document.querySelector(".detail-body");
+export const details = document.querySelector(".detail-body");
 // Form edição
 const formEdit = document.getElementById("formEdit");
 // Novos dados no Form abaixo

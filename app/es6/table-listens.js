@@ -1,5 +1,6 @@
+import { orderBy } from './helpers/table-order.js';
 // Linhas Tabela
-const rowsTable = document.querySelectorAll(".info-row");
+export const rowsTable = document.querySelectorAll(".info-row");
 // Cabeçalho Tabela onde ordena colunas
 const tbHead = document.querySelectorAll(".order");
 // Coluna cabeçalho abaixo

@@ -11,5 +11,5 @@ try {
 } catch (PDOException $e) {
 	// Erro::handler($e);
 	header("Location: ../../app/view/category.php");
-	$_SESSION['danger'] = "Essa operação exige que remova produtos <span>relacionados</span> a categoria";
+	$_SESSION['danger'] = "Essa operação exige que remova produtos <span>relacionados</span>";
 }

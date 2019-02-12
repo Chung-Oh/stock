@@ -1,3 +1,7 @@
+import { messageTableEmpty } from './helpers/msg-empty.js';
+import { rowsTable } from './table-listens.js';
+import { details } from './form-edit.js';
+
 const inputsSearch = document.querySelectorAll(".search");
 
 const empty = (row, context) => {

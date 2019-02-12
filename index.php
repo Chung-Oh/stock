@@ -10,12 +10,14 @@ $_SESSION['path'] = basename(__FILE__);
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<!-- build:css -->
 	<link rel="stylesheet" href="app/css/reset.css">
 	<link rel="stylesheet" href="app/css/login/login-base.css">
 	<link rel="stylesheet" href="app/css/login/login-title.css">
 	<link rel="stylesheet" href="app/css/login/login-alert.css">
 	<link rel="stylesheet" href="app/css/login/login-form.css">
 	<link rel="stylesheet" href="app/css/login/login-button.css">
+	<!-- endbuild -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 </head>
 <body>

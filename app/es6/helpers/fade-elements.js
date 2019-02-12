@@ -1,5 +1,5 @@
-const fadeIn = (element, time) => processFade(element, time, 0, 100);
-const fadeOut = (element, time) => processFade(element, time, 100, 0);
+export const fadeIn = (element, time) => processFade(element, time, 0, 100);
+export const fadeOut = (element, time) => processFade(element, time, 100, 0);
 
 const processFade = (element, time, initial, end) => {
 	let opc = initial;

@@ -7,7 +7,7 @@ let count;
 // Verifica se já foi ordenado 
 let toogleTable = false;
 
-const orderBy = (tbHead, rowsTable, column) => 
+export const orderBy = (tbHead, rowsTable, column) => 
 	processOrderBy(tbHead, rowsTable, column);
 
 const processOrderBy = (tbHead, rowsTable, column) => {

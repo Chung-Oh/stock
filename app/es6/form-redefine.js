@@ -1,3 +1,5 @@
+import { fadeIn } from './helpers/fade-elements.js';
+
 const formRedefine = document.getElementById("formRedefine");
 const btnCancelRedefine = document.getElementById("btnCancelRedefine");
 const dir = window.location.pathname;

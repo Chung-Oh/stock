@@ -1,3 +1,5 @@
+import { fadeIn, fadeOut } from './helpers/fade-elements.js';
+import { details, tbody } from './form-edit.js';
 // Form delete
 const formDelete = document.getElementById("formDelete");
 // Nome categoria Mensagem deleção

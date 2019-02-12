@@ -1,3 +1,5 @@
+import { details } from './form-edit.js';
+
 const btnOpen = document.querySelector(".open-close");
 let toogle = false;
 

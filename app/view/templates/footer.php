@@ -10,6 +10,7 @@
 			: null;
 		})();
 	</script>
+	<!-- build:js -->
 	<script type="module" src="../js/helpers/fade-elements.js"></script>
 	<script type="module" src="../js/helpers/msg-empty.js"></script>
 	<script type="module" src="../js/helpers/table-order.js"></script>
@@ -26,5 +27,6 @@
 	<script type="module" src="../js/form-redefine.js"></script>
 	<script type="module" src="../js/button-panel.js"></script>
 	<script type="module" src="../js/footer-btn-top.js"></script>
+	<!-- endbuild -->
 </body>
 </html>
