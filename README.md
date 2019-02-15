@@ -13,7 +13,7 @@ Aplicação com 6 telas, desenvolvido sem uso de frameworks (usado apenas arquiv
 
 **PHP** - Padrões seguidos: DAO, PSR-1, PSR-2, PSR-4(autoload Composer). 
       Paradigmas OOP e Funcional. 
-      Para persistência ao Database foi implementado a extensão PDO.
+      Para persistência foi implementado a extensão PDO.
       
 **Automatizador** - Gulp
 

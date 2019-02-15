@@ -32,7 +32,21 @@
         top: 997px;
     }
 }
-/*** Desk 1366px ***/
+/*** Desk FULL ***/
+@media only screen and (max-width: 1366px) and (max-height: 768px) {
+    .foot {
+        font-size: 70%;
+        top: 746px;
+    }
+}
+/*** Desk 657px HEIGHT ***/
+@media only screen and (max-width: 1366px) and (max-height: 657px) {
+    .foot {
+        font-size: 70%;
+        top: 635px;
+    }
+}
+/*** Desk 640px HEIGHT ***/
 @media only screen and (max-width: 1366px) and (max-height: 640px) {
     .foot {
         font-size: 70%;

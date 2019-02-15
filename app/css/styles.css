@@ -2164,8 +2164,16 @@ td {
 @media only screen and (max-width: 768px) and (max-height: 1024px) {
   .btn-top {
     top: 947px; } }
-/*** Desk 1354px ***/
-@media only screen and (max-width: 1354px) and (max-height: 640px) {
+/*** Desk FULL ***/
+@media only screen and (max-width: 1366px) and (max-height: 768px) {
+  .btn-top {
+    top: 690px; } }
+/*** Desk 657px HEIGHT ***/
+@media only screen and (max-width: 1366px) and (max-height: 657px) {
+  .btn-top {
+    top: 580px; } }
+/*** Desk 640px HEIGHT ***/
+@media only screen and (max-width: 1366px) and (max-height: 640px) {
   .btn-top {
     top: 567px; } }
 /*** Samsung-S5  640px landscape ***/
@@ -2201,7 +2209,17 @@ td {
   .foot {
     font-size: 90%;
     top: 997px; } }
-/*** Desk 1366px ***/
+/*** Desk FULL ***/
+@media only screen and (max-width: 1366px) and (max-height: 768px) {
+  .foot {
+    font-size: 70%;
+    top: 746px; } }
+/*** Desk 657px HEIGHT ***/
+@media only screen and (max-width: 1366px) and (max-height: 657px) {
+  .foot {
+    font-size: 70%;
+    top: 635px; } }
+/*** Desk 640px HEIGHT ***/
 @media only screen and (max-width: 1366px) and (max-height: 640px) {
   .foot {
     font-size: 70%;
