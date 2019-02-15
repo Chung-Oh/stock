@@ -1,0 +1,142 @@
+/*** FORM ***/
+form {
+	@extend %elem-border-radius-05em;
+	@extend %elem-flex-justify;
+	height: 330px;
+	width: 470px;
+	margin: auto;
+	margin-top: 4%;
+	border: 0.034em solid $color-8;
+	box-shadow: 1em 0.5em 1.5em $color-9;
+	align-items: center;
+}
+
+.table-form {
+	height: 100%;
+	width: 90%;
+	opacity: 0.7;
+}
+
+.table-body {
+	width: 90%;
+}
+
+tr {
+	@extend %elem-text-center;
+	height: 33%;
+}
+
+.cel-name, 
+.cel-password {
+	@extend %elem-text-center;
+	@extend %elem-vertical-align-middle;
+	padding: 0.15em;
+}
+
+.name,
+.password {
+	@extend %elem-text-center;
+	height: 50px;
+	width: 95%;
+	font-size: 120%;
+	box-shadow: .25em .25em .5em $color-3;
+	transition: $time-03s;
+	@include border-radius(2em);
+}
+/* Configurar ícone no input */
+.name:hover, .name:focus,
+.password:hover, .password:focus {
+	border-color: $color-dodgerblue;
+	box-shadow: 0 0 1em 0 $color-dodgerblue;
+}
+
+.cel-icon {
+	@extend %elem-position-relative;
+}
+
+.cel-icon i {
+	@extend %elem-position-absolute;
+	top: 34%;
+	left: 7%;
+	padding: .5em .5em;
+	color: $color-3;
+	transition: $time-03s;
+}
+
+.input-icon:focus + i {
+	color: $color-dodgerblue;
+}
+/*** iPad 1024px landscape ***/
+@media only screen and (max-device-width: 1024px) and (max-device-height: 768px) {
+	form {
+		height: 350px;
+		width: 60%;
+		margin-top: 10%;
+	}
+	.name, 
+	.password {
+		font-size: 150%;
+	}
+}
+/*** iPed 768px portrait ***/
+@media only screen and (max-device-width: 768px) and (max-device-height: 1024px) {
+	form {
+		height: 350px;
+		margin-top: 47%;
+	}	
+	.name, 
+	.password {
+		height: 60px;
+		font-size: 150%;
+	}
+}
+/*** Desk 800px ***/
+@media only screen and (max-width: 800px) {
+	form {
+		width: 60%;
+	}
+}
+/*** Samsung-S5 640px landscape ***/
+@media only screen and (max-device-width: 640px) and (max-device-height: 360px) {
+	form {
+		height: 180px;
+		width: 50%;
+		margin-top: 8%;
+	}
+	.table-form {
+	    height: 178px;
+	}
+	.cel-name, 
+	.cel-password {
+		font-size: 60%;
+	}
+	.name, 
+	.password {
+	    height: 35px;
+	    font-size: 120%;
+	}
+	.cel-icon i {
+		top: 35%;
+	}
+}
+/*** Samsung-S5 360px portrait ***/
+@media only screen and (max-device-width: 360px) and (max-device-height: 640px) {
+	form {
+		height: 240px;
+		width: 75%;
+		margin-top: 60%;
+	}
+	.table-form {
+	    height: 100%;
+	}
+	.cel-name, 
+	.cel-password {
+		font-size: 75%;
+	}
+	.cel-icon i {
+		top: 36%;
+	}
+	.name, .password {
+	    height: 40px;
+	}
+}

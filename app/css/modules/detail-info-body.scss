@@ -1,0 +1,71 @@
+.detail-body {
+	@extend %elem-font-bold;
+	width: 50%;
+	font-family: $font-open-sans-cond;
+	margin: 1em auto;
+	border: 2px solid $color-3;
+	box-shadow: 2px 2px 5px $color-5;
+	@include border-radius(7px);
+}
+
+.info-body {
+	padding: 1em;
+}
+
+details {
+    padding: .5em;
+}
+
+details:nth-child(odd) {
+	background-color: $color-c;
+	border: 1px solid $color-9;
+	box-shadow: 1px 1px 3px $color-3;
+	@include border-radius(5px);
+}
+
+summary {
+	@extend %elem-cursor-pointer;
+	@extend %elem-text-center;
+}
+
+summary:focus,
+summary:hover {
+	color: $color-dodgerblue;
+}
+
+.info-body-strong {
+	@extend %elem-font-bold;
+	text-decoration: underline;
+	font-family: $font-raleway;
+	margin-right: 5px;
+}
+
+details button {
+	margin-top: 5px;
+}
+/*** Desk 770px ***/
+@media only screen and (min-width: 100px) and (max-width: 770px) and (max-height: 641px) {
+	.detail-body {
+	    width: 80%;
+	    margin-top: 0;
+	    border-radius: 0 0 7px 7px;
+	}
+}
+/*** Samsung-S5  640px landscape ***/
+@media only screen and (max-width: 640px) and (max-height: 360px) {
+	.detail-body {
+		width: 67%;
+	}
+	.info-body-strong, em {
+	    font-size: 90%;
+	}
+}
+/*** Samsung-S5 360px portrait ***/
+@media only screen and (max-width: 360px) and (max-height: 640px) {
+	.detail-body {
+		width: 85%;
+	}
+	.info-body-strong, em {
+	    font-size: 90%;
+	}
+}

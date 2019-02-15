@@ -1,0 +1,104 @@
+@mixin border-radius($value) {
+	-webkit-border-radius: $value;
+	-moz-border-radius: $value;
+	-ms-border-radius: $value;
+	-o-border-radius: $value;
+	border-radius: $value;
+}
+@mixin btn-detail-open-close($color) {
+	border-top: 2px solid $color;
+	border-right: 2px solid $color;
+	border-left: 2px solid $color;
+	border-bottom: 0;
+	margin: 0;
+}
+@mixin image-large-index($x, $y) {
+	background: url(../img/stock-large-original.png) no-repeat $x $y;
+}
+@mixin image-small-index($x, $y) {
+	background: url(../img/stock-small-320.png) no-repeat $x $y;
+}
+@mixin msg-alert($color-1, $color-2) {
+	background-color: $color-1;
+	border: 1px solid $color-2;
+}
+@mixin radial-gradient($a, $b, $c) {
+	background-image: -webkit-radial-gradient($a, $b, $c);
+	background-image: -moz-radial-gradient($a, $b, $c);
+	background-image: -o-radial-gradient($a, $b, $c);
+	background-image: -ms-radial-gradient($a, $b, $c);
+	background-image: radial-gradient($a, $b, $c);
+}
+@mixin transform($prop) {
+	-webkit-transform: $prop;
+	-moz-transform: $prop;
+	-ms-transform: $prop;
+	-o-transform: $prop;
+	transform: $prop;	
+}
+@mixin transition($value) {
+	-webkit-transition: $value;
+	-moz-transition: $value;
+	-ms-transition: $value;
+	-o-transition: $value;
+	transition: $value;	
+}
+%elem-border-radius-05em {
+	-webkit-border-radius: .5em;
+	-moz-border-radius: .5em;
+	-ms-border-radius: .5em;
+	-o-border-radius: .5em;
+	border-radius: .5em;
+}
+%elem-cursor-pointer {
+	-webkit-cursor: pointer;
+	-moz-cursor: pointer;
+	-ms-cursor: pointer;
+	-o-cursor: pointer;
+	cursor: pointer;
+}
+%elem-flex-justify {
+	display: flex;
+    justify-content: center;
+}
+%elem-font-bold {
+	font-weight: bold;
+}
+%elem-margin-auto {
+	margin: auto;	
+}
+%elem-position-absolute {
+	position: absolute;
+}
+%elem-position-fixed {
+	position: fixed;
+}
+%elem-position-relative {
+	position: relative;
+}
+%elem-text-center {
+	text-align: center;
+}
+%elem-text-decoration-none {
+	text-decoration: none;
+}
+%elem-text-decoration-under {
+	text-decoration: underline;
+}
+%elem-transition-1s {
+	-webkit-transition: 1s;
+	-moz-transition: 1s;
+	-ms-transition: 1s;
+	-o-transition: 1s;
+	transition: 1s;
+}
+%elem-transition-07s {
+	-webkit-transition: .7s;
+	-moz-transition: .7s;
+	-ms-transition: .7s;
+	-o-transition: .7s;
+	transition: .7s;	
+}
+%elem-vertical-align-middle {
+	vertical-align: middle;
+}

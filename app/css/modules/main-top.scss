@@ -1,0 +1,58 @@
+/*** Desk ***/
+@media only screen and (min-width: 100px) {
+	.title {
+	    margin-top: 45px;
+	}
+	.col-12 h2 {
+		font-size: 150%;
+		font-weight: 500;
+		text-align: center;
+		text-shadow: 1px 1px 3px $color-5;
+		padding: 20px 10px  10px 10px;
+	}
+	.btn {
+		height: 30px;
+	}
+	.btn,
+	.new-item {
+		width: 100%;
+	}
+	.btn,
+	.new-item,
+	.btn-primary {
+		display: flex;
+		justify-content: center;
+	}
+	.btn,
+	.btn-primary {
+		align-items: center;
+	}
+	.new-item {
+		padding: 0;
+	}
+	.new-item,
+	.btn-primary {
+		height: 100%;
+	}
+	.btn-primary {
+		width: 250px;
+		font-size: 100%;
+		font-weight: 700;
+		text-decoration: none;
+		background-color: $btn-primary;
+		color: $color-black;
+		border: 1px solid $btn-primary-border;
+		box-shadow: 0 0 5px $btn-primary-shadow;
+		padding: 0;
+		cursor: pointer;
+		@include transition(.7s);
+		@include border-radius(5px);
+	}
+	.btn-primary:focus,
+	.btn-primary:hover {
+		background-color: $btn-primary-border;
+		border: 1px solid $btn-primary-shadow;
+		box-shadow: 0 0 10px $color-dodgerblue;
+		@include transition(.7s);
+	}
+}

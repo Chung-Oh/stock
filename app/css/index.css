@@ -1,0 +1,639 @@
+@charset "UTF-8";
+form, button, .btn-return p a {
+  -webkit-border-radius: .5em;
+  -moz-border-radius: .5em;
+  -ms-border-radius: .5em;
+  -o-border-radius: .5em;
+  border-radius: .5em; }
+
+button {
+  -webkit-cursor: pointer;
+  -moz-cursor: pointer;
+  -ms-cursor: pointer;
+  -o-cursor: pointer;
+  cursor: pointer; }
+
+.alert-success, form, .btn-return p,
+.btn-return p a {
+  display: flex;
+  justify-content: center; }
+
+[class*="alert-"], .alert-success, button, .btn-return p a {
+  font-weight: bold; }
+
+.title-shake, .title-fly, h1 {
+  margin: auto; }
+
+.cel-icon i {
+  position: absolute; }
+
+.title-shake, .title-fly, h1, [class*="alert-"], .cel-icon, .btn-return {
+  position: relative; }
+
+h1, [class*="alert-"], tr, .cel-name,
+.cel-password, .name,
+.password, .btn-return {
+  text-align: center; }
+
+.btn-return, .btn-return p a {
+  text-decoration: none; }
+
+button, .btn-return p a {
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s; }
+
+.cel-name,
+.cel-password, .btn {
+  vertical-align: middle; }
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+* {
+  box-sizing: border-box; }
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*** BASE ***/
+html, body {
+  height: 657px; }
+
+html {
+  background-color: #EEE; }
+
+body {
+  width: 100%;
+  border-top: 0.3em solid #444;
+  background-image: -webkit-radial-gradient(#AAA, #BBB, #DDD);
+  background-image: -moz-radial-gradient(#AAA, #BBB, #DDD);
+  background-image: -o-radial-gradient(#AAA, #BBB, #DDD);
+  background-image: -ms-radial-gradient(#AAA, #BBB, #DDD);
+  background-image: radial-gradient(#AAA, #BBB, #DDD); }
+
+/* Inserir imagem no centro da tela */
+.interface {
+  height: 652px;
+  background: url(../img/stock-large-original.png) no-repeat 50% 50%; }
+
+/*** iPad 1024px landscape ***/
+@media only screen and (max-device-width: 1024px) and (max-device-height: 768px) {
+  html, body {
+    height: 768px; }
+
+  .interface {
+    height: 763px;
+    background: url(../img/stock-large-original.png) no-repeat 50% 50%; } }
+/*** iPed 768px portrait ***/
+@media only screen and (max-device-width: 768px) and (max-device-height: 1024px) {
+  html, body {
+    height: 1024px; }
+
+  .interface {
+    height: 1018px;
+    background: url(../img/stock-large-original.png) no-repeat 50% 25%; } }
+/*** Samsung-S5 640px landscape ***/
+@media only screen and (max-device-width: 640px) and (max-device-height: 360px) {
+  html, body {
+    height: 360px; }
+
+  .interface {
+    height: 355px;
+    background: url(../img/stock-small-320.png) no-repeat 50% 50%; } }
+/*** Samsung-S5 360px portrait ***/
+@media only screen and (max-device-width: 360px) and (max-device-height: 640px) {
+  html, body {
+    height: 640px; }
+
+  .interface {
+    height: 635px;
+    background: url(../img/stock-small-320.png) no-repeat 50% 22%; } }
+/*** TITULO ***/
+/* Anima├º├úo chacoalhar */
+.title-shake {
+  height: 120px;
+  width: 90%;
+  animation: shake 1s infinite;
+  animation-delay: 20s; }
+
+.title-shake:hover,
+.title-fly:hover {
+  animation-play-state: paused; }
+
+@keyframes shake {
+  0% {
+    top: 0px; }
+  10% {
+    -webkit-transform: rotate(3deg);
+    -moz-transform: rotate(3deg);
+    -ms-transform: rotate(3deg);
+    -o-transform: rotate(3deg);
+    transform: rotate(3deg); }
+  15% {
+    -webkit-transform: rotate(-3deg);
+    -moz-transform: rotate(-3deg);
+    -ms-transform: rotate(-3deg);
+    -o-transform: rotate(-3deg);
+    transform: rotate(-3deg); }
+  100% {
+    top: -15px; } }
+/* Anima├º├úo voar */
+.title-fly {
+  animation: flying 2s 5;
+  animation-delay: 10s; }
+
+@keyframes flying {
+  from {
+    top: 0px; }
+  to {
+    top: -15px; } }
+/* Anima├º├úo correr */
+h1 {
+  width: 100%;
+  font-family: "FonteLogo", sans-serif;
+  font-size: 2.5em;
+  color: #3E4444;
+  text-shadow: 0.05em 0.05em 0.25em rgba(0, 0, 0, 0.6);
+  padding: 1em;
+  animation: run 4s; }
+
+@keyframes run {
+  from {
+    left: -800px; }
+  to {
+    left: 0px; } }
+/*** iPad 1024px landscape ***/
+@media only screen and (max-device-width: 1024px) and (max-device-height: 768px) {
+  .title-fly {
+    height: 100%;
+    display: flex;
+    flex-direction: column-reverse; }
+
+  @keyframes shake {
+    0% {
+      top: 0px; }
+    10% {
+      -webkit-transform: rotate(3deg);
+      -moz-transform: rotate(3deg);
+      -ms-transform: rotate(3deg);
+      -o-transform: rotate(3deg);
+      transform: rotate(3deg); }
+    15% {
+      -webkit-transform: rotate(-3deg);
+      -moz-transform: rotate(-3deg);
+      -ms-transform: rotate(-3deg);
+      -o-transform: rotate(-3deg);
+      transform: rotate(-3deg); }
+    100% {
+      top: -40px; } }
+  @keyframes flying {
+    from {
+      top: 0px; }
+    to {
+      top: -40px; } }
+  @keyframes run {
+    from {
+      left: -800px; }
+    to {
+      left: 0px; } } }
+/*** iPed 768px portrait ***/
+@media only screen and (max-device-width: 768px) and (max-device-height: 1024px) {
+  .title-shake {
+    height: 13%; }
+
+  .title-fly {
+    height: 100%;
+    display: flex;
+    flex-direction: column-reverse; }
+
+  @keyframes shake {
+    0% {
+      top: 0px; }
+    10% {
+      -webkit-transform: rotate(3deg);
+      -moz-transform: rotate(3deg);
+      -ms-transform: rotate(3deg);
+      -o-transform: rotate(3deg);
+      transform: rotate(3deg); }
+    15% {
+      -webkit-transform: rotate(-3deg);
+      -moz-transform: rotate(-3deg);
+      -ms-transform: rotate(-3deg);
+      -o-transform: rotate(-3deg);
+      transform: rotate(-3deg); }
+    100% {
+      top: -40px; } }
+  @keyframes flying {
+    from {
+      top: 0px; }
+    to {
+      top: -40px; } }
+  @keyframes run {
+    from {
+      left: -800px; }
+    to {
+      left: 0px; } }
+  h1 {
+    padding: 0;
+    font-size: 3em; } }
+/*** Desk 675px ***/
+@media only screen and (max-width: 675px) {
+  .title-fly {
+    align-items: center; }
+
+  h1 {
+    font-size: 2em;
+    padding: 1em 0; } }
+/*** Samsung-S5 640px landscape ***/
+@media only screen and (max-device-width: 640px) and (max-device-height: 360px) {
+  .title-fly {
+    flex-direction: column; }
+
+  @keyframes shake {
+    0% {
+      top: 0px; }
+    10% {
+      -webkit-transform: rotate(3deg);
+      -moz-transform: rotate(3deg);
+      -ms-transform: rotate(3deg);
+      -o-transform: rotate(3deg);
+      transform: rotate(3deg); }
+    15% {
+      -webkit-transform: rotate(-3deg);
+      -moz-transform: rotate(-3deg);
+      -ms-transform: rotate(-3deg);
+      -o-transform: rotate(-3deg);
+      transform: rotate(-3deg); }
+    100% {
+      top: -15px; } }
+  @keyframes flying {
+    from {
+      top: 0px; }
+    to {
+      top: -15px; } }
+  @keyframes run {
+    from {
+      left: -800px; }
+    to {
+      left: 0px; } }
+  h1 {
+    font-size: 150%;
+    padding-bottom: 0; } }
+/*** Samsung-S5 360px portrait ***/
+@media only screen and (max-device-width: 360px) and (max-device-height: 640px) {
+  .title-shake {
+    height: 10%; }
+
+  .title-fly {
+    flex-direction: column; }
+
+  @keyframes shake {
+    0% {
+      top: 0px; }
+    10% {
+      -webkit-transform: rotate(3deg);
+      -moz-transform: rotate(3deg);
+      -ms-transform: rotate(3deg);
+      -o-transform: rotate(3deg);
+      transform: rotate(3deg); }
+    15% {
+      -webkit-transform: rotate(-3deg);
+      -moz-transform: rotate(-3deg);
+      -ms-transform: rotate(-3deg);
+      -o-transform: rotate(-3deg);
+      transform: rotate(-3deg); }
+    100% {
+      top: -25px; } }
+  @keyframes flying {
+    from {
+      top: 0px; }
+    to {
+      top: -25px; } }
+  @keyframes run {
+    from {
+      left: -800px; }
+    to {
+      left: 0px; } }
+  h1 {
+    font-size: 170%;
+    padding: 1.4em 0 0; } }
+/*** ALERTA ***/
+[class*="alert-"] {
+  font-family: "Lucinda", sans-serif; }
+
+.alert-danger {
+  top: 5%;
+  font-size: 100%;
+  color: #DB1E1EDD; }
+
+.alert-success {
+  top: 26%;
+  color: #444;
+  align-items: center; }
+
+/*** Desk 950px ***/
+@media only screen and (max-width: 950px) {
+  .alert-success {
+    top: 22%; } }
+/*** Desk 800px ***/
+@media only screen and (max-width: 800px) {
+  .alert-danger {
+    top: 2%; } }
+/*** iPad 1024px landscape ***/
+@media only screen and (max-device-width: 1024px) and (max-device-height: 768px) {
+  .alert-danger,
+  .alert-success {
+    font-size: 150%; }
+
+  .alert-danger {
+    top: 12%; }
+
+  .alert-success {
+    top: 27%; } }
+/*** iPed 768px portrait ***/
+@media only screen and (max-device-width: 768px) and (max-device-height: 1024px) {
+  .alert-danger,
+  .alert-success {
+    font-size: 150%; }
+
+  .alert-danger {
+    top: 35%; }
+
+  .alert-success {
+    top: 47%; } }
+/*** Samsung-S5 640px landscape ***/
+@media only screen and (max-device-width: 640px) and (max-device-height: 360px) {
+  .alert-danger,
+  .alert-success {
+    font-size: 90%; }
+
+  .alert-danger {
+    top: 13%; }
+
+  .alert-success {
+    top: 26%; } }
+/*** Samsung-S5 360px portrait ***/
+@media only screen and (max-device-width: 360px) and (max-device-height: 640px) {
+  .alert-danger,
+  .alert-success {
+    font-size: 100%; }
+
+  .alert-danger {
+    top: 32%; }
+
+  .alert-success {
+    top: 43%; } }
+/*** FORM ***/
+form {
+  height: 330px;
+  width: 470px;
+  margin: auto;
+  margin-top: 4%;
+  border: 0.034em solid #888;
+  box-shadow: 1em 0.5em 1.5em #999;
+  align-items: center; }
+
+.table-form {
+  height: 100%;
+  width: 90%;
+  opacity: 0.7; }
+
+.table-body {
+  width: 90%; }
+
+tr {
+  height: 33%; }
+
+.cel-name,
+.cel-password {
+  padding: 0.15em; }
+
+.name,
+.password {
+  height: 50px;
+  width: 95%;
+  font-size: 120%;
+  box-shadow: 0.25em 0.25em 0.5em #333;
+  transition: 0.3s;
+  -webkit-border-radius: 2em;
+  -moz-border-radius: 2em;
+  -ms-border-radius: 2em;
+  -o-border-radius: 2em;
+  border-radius: 2em; }
+
+/* Configurar ├¡cone no input */
+.name:hover, .name:focus,
+.password:hover, .password:focus {
+  border-color: dodgerblue;
+  box-shadow: 0 0 1em 0 dodgerblue; }
+
+.cel-icon i {
+  top: 34%;
+  left: 7%;
+  padding: .5em .5em;
+  color: #333;
+  transition: 0.3s; }
+
+.input-icon:focus + i {
+  color: dodgerblue; }
+
+/*** iPad 1024px landscape ***/
+@media only screen and (max-device-width: 1024px) and (max-device-height: 768px) {
+  form {
+    height: 350px;
+    width: 60%;
+    margin-top: 10%; }
+
+  .name,
+  .password {
+    font-size: 150%; } }
+/*** iPed 768px portrait ***/
+@media only screen and (max-device-width: 768px) and (max-device-height: 1024px) {
+  form {
+    height: 350px;
+    margin-top: 47%; }
+
+  .name,
+  .password {
+    height: 60px;
+    font-size: 150%; } }
+/*** Desk 800px ***/
+@media only screen and (max-width: 800px) {
+  form {
+    width: 60%; } }
+/*** Samsung-S5 640px landscape ***/
+@media only screen and (max-device-width: 640px) and (max-device-height: 360px) {
+  form {
+    height: 180px;
+    width: 50%;
+    margin-top: 8%; }
+
+  .table-form {
+    height: 178px; }
+
+  .cel-name,
+  .cel-password {
+    font-size: 60%; }
+
+  .name,
+  .password {
+    height: 35px;
+    font-size: 120%; }
+
+  .cel-icon i {
+    top: 35%; } }
+/*** Samsung-S5 360px portrait ***/
+@media only screen and (max-device-width: 360px) and (max-device-height: 640px) {
+  form {
+    height: 240px;
+    width: 75%;
+    margin-top: 60%; }
+
+  .table-form {
+    height: 100%; }
+
+  .cel-name,
+  .cel-password {
+    font-size: 75%; }
+
+  .cel-icon i {
+    top: 36%; }
+
+  .name, .password {
+    height: 40px; } }
+/*** BOTAO ***/
+button {
+  height: 50px;
+  width: 95%;
+  font-family: "Verdana", sans-serif;
+  font-size: 100%;
+  background-color: #222; }
+
+button,
+.btn-return p a {
+  color: #FFF; }
+
+button:hover,
+button:focus {
+  background-color: #000;
+  box-shadow: 0 1px 1.25em #000; }
+
+/* Bot├úo retornar ao Sistema */
+.btn-return {
+  height: 10%;
+  top: 70%; }
+
+.btn-return p {
+  height: 100%; }
+
+.btn-return p,
+.btn-return p a {
+  align-items: center; }
+
+.btn-return p a {
+  height: 75%;
+  width: 240px;
+  font-family: "Verdana", sans-serif;
+  align-self: center;
+  background-color: #222;
+  opacity: .7; }
+
+.btn-return p a:hover,
+.btn-return p a:focus {
+  background-color: #000;
+  box-shadow: 0 0 1.25em #000; }
+
+/*** iPad 1024px landscape ***/
+@media only screen and (max-device-width: 1024px) and (max-device-height: 768px) {
+  button {
+    font-size: 119%; }
+
+  .btn-return {
+    top: 65%; }
+
+  .btn-return p a {
+    width: 40%;
+    font-size: 150%; } }
+/*** iPed 768px portrait ***/
+@media only screen and (max-device-height: 1024px) and (max-device-width: 768px) {
+  button {
+    height: 60px;
+    font-size: 125%; }
+
+  .btn-return {
+    height: 10%;
+    top: 50%; }
+
+  .btn-return p a {
+    width: 50%;
+    font-size: 150%; } }
+/*** Samsung-S5 640px landscape ***/
+@media only screen and (max-device-width: 640px) and (max-device-height: 360px) {
+  button {
+    height: 35px;
+    font-size: 65%; }
+
+  .btn-return {
+    top: 65%; }
+
+  .btn-return p a {
+    width: 35%;
+    font-size: 75%; } }
+/*** Samsung-S5 360px portrait ***/
+@media only screen and (max-device-width: 360px) and (max-device-height: 640px) {
+  button {
+    height: 40px;
+    font-size: 85%; }
+
+  .btn-return {
+    top: 45%; }
+
+  .btn-return p a {
+    width: 60%;
+    font-size: 100%; } }
+
+/*# sourceMappingURL=index.css.map */

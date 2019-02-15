@@ -1,0 +1,53 @@
+.user-button {
+    margin-top: 5em;
+}
+
+.user-btn-panel {
+	@extend %elem-flex-justify;
+}
+
+.show-user-form {
+	@extend %elem-font-bold;
+	@extend %elem-transition-07s;
+	@extend %elem-cursor-pointer;
+	width: 130px;
+	font-size: 80%;
+	padding: .4em;
+	text-shadow: 1px 1px 1px $color-8;
+	background-color: $color-c;
+	border: 1px solid $color-3;
+	box-shadow: 2px 2px 5px $color-3;
+	@include border-radius(3px);
+}
+
+.show-user-form:focus,
+.show-user-form:hover {
+	@extend %elem-transition-07s;
+	color: $color-dodgerblue;
+	border-color: $color-dodgerblue;
+    box-shadow: 0 0 1em 0 $color-dodgerblue;
+}
+/*** iPad 1024px landscape ***/
+@media only screen and (max-width: 1024px) and (max-height: 768px) {
+	.show-user-form {
+	    font-size: 90%;
+	}
+}
+/*** iPad 768px portrait ***/
+@media only screen and (max-width: 768px) and (max-height: 1024px) {
+	.show-user-form {
+	    font-size: 80%;
+	}
+}
+/*** Samsung-S5  640px landscape ***/
+@media only screen and (max-width: 640px) and (max-height: 360px) {
+	.user-button {
+	    margin: 3em 0;
+	}
+}
+/*** Samsung-S5 360px portrait ***/
+@media only screen and (max-width: 360px) and (max-height: 640px) {
+	.show-user-form {
+	    font-size: 85%;
+	}
+}

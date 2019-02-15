@@ -1,0 +1,53 @@
+// Cores genéricas
+$color-black: #000;
+$color-1: #111;
+$color-2: #222;
+$color-3: #333;
+$color-4: #444;
+$color-5: #555;
+$color-6: #666;
+$color-8: #888;
+$color-9: #999;
+$color-a: #AAA;
+$color-b: #BBB;
+$color-c: #CCC;
+$color-d: #DDD;
+$color-e: #EEE;
+$color-white: #FFF;
+$color-f2: #F2F2F2;
+$color-dodgerblue: dodgerblue;
+$color-lavender: lavender;
+// Linhas Tabela
+$td-bottom: #DBDBDB; // Borda abaixo da linha
+$tbody-odd: #FBFBFB; // Linha ímpar tabela
+$tbody-hover: #E3E3E3;
+$title-table-search: #DE2929; // Msg quando não há regsitro Tabela
+// Cores Msg Alerta
+$alert-danger: #E3A0BA; // Msg Session perigo
+$alert-danger-border: #CF6479; // Borda perigo
+$alert-success: #5DE19E; // Msg Session sucesso
+$alert-success-border: #17A05A; // Borda sucesso
+// Botões Forms
+$btn-primary: #A2C8EC; // Preenchimento botão Principal Form
+$btn-primary-border: #57A1EA; // Borda botão
+$btn-primary-shadow: #357795; // Sombra botão
+$btn-danger: #E37777; // Preenchimento botão Cancelar
+$btn-danger-border: #D65D5D; // Borda Cancelar
+$btn-danger-shadow: #AA7070; // Sombra Cancelar
+// Cancelar Hover Focus
+$btn-danger-hover: #F05555; // Preenchimento Cancelar
+$btn-danger-border-hover: #DA2003; // Borda
+$btn-danger-shadow-hover: #F00; // Sombra
+// Botão Rodapé
+$btn-go-top: #72B0EC; // Botão sobe tela
+// Fontes
+$font-default: sans-serif;
+$font-fontelogo: "FonteLogo", sans-serif;
+$font-helvetica: "Helvetica", sans-serif;
+$font-lucinda: "Lucinda", sans-serif;
+$font-open-sans-cond: "Open Sans Condensed", sans-serif;
+$font-raleway: "Raleway", sans-serif;
+$font-verdana: "Verdana", sans-serif;
+// Animção
+$time-1s: 1s;
+$time-03s: .3s;

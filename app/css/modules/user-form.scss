@@ -1,0 +1,184 @@
+.user-form {
+	@extend %elem-position-fixed;
+	width: 50%;
+	display: none;
+	top: 45%;
+	left: 25%;
+}
+/* Ícones */
+.fa-user, .fa-lock {
+	@extend %elem-position-relative;
+	color: $color-black;
+	opacity: .5;
+}
+/* Ícone usuário */
+.fa-user {
+	top: 78px;
+	left: 65px;
+}
+/* Ícone cadeado */
+.fa-lock {
+	top: 123px;
+	left: 47px;
+}
+
+.form-user {
+	@extend %elem-flex-justify;
+	width: 100%;
+	align-items: center;
+	background-color: $color-lavender;
+	border: 1px solid $color-9;
+	box-shadow: 1px 1px 5px $color-5;
+	padding: 1em;
+}
+
+.form-user form {
+	height: 100%;
+	width: 90%;
+}
+
+.form-user input {
+	@extend %elem-font-bold;
+	height: 45px;
+    width: 100%;
+    font-size: 100%;
+    display: block;
+}
+
+.name,
+.password {
+	@extend %elem-text-center;
+	@extend %elem-transition-07s;
+	font-family: $font-raleway;
+    border: 1px solid $color-9;
+}
+
+.name:focus, .name:hover,
+.password:focus, .password:hover {
+	@extend %elem-transition-07s;
+	box-shadow: 1px 1px 15px $color-black inset;
+}
+/*** iPad 1024px landscape ***/
+@media only screen and (max-width: 1024px) and (max-height: 768px) {
+	.fa-user {
+	    left: 60px;
+	}
+	.fa-lock {
+	    left: 40px;
+	}
+}
+/*** iPad 768px portrait ***/
+@media only screen and (max-width: 768px) and (min-height: 1024px) {
+	.user-form {
+	    width: 60%;
+	    top: 50%;
+	    left: 20%;
+	}
+	.fa-user {
+	    left: 50px;
+	}
+	.fa-lock {
+    	left: 32px;
+    }
+}
+/*** Desk 1260px ***/
+@media only screen and (max-width: 1260px) and (max-height: 657px) {
+	.user-form {
+	    top: 52%;
+	}
+	.fa-user {
+	    left: 56px;
+	}
+	.fa-lock {
+	    left: 37px;
+	}
+}
+/*** Desk 1100px ***/
+@media only screen and (max-width: 1100px) and (max-height: 657px) {
+	.fa-user {
+	    left: 50px;
+	}
+	.fa-lock {
+	    left: 32px;
+	}
+}
+/*** Desk 900px ***/
+@media only screen and (max-width: 900px) and (max-height: 657px) {
+	.fa-user {
+	    left: 47px;
+	}
+	.fa-lock {
+	    left: 28px;
+	}
+}
+/*** Desk 770px ***/
+@media only screen and (max-width: 770px) and (max-height: 657px) {
+    .user-form {
+    	width: 70%;
+    	top: 50%;
+    	left: 15%;
+    }
+    .fa-user {
+	    left: 49px;
+	}
+	.fa-lock {
+	    left: 30px;
+	}
+}
+/*** Desk 635px ***/
+@media only screen and (max-width: 635px) and (max-height: 657px) {
+	.fa-user {
+	    left: 45px;
+	}
+	.fa-lock {
+	    left: 26px;
+	}
+	.user-form .btn-danger,
+	.form-user input {
+		font-size: 90%;
+	}
+}
+/*** Desk 500px ***/
+@media only screen and (max-width: 500px) and (max-height: 657px) {
+	.fa-user, .fa-lock {
+		font-size: 90%;
+	}
+	.fa-user {
+	    left: 40px;
+	}
+	.fa-lock {
+	    left: 23px;
+	}
+}
+/*** Samsung-S5 640px landscape ***/
+@media only screen and (max-width: 640px) and (max-height: 360px) {
+	.user-form {
+	    width: 60%;
+	    top: 10%;
+	    left: 20%;
+	}
+	.fa-user {
+	    top: 78px;
+	    left: 45px;
+	}
+	.fa-lock {
+	    top: 122px;
+	    left: 27px;
+	}
+}
+/*** Samsung-S5 360px portrait ***/
+@media only screen and (max-width: 360px) and (max-height: 640px) {
+	.user-form {
+	    width: 80%;
+	    top: 11%;
+	    left: 10%;
+	}
+	.fa-user {
+	    top: 77px;
+	    left: 40px;
+	}
+	.fa-lock {
+	    top: 123px;
+	    left: 23px;
+	}
+}

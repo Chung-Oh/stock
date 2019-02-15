@@ -1,0 +1,205 @@
+.category-form-create,
+.category-form-edit,
+#formDelete,
+.product-form-create,
+.product-form-edit {
+    display: none;
+}
+
+.category-form-create,
+.category-form-edit,
+.product-form-create,
+.product-form-edit {
+    @extend %elem-position-fixed;
+    width: 50%;
+    top: 20%;
+    left: 25%;
+}
+
+.container,
+.container-category,
+.container-product,
+.form-category,
+.form-product {
+    @extend %elem-flex-justify;
+    align-items: center;   
+}
+
+.container-category {
+    height: 188px;
+}
+
+.form-category,
+.form-product {
+    width: 100%;
+    background-color: $color-lavender;
+    border: 1px solid $color-9;
+    box-shadow: 1px 1px 5px $color-5;
+}
+
+.form-category {
+    padding: 3em 0;
+}
+
+.form-product {
+    padding: 1.5em 0;
+}
+
+.form-category form,
+.form-product form {
+    width: 80%;
+}
+
+.form-category input,
+.form-product input {
+    @extend %elem-font-bold;
+    height: 45px;
+    width: 100%;
+    font-size: 100%;
+    display: block;
+}
+
+.data {
+   @extend %elem-text-center;
+}
+/* Select Form Product */
+.data, select {
+    @extend %elem-transition-07s;
+    font-family: $font-raleway;
+    border: 1px solid $color-9;
+}
+
+.data:focus,
+.data:hover,
+select:focus,
+select:hover {
+    @extend %elem-transition-07s;
+    box-shadow: 1px 1px 15px $color-black inset;
+}
+
+select {
+    @extend %elem-font-bold;
+    height: 40px;
+    width: 100%;
+    font-size: 110%;
+}
+
+select > option:first-child {
+    background-color: $color-8;
+    color: $color-white;
+}
+
+.btn-form {
+    @extend %elem-cursor-pointer;
+    @extend %elem-transition-07s;
+    background-color: $btn-primary;
+    border: 1px solid $btn-primary-border;
+    box-shadow: 0 0 6px $btn-primary-shadow;
+    color: $color-black;
+}
+
+.btn-form:focus,
+.btn-form:hover {
+    @extend %elem-transition-07s;
+    background-color: $btn-primary-border;
+    border: 1px solid $btn-primary-shadow;
+    box-shadow: 0 0 10px $color-dodgerblue;
+}
+/*** Desk ***/
+@media only screen and (min-width: 100px) {
+    .new-item_danger {
+        width: 100%;
+    }
+    .btn-danger {
+        height: 100%;
+        width: 100%;
+        font-size: 100%;
+        font-weight: bold;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $btn-danger;
+        color: $color-black;
+        border: 1px solid $btn-danger-border;
+        box-shadow: 0 0 6px $btn-danger-shadow;
+        padding: 0;
+        cursor: pointer;
+        @include transition(.7s);
+        @include border-radius(40px 40px 0 0);
+    }
+    .btn-danger:focus,
+    .btn-danger:hover {
+        background-color: $btn-danger-hover;
+        border: 1px solid $btn-danger-border-hover;
+        box-shadow: 0 0 10px $btn-danger-shadow-hover;
+        @include transition(.5s);
+    }
+}
+/*** iPad 768px portrait ***/
+@media only screen and (max-width: 768px) and (min-height: 1024px) {
+    .category-form-create, 
+    .category-form-edit, 
+    .product-form-create,
+    .product-form-edit {
+        width: 60%;
+        left: 20%;
+    }
+}
+/*** Samsung-S5 640px landscape ***/
+@media only screen and (max-width: 640px) and (max-height: 360px) {
+    .category-form-create,
+    .category-form-edit,
+    .product-form-create,
+    .product-form-edit {
+        width: 70%;
+        top: 27%;
+        left: 15%;
+    }
+    .container-category {
+        height: 106px;
+    }
+    .form-category,
+    .form-product {
+        padding: .5em 0;
+    }
+    .form-product input, select {
+        height: 30px;
+    }
+}
+/*** Samsung-S5 360px portrait ***/
+@media only screen and (max-width: 360px) and (max-height: 640px) {
+    .category-form-create,
+    .category-form-edit,
+    .product-form-create,
+    .product-form-edit {
+        width: 85%;
+        top: 35%;
+        left: 7.5%;
+    }
+    .container-category {
+        height: 138px;
+    }
+    .container-product {
+        height: 197px;
+    }
+    .form-category input {
+        height: 45px;
+    }
+    .form-product input {
+        height: 30px;
+    }
+    .form-category {
+        padding: 1.5em 0;
+    }
+    .form-product {
+        padding: .5em 0;
+    }
+    .new-item_danger {
+        font-size: 100%;
+    }
+    select {
+        height: 30px;
+        font-size: 100%;
+    }
+}

@@ -1,0 +1,56 @@
+/* Mensagem Session */
+span,
+.alert-danger,
+.alert-success {
+	display: flex;
+	align-items: center;
+
+}
+
+span {
+	font-family: $font-default;
+	font-weight: bold;
+	margin: 0 .5%;
+	justify-content: flex-end;
+	overflow: hidden;
+}
+
+.alert-danger,
+.alert-success {
+	height: 30px;
+	width: 100%;
+	font-family: $font-raleway;
+	justify-content: center;
+}
+
+.alert-danger {
+	@include msg-alert($alert-danger, $alert-danger-border);
+}
+
+.alert-success {
+	@include msg-alert($alert-success, $alert-success-border);
+}
+/*** Desk ***/
+@media only screen and (max-width: 465px) {
+	.col-12 .alert-danger,
+	.col-12 .alert-success {
+	    font-size: 85%;
+	}
+}
+/*** Samsung-S5 640px landscape ***/
+@media only screen and (max-width: 640px) and (max-height: 360px) {
+	span {
+	    margin-right: 1%;
+	}
+}
+/*** Samsung-S5 360px portrait ***/
+@media only screen and (max-width: 360px) and (max-height: 640px) {
+	span {
+	    margin-right: 3px;
+	}
+	.col-12 .alert-danger,
+	.col-12 .alert-success {
+		font-size: 70%;
+		margin-top: 0px;
+	}
+}

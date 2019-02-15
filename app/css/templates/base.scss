@@ -1,0 +1,66 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: $font-helvetica;
+}
+
+main {
+	width: 100%;
+	margin-bottom: 4.5em;
+	transition: margin-top .5s;
+}
+/** grid abordagem de 12 Colunas**/
+.col-1 { width: 8.33%; }
+.col-2 { width: 16.66%; }
+.col-3 { width: 25%; }
+.col-4 {width: 33.33%;}
+.col-5 { width: 41.66%; }
+.col-6 { width: 50%; }
+.col-7 { width: 58.33%; }
+.col-8 { width: 66.66%; }
+.col-9 { width: 75%; }
+.col-10 { width: 83.33%; }
+.col-11 { width: 91.66%; }
+.col-12 { width: 100%; }
+/* Fazendo flutuar com prenchimento */
+[class*="col-"] {
+	float: left;
+	padding: 15px;
+}
+/* Limpar o fluxo */
+.row::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.title-top {
+	padding: 0 0 15px 0;
+}
+/*** Desk ***/
+@media only screen and (min-width: 100px) {
+	.main-down {
+		margin-top: 225px;
+		transition: margin-top .5s;
+	}
+}
+/*** Desk 451px ***/
+@media only screen and (min-width: 451px) {
+	.main-down {
+		margin-top: 45px;
+	}
+}
+/*** Samsung-S5 640px landscape ***/
+@media only screen and (max-width: 640px) and (max-height: 360px) {
+	main {
+	    margin: 45px 0 60px 0;
+	}
+}
+/*** Samsung-S5 360px portrait ***/
+@media only screen and (max-width: 360px) and (max-height: 640px) {
+	main {
+	    margin-bottom: 4em;
+	}
+}

@@ -1,0 +1,85 @@
+/*** ALERTA ***/
+[class*="alert-"] {
+	@extend %elem-font-bold;
+	@extend %elem-text-center;
+	@extend %elem-position-relative;
+	font-family: $font-lucinda;
+}
+
+.alert-danger {
+	top: 5%;
+	font-size: 100%;
+	color: #DB1E1EDD;
+}
+
+.alert-success {
+    @extend %elem-font-bold;
+    @extend %elem-flex-justify;
+    top: 26%;
+    color: $color-4;
+    align-items: center;
+}
+/*** Desk 950px ***/
+@media only screen and (max-width: 950px) {
+	.alert-success {
+	    top: 22%;
+	}
+}
+/*** Desk 800px ***/
+@media only screen and (max-width: 800px) {
+	.alert-danger {
+	    top: 2%;
+	}
+}
+/*** iPad 1024px landscape ***/
+@media only screen and (max-device-width: 1024px) and (max-device-height: 768px) {
+	.alert-danger,
+	.alert-success {
+		font-size: 150%;		
+	}
+	.alert-danger {
+		top: 12%;
+	}
+	.alert-success {
+	    top: 27%;
+	}
+}
+/*** iPed 768px portrait ***/
+@media only screen and (max-device-width: 768px) and (max-device-height: 1024px) {
+	.alert-danger,
+	.alert-success {
+		font-size: 150%;		
+	}
+	.alert-danger {
+		top: 35%;
+	}
+	.alert-success {
+	    top: 47%;
+	}
+}
+/*** Samsung-S5 640px landscape ***/
+@media only screen and (max-device-width: 640px) and (max-device-height: 360px) {
+	.alert-danger,
+	.alert-success {
+	    font-size: 90%;		
+	}
+	.alert-danger {
+	    top: 13%;
+	}
+	.alert-success {
+	    top: 26%;
+	}
+}
+/*** Samsung-S5 360px portrait ***/
+@media only screen and (max-device-width: 360px) and (max-device-height: 640px) {
+	.alert-danger,
+	.alert-success {
+		font-size: 100%;		
+	}
+	.alert-danger {
+		top: 32%;
+	}
+	.alert-success {
+	    top: 43%;
+	}
+}

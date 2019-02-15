@@ -1,0 +1,34 @@
+body {
+    @include radial-gradient($color-a, $color-b, $color-d);
+}
+
+.row {
+    height: 15%;
+}
+
+.message-title,
+.message-erro {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.message-title {
+    width: 100%;
+    background-image: linear-gradient(to right, $color-8, $color-b);
+    opacity: .9;
+}
+
+.message-title h2 {
+    font-size: 2.5em;
+    margin-left: .5em;
+}
+/*** iPad 1024px landscape ***/
+@media screen and (max-width: 1024px) and (max-height: 768px) {
+    .message-title h2 {
+        font-size: 3em;
+    }
+    .message-erro {
+        font-size: 150%;
+    }
+}

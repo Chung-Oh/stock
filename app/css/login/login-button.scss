@@ -1,0 +1,120 @@
+/*** BOTAO ***/
+.btn {
+	@extend %elem-vertical-align-middle;
+}
+
+button {
+	@extend %elem-font-bold;
+	@extend %elem-border-radius-05em;
+	@extend %elem-cursor-pointer;
+	@extend %elem-transition-1s;
+	height: 50px;
+	width: 95%;
+	font-family: $font-verdana;
+	font-size: 100%;
+	background-color: $color-2;
+}
+
+button,
+.btn-return p a {
+	color: $color-white;
+}
+
+button:hover,
+button:focus {
+	background-color: $color-black;
+	box-shadow: 0 1px 1.25em $color-black;
+}
+/* Botão retornar ao Sistema */
+.btn-return {
+	@extend %elem-text-center;
+	@extend %elem-position-relative;
+	@extend %elem-text-decoration-none;
+	height: 10%;
+	top: 70%;
+}
+
+.btn-return p {
+    height: 100%;
+}
+
+.btn-return p,
+.btn-return p a {
+    @extend %elem-flex-justify;
+    align-items: center;
+}
+
+.btn-return p a {
+    @extend %elem-font-bold;
+    @extend %elem-border-radius-05em;
+    @extend %elem-text-decoration-none;
+    @extend %elem-transition-1s;
+    height: 75%;
+    width: 240px;
+    font-family: $font-verdana;
+    align-self: center;
+    background-color: $color-2;
+    opacity: .7;
+}
+
+.btn-return p a:hover,
+.btn-return p a:focus {
+	background-color: $color-black;
+	box-shadow: 0 0 1.25em $color-black;
+}
+/*** iPad 1024px landscape ***/
+@media only screen and (max-device-width: 1024px) and (max-device-height: 768px) {
+	button {
+	    font-size: 119%;
+	}
+	.btn-return {
+	    top: 65%;
+	}
+	.btn-return p a {
+	    width: 40%;
+	    font-size: 150%;
+	}
+}
+/*** iPed 768px portrait ***/
+@media only screen and (max-device-height: 1024px) and (max-device-width: 768px) {
+	button {
+	    height: 60px;
+	    font-size: 125%;
+	}
+	.btn-return {
+	    height: 10%;
+	    top: 50%;
+	}
+	.btn-return p a {
+	    width: 50%;
+	    font-size: 150%;
+	}
+}
+/*** Samsung-S5 640px landscape ***/
+@media only screen and (max-device-width: 640px) and (max-device-height: 360px) {
+	button {
+		height: 35px;
+		font-size: 65%;
+	}
+	.btn-return {
+		top: 65%;
+	}
+	.btn-return p a {
+	    width: 35%;
+	    font-size: 75%;
+	}
+}
+/*** Samsung-S5 360px portrait ***/
+@media only screen and (max-device-width: 360px) and (max-device-height: 640px) {
+	button {
+		height: 40px;
+		font-size: 85%;
+	}
+	.btn-return {
+	    top: 45%;
+	}
+	.btn-return p a {
+	    width: 60%;
+	    font-size: 100%;
+	}
+}

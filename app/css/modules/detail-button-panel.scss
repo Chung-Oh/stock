@@ -1,0 +1,55 @@
+.detail-button {
+    margin-top: 1em;
+}
+
+.detail-btn-panel {
+	@extend %elem-flex-justify;
+    font-size: 85%;
+    padding: 0;
+}
+
+.open-close {
+	@extend %elem-font-bold;
+	@extend %elem-cursor-pointer;
+	@extend %elem-transition-07s;
+	width: 150px;
+	font-size: 80%;
+	padding: .5em;
+	text-shadow: 1px 1px 1px $color-8;
+	background-color: $color-c;
+	border: 1px solid $color-3;
+	box-shadow: 2px 2px 5px $color-3;
+	@include border-radius(3px);
+}
+
+.open-close:focus,
+.open-close:hover {
+	@extend %elem-transition-07s;
+	color: $color-dodgerblue;
+	border-color: $color-dodgerblue;
+    box-shadow: 0 0 1em 0 $color-dodgerblue;
+}
+/*** Desk 770px ***/
+@media only screen and (min-width: 100px) and (max-width: 770px) and (max-height: 641px) {
+   .open-close {
+		width: 80%;
+   		@include border-radius(50px 50px 0 0);
+		@include btn-detail-open-close($color-3);
+	}
+}
+/*** Samsung-S5  640px landscape ***/
+@media only screen and (max-width: 640px) and (max-height: 360px) {
+	.open-close {
+		width: 67%;
+		@include border-radius(50px 50px 0 0);
+		@include btn-detail-open-close($color-3);
+	}
+}
+/*** Samsung-S5 360px portrait ***/
+@media only screen and (max-width: 360px) and (max-height: 640px) {
+	.open-close {
+		width: 85%;
+		@include border-radius(50px 50px 0 0);
+		@include btn-detail-open-close($color-3);
+	}
+}

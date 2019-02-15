@@ -1,0 +1,2223 @@
+@charset "UTF-8";
+.top-nav a, .not, .yes, .btn-form, .open-close, summary, .order, #delete:focus,
+#delete:hover,
+#edit:focus,
+#edit:hover, .show-user-form, .btn-top {
+  -webkit-cursor: pointer;
+  -moz-cursor: pointer;
+  -ms-cursor: pointer;
+  -o-cursor: pointer;
+  cursor: pointer; }
+
+.dash-top, .info-table, .container,
+.container-category,
+.container-product,
+.form-category,
+.form-product, .detail-btn-panel, .table .col-12, .msg-table-search, .title-table-search, .user-btn-panel, .form-user, .msg-empty {
+  display: flex;
+  justify-content: center; }
+
+.info-top-strong, .search, .title-delete, .msg-delete, .form-category input,
+.form-product input, select, .info-head-strong, .open-close, .detail-body, .info-body-strong, .caption-category,
+.caption-product, th, .order:hover, .show-user-form, .form-user input {
+  font-weight: bold; }
+
+.user-head-one,
+.user-head-two,
+.user-head-three,
+.user-head-four {
+  margin: auto; }
+
+.fas.fa-search {
+  position: absolute; }
+
+.top-nav, #formDelete, .category-form-create,
+.category-form-edit,
+.product-form-create,
+.product-form-edit, .user-form, .btn-top, .foot {
+  position: fixed; }
+
+.fa-info,
+.fa-balance-scale,
+.fa-broom, .fa-bookmark, .fa-user, .fa-lock {
+  position: relative; }
+
+.col-12 p, .info-top, .search, .delete-category,
+.delete-product, .data, summary, td, .name,
+.password, .msg-empty-title, .foot {
+  text-align: center; }
+
+.top-nav a, .foot a {
+  text-decoration: none; }
+
+.msg-delete {
+  text-decoration: underline; }
+
+.top-nav a, .top-nav a:focus,
+.top-nav a:hover, .search, .not, .not:focus,
+.not:hover, .yes, .yes:focus,
+.yes:hover, .data, select, .data:focus,
+.data:hover,
+select:focus,
+select:hover, .btn-form, .btn-form:focus,
+.btn-form:hover, .open-close, .open-close:focus,
+.open-close:hover, .order, .order:hover, .show-user-form, .show-user-form:focus,
+.show-user-form:hover, .name,
+.password, .name:focus, .name:hover,
+.password:focus, .password:hover, .btn-top, .btn-top:focus,
+.btn-top:hover {
+  -webkit-transition: .7s;
+  -moz-transition: .7s;
+  -ms-transition: .7s;
+  -o-transition: .7s;
+  transition: .7s; }
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+* {
+  box-sizing: border-box; }
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html, body {
+  height: 100%; }
+
+body {
+  font-family: "Helvetica", sans-serif; }
+
+main {
+  width: 100%;
+  margin-bottom: 4.5em;
+  transition: margin-top .5s; }
+
+/** grid abordagem de 12 Colunas**/
+.col-1 {
+  width: 8.33%; }
+
+.col-2 {
+  width: 16.66%; }
+
+.col-3 {
+  width: 25%; }
+
+.col-4 {
+  width: 33.33%; }
+
+.col-5 {
+  width: 41.66%; }
+
+.col-6 {
+  width: 50%; }
+
+.col-7 {
+  width: 58.33%; }
+
+.col-8 {
+  width: 66.66%; }
+
+.col-9 {
+  width: 75%; }
+
+.col-10 {
+  width: 83.33%; }
+
+.col-11 {
+  width: 91.66%; }
+
+.col-12 {
+  width: 100%; }
+
+/* Fazendo flutuar com prenchimento */
+[class*="col-"] {
+  float: left;
+  padding: 15px; }
+
+/* Limpar o fluxo */
+.row::after {
+  content: "";
+  clear: both;
+  display: table; }
+
+.title-top {
+  padding: 0 0 15px 0; }
+
+/*** Desk ***/
+@media only screen and (min-width: 100px) {
+  .main-down {
+    margin-top: 225px;
+    transition: margin-top .5s; } }
+/*** Desk 451px ***/
+@media only screen and (min-width: 451px) {
+  .main-down {
+    margin-top: 45px; } }
+/*** Samsung-S5 640px landscape ***/
+@media only screen and (max-width: 640px) and (max-height: 360px) {
+  main {
+    margin: 45px 0 60px 0; } }
+/*** Samsung-S5 360px portrait ***/
+@media only screen and (max-width: 360px) and (max-height: 640px) {
+  main {
+    margin-bottom: 4em; } }
+/** Barra Navega├º├úo **/
+.top-nav {
+  width: 100%;
+  background-color: #333;
+  overflow: hidden;
+  top: 0;
+  z-index: 1; }
+
+.top-nav a {
+  float: left;
+  padding: 14px 16px;
+  color: #F2F2F2; }
+
+.top-nav a:focus,
+.top-nav a:hover {
+  background-color: #DDD;
+  color: #000; }
+
+.active {
+  background-color: dodgerblue; }
+
+/* Caixa de Busca */
+.page-action:nth-child(5) {
+  width: 35%;
+  display: block;
+  padding: 5px 10px;
+  cursor: default; }
+
+.page-action:nth-child(5):hover {
+  background-color: #333; }
+
+/* Bot├úo de Sair */
+.page-action:nth-child(6) {
+  float: right;
+  padding: 14px; }
+
+.top-nav .icon {
+  display: none; }
+
+/*** Desk 465px ***/
+@media only screen and (max-width: 465px) {
+  /* Anima├º├úo navega├º├úo */
+  .top-nav {
+    height: 45px;
+    transition: height .5s; }
+
+  .top-nav.responsive {
+    height: 225px; }
+
+  /* Fim anima├º├úo */
+  .top-nav .page-action {
+    display: none; }
+
+  .top-nav a.icon {
+    float: right;
+    display: block; }
+
+  .top-nav.responsive .icon {
+    position: absolute;
+    top: 0;
+    right: 0; }
+
+  .top-nav.responsive a {
+    float: none;
+    display: block;
+    text-align: left; } }
+/*** iPad 1024px landscape ***/
+@media only screen and (max-width: 1024px) and (max-height: 768px) {
+  .top-nav .page-action:nth-child(5) {
+    width: 45%; } }
+/*** iPad 768px portrait ***/
+@media only screen and (max-width: 768px) and (max-height: 1024px) {
+  .top-nav .page-action:nth-child(5) {
+    width: 40%; } }
+/*** Desk 832px ***/
+@media only screen and (max-width: 832px) and (max-height: 657px) {
+  .top-nav .page-action:nth-child(5) {
+    width: 35%; } }
+/*** Desk 710px ***/
+@media only screen and (max-width: 710px) and (max-height: 657px) {
+  .top-nav .page-action:nth-child(5) {
+    display: none; }
+
+  .top-nav .page-action:nth-child(6) {
+    float: right; } }
+/*** Samsung-S5  640px landscape ***/
+@media only screen and (max-width: 640px) and (max-height: 360px) {
+  .top-nav .page-action {
+    font-size: 85%;
+    padding: 16px; }
+
+  .top-nav .page-action:nth-child(5) {
+    width: 34%;
+    display: flex;
+    padding: 5px; }
+
+  .top-nav .page-action:nth-child(6) {
+    float: right; } }
+/*** Samsung-S5 360px portrait ***/
+@media only screen and (max-width: 360px) and (max-height: 640px) {
+  .top-nav .page-action:nth-child(6) {
+    float: right; } }
+/* Mensagem Session */
+span,
+.alert-danger,
+.alert-success {
+  display: flex;
+  align-items: center; }
+
+span {
+  font-family: sans-serif;
+  font-weight: bold;
+  margin: 0 .5%;
+  justify-content: flex-end;
+  overflow: hidden; }
+
+.alert-danger,
+.alert-success {
+  height: 30px;
+  width: 100%;
+  font-family: "Raleway", sans-serif;
+  justify-content: center; }
+
+.alert-danger {
+  background-color: #E3A0BA;
+  border: 1px solid #CF6479; }
+
+.alert-success {
+  background-color: #5DE19E;
+  border: 1px solid #17A05A; }
+
+/*** Desk ***/
+@media only screen and (max-width: 465px) {
+  .col-12 .alert-danger,
+  .col-12 .alert-success {
+    font-size: 85%; } }
+/*** Samsung-S5 640px landscape ***/
+@media only screen and (max-width: 640px) and (max-height: 360px) {
+  span {
+    margin-right: 1%; } }
+/*** Samsung-S5 360px portrait ***/
+@media only screen and (max-width: 360px) and (max-height: 640px) {
+  span {
+    margin-right: 3px; }
+
+  .col-12 .alert-danger,
+  .col-12 .alert-success {
+    font-size: 70%;
+    margin-top: 0px; } }
+/* Mensagem na Home */
+.msg-home {
+  padding-top: 45px; }
+
+/* Par├ígrafo na Home */
+.col-12 p {
+  font-size: 100%;
+  padding: 1em; }
+
+/*** Desk 450px ***/
+@media only screen and (max-width: 450px) and (min-height: 640px) {
+  .msg-home {
+    margin-top: 45px;
+    padding-top: 0; } }
+/*** iPad 1024px landscape ***/
+@media only screen and (max-width: 1024px) and (min-height: 768px) {
+  .msg-home {
+    padding-top: 45px; } }
+/*** Samsung-S5 640px landscape ***/
+@media only screen and (max-width: 640px) and (max-height: 360px) {
+  .msg-home {
+    padding: 0; } }
+/*** Samsung-S5 360px portrait ***/
+@media only screen and (max-width: 360px) and (max-height: 640px) {
+  .msg-home {
+    margin-top: 45px;
+    padding-top: 0; } }
+.info-top {
+  width: 370px;
+  background-color: #333;
+  color: lavender;
+  box-shadow: 3px 3px 9px #555;
+  padding: .7em; }
+
+.info-top:first-child {
+  -webkit-border-radius: 10px 0 0 10px;
+  -moz-border-radius: 10px 0 0 10px;
+  -ms-border-radius: 10px 0 0 10px;
+  -o-border-radius: 10px 0 0 10px;
+  border-radius: 10px 0 0 10px; }
+
+.info-top:last-child {
+  -webkit-border-radius: 0 10px 10px 0;
+  -moz-border-radius: 0 10px 10px 0;
+  -ms-border-radius: 0 10px 10px 0;
+  -o-border-radius: 0 10px 10px 0;
+  border-radius: 0 10px 10px 0; }
+
+.info-top p {
+  font-size: 95%; }
+
+.info-top-strong {
+  font-size: 110%;
+  color: #98C4F0;
+  margin-right: .5em; }
+
+/*** iPad 1024px landscape ***/
+@media only screen and (max-width: 1024px) and (max-height: 768px) {
+  .info-top:first-child {
+    -webkit-border-radius: 20px 0 0 20px;
+    -moz-border-radius: 20px 0 0 20px;
+    -ms-border-radius: 20px 0 0 20px;
+    -o-border-radius: 20px 0 0 20px;
+    border-radius: 20px 0 0 20px; }
+
+  .info-top:last-child {
+    -webkit-border-radius: 0 20px 20px 0;
+    -moz-border-radius: 0 20px 20px 0;
+    -ms-border-radius: 0 20px 20px 0;
+    -o-border-radius: 0 20px 20px 0;
+    border-radius: 0 20px 20px 0; } }
+/*** iPad 768px portrait ***/
+@media only screen and (max-width: 768px) and (max-height: 1024px) {
+  .info-top {
+    width: 40%; }
+
+  .info-top:first-child {
+    -webkit-border-radius: 20px 0 0 20px;
+    -moz-border-radius: 20px 0 0 20px;
+    -ms-border-radius: 20px 0 0 20px;
+    -o-border-radius: 20px 0 0 20px;
+    border-radius: 20px 0 0 20px; }
+
+  .info-top:last-child {
+    -webkit-border-radius: 0 20px 20px 0;
+    -moz-border-radius: 0 20px 20px 0;
+    -ms-border-radius: 0 20px 20px 0;
+    -o-border-radius: 0 20px 20px 0;
+    border-radius: 0 20px 20px 0; } }
+/*** Desk 640px ***/
+@media only screen and (max-width: 600px) and (max-height: 640px) {
+  .dash-top {
+    align-items: center;
+    flex-direction: column; }
+
+  .info-top {
+    width: 80%; }
+
+  .info-top:first-child {
+    -webkit-border-radius: 40px 40px 0 0;
+    -moz-border-radius: 40px 40px 0 0;
+    -ms-border-radius: 40px 40px 0 0;
+    -o-border-radius: 40px 40px 0 0;
+    border-radius: 40px 40px 0 0; }
+
+  .info-top:last-child {
+    margin-top: 3px;
+    -webkit-border-radius: 0 0 40px 40px;
+    -moz-border-radius: 0 0 40px 40px;
+    -ms-border-radius: 0 0 40px 40px;
+    -o-border-radius: 0 0 40px 40px;
+    border-radius: 0 0 40px 40px; } }
+/*** Samsung-S5 640px landscape ***/
+@media only screen and (max-width: 640px) and (max-height: 360px) {
+  .info-top {
+    width: 35%; }
+
+  .info-top:first-child {
+    -webkit-border-radius: 20px 0 0 20px;
+    -moz-border-radius: 20px 0 0 20px;
+    -ms-border-radius: 20px 0 0 20px;
+    -o-border-radius: 20px 0 0 20px;
+    border-radius: 20px 0 0 20px; }
+
+  .info-top:last-child {
+    -webkit-border-radius: 0 20px 20px 0;
+    -moz-border-radius: 0 20px 20px 0;
+    -ms-border-radius: 0 20px 20px 0;
+    -o-border-radius: 0 20px 20px 0;
+    border-radius: 0 20px 20px 0; } }
+/*** Samsung-S5 360px portrait ***/
+@media only screen and (max-width: 360px) and (max-height: 640px) {
+  .dash-top {
+    align-items: center;
+    flex-direction: column; }
+
+  .info-top {
+    width: 80%; }
+
+  .info-top:first-child {
+    -webkit-border-radius: 40px 40px 0 0;
+    -moz-border-radius: 40px 40px 0 0;
+    -ms-border-radius: 40px 40px 0 0;
+    -o-border-radius: 40px 40px 0 0;
+    border-radius: 40px 40px 0 0; }
+
+  .info-top:last-child {
+    margin-top: 3px;
+    -webkit-border-radius: 0 0 40px 40px;
+    -moz-border-radius: 0 0 40px 40px;
+    -ms-border-radius: 0 0 40px 40px;
+    -o-border-radius: 0 0 40px 40px;
+    border-radius: 0 0 40px 40px; } }
+.dash-table {
+  margin-top: 1em; }
+
+.info-table table {
+  width: 740px;
+  box-shadow: 1px 1px 5px #555; }
+
+meter {
+  width: 100%; }
+
+/*** iPad 768px portrait ***/
+@media only screen and (max-width: 768px) and (max-height: 1024px) {
+  .info-table table {
+    width: 80%; } }
+/*** Desk 640px ***/
+@media only screen and (max-width: 600px) and (max-height: 640px) {
+  .info-table table {
+    width: 100%; } }
+/*** Samsung-S5 640px landscape ***/
+@media only screen and (max-width: 640px) and (max-height: 360px) {
+  .info-table table {
+    width: 70%; } }
+/*** Samsung-S5 360px portrait ***/
+@media only screen and (max-width: 360px) and (max-height: 640px) {
+  .dash-table {
+    margin-bottom: 5em; }
+
+  .info-table table {
+    width: 100%; } }
+/*** Desk ***/
+@media only screen and (min-width: 100px) {
+  .title {
+    margin-top: 45px; }
+
+  .col-12 h2 {
+    font-size: 150%;
+    font-weight: 500;
+    text-align: center;
+    text-shadow: 1px 1px 3px #555;
+    padding: 20px 10px  10px 10px; }
+
+  .btn {
+    height: 30px; }
+
+  .btn,
+  .new-item {
+    width: 100%; }
+
+  .btn,
+  .new-item,
+  .btn-primary {
+    display: flex;
+    justify-content: center; }
+
+  .btn,
+  .btn-primary {
+    align-items: center; }
+
+  .new-item {
+    padding: 0; }
+
+  .new-item,
+  .btn-primary {
+    height: 100%; }
+
+  .btn-primary {
+    width: 250px;
+    font-size: 100%;
+    font-weight: 700;
+    text-decoration: none;
+    background-color: #A2C8EC;
+    color: #000;
+    border: 1px solid #57A1EA;
+    box-shadow: 0 0 5px #357795;
+    padding: 0;
+    cursor: pointer;
+    -webkit-transition: 0.7s;
+    -moz-transition: 0.7s;
+    -ms-transition: 0.7s;
+    -o-transition: 0.7s;
+    transition: 0.7s;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px; }
+
+  .btn-primary:focus,
+  .btn-primary:hover {
+    background-color: #57A1EA;
+    border: 1px solid #357795;
+    box-shadow: 0 0 10px dodgerblue;
+    -webkit-transition: 0.7s;
+    -moz-transition: 0.7s;
+    -ms-transition: 0.7s;
+    -o-transition: 0.7s;
+    transition: 0.7s; } }
+/* Caixa no Header */
+.search {
+  height: 35px;
+  width: 100%;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 100%;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+  border-radius: 25px; }
+
+.search:focus,
+.search:hover {
+  border-color: dodgerblue;
+  box-shadow: 0 0 1em 0 dodgerblue; }
+
+.search:focus + i {
+  color: dodgerblue; }
+
+.fas.fa-search {
+  top: 15px;
+  left: 425px;
+  color: #333; }
+
+/* Caixa no Main */
+.search-box {
+  background-color: #333;
+  padding: 10px;
+  margin-bottom: 1em;
+  display: none; }
+
+/*** Desk 710px ***/
+@media only screen and (max-width: 710px) {
+  .search-box {
+    display: block;
+    padding: 15px 10px 0 10px; }
+
+  .fas.fa-search {
+    width: 18px;
+    display: block;
+    position: relative;
+    top: -25px;
+    left: 10px; } }
+/*** Samsung-S5 640px landscape ***/
+@media only screen and (max-width: 640px) and (max-height: 360px) {
+  .search-box {
+    display: none; }
+
+  .fas.fa-search {
+    top: 12px;
+    left: -183px; } }
+/*** Samsung-S5 360px portrait ***/
+@media only screen and (max-width: 360px) and (max-height: 640px) {
+  .page-action .search {
+    display: none; }
+
+  .search-box {
+    display: block;
+    padding: 15px 10px 0 10px; }
+
+  .fas.fa-search {
+    width: 18px;
+    position: relative;
+    display: block;
+    top: -24px;
+    left: 10px; } }
+#formDelete {
+  height: 93%;
+  background: rgba(0, 0, 0, 0.4);
+  top: 6.7%; }
+
+#formDelete,
+.form-delete {
+  width: 100%; }
+
+#formDelete,
+.form-delete,
+.title-delete,
+.msg-delete,
+.options,
+.not {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.form-delete {
+  height: 170px; }
+
+.form-delete,
+.options {
+  align-items: initial; }
+
+.delete-category,
+.delete-product {
+  width: 35%;
+  background-color: lavender;
+  border: 1px solid #999;
+  box-shadow: 1px 1px 5px #111; }
+
+.title-delete,
+.msg-delete {
+  font-family: "Open Sans Condensed", sans-serif; }
+
+.title-delete {
+  height: 25%;
+  font-size: 120%; }
+
+.msg-delete {
+  height: 25%;
+  margin-bottom: 1em; }
+
+.options {
+  height: 40px; }
+
+.not {
+  background-color: #E37777;
+  border: 1px solid #D65D5D;
+  box-shadow: 0 0 10px #AA7070;
+  -webkit-border-radius: 30px 0 0 30px;
+  -moz-border-radius: 30px 0 0 30px;
+  -ms-border-radius: 30px 0 0 30px;
+  -o-border-radius: 30px 0 0 30px;
+  border-radius: 30px 0 0 30px; }
+
+.not:focus,
+.not:hover {
+  background-color: #F05555;
+  border: 1px solid #DA2003;
+  box-shadow: 0 0 10px #F00; }
+
+.yes {
+  font-size: 100%;
+  background-color: #A2C8EC;
+  border: 1px solid #57A1EA;
+  box-shadow: 0 0 6px #357795;
+  -webkit-border-radius: 0 30px 30px 0;
+  -moz-border-radius: 0 30px 30px 0;
+  -ms-border-radius: 0 30px 30px 0;
+  -o-border-radius: 0 30px 30px 0;
+  border-radius: 0 30px 30px 0; }
+
+.yes:focus,
+.yes:hover {
+  background-color: #57A1EA;
+  border: 1px solid #357795;
+  box-shadow: 0 0 7px dodgerblue; }
+
+.not, .yes {
+  width: 30%; }
+
+/*** Desk 617px ***/
+@media only screen and (max-width: 617px) {
+  .delete-category,
+  .delete-product {
+    width: 50%; } }
+/*** iPad 1024px landscape ***/
+@media only screen and (max-width: 1024px) and (min-height: 768px) {
+  #formDelete {
+    height: 94%;
+    top: 6%; } }
+/*** iPad 768px portrait ***/
+@media only screen and (max-width: 768px) and (min-height: 1024px) {
+  #formDelete {
+    height: 96%;
+    top: 4.5%; }
+
+  .delete-category,
+  .delete-product {
+    width: 50%; } }
+/*** Samsung-S5 640px landscape ***/
+@media only screen and (max-width: 640px) and (max-height: 360px) {
+  #formDelete {
+    top: 12.5%; }
+
+  .delete-category,
+  .delete-product {
+    width: 60%; } }
+/*** Samsung-S5 360px portrait ***/
+@media only screen and (max-width: 360px) and (max-height: 640px) {
+  #formDelete {
+    height: 93%;
+    top: 7%; }
+
+  .delete-category,
+  .delete-product {
+    width: 75%; } }
+.category-form-create,
+.category-form-edit,
+#formDelete,
+.product-form-create,
+.product-form-edit {
+  display: none; }
+
+.category-form-create,
+.category-form-edit,
+.product-form-create,
+.product-form-edit {
+  width: 50%;
+  top: 20%;
+  left: 25%; }
+
+.container,
+.container-category,
+.container-product,
+.form-category,
+.form-product {
+  align-items: center; }
+
+.container-category {
+  height: 188px; }
+
+.form-category,
+.form-product {
+  width: 100%;
+  background-color: lavender;
+  border: 1px solid #999;
+  box-shadow: 1px 1px 5px #555; }
+
+.form-category {
+  padding: 3em 0; }
+
+.form-product {
+  padding: 1.5em 0; }
+
+.form-category form,
+.form-product form {
+  width: 80%; }
+
+.form-category input,
+.form-product input {
+  height: 45px;
+  width: 100%;
+  font-size: 100%;
+  display: block; }
+
+/* Select Form Product */
+.data, select {
+  font-family: "Raleway", sans-serif;
+  border: 1px solid #999; }
+
+.data:focus,
+.data:hover,
+select:focus,
+select:hover {
+  box-shadow: 1px 1px 15px #000 inset; }
+
+select {
+  height: 40px;
+  width: 100%;
+  font-size: 110%; }
+
+select > option:first-child {
+  background-color: #888;
+  color: #FFF; }
+
+.btn-form {
+  background-color: #A2C8EC;
+  border: 1px solid #57A1EA;
+  box-shadow: 0 0 6px #357795;
+  color: #000; }
+
+.btn-form:focus,
+.btn-form:hover {
+  background-color: #57A1EA;
+  border: 1px solid #357795;
+  box-shadow: 0 0 10px dodgerblue; }
+
+/*** Desk ***/
+@media only screen and (min-width: 100px) {
+  .new-item_danger {
+    width: 100%; }
+
+  .btn-danger {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E37777;
+    color: #000;
+    border: 1px solid #D65D5D;
+    box-shadow: 0 0 6px #AA7070;
+    padding: 0;
+    cursor: pointer;
+    -webkit-transition: 0.7s;
+    -moz-transition: 0.7s;
+    -ms-transition: 0.7s;
+    -o-transition: 0.7s;
+    transition: 0.7s;
+    -webkit-border-radius: 40px 40px 0 0;
+    -moz-border-radius: 40px 40px 0 0;
+    -ms-border-radius: 40px 40px 0 0;
+    -o-border-radius: 40px 40px 0 0;
+    border-radius: 40px 40px 0 0; }
+
+  .btn-danger:focus,
+  .btn-danger:hover {
+    background-color: #F05555;
+    border: 1px solid #DA2003;
+    box-shadow: 0 0 10px #F00;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s; } }
+/*** iPad 768px portrait ***/
+@media only screen and (max-width: 768px) and (min-height: 1024px) {
+  .category-form-create,
+  .category-form-edit,
+  .product-form-create,
+  .product-form-edit {
+    width: 60%;
+    left: 20%; } }
+/*** Samsung-S5 640px landscape ***/
+@media only screen and (max-width: 640px) and (max-height: 360px) {
+  .category-form-create,
+  .category-form-edit,
+  .product-form-create,
+  .product-form-edit {
+    width: 70%;
+    top: 27%;
+    left: 15%; }
+
+  .container-category {
+    height: 106px; }
+
+  .form-category,
+  .form-product {
+    padding: .5em 0; }
+
+  .form-product input, select {
+    height: 30px; } }
+/*** Samsung-S5 360px portrait ***/
+@media only screen and (max-width: 360px) and (max-height: 640px) {
+  .category-form-create,
+  .category-form-edit,
+  .product-form-create,
+  .product-form-edit {
+    width: 85%;
+    top: 35%;
+    left: 7.5%; }
+
+  .container-category {
+    height: 138px; }
+
+  .container-product {
+    height: 197px; }
+
+  .form-category input {
+    height: 45px; }
+
+  .form-product input {
+    height: 30px; }
+
+  .form-category {
+    padding: 1.5em 0; }
+
+  .form-product {
+    padding: .5em 0; }
+
+  .new-item_danger {
+    font-size: 100%; }
+
+  select {
+    height: 30px;
+    font-size: 100%; } }
+/* Nome */
+.product-form-create .fa-bookmark,
+.product-form-edit .fa-bookmark {
+  top: 87px;
+  left: 80px; }
+
+.fa-info,
+.fa-balance-scale,
+.fa-broom {
+  color: #000;
+  opacity: .5; }
+
+/* Descri├º├úo */
+.fa-info {
+  top: 130px;
+  left: 67px; }
+
+/* Peso */
+.fa-balance-scale {
+  top: 175px;
+  left: 50px; }
+
+/* Cor */
+.fa-broom {
+  top: 220px;
+  left: 27px; }
+
+/*** iPad 1024px landscape ***/
+@media only screen and (max-width: 1024px) and (max-height: 768px) {
+  .product-form-create .fa-bookmark,
+  .product-form-edit .fa-bookmark {
+    left: 65px; }
+
+  .fa-info {
+    left: 52px; }
+
+  .fa-balance-scale {
+    left: 35px; }
+
+  .fa-broom {
+    left: 10px; } }
+/*** iPad 768px portrait ***/
+@media only screen and (max-width: 768px) and (min-height: 1024px) {
+  .product-form-create .fa-bookmark,
+  .product-form-edit .fa-bookmark {
+    left: 60px; }
+
+  .fa-info {
+    left: 47px; }
+
+  .fa-balance-scale {
+    left: 30px; }
+
+  .fa-broom {
+    left: 5px; } }
+/*** Desk 1300px ***/
+@media only screen and (max-width: 1300px) and (max-height: 657px) {
+  .product-form-create .fa-bookmark,
+  .product-form-edit .fa-bookmark {
+    left: 70px; }
+
+  .fa-info {
+    left: 56px; }
+
+  .fa-balance-scale {
+    left: 41px; }
+
+  .fa-broom {
+    left: 17px; } }
+/*** Desk 1100px ***/
+@media only screen and (max-width: 1100px) and (max-height: 657px) {
+  .product-form-create .fa-bookmark,
+  .product-form-edit .fa-bookmark {
+    left: 65px; }
+
+  .fa-info {
+    left: 51px; }
+
+  .fa-balance-scale {
+    left: 35px; }
+
+  .fa-broom {
+    left: 12px; } }
+/*** Desk 900px ***/
+@media only screen and (max-width: 900px) and (max-height: 657px) {
+  .product-form-create .fa-bookmark,
+  .product-form-edit .fa-bookmark {
+    left: 55px; }
+
+  .fa-info {
+    left: 42px; }
+
+  .fa-balance-scale {
+    left: 25px; }
+
+  .fa-broom {
+    left: 2px; } }
+/*** Desk 770px ***/
+@media only screen and (max-width: 770px) and (max-height: 657px) {
+  .product-form-create,
+  .product-form-edit {
+    top: 28%; } }
+/*** Desk 635px ***/
+@media only screen and (max-width: 635px) and (max-height: 657px) {
+  .product-form-create,
+  .product-form-edit {
+    width: 60%;
+    left: 20%; }
+
+  .product-form-create .fa-bookmark,
+  .product-form-edit .fa-bookmark {
+    left: 45px; }
+
+  .fa-info {
+    left: 32px; }
+
+  .fa-balance-scale {
+    left: 16px; }
+
+  .fa-broom {
+    left: -7px; } }
+/*** Desk 500px ***/
+@media only screen and (max-width: 500px) and (max-height: 657px) {
+  .product-form-create,
+  .product-form-edit {
+    width: 320px;
+    left: 10%; } }
+/*** Samsung-S5 640px landscape ***/
+@media only screen and (max-width: 640px) and (max-height: 360px) {
+  .product-form-create,
+  .product-form-edit {
+    top: 10%; }
+
+  .product-form-create .fa-bookmark,
+  .product-form-edit .fa-bookmark {
+    top: 64px; }
+
+  .fa-info {
+    top: 93px; }
+
+  .fa-balance-scale {
+    top: 123px; }
+
+  .fa-broom {
+    top: 153px; } }
+/*** Samsung-S5 360px portrait ***/
+@media only screen and (max-width: 360px) and (max-height: 640px) {
+  .product-form-create,
+  .product-form-edit {
+    width: 80%;
+    top: 9%;
+    left: 10%; }
+
+  .product-form-create .fa-bookmark,
+  .product-form-edit .fa-bookmark {
+    top: 63px;
+    left: 40px; }
+
+  .fa-info {
+    top: 91px;
+    left: 26px; }
+
+  .fa-balance-scale {
+    top: 122px;
+    left: 8px; }
+
+  .fa-broom {
+    top: 151px;
+    left: -17px; } }
+.fa-bookmark {
+  color: #000;
+  opacity: .5; }
+
+.category-form-create .fa-bookmark,
+.category-form-edit .fa-bookmark {
+  top: 110px;
+  left: 85px; }
+
+/*** iPad 1024px landscape ***/
+@media only screen and (max-width: 1024px) and (max-height: 768px) {
+  .category-form-create .fa-bookmark,
+  .category-form-edit .fa-bookmark {
+    left: 70px; } }
+/*** iPad 768px portrait ***/
+@media only screen and (max-width: 768px) and (min-height: 1024px) {
+  .category-form-create,
+  .category-form-edit {
+    top: 20%; }
+
+  .category-form-create .fa-bookmark,
+  .category-form-edit .fa-bookmark {
+    left: 60px; } }
+/*** Desk 1300px ***/
+@media only screen and (max-width: 1300px) and (max-height: 657px) {
+  .category-form-create .fa-bookmark,
+  .category-form-edit .fa-bookmark {
+    left: 75px; } }
+/*** Desk 1100px ***/
+@media only screen and (max-width: 1100px) and (max-height: 657px) {
+  .category-form-create .fa-bookmark,
+  .category-form-edit .fa-bookmark {
+    left: 65px; } }
+/*** Desk 900px ***/
+@media only screen and (max-width: 900px) and (max-height: 657px) {
+  .category-form-create .fa-bookmark,
+  .category-form-edit .fa-bookmark {
+    left: 55px; } }
+/*** Desk 770px ***/
+@media only screen and (max-width: 770px) and (max-height: 657px) {
+  .category-form-create,
+  .category-form-edit {
+    top: 28%;
+    left: 22%;
+    width: 55%; }
+
+  .category-form-create .fa-bookmark,
+  .category-form-edit .fa-bookmark {
+    left: 50px; } }
+/*** Desk 635px ***/
+@media only screen and (max-width: 635px) and (max-height: 657px) {
+  .category-form-create,
+  .category-form-edit {
+    top: 28%;
+    width: 55%; }
+
+  .category-form-create .fa-bookmark,
+  .category-form-edit .fa-bookmark {
+    left: 40px; } }
+/*** Desk 500px ***/
+@media only screen and (max-width: 500px) and (max-height: 657px) {
+  .category-form-create,
+  .category-form-edit {
+    width: 320px;
+    left: 10%; } }
+/*** Samsung-S5  640px landscape ***/
+@media only screen and (max-width: 640px) and (max-height: 360px) {
+  .category-form-create,
+  .category-form-edit {
+    width: 70%;
+    top: 12%;
+    left: 15%; }
+
+  .category-form-create .fa-bookmark,
+  .category-form-edit .fa-bookmark {
+    top: 70px;
+    left: 60px; } }
+/*** Samsung-S5 360px portrait ***/
+@media only screen and (max-width: 360px) and (max-height: 640px) {
+  .category-form-create,
+  .category-form-edit {
+    width: 80%;
+    top: 10%;
+    left: 10%; }
+
+  .category-form-create .fa-bookmark,
+  .category-form-edit .fa-bookmark {
+    top: 85px;
+    left: 40px; } }
+.detail-head {
+  width: 80%; }
+
+.detail-head,
+.info {
+  display: flex;
+  justify-content: center;
+  margin: auto; }
+
+.info {
+  width: 90%;
+  background-color: #333;
+  color: lavender;
+  box-shadow: 3px 3px 9px #555;
+  align-items: center;
+  padding: .7em; }
+
+.detail-head-info:first-child {
+  width: 15%;
+  margin-right: 5px;
+  -webkit-border-radius: 15px 0 0 0;
+  -moz-border-radius: 15px 0 0 0;
+  -ms-border-radius: 15px 0 0 0;
+  -o-border-radius: 15px 0 0 0;
+  border-radius: 15px 0 0 0; }
+
+.detail-head-info:last-child {
+  width: 30%;
+  margin-left: 5px;
+  -webkit-border-radius: 0 15px 0 0;
+  -moz-border-radius: 0 15px 0 0;
+  -ms-border-radius: 0 15px 0 0;
+  -o-border-radius: 0 15px 0 0;
+  border-radius: 0 15px 0 0; }
+
+.info-head-strong {
+  color: #98C4F0;
+  margin-right: .5em; }
+
+.detail-update,
+.detail-create {
+  margin-top: 5px; }
+
+.detail-create .info-sub:first-child,
+.detail-update .info-sub:first-child {
+  margin-right: 5px; }
+
+.detail-update .info-sub:first-child {
+  -webkit-border-radius: 0 0 0 15px;
+  -moz-border-radius: 0 0 0 15px;
+  -ms-border-radius: 0 0 0 15px;
+  -o-border-radius: 0 0 0 15px;
+  border-radius: 0 0 0 15px; }
+
+.detail-update .info-sub:last-child {
+  -webkit-border-radius: 0 0 15px 0;
+  -moz-border-radius: 0 0 15px 0;
+  -ms-border-radius: 0 0 15px 0;
+  -o-border-radius: 0 0 15px 0;
+  border-radius: 0 0 15px 0; }
+
+/*** iPad 1024px landscape ***/
+@media only screen and (max-width: 1024px) and (max-height: 768px) {
+  .detail-head-info:first-child {
+    -webkit-border-radius: 30px 0 0 0;
+    -moz-border-radius: 30px 0 0 0;
+    -ms-border-radius: 30px 0 0 0;
+    -o-border-radius: 30px 0 0 0;
+    border-radius: 30px 0 0 0; }
+
+  .detail-head-info:last-child {
+    width: 30%;
+    -webkit-border-radius: 0 30px 0 0;
+    -moz-border-radius: 0 30px 0 0;
+    -ms-border-radius: 0 30px 0 0;
+    -o-border-radius: 0 30px 0 0;
+    border-radius: 0 30px 0 0; }
+
+  .detail-update .info-sub:first-child {
+    margin-right: 5px;
+    -webkit-border-radius: 0 0 0 30px;
+    -moz-border-radius: 0 0 0 30px;
+    -ms-border-radius: 0 0 0 30px;
+    -o-border-radius: 0 0 0 30px;
+    border-radius: 0 0 0 30px; }
+
+  .detail-update .info-sub:last-child {
+    -webkit-border-radius: 0 0 30px 0;
+    -moz-border-radius: 0 0 30px 0;
+    -ms-border-radius: 0 0 30px 0;
+    -o-border-radius: 0 0 30px 0;
+    border-radius: 0 0 30px 0; } }
+/*** iPad 768px portrait ***/
+@media only screen and (max-width: 768px) and (max-height: 1024px) {
+  .detail-head-info:first-child {
+    width: 20%;
+    -webkit-border-radius: 30px 0 0 0;
+    -moz-border-radius: 30px 0 0 0;
+    -ms-border-radius: 30px 0 0 0;
+    -o-border-radius: 30px 0 0 0;
+    border-radius: 30px 0 0 0; }
+
+  .detail-head-info:last-child {
+    width: 35%;
+    -webkit-border-radius: 0 30px 0 0;
+    -moz-border-radius: 0 30px 0 0;
+    -ms-border-radius: 0 30px 0 0;
+    -o-border-radius: 0 30px 0 0;
+    border-radius: 0 30px 0 0; }
+
+  .detail-head-info p {
+    font-size: 95%; }
+
+  .detail-update .info-sub:first-child {
+    margin-right: 5px;
+    -webkit-border-radius: 0 0 0 30px;
+    -moz-border-radius: 0 0 0 30px;
+    -ms-border-radius: 0 0 0 30px;
+    -o-border-radius: 0 0 0 30px;
+    border-radius: 0 0 0 30px; }
+
+  .detail-update .info-sub:last-child {
+    -webkit-border-radius: 0 0 30px 0;
+    -moz-border-radius: 0 0 30px 0;
+    -ms-border-radius: 0 0 30px 0;
+    -o-border-radius: 0 0 30px 0;
+    border-radius: 0 0 30px 0; } }
+/*** Desk 770px ***/
+@media only screen and (min-width: 100px) and (max-width: 770px) and (max-height: 641px) {
+  .detail-head {
+    display: block; }
+
+  .detail-head-info {
+    width: 100%; }
+
+  .detail-head-info:first-child,
+  .detail-head-info:last-child {
+    width: 100%; }
+
+  .detail-head-info:first-child {
+    margin-bottom: 2px;
+    -webkit-border-radius: 50px 50px 0 0;
+    -moz-border-radius: 50px 50px 0 0;
+    -ms-border-radius: 50px 50px 0 0;
+    -o-border-radius: 50px 50px 0 0;
+    border-radius: 50px 50px 0 0; }
+
+  .detail-head-info:last-child {
+    margin-left: 0;
+    margin-top: 2px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0; }
+
+  .detail-create,
+  .detail-update {
+    margin-top: 2px; }
+
+  .detail-update .info-sub:first-child {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0; }
+
+  .detail-update .info-sub:last-child {
+    -webkit-border-radius: 0 0 50px 50px;
+    -moz-border-radius: 0 0 50px 50px;
+    -ms-border-radius: 0 0 50px 50px;
+    -o-border-radius: 0 0 50px 50px;
+    border-radius: 0 0 50px 50px; }
+
+  .info-sub:first-child {
+    width: 100%;
+    margin-bottom: 2px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0; }
+
+  .info-sub:last-child {
+    width: 100%; }
+
+  .info-sub p {
+    font-size: 95%; } }
+/*** Samsung-S5  640px landscape ***/
+@media only screen and (max-width: 640px) and (max-height: 360px) {
+  .detail-head {
+    width: 67%; }
+
+  .detail-head-info:first-child,
+  .detail-head-info:last-child {
+    width: 100%;
+    margin: auto;
+    border-left: 1px solid #333;
+    border-right: 1px solid #333; }
+
+  .detail-head-info:first-child {
+    margin-bottom: 2px; }
+
+  .detail-head-info:last-child {
+    margin-top: 2px; }
+
+  .detail-head-info p {
+    font-size: 90%; }
+
+  .detail-update {
+    margin-top: 2px; }
+
+  .info-sub p {
+    font-size: 80%; } }
+/*** Samsung-S5 360px portrait ***/
+@media only screen and (max-width: 360px) and (max-height: 640px) {
+  .detail-head {
+    width: 85%; }
+
+  .detail-head-info:first-child,
+  .detail-head-info:last-child {
+    width: 100%;
+    margin: auto;
+    border-left: 1px solid #333;
+    border-right: 1px solid #333; }
+
+  .detail-head-info:first-child {
+    margin-bottom: 2px; }
+
+  .detail-head-info:last-child {
+    margin-top: 2px; }
+
+  .detail-head-info p {
+    font-size: 85%; }
+
+  .info-sub p {
+    font-size: 85%; } }
+.detail-button {
+  margin-top: 1em; }
+
+.detail-btn-panel {
+  font-size: 85%;
+  padding: 0; }
+
+.open-close {
+  width: 150px;
+  font-size: 80%;
+  padding: .5em;
+  text-shadow: 1px 1px 1px #888;
+  background-color: #CCC;
+  border: 1px solid #333;
+  box-shadow: 2px 2px 5px #333;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px; }
+
+.open-close:focus,
+.open-close:hover {
+  color: dodgerblue;
+  border-color: dodgerblue;
+  box-shadow: 0 0 1em 0 dodgerblue; }
+
+/*** Desk 770px ***/
+@media only screen and (min-width: 100px) and (max-width: 770px) and (max-height: 641px) {
+  .open-close {
+    width: 80%;
+    -webkit-border-radius: 50px 50px 0 0;
+    -moz-border-radius: 50px 50px 0 0;
+    -ms-border-radius: 50px 50px 0 0;
+    -o-border-radius: 50px 50px 0 0;
+    border-radius: 50px 50px 0 0;
+    border-top: 2px solid #333;
+    border-right: 2px solid #333;
+    border-left: 2px solid #333;
+    border-bottom: 0;
+    margin: 0; } }
+/*** Samsung-S5  640px landscape ***/
+@media only screen and (max-width: 640px) and (max-height: 360px) {
+  .open-close {
+    width: 67%;
+    -webkit-border-radius: 50px 50px 0 0;
+    -moz-border-radius: 50px 50px 0 0;
+    -ms-border-radius: 50px 50px 0 0;
+    -o-border-radius: 50px 50px 0 0;
+    border-radius: 50px 50px 0 0;
+    border-top: 2px solid #333;
+    border-right: 2px solid #333;
+    border-left: 2px solid #333;
+    border-bottom: 0;
+    margin: 0; } }
+/*** Samsung-S5 360px portrait ***/
+@media only screen and (max-width: 360px) and (max-height: 640px) {
+  .open-close {
+    width: 85%;
+    -webkit-border-radius: 50px 50px 0 0;
+    -moz-border-radius: 50px 50px 0 0;
+    -ms-border-radius: 50px 50px 0 0;
+    -o-border-radius: 50px 50px 0 0;
+    border-radius: 50px 50px 0 0;
+    border-top: 2px solid #333;
+    border-right: 2px solid #333;
+    border-left: 2px solid #333;
+    border-bottom: 0;
+    margin: 0; } }
+.detail-body {
+  width: 50%;
+  font-family: "Open Sans Condensed", sans-serif;
+  margin: 1em auto;
+  border: 2px solid #333;
+  box-shadow: 2px 2px 5px #555;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+  border-radius: 7px; }
+
+.info-body {
+  padding: 1em; }
+
+details {
+  padding: .5em; }
+
+details:nth-child(odd) {
+  background-color: #CCC;
+  border: 1px solid #999;
+  box-shadow: 1px 1px 3px #333;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px; }
+
+summary:focus,
+summary:hover {
+  color: dodgerblue; }
+
+.info-body-strong {
+  text-decoration: underline;
+  font-family: "Raleway", sans-serif;
+  margin-right: 5px; }
+
+details button {
+  margin-top: 5px; }
+
+/*** Desk 770px ***/
+@media only screen and (min-width: 100px) and (max-width: 770px) and (max-height: 641px) {
+  .detail-body {
+    width: 80%;
+    margin-top: 0;
+    border-radius: 0 0 7px 7px; } }
+/*** Samsung-S5  640px landscape ***/
+@media only screen and (max-width: 640px) and (max-height: 360px) {
+  .detail-body {
+    width: 67%; }
+
+  .info-body-strong, em {
+    font-size: 90%; } }
+/*** Samsung-S5 360px portrait ***/
+@media only screen and (max-width: 360px) and (max-height: 640px) {
+  .detail-body {
+    width: 85%; }
+
+  .info-body-strong, em {
+    font-size: 90%; } }
+/* Alinha Tabela Categoria */
+.table-category,
+.table-product {
+  box-shadow: 1px 1px 5px #555; }
+
+.table-category {
+  width: 60%; }
+
+.table-product,
+.title-table-search {
+  width: 100%; }
+
+.caption-category,
+.caption-product {
+  font-size: 80%;
+  font-style: italic;
+  padding: .5em; }
+
+thead {
+  background-color: #333;
+  color: #FFF; }
+
+tbody tr:nth-child(odd) {
+  background-color: #FBFBFB; }
+
+tbody tr:hover {
+  background-color: #E3E3E3; }
+
+tbody a {
+  color: #000; }
+
+/* Bot├Áes da tabela */
+tbody a:focus,
+tbody a:hover,
+tbody button:focus,
+tbody button:hover {
+  color: dodgerblue; }
+
+/* Fim bot├Áes */
+th, td {
+  font-family: "Open Sans Condensed", sans-serif;
+  padding: 5px; }
+
+/* Ordena coluna Tabela */
+.order:hover {
+  background-color: #DDD;
+  border: 1px solid #000;
+  color: #000; }
+
+.order:active {
+  background-color: dodgerblue;
+  color: #FFF; }
+
+/* Fim */
+td {
+  border-bottom: 1px solid #DBDBDB;
+  font-weight: bold;
+  /* Essa prop n├úo pode ser extendida SASS */ }
+
+/* Mensagem de Busca que n├úo existe */
+.msg-table-search {
+  height: 60px; }
+
+.msg-table-search,
+.title-table-search {
+  align-items: center; }
+
+.title-table-search {
+  height: 100%;
+  color: #DE2929;
+  text-shadow: 0 0 3px #333; }
+
+#delete:focus,
+#delete:hover,
+#edit:focus,
+#edit:hover {
+  color: dodgerblue; }
+
+/* Filtrar na Busca */
+.invisible {
+  display: none; }
+
+/*** Desk 700px ***/
+@media only screen and (max-width: 700px) and (max-height: 640px) {
+  .table-category {
+    width: 100%; } }
+/*** Desk 510px ***/
+@media only screen and (max-width: 510px) and (max-height: 640px) {
+  .table-product {
+    font-size: 75%; } }
+/*** Samsung-S5 640px landscape ***/
+@media only screen and (max-width: 640px) and (max-height: 360px) {
+  .table-category {
+    width: 100%; } }
+/*** Samsung-S5 360px portrait ***/
+@media only screen and (max-width: 360px) and (max-height: 640px) {
+  .table-category {
+    width: 100%; }
+
+  .table-product {
+    font-size: 65%; }
+
+  .caption-product {
+    font-size: 125%; } }
+.user-head-one,
+.user-head-two,
+.user-head-three,
+.user-head-four {
+  width: 80%;
+  display: flex; }
+
+.user-head-two,
+.user-head-three,
+.user-head-four {
+  margin-top: 2px; }
+
+.user-head-info {
+  margin-bottom: 2px; }
+
+/* Primeira linha */
+.user-head-one .user-head-info:first-child {
+  -webkit-border-radius: 15px 0 0 0;
+  -moz-border-radius: 15px 0 0 0;
+  -ms-border-radius: 15px 0 0 0;
+  -o-border-radius: 15px 0 0 0;
+  border-radius: 15px 0 0 0; }
+
+/* Primeira linha */
+.user-head-one .user-head-info:last-child {
+  -webkit-border-radius: 0 15px 0 0;
+  -moz-border-radius: 0 15px 0 0;
+  -ms-border-radius: 0 15px 0 0;
+  -o-border-radius: 0 15px 0 0;
+  border-radius: 0 15px 0 0; }
+
+/* Terceira linha */
+.user-head-four .user-head-info:first-child {
+  -webkit-border-radius: 0 0 0 15px;
+  -moz-border-radius: 0 0 0 15px;
+  -ms-border-radius: 0 0 0 15px;
+  -o-border-radius: 0 0 0 15px;
+  border-radius: 0 0 0 15px; }
+
+/* Terceira linha */
+.user-head-four .user-head-info:last-child {
+  -webkit-border-radius: 0 0 15px 0;
+  -moz-border-radius: 0 0 15px 0;
+  -ms-border-radius: 0 0 15px 0;
+  -o-border-radius: 0 0 15px 0;
+  border-radius: 0 0 15px 0; }
+
+.user-head-info:first-child {
+  margin-right: 5px; }
+
+/* Primeira e Segunda linhas */
+.user-head-one .user-head-info:last-child,
+.user-head-two .user-head-info:last-child {
+  margin-left: 5px; }
+
+/*** iPad 1024px landscape ***/
+@media only screen and (max-width: 1024px) and (max-height: 768px) {
+  .user-head-one,
+  .user-head-two,
+  .user-head-three,
+  .user-head-four {
+    width: 90%;
+    font-size: 92%; } }
+/*** iPad 768px portrait ***/
+@media only screen and (max-width: 768px) and (max-height: 1024px) {
+  .user-head-one,
+  .user-head-two,
+  .user-head-three,
+  .user-head-four {
+    width: 60%;
+    display: block; }
+
+  .user-head-info {
+    width: 100%; }
+
+  .user-head-one .user-head-info:first-child {
+    -webkit-border-radius: 50px 50px 0 0;
+    -moz-border-radius: 50px 50px 0 0;
+    -ms-border-radius: 50px 50px 0 0;
+    -o-border-radius: 50px 50px 0 0;
+    border-radius: 50px 50px 0 0; }
+
+  .user-head-one .user-head-info:last-child,
+  .user-head-two .user-head-info:last-child,
+  .user-head-three .user-head-info:last-child
+  .user-head-four .user-head-info:last-child {
+    margin: 0; }
+
+  .user-head-one .user-head-info:last-child,
+  .user-head-two .user-head-info:last-child,
+  .user-head-three .user-head-info:last-child,
+  .user-head-four .user-head-info:first-child {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0; }
+
+  .user-head-three .user-head-info:last-child {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0; }
+
+  .user-head-four .user-head-info:last-child {
+    -webkit-border-radius: 0 0 50px 50px;
+    -moz-border-radius: 0 0 50px 50px;
+    -ms-border-radius: 0 0 50px 50px;
+    -o-border-radius: 0 0 50px 50px;
+    border-radius: 0 0 50px 50px; } }
+/*** Desk 1260px ***/
+@media only screen and (min-width: 100px) and (max-width: 1260px) and (max-height: 641px) {
+  .user-head-one,
+  .user-head-two,
+  .user-head-three,
+  .user-head-four {
+    width: 70%;
+    margin: 2px auto;
+    display: block; }
+
+  .user-head-info {
+    font-size: 90%; }
+
+  .user-head-one .user-head-info:first-child,
+  .user-head-two .user-head-info:first-child,
+  .user-head-three .user-head-info:first-child,
+  .user-head-four .user-head-info:first-child,
+  .user-head-one .user-head-info:last-child,
+  .user-head-two .user-head-info:last-child,
+  .user-head-three .user-head-info:last-child,
+  .user-head-four .user-head-info:last-child {
+    margin: auto; }
+
+  .user-head-one .user-head-info:first-child,
+  .user-head-two .user-head-info:first-child,
+  .user-head-three .user-head-info:first-child,
+  .user-head-four .user-head-info:first-child {
+    margin-bottom: 2px; }
+
+  .user-head-one .user-head-info:first-child {
+    -webkit-border-radius: 50px 50px 0 0;
+    -moz-border-radius: 50px 50px 0 0;
+    -ms-border-radius: 50px 50px 0 0;
+    -o-border-radius: 50px 50px 0 0;
+    border-radius: 50px 50px 0 0; }
+
+  .user-head-one .user-head-info:last-child,
+  .user-head-two .user-head-info:last-child,
+  .user-head-three .user-head-info:last-child,
+  .user-head-four .user-head-info:first-child {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0; }
+
+  .user-head-four .user-head-info:last-child {
+    -webkit-border-radius: 0 0 50px 50px;
+    -moz-border-radius: 0 0 50px 50px;
+    -ms-border-radius: 0 0 50px 50px;
+    -o-border-radius: 0 0 50px 50px;
+    border-radius: 0 0 50px 50px; } }
+/*** Samsung-S5 640px landscape ***/
+@media only screen and (max-width: 640px) and (max-height: 360px) {
+  .user-head-one,
+  .user-head-two,
+  .user-head-three,
+  .user-head-four {
+    width: 65%; }
+
+  .user-head-info {
+    font-size: 90%; }
+
+  .user-head-four .user-head-info:last-child {
+    -webkit-border-radius: 0 0 50px 50px;
+    -moz-border-radius: 0 0 50px 50px;
+    -ms-border-radius: 0 0 50px 50px;
+    -o-border-radius: 0 0 50px 50px;
+    border-radius: 0 0 50px 50px; } }
+/*** Samsung-S5 360px portrait ***/
+@media only screen and (max-width: 360px) and (max-height: 640px) {
+  .user-head-one,
+  .user-head-two,
+  .user-head-three,
+  .user-head-four {
+    width: 90%; }
+
+  .user-head-info {
+    font-size: 95%; }
+
+  .user-head-four .user-head-info:last-child {
+    -webkit-border-radius: 0 0 50px 50px;
+    -moz-border-radius: 0 0 50px 50px;
+    -ms-border-radius: 0 0 50px 50px;
+    -o-border-radius: 0 0 50px 50px;
+    border-radius: 0 0 50px 50px; } }
+.user-button {
+  margin-top: 5em; }
+
+.show-user-form {
+  width: 130px;
+  font-size: 80%;
+  padding: .4em;
+  text-shadow: 1px 1px 1px #888;
+  background-color: #CCC;
+  border: 1px solid #333;
+  box-shadow: 2px 2px 5px #333;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px; }
+
+.show-user-form:focus,
+.show-user-form:hover {
+  color: dodgerblue;
+  border-color: dodgerblue;
+  box-shadow: 0 0 1em 0 dodgerblue; }
+
+/*** iPad 1024px landscape ***/
+@media only screen and (max-width: 1024px) and (max-height: 768px) {
+  .show-user-form {
+    font-size: 90%; } }
+/*** iPad 768px portrait ***/
+@media only screen and (max-width: 768px) and (max-height: 1024px) {
+  .show-user-form {
+    font-size: 80%; } }
+/*** Samsung-S5  640px landscape ***/
+@media only screen and (max-width: 640px) and (max-height: 360px) {
+  .user-button {
+    margin: 3em 0; } }
+/*** Samsung-S5 360px portrait ***/
+@media only screen and (max-width: 360px) and (max-height: 640px) {
+  .show-user-form {
+    font-size: 85%; } }
+.user-form {
+  width: 50%;
+  display: none;
+  top: 45%;
+  left: 25%; }
+
+/* ├ìcones */
+.fa-user, .fa-lock {
+  color: #000;
+  opacity: .5; }
+
+/* ├ìcone usu├írio */
+.fa-user {
+  top: 78px;
+  left: 65px; }
+
+/* ├ìcone cadeado */
+.fa-lock {
+  top: 123px;
+  left: 47px; }
+
+.form-user {
+  width: 100%;
+  align-items: center;
+  background-color: lavender;
+  border: 1px solid #999;
+  box-shadow: 1px 1px 5px #555;
+  padding: 1em; }
+
+.form-user form {
+  height: 100%;
+  width: 90%; }
+
+.form-user input {
+  height: 45px;
+  width: 100%;
+  font-size: 100%;
+  display: block; }
+
+.name,
+.password {
+  font-family: "Raleway", sans-serif;
+  border: 1px solid #999; }
+
+.name:focus, .name:hover,
+.password:focus, .password:hover {
+  box-shadow: 1px 1px 15px #000 inset; }
+
+/*** iPad 1024px landscape ***/
+@media only screen and (max-width: 1024px) and (max-height: 768px) {
+  .fa-user {
+    left: 60px; }
+
+  .fa-lock {
+    left: 40px; } }
+/*** iPad 768px portrait ***/
+@media only screen and (max-width: 768px) and (min-height: 1024px) {
+  .user-form {
+    width: 60%;
+    top: 50%;
+    left: 20%; }
+
+  .fa-user {
+    left: 50px; }
+
+  .fa-lock {
+    left: 32px; } }
+/*** Desk 1260px ***/
+@media only screen and (max-width: 1260px) and (max-height: 657px) {
+  .user-form {
+    top: 52%; }
+
+  .fa-user {
+    left: 56px; }
+
+  .fa-lock {
+    left: 37px; } }
+/*** Desk 1100px ***/
+@media only screen and (max-width: 1100px) and (max-height: 657px) {
+  .fa-user {
+    left: 50px; }
+
+  .fa-lock {
+    left: 32px; } }
+/*** Desk 900px ***/
+@media only screen and (max-width: 900px) and (max-height: 657px) {
+  .fa-user {
+    left: 47px; }
+
+  .fa-lock {
+    left: 28px; } }
+/*** Desk 770px ***/
+@media only screen and (max-width: 770px) and (max-height: 657px) {
+  .user-form {
+    width: 70%;
+    top: 50%;
+    left: 15%; }
+
+  .fa-user {
+    left: 49px; }
+
+  .fa-lock {
+    left: 30px; } }
+/*** Desk 635px ***/
+@media only screen and (max-width: 635px) and (max-height: 657px) {
+  .fa-user {
+    left: 45px; }
+
+  .fa-lock {
+    left: 26px; }
+
+  .user-form .btn-danger,
+  .form-user input {
+    font-size: 90%; } }
+/*** Desk 500px ***/
+@media only screen and (max-width: 500px) and (max-height: 657px) {
+  .fa-user, .fa-lock {
+    font-size: 90%; }
+
+  .fa-user {
+    left: 40px; }
+
+  .fa-lock {
+    left: 23px; } }
+/*** Samsung-S5 640px landscape ***/
+@media only screen and (max-width: 640px) and (max-height: 360px) {
+  .user-form {
+    width: 60%;
+    top: 10%;
+    left: 20%; }
+
+  .fa-user {
+    top: 78px;
+    left: 45px; }
+
+  .fa-lock {
+    top: 122px;
+    left: 27px; } }
+/*** Samsung-S5 360px portrait ***/
+@media only screen and (max-width: 360px) and (max-height: 640px) {
+  .user-form {
+    width: 80%;
+    top: 11%;
+    left: 10%; }
+
+  .fa-user {
+    top: 77px;
+    left: 40px; }
+
+  .fa-lock {
+    top: 123px;
+    left: 23px; } }
+/* Mensagem p├ígina vazia */
+.empty,
+.empty-category {
+  padding: 3em; }
+
+/** Msg quando n├úo h├í categoria, na Page Produto e Detalhe **/
+.empty-category {
+  margin-top: 10em; }
+
+.msg-empty-category {
+  display: flex;
+  flex-direction: column; }
+
+/* Fim */
+.msg-empty {
+  align-items: center;
+  padding: 0; }
+
+.msg-empty-title {
+  color: #DE2929;
+  text-shadow: 0 0 3px #333;
+  display: block;
+  padding: .5em; }
+
+/*** Samsung-S5 640px landscape ***/
+@media only screen and (max-width: 640px) and (max-height: 360px) {
+  .empty-category {
+    margin-top: 7em;
+    padding: 1em; }
+
+  .msg-empty {
+    display: flex; } }
+/*** Samsung-S5 360px portrait ***/
+@media only screen and (max-width: 360px) and (max-height: 640px) {
+  .empty {
+    margin-top: 10%;
+    padding: 0; }
+
+  .empty-category {
+    padding: .5em; }
+
+  .msg-empty-title {
+    width: 100%; } }
+.btn-top {
+  height: 40px;
+  width: 40px;
+  display: none;
+  background-color: #666;
+  border: 1px solid #444;
+  box-shadow: 1px 1px 3px #000;
+  opacity: .5;
+  top: 585px;
+  left: 10px;
+  z-index: 99;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  border-radius: 50px; }
+
+.btn-top:focus,
+.btn-top:hover {
+  background-color: #72B0EC;
+  border: 1px solid dodgerblue;
+  opacity: 1; }
+
+.icon-up {
+  font-size: 25px;
+  color: lavender; }
+
+/*** iPad 1024px landscape ***/
+@media only screen and (max-width: 1024px) and (max-height: 768px) {
+  .btn-top {
+    top: 690px; } }
+/*** iPad 768px portrait ***/
+@media only screen and (max-width: 768px) and (max-height: 1024px) {
+  .btn-top {
+    top: 947px; } }
+/*** Desk 1354px ***/
+@media only screen and (max-width: 1354px) and (max-height: 640px) {
+  .btn-top {
+    top: 567px; } }
+/*** Samsung-S5  640px landscape ***/
+@media only screen and (max-width: 640px) and (max-height: 360px) {
+  .btn-top {
+    top: 268px; } }
+/*** Samsung-S5 360px portrait ***/
+@media only screen and (max-width: 360px) and (max-height: 640px) {
+  .btn-top {
+    top: 546px; } }
+.foot {
+  width: 100%;
+  font-size: 70%;
+  color: #F2F2F2;
+  background-color: #333;
+  display: none;
+  top: 635px; }
+
+.foot,
+.foot a {
+  padding: .5em; }
+
+.foot a {
+  color: #FFF; }
+
+/*** iPad 1024px landscape ***/
+@media only screen and (max-width: 1024px) and (max-height: 768px) {
+  .foot {
+    font-size: 90%;
+    top: 741px; } }
+/*** iPad 768px portrait ***/
+@media only screen and (max-width: 768px) and (max-height: 1024px) {
+  .foot {
+    font-size: 90%;
+    top: 997px; } }
+/*** Desk 1366px ***/
+@media only screen and (max-width: 1366px) and (max-height: 640px) {
+  .foot {
+    font-size: 70%;
+    top: 618px; } }
+/*** Samsung-S5 640px landscape ***/
+@media only screen and (max-width: 640px) and (max-height: 360px) {
+  .foot {
+    height: 15%;
+    font-size: 70%;
+    top: 315px; } }
+/*** Samsung-S5 360px portrait ***/
+@media only screen and (max-width: 360px) and (max-height: 640px) {
+  .foot {
+    height: 10%;
+    font-size: 70%;
+    text-align: start;
+    top: 595px; } }
+
+/*# sourceMappingURL=styles.css.map */

@@ -11,22 +11,22 @@
 		})();
 	</script>
 	<!-- build:js -->
-	<script type="module" src="../js/helpers/fade-elements.js"></script>
-	<script type="module" src="../js/helpers/msg-empty.js"></script>
-	<script type="module" src="../js/helpers/table-order.js"></script>
-	<script type="module" src="../js/helpers/select.js"></script>
-	<script type="module" src="../js/helpers/services.js"></script>
-	<script type="module" src="../js/nav-bar-button.js"></script>
-	<script type="module" src="../js/msg-session.js"></script>
-	<script type="module" src="../js/search-box.js"></script>
-	<script type="module" src="../js/table-listens.js"></script>
-	<script type="module" src="../js/form-create.js"></script>
-	<script type="module" src="../js/form-edit.js"></script>
-	<script type="module" src="../js/form-delete.js"></script>
-	<script type="module" src="../js/form-user.js"></script>
-	<script type="module" src="../js/form-redefine.js"></script>
-	<script type="module" src="../js/button-panel.js"></script>
-	<script type="module" src="../js/footer-btn-top.js"></script>
+	<script type="module" src="../es6/helpers/fade-elements.js"></script>
+	<script type="module" src="../es6/helpers/msg-empty.js"></script>
+	<script type="module" src="../es6/helpers/table-order.js"></script>
+	<script type="module" src="../es6/helpers/select.js"></script>
+	<script type="module" src="../es6/helpers/services.js"></script>
+	<script type="module" src="../es6/nav-bar-button.js"></script>
+	<script type="module" src="../es6/msg-session.js"></script>
+	<script type="module" src="../es6/search-box.js"></script>
+	<script type="module" src="../es6/table-listens.js"></script>
+	<script type="module" src="../es6/form-create.js"></script>
+	<script type="module" src="../es6/form-edit.js"></script>
+	<script type="module" src="../es6/form-delete.js"></script>
+	<script type="module" src="../es6/form-user.js"></script>
+	<script type="module" src="../es6/form-redefine.js"></script>
+	<script type="module" src="../es6/button-panel.js"></script>
+	<script type="module" src="../es6/footer-btn-top.js"></script>
 	<!-- endbuild -->
 </body>
 </html>

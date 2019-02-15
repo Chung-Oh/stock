@@ -18,69 +18,30 @@ exports.server = function() {
 }
 // Usando 'glob pattern', coringas para ler tadas as pastas(**) e todos os arquivos(*)
 function clean() {
-	return src('dist')
-		.pipe(gulpClean());
+	// 2º parametro do SRC serve para caso diretório 'dist' não exista, assim suprimi o Erro
+	return src('dist', { allowEmpty: true })
+		.pipe(gulpClean());	
 }
 
 function copy() {
 	return src('app/**/*')
 		.pipe(dest('dist'));
 }
-// Faz merge no CSS login
-function buildCssLogin() {
-	return src(['dist/css/reset.css',
-		'dist/css/login/login-base.css',
-		'dist/css/login/login-title.css',
-		'dist/css/login/login-alert.css',
-		'dist/css/login/login-form.css',
-		'dist/css/login/login-button.css'])
-		.pipe(gulpAutoprefixer({
-			browsers: ['last 40 versions'],
-			cascade: false
-		}))
-		.pipe(gulpConcat('index.css'))
-		.pipe(gulpCssmin())
-		.pipe(dest('dist/css'));
-}
-// Faz merge em todos CSS do sistema
-function buildCssSystem() {
-	return src(['dist/css/reset.css',
-		'dist/css/templates/base.css',
-		'dist/css/templates/header.css',
-		'dist/css/templates/msg-alert.css',
-		'dist/css/modules/msg-home.css',
-		'dist/css/modules/home-dash-top.css',
-		'dist/css/modules/home-dash-body.css',
-		'dist/css/modules/main-top.css',
-		'dist/css/modules/search-box.css',
-		'dist/css/modules/form-delete.css',
-		'dist/css/modules/forms.css',
-		'dist/css/modules/forms-product.css',
-		'dist/css/modules/forms-category.css',
-		'dist/css/modules/detail-info-head.css',
-		'dist/css/modules/detail-button-panel.css',
-		'dist/css/modules/detail-info-body.css',
-		'dist/css/modules/table.css',
-		'dist/css/modules/user-info.css',
-		'dist/css/modules/user-button.css',
-		'dist/css/modules/user-form.css',
-		'dist/css/modules/msg-category-empty.css',
-		'dist/css/templates/button-go-top.css',
-		'dist/css/templates/footer.css'])
-		.pipe(gulpAutoprefixer({
-			browsers: ['last 40 versions'],
-			cascade: false
-		}))
-		.pipe(gulpConcat('styles.css'))
+// Minifica os CSSs ja pré-processados pelo SASS
+function buildCSS() {
+	return src(['dist/css/index.css',
+		'dist/css/styles.css'])
 		.pipe(gulpCssmin())
 		.pipe(dest('dist/css'));
 }
 // Remove CSS concatenado
 function removeCssNotUse(cb) {
-	src(['dist/css/reset.css',
+	src(['dist/css/helpers',
 		'dist/css/login',
 		'dist/css/modules',
-		'dist/css/templates'])
+		'dist/css/templates',
+		'dist/css/*.scss',
+		'dist/css/*.css.map'])
 		.pipe(gulpClean());
 	cb();
 }
@@ -158,6 +119,6 @@ function buildImg(cb) {
 	cb();
 }
 // Exemplo baixo usando uma Tarefa privada, são executadas sequencialmente "series()"
-exports.default = series(clean, copy, buildCssLogin,
-	parallel(buildCssSystem, buildHtmlIndex, buildHtmlSystem, buildJs, buildImg), 
+exports.default = series(clean, copy,
+	parallel(buildCSS, buildHtmlIndex, buildHtmlSystem, buildJs, buildImg), 
 	removeCssNotUse, removeJsNotUse);

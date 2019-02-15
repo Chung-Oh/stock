@@ -19,8 +19,8 @@
 	<link rel="stylesheet" href="../css/modules/search-box.css">
 	<link rel="stylesheet" href="../css/modules/form-delete.css">
 	<link rel="stylesheet" href="../css/modules/forms.css">
-	<link rel="stylesheet" href="../css/modules/forms-product.css">
-	<link rel="stylesheet" href="../css/modules/forms-category.css">
+	<link rel="stylesheet" href="../css/modules/form-product.css">
+	<link rel="stylesheet" href="../css/modules/form-category.css">
 	<link rel="stylesheet" href="../css/modules/detail-info-head.css">
 	<link rel="stylesheet" href="../css/modules/detail-button-panel.css">
 	<link rel="stylesheet" href="../css/modules/detail-info-body.css">
