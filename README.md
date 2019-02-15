@@ -21,5 +21,5 @@ Aplicação com 6 telas, desenvolvido sem uso de frameworks (usado apenas arquiv
 
 Segue link, da aplicação em produção: https://stocksystem2019.000webhostapp.com
 
-**Login**: usuario
+**Nome**: usuario
 **Senha**: usuario
