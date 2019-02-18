@@ -15,6 +15,10 @@ Aplicação com 6 telas, desenvolvido sem uso de frameworks (usado apenas arquiv
       Paradigmas OOP e Funcional. 
       Para persistência foi implementado a extensão PDO.
       
+***Fontes*** - Google Fonts (https://fonts.google.com)
+
+***Ícones*** - Font Awseome (https://fontawesome.com)
+      
 **Automatizador** - Gulp
 
 **Pré-processador** CSS - SASS
