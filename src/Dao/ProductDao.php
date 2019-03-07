@@ -22,11 +22,11 @@ class ProductDao
 		$list = array();
 		foreach ($result->fetchAll() as $product_array) {
 			$product = new Product(
-				$product_array['name'], 
-				$product_array['description'], 
-				$product_array['weight'], 
-				$product_array['color'], 
-				$product_array['category_id'], 
+				$product_array['name'],
+				$product_array['description'],
+				$product_array['weight'],
+				$product_array['color'],
+				$product_array['category_id'],
 				$product_array['id']
 			);
 			$product->setCategoryName($product_array['category_name']);
@@ -34,7 +34,7 @@ class ProductDao
 			$product->setUpdatedAt($product_array['updated_at']);
 			$product->setCreatedBy($product_array['created_by']);
 			$product->setUpdatedBy($product_array['updated_by']);
-			array_push($list, $product);	
+			array_push($list, $product);
 		}
 		return $list;
 	}
@@ -50,11 +50,11 @@ class ProductDao
 		$list = array();
 		foreach($result as $product_array) {
 			$product = new Product(
-				$product_array['name'], 
-				$product_array['description'], 
-				$product_array['weight'], 
-				$product_array['color'], 
-				$product_array['category_id'], 
+				$product_array['name'],
+				$product_array['description'],
+				$product_array['weight'],
+				$product_array['color'],
+				$product_array['category_id'],
 				$product_array['id']
 			);
 			$product->setCategoryName($product_array['category_name']);

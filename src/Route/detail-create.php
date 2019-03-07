@@ -7,10 +7,10 @@ use Src\Dao\ProductDao;
 
 try {
 	$object = new ProductDao(
-		$_POST['name'], 
-		$_POST['description'], 
-		allLower($_POST['weight']), 
-		afterFirst($_POST['color']), 
+		$_POST['name'],
+		$_POST['description'],
+		allLower($_POST['weight']),
+		afterFirst($_POST['color']),
 		$_POST['category_id']
 	);
 	// Setando Usuário que está atualizando

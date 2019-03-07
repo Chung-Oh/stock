@@ -10,11 +10,11 @@ const btnCancelUser = document.getElementById("btnCancelUser");
 const inputs = document.querySelectorAll(".input-icon");
 
 btnCancelUser
-	? btnCancelUser.addEventListener("click", () => 
+	? btnCancelUser.addEventListener("click", () =>
 		process(formUser, userButton, inputs))
 	: null;
 
 btnFormUser
-	? btnFormUser.addEventListener("click", () => 
+	? btnFormUser.addEventListener("click", () =>
 		process(userButton, formUser, inputs))
 	: null;

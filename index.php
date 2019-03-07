@@ -22,12 +22,12 @@ $_SESSION['path'] = basename(__FILE__);
 </head>
 <body>
 	<div class="interface">
-		<?php showAlert('success'); ?>			
+		<?php showAlert('success'); ?>
 		<?php if (!userIsLogged()) : ?>
 			<div class="title-shake">
 				<div class="title-fly">
-					<h1>Bem vindo</h1>			
-				</div>			
+					<h1>Bem vindo</h1>
+				</div>
 			</div>
 			<?php showAlert('danger'); ?>
 			<form action="src/Route/login-enter.php" method="post">
@@ -43,7 +43,7 @@ $_SESSION['path'] = basename(__FILE__);
 							<td class="cel-password cel-icon">
 								<input class="password input-icon" type="password" name="password" placeholder="Senha" pattern="\w{3,50}" title="Mín 3 Máx 50 caracteres. Ex: test123" required>
 								<i class="fas fa-lock"></i>
-							</td>					
+							</td>
 						</tr>
 						<tr>
 							<td class="btn">

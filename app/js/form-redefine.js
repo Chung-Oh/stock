@@ -3,7 +3,7 @@ const btnCancelRedefine = document.getElementById("btnCancelRedefine");
 const dir = window.location.pathname;
 
 btnCancelRedefine
-	? btnCancelRedefine.addEventListener("click", () => 
+	? btnCancelRedefine.addEventListener("click", () =>
 		window.location.href = "user.php")
 	: null;
 

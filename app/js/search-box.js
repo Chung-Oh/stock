@@ -29,8 +29,8 @@ const pageDetail = () => {
 					notEmpty(row, detailList);
 				}
 			}
-		});	
-	});		
+		});
+	});
 }
 
 const pageCategoryProduct = () => {
@@ -45,14 +45,14 @@ const pageCategoryProduct = () => {
 					!expression.test(name)
 						? empty(row, rowsTable)
 						: row.classList.remove("invisible");
-				}	
+				}
 			} else {
 				for (let i = 0; i < rowsTable.length; i++) {
 					let row = rowsTable[i];
 					notEmpty(row, rowsTable);
 				}
 			}
-		});	
+		});
 	});
 }
 // Limpar caixas de Pesquisa
@@ -64,7 +64,7 @@ inputsSearch.forEach(search => {
 			let row = rowsTable[i];
 			window.location.pathname == "/app/view/detail.php"
 				? notEmpty(row, details)
-				: notEmpty(row, rowsTable);	
+				: notEmpty(row, rowsTable);
 		}
 	});
 });

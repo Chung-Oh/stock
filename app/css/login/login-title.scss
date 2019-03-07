@@ -29,7 +29,7 @@
 	}
 }
 /* Animação voar */
-.title-fly {	
+.title-fly {
 	@extend %elem-margin-auto;
 	@extend %elem-position-relative;
 	animation: flying 2s 5;

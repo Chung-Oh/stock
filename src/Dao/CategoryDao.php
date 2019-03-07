@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace Src\Dao;
 
@@ -92,7 +92,7 @@ class CategoryDao
 	// Page Categorias
 	public function update()
 	{
-		$query = "UPDATE categorys SET name = :name, updated_at = current_timestamp(), updated_by = :updated_by 
+		$query = "UPDATE categorys SET name = :name, updated_at = current_timestamp(), updated_by = :updated_by
 			WHERE id = :id";
 		$conn = Connection::getConn();
 		$stmt = $conn->prepare($query);

@@ -1,4 +1,4 @@
-<?php 
+<?php
 // Registra entrada
 function beginAccess()
 {
@@ -23,7 +23,7 @@ function getTime()
 function timeOver()
 {
 	if ($_SESSION['session_time'] < time()) {
-		getOut();		
+		getOut();
 	} else {
 		getTime();
 	}

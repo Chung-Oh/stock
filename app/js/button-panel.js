@@ -8,6 +8,6 @@ const runDetails = toogle => {
 }
 
 btnOpen
-	? btnOpen.addEventListener("click", () => 
+	? btnOpen.addEventListener("click", () =>
 		!toogle ? runDetails(toogle = true)	: runDetails(toogle = false))
 	: null;

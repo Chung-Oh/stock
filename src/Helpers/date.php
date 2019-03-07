@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 function testArg($arg)
 {
@@ -22,7 +22,7 @@ function manipulateDate($arg)
 		$day = substr($arg, 8, 2);
 		$char = '/';
 		$date = $day . $char . $month . $char . $year;
-		return $date; 	
+		return $date;
 	} else {
 		messageDefault();
 	}
@@ -44,7 +44,7 @@ function dateFull($arg)
 		$time = manipulateTime($arg);
 		$date = manipulateDate($arg);
 		$full = $date . " - " . $time;
-		return $full;		
+		return $full;
 	} else {
 		messageDefault();
 	}

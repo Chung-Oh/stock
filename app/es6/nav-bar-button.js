@@ -6,7 +6,7 @@ const main = document.querySelector("main");
 // Ícone no input dentro do Main
 const iconSearch = document.querySelector(".icon-search");
 
-const topNavAnimation = () => {	
+const topNavAnimation = () => {
 	navBar.className === "top-nav"
 		? (navBar.className += " responsive", main.className = "main-down")
 		: (navBar.className = "top-nav", main.className = "");

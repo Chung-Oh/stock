@@ -5,7 +5,7 @@ export const btnCallFormCreate = document.getElementById("callFormCreate");
 const btnAction = document.getElementById("callForm");
 // Botão do Form para cancelar
 export const btnCancel = document.querySelectorAll(".btn-danger");
-// Form de criação 
+// Form de criação
 export const formCreate = document.getElementById("formCreate");
 // Input do Form para nova Categoria
 export const data = document.querySelectorAll(".data");

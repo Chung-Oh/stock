@@ -10,16 +10,16 @@ const processFade = (element, time, initial, end) => {
 	// A mágica acontece aqui, efeito de opacidade e o display NONE no fim
 	const interval = setInterval(() => {
 		opc == end
-			? (end == 0 ? element.style.display = "none" : null, 
+			? (end == 0 ? element.style.display = "none" : null,
 				clearInterval(interval))
-			: (opc += increment, 
-				element.style.opacity = opc/100, 
+			: (opc += increment,
+				element.style.opacity = opc/100,
 				element.style.filter = "alpha(opacity=" + opc + ")");
 	}, time * 10);
 }
 
 const testClassName = element => {
 	element.className == ""
-		? element.style.display = "flex" 
-		: element.style.display = "block";	
+		? element.style.display = "flex"
+		: element.style.display = "block";
 }

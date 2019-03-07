@@ -4,10 +4,10 @@ let list = [];
 let copy;
 // Contador para Manipulação das Tabelas
 let count;
-// Verifica se já foi ordenado 
+// Verifica se já foi ordenado
 let toogleTable = false;
 
-const orderBy = (tbHead, rowsTable, column) => 
+const orderBy = (tbHead, rowsTable, column) =>
 	processOrderBy(tbHead, rowsTable, column);
 
 const processOrderBy = (tbHead, rowsTable, column) => {
@@ -17,13 +17,13 @@ const processOrderBy = (tbHead, rowsTable, column) => {
 			if (column == 0 || column == 3) {
 				let temp1 = parseInt(a.children[column].textContent, 10);
 				let temp2 = parseInt(b.children[column].textContent, 10);
-				return temp2 - temp1; 
+				return temp2 - temp1;
 			} else {
-				return a.children[column].textContent > b.children[column].textContent 
-					? 1 
+				return a.children[column].textContent > b.children[column].textContent
+					? 1
 					: ((b.children[column].textContent > a.children[column].textContent) ? -1 : 0);
 			}
-		});		
+		});
 	} else {
 		listReverse();
 	}
@@ -36,7 +36,7 @@ const runList = rowsTable => {
 	rowsTable.forEach(row => {
 		copy = row.cloneNode(true);
 		list.push(copy);
-	});	
+	});
 }
 
 const listReverse = () => {
@@ -44,7 +44,7 @@ const listReverse = () => {
 	list.reverse();
 }
 
-const verifyTable = (tbHead, rowsTable) => 
+const verifyTable = (tbHead, rowsTable) =>
 	tbHead.length == 2 ? tableCategory(rowsTable) : tableProduct(rowsTable);
 
 const tableCategory = rowsTable => {

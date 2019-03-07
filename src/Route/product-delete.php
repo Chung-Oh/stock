@@ -7,11 +7,11 @@ use Src\Dao\ProductDao;
 
 try {
 	$product = new ProductDao(
-		$_POST['name'], 
-		$_POST['description'], 
-		$_POST['weight'], 
-		$_POST['color'], 
-		$_POST['category_id'], 
+		$_POST['name'],
+		$_POST['description'],
+		$_POST['weight'],
+		$_POST['color'],
+		$_POST['category_id'],
 		$_POST['id']
 	);
 	registerDeleteProduct(11, $product);

@@ -10,27 +10,27 @@ const weightListens = tbHead[2];
 const colorListens = tbHead[3];
 const categoryListens = tbHead[4];
 
-idListens 
-	? idListens.addEventListener("click", () => 
+idListens
+	? idListens.addEventListener("click", () =>
 		orderBy(tbHead, rowsTable, 0))
 	: null;
 
-nameListens 
-	? nameListens.addEventListener("click", () => 
-		orderBy(tbHead, rowsTable, 1))	
+nameListens
+	? nameListens.addEventListener("click", () =>
+		orderBy(tbHead, rowsTable, 1))
 	: null;
 
-weightListens 
-	? weightListens.addEventListener("click", () => 
+weightListens
+	? weightListens.addEventListener("click", () =>
 		orderBy(tbHead, rowsTable, 3))
 	: null;
 
 colorListens
-	? colorListens.addEventListener("click", () => 
+	? colorListens.addEventListener("click", () =>
 		orderBy(tbHead, rowsTable, 4))
 	: null;
 
 categoryListens
-	? categoryListens.addEventListener("click", () => 
+	? categoryListens.addEventListener("click", () =>
 		orderBy(tbHead, rowsTable, 5))
 	: null;

@@ -13,7 +13,7 @@ const colorFormDelete = document.getElementById("colorFormDelete");
 const categoryIdFormDelete = document.getElementById("categoryIdFormDelete");
 
 const categoryContext = () => {
-	tbody 
+	tbody
 		? tbody.addEventListener("click", event => {
 			const target = event.target;
 			const currentTarget = target.parentNode.parentNode;
@@ -30,7 +30,7 @@ const categoryContext = () => {
 }
 
 const productContext = () => {
-	tbody 
+	tbody
 		? tbody.addEventListener("click", event => {
 			const target = event.target;
 			const currentTarget = target.parentNode.parentNode;
@@ -46,7 +46,7 @@ const productContext = () => {
 					categoryIdFormDelete.value = currentTarget.children[7].children[0].value;
 				}, 700);
 			}})
-		: null;	
+		: null;
 
 	details
 		? details.addEventListener("click", event => {
@@ -68,11 +68,11 @@ const productContext = () => {
 		: null;
 }
 // Verifica qual tipo de Tabela
-const typeFormDelete = () => 
+const typeFormDelete = () =>
 	tbody.parentNode.classList.contains("table-category") ? categoryContext() : productContext();
 // Caso não tenha Tabela retornar função Product(acima)
 tbody ? typeFormDelete() : productContext();
 
-btnCancelFormDelete 
-	? btnCancelFormDelete.addEventListener("click", () => fadeOut(formDelete, 1)) 
-	: null;	
+btnCancelFormDelete
+	? btnCancelFormDelete.addEventListener("click", () => fadeOut(formDelete, 1))
+	: null;

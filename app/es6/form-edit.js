@@ -82,13 +82,13 @@ const pageAnalysis = () => {
 
 const showForm = typeForm => {
 	// Cancelar Form page Detalhe
-	btnCancel[0] 
+	btnCancel[0]
 		? btnCancel[0].addEventListener("click", () => hiddenFormDetail())
 		: null;
 	// Cancelar Form page Categoria e Produto
-	btnCancel[1] 
+	btnCancel[1]
 		? btnCancel[1].addEventListener("click", () => hiddenFormCatProd())
-		: null;			
+		: null;
 	// Page Categoria e Produto
 	if (tbody) {
 		tbody.addEventListener("click", event => {
@@ -102,7 +102,7 @@ const showForm = typeForm => {
 				}, 700);
 				fadeOut(formCreate);
 			}
-		});		
+		});
 	}
 	// Page Detalhe
 	if (details) {
@@ -115,7 +115,7 @@ const showForm = typeForm => {
 					typeForm(currentTarget);
 				}, 700);
 			}
-		});		
+		});
 	}
 }
 // Inicia função passando o Nó certo para trabalhar

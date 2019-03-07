@@ -22,7 +22,7 @@
 .form-category,
 .form-product {
     @extend %elem-flex-justify;
-    align-items: center;   
+    align-items: center;
 }
 
 .container-category {
@@ -138,8 +138,8 @@ select > option:first-child {
 }
 /*** iPad 768px portrait ***/
 @media only screen and (max-width: 768px) and (min-height: 1024px) {
-    .category-form-create, 
-    .category-form-edit, 
+    .category-form-create,
+    .category-form-edit,
     .product-form-create,
     .product-form-edit {
         width: 60%;

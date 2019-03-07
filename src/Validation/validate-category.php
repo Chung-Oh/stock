@@ -14,10 +14,10 @@ function validateCategoryIfExist($op, $current, $old)
 // Filtrar caracteres epeciais
 function validateCategorySpecialChars($op, $current)
 {
-	if (filter_var($_POST['name'], 
-				FILTER_VALIDATE_REGEXP, array("options" => 
+	if (filter_var($_POST['name'],
+				FILTER_VALIDATE_REGEXP, array("options" =>
 					array("regexp" => "/^([\w\s\dáâãéêíóõôúç].{0,50})/")))) {
-						validateCategoryIsNull($op, $current);	
+						validateCategoryIsNull($op, $current);
 	} else {
 		header("Location: ../../app/view/category.php");
 		$_SESSION['danger'] = "<span>Categoria</span> não conrresponde como exigido";
@@ -76,7 +76,7 @@ function validateCategoryIfDependency($op, $current)
 function validateCategoryId($op, $current)
 {
 	if (is_numeric($_POST['id'])) {
-		validateCategoryRemoving($op, $current);		
+		validateCategoryRemoving($op, $current);
 	} else {
 		header("Location: ../../app/view/category.php");
 		$_SESSION['danger'] = "Formulário violado, ID: <span>{$_POST['id']}</span> não existe";

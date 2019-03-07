@@ -38,7 +38,7 @@ function logOutUser($current)
 function verifyCurrentUser($current)
 {
 	// Verificando autencidade do Usuário
-	header("Location: ../../app/view/redefine.php");		
+	header("Location: ../../app/view/redefine.php");
 	$_SESSION['authorized'] = "OK";
 	$_SESSION['success'] = "Usuário e senha válido, redefina novo <span>nome</span> e <span>senha.</span>";
 }
@@ -48,7 +48,7 @@ function redefineUser($current)
 	// Redefinição Nome e Senha
 	if ($current->update($_SESSION['user_id'])) {
 		header("Location: ../../app/view/user.php");
-		$_SESSION['success'] = "Redefinição do <span>Usuário</span> realizado com sucesso.";		
+		$_SESSION['success'] = "Redefinição do <span>Usuário</span> realizado com sucesso.";
 	}
 }
 /*** Categoria ***/
@@ -69,7 +69,7 @@ function newCategory($current)
 		header("Location: ../../app/view/category.php");
 		$name = customString($_POST['name'], 25);
 		$_SESSION['success'] = "<span>{$name}</span> cadastrado com sucesso";
-	} 	
+	}
 }
 
 function updateCategory($current)
@@ -87,7 +87,7 @@ function deleteCategory($current)
 		header("Location: ../../app/view/category.php");
 		$name = customString($_POST['name'], 25);
 		$_SESSION['success'] = "<span>{$name}</span> removido com sucesso";
-	}	
+	}
 }
 /*** Produto ***/
 function newProduct($current)
@@ -132,7 +132,7 @@ function updateProductDetail($current)
 {
 	$category = CategoryDao::load($_POST['category_id']);
 	if ($current->update()) {
-		header("Location: ../../app/view/detail.php");	
+		header("Location: ../../app/view/detail.php");
 		setCategory($category->getId(), $category->getName());
 		$name = customString($_POST['name'], 25);
 		$_SESSION['success'] = "<span>{$name}</span> alterado com sucesso";

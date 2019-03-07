@@ -15,7 +15,7 @@ function registerSelectCategory($op, $current)
 	validateCategoryIdSelect($op, $current);
 }
 
-function registerNewCategory($op, $current) 
+function registerNewCategory($op, $current)
 {
 	validateCategoryIsNull($op, $current);
 }

@@ -2,7 +2,7 @@
 
 namespace Src\Model;
 
-class User 
+class User
 {
 	private $id;
 	private $name;

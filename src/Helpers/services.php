@@ -38,6 +38,6 @@ function percentage($name, $id, $total)
 		$quantity = countProduct($name, $id);
 		$products = count($total);
 		$result = ($quantity / $products) * 100;
-		return customNumber($result, 3);		
+		return customNumber($result, 3);
 	}
 }

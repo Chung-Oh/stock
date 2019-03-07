@@ -18,7 +18,7 @@ function validateProductIfExist($op, $current)
 		validateProductNameIsNull($op, $current);
 	} else {
 		testPath(
-			$_SESSION['path'], 
+			$_SESSION['path'],
 			"Esse <span>produto</span> já existe no sistema"
 		);
 	}
@@ -30,7 +30,7 @@ function validateProductNameIsNull($op, $current)
 		validateProductSpecialChars($op, $current);
 	} else {
 		testPath(
-			$_SESSION['path'], 
+			$_SESSION['path'],
 			"Não foi possível, campo <span>nome</span> vazio"
 		);
 	}
@@ -38,12 +38,12 @@ function validateProductNameIsNull($op, $current)
 // Filtrar caracteres epeciais
 function validateProductSpecialChars($op, $current)
 {
-	if (filter_var($_POST['name'], FILTER_VALIDATE_REGEXP, array("options" => 
+	if (filter_var($_POST['name'], FILTER_VALIDATE_REGEXP, array("options" =>
 		array("regexp" => "/^([\w\s\dáâãéêíóõôúç].{0,50})/")))) {
-		validateProductColorIsNumber($op, $current);	
+		validateProductColorIsNumber($op, $current);
 	} else {
 		testPath(
-			$_SESSION['path'], 
+			$_SESSION['path'],
 			"<span>Produto</span> não conrresponde como exigido"
 		);
 	}
@@ -55,7 +55,7 @@ function validateProductColorIsNumber($op, $current)
 		validateProductDescIsNull($op, $current);
 	} else {
 		testPath(
-			$_SESSION['path'], 
+			$_SESSION['path'],
 			"Campo <span>cor</span> não pode ser numérico"
 		);
 	}
@@ -67,7 +67,7 @@ function validateProductDescIsNull($op, $current)
 		validateProductWeightIsNull($op, $current);
 	} else {
 		testPath(
-			$_SESSION['path'], 
+			$_SESSION['path'],
 			"Não foi possível, campo <span>descrição</span> vazio"
 		);
 	}
@@ -79,7 +79,7 @@ function validateProductWeightIsNull($op, $current)
 		validateProductColorIsNull($op, $current);
 	} else {
 		testPath(
-			$_SESSION['path'], 
+			$_SESSION['path'],
 			"Não foi possível, campo <span>peso</span> vazio"
 		);
 	}
@@ -91,7 +91,7 @@ function validateProductColorIsNull($op, $current)
 		validateProductCategoryIsNull($op, $current);
 	} else {
 		testPath(
-			$_SESSION['path'], 
+			$_SESSION['path'],
 			"Não foi possível, campo <span>cor</span> vazio"
 		);
 	}
@@ -103,7 +103,7 @@ function validateProductCategoryIsNull($op, $current)
 		validateProductNameLength($op, $current);
 	} else {
 		testPath(
-			$_SESSION['path'], 
+			$_SESSION['path'],
 			"Não foi possível, campo <span>categoria</span> vazio"
 		);
 	}
@@ -115,7 +115,7 @@ function validateProductNameLength($op, $current)
 		validateProductDescLength($op, $current);
 	} else {
 		testPath(
-			$_SESSION['path'], 
+			$_SESSION['path'],
 			"<span>Nome</span> acima do exigido, máximo 50 caracteres"
 		);
 	}
@@ -127,7 +127,7 @@ function validateProductDescLength($op, $current)
 		validateProductWeightLength($op, $current);
 	} else {
 		testPath(
-			$_SESSION['path'], 
+			$_SESSION['path'],
 			"<span>Descrição</span> acima do exigido, máximo 250 caracteres"
 		);
 	}
@@ -139,7 +139,7 @@ function validateProductWeightLength($op, $current)
 		validateProductColorLength($op, $current);
 	} else {
 		testPath(
-			$_SESSION['path'], 
+			$_SESSION['path'],
 			"<span>Peso</span> acima do exigido, máximo 100 caracteres"
 		);
 	}
@@ -151,7 +151,7 @@ function validateProductColorLength($op, $current)
 		validateProductCategoryId($op, $current);
 	} else {
 		testPath(
-			$_SESSION['path'], 
+			$_SESSION['path'],
 			"<span>Cor</span> acima do exigido, máximo 25 caracteres"
 		);
 	}
@@ -163,7 +163,7 @@ function validateProductCategoryId($op, $current)
 		option($op, $current);
 	} else {
 		testPath(
-			$_SESSION['path'], 
+			$_SESSION['path'],
 			"<span>Categoria</span> não conrresponde. Formulário <span>violado</span>"
 		);
 	}
@@ -175,7 +175,7 @@ function validateProductToRemove($op, $current)
 		validateProductCategoryId($op, $current);
 	} else {
 		testPath(
-			$_SESSION['path'], 
+			$_SESSION['path'],
 			"Formulário <span>violado,</span> não foi possível remover"
 		);
 	}
