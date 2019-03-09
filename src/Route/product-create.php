@@ -4,13 +4,14 @@ require_once '../../vendor/autoload.php';
 
 use Src\Config\Erro;
 use Src\Dao\ProductDao;
+use Src\Helpers\Convert;
 
 try {
 	$object = new ProductDao(
 		$_POST['name'],
 		$_POST['description'],
-		allLower($_POST['weight']),
-		afterFirst($_POST['color']),
+		Convert::allLower($_POST['weight']),
+		Convert::afterFirst($_POST['color']),
 		$_POST['category_id']
 	);
 	// Setando Usuário que está atualizando

@@ -1,85 +1,90 @@
 <?php
 
-function testArg($arg)
-{
-	if ($arg) {
-		return true;
-	} else {
-		return false;
-	}
-}
+namespace Src\Helpers;
 
-function messageDefault()
+class Date
 {
-	echo "N/D";
-}
-// Converte para Data
-function manipulateDate($arg)
-{
-	if (testArg($arg)) {
-		$year = substr($arg, 0, 4);
-		$month = substr($arg, 5, 2);
-		$day = substr($arg, 8, 2);
-		$char = '/';
-		$date = $day . $char . $month . $char . $year;
-		return $date;
-	} else {
-		messageDefault();
+	public static function testArg($arg)
+	{
+		if ($arg) {
+			return true;
+		} else {
+			return false;
+		}
 	}
-}
-// Converte para Horas
-function manipulateTime($arg)
-{
-	if (testArg($arg)) {
-		$time = substr($arg, 11, 8) . " hrs";
-		return $time;
-	} else {
-		messageDefault();
-	}
-}
-// Converte para Data completa
-function dateFull($arg)
-{
-	if (testArg($arg)) {
-		$time = manipulateTime($arg);
-		$date = manipulateDate($arg);
-		$full = $date . " - " . $time;
-		return $full;
-	} else {
-		messageDefault();
-	}
-}
-// Retorna Início da Sessão
-function initAccess($arg)
-{
-	$index = count($arg) - 1;
-	$log = $arg[$index];
-	$result = manipulateTime($log->getLogin());
-	return $result;
-}
-// Verifica se está vazio
-function isEmpty($arg)
-{
-	// 1º Cond. para primeiro acesso
-	if (empty($arg->getLogin()) && empty($arg->getLogout())) {
+
+	public static function messageDefault()
+	{
 		echo "N/D";
-	} elseif (!empty($arg->getLogout())) {
-		echo dateFull($arg->getLogout());
-	} else {
-		// Caso não tenha gravado último logout pega login
-		echo dateFull($arg->getLogin());
 	}
-}
-// Retorna Último acesso
-function lastAccess($arg)
-{
-	if (count($arg) == 1) {
+	// Converte para Data
+	public static function manipulateDate($arg)
+	{
+		if (Date::testArg($arg)) {
+			$year = substr($arg, 0, 4);
+			$month = substr($arg, 5, 2);
+			$day = substr($arg, 8, 2);
+			$char = '/';
+			$date = $day . $char . $month . $char . $year;
+			return $date;
+		} else {
+			Date::messageDefault();
+		}
+	}
+	// Converte para Horas
+	public static function manipulateTime($arg)
+	{
+		if (Date::testArg($arg)) {
+			$time = substr($arg, 11, 8) . " hrs";
+			return $time;
+		} else {
+			Date::messageDefault();
+		}
+	}
+	// Converte para Data completa
+	public static function dateFull($arg)
+	{
+		if (Date::testArg($arg)) {
+			$time = Date::manipulateTime($arg);
+			$date = Date::manipulateDate($arg);
+			$full = $date . " - " . $time;
+			return $full;
+		} else {
+			Date::messageDefault();
+		}
+	}
+	// Retorna Início da Sessão
+	public static function initAccess($arg)
+	{
 		$index = count($arg) - 1;
 		$log = $arg[$index];
-		isEmpty($log);
-	} else {
-		$index = count($arg) - 2;
-		$log = $arg[$index];
-		isEmpty($log);
+		$result = Date::manipulateTime($log->getLogin());
+		return $result;
+	}
+	// Verifica se está vazio
+	public static function isEmpty($arg)
+	{
+		// 1º Cond. para primeiro acesso
+		if (empty($arg->getLogin()) && empty($arg->getLogout())) {
+			echo "N/D";
+		} elseif (!empty($arg->getLogout())) {
+			echo Date::dateFull($arg->getLogout());
+		} else {
+			// Caso não tenha gravado último logout pega login
+			echo Date::dateFull($arg->getLogin());
+		}
+	}
+	// Retorna Último acesso
+	public static function lastAccess($arg)
+	{
+		if (count($arg) == 1) {
+			$index = count($arg) - 1;
+			$log = $arg[$index];
+			Date::isEmpty($log);
+		} else {
+			$index = count($arg) - 2;
+			$log = $arg[$index];
+			Date::isEmpty($log);
+		}
 	}
 }

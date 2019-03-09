@@ -1,3 +1,5 @@
+<?php use Src\Helpers\Convert; ?>
+
 <section class="row table">
 	<div class="col-12">
 		<table class="table-product">
@@ -19,7 +21,7 @@
 					<tr class="info-row">
 						<td class="info-id"><?php echo $product->getId() ?></td><!-- 0 -->
 						<td class="info-name"><?php echo $product->getName() ?></td><!-- 1 -->
-						<td class="info-desc"><?php echo customString($product->getDesc(), 150) ?></td><!-- 2 -->
+						<td class="info-desc"><?php echo Convert::customString($product->getDesc(), 150) ?></td><!-- 2 -->
 						<td class="info-weight"><?php echo $product->getWeight() ?></td><!-- 3 -->
 						<td class="info-color"><?php echo $product->getColor() ?></td><!-- 4 -->
 						<td class="info-category-name"><?php echo $product->getCategoryName() ?></td><!-- 5 -->

@@ -11,5 +11,5 @@
 				<input class="btn-form" type="submit" value="Cadastrar">
 			</form>
 		</div>
-	</div>	
+	</div>
 </section>

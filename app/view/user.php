@@ -34,8 +34,8 @@ if (userLogged()) : ?>
 	<?php require_once 'user/form-user.php' ?>
 	<main>
 		<?php require_once 'user/main-top.php' ?>
-		<?php require_once 'user/main-info-head.php' ?>	
-		<?php require_once 'user/main-button.php' ?>	
+		<?php require_once 'user/main-info-head.php' ?>
+		<?php require_once 'user/main-button.php' ?>
 	</main>
 	<?php require_once 'templates/button-go-top.php' ?>
 	<?php require_once 'templates/footer.php' ?>

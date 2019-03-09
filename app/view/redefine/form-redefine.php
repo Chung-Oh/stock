@@ -14,5 +14,5 @@
 				<input class="btn-form" type="submit" value="Verificar">
 			</form>
 		</div>
-	</div>	
+	</div>
 </section>

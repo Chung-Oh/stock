@@ -4,12 +4,13 @@ require_once '../../vendor/autoload.php';
 
 use Src\Config\Erro;
 use Src\Dao\CategoryDao;
+use Src\Helpers\Convert;
 
 try {
-	$object = new CategoryDao(afterFirst($_POST['name']));
+	$object = new CategoryDao(Convert::afterFirst($_POST['name']));
 	// Setando Usuário que está atualizando
 	$object->category->setCreatedBy($_SESSION['user_id']);
-	$name = customString($_POST['name'], 25);
+	$name = Convert::customString($_POST['name'], 25);
 	registerNewCategory(6, $object);
 } catch (PDOException $e) {
 	// Erro::handler($e);

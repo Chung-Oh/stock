@@ -7,7 +7,7 @@
 			<input id="nameFormDelete" type="hidden" name="name">
 			<div class="options">
 				<p class="not">Não</p>
-				<input class="yes" type="submit" value="Sim"></input>				
+				<input class="yes" type="submit" value="Sim"></input>
 			</div>
 		</form>
 	</div>

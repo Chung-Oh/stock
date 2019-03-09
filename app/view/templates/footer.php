@@ -3,7 +3,7 @@
 		// Ocultar input na Home, Sessão Usuário e Redefinição
 		(function showSearchBox() {
 			const navBar = document.querySelectorAll(".page-action");
-			(window.location.pathname == "/app/view/home.php" 
+			(window.location.pathname == "/app/view/home.php"
 				|| window.location.pathname == "/app/view/user.php"
 				|| window.location.pathname == "/app/view/redefine.php")
 			? navBar[3].style.display="none"

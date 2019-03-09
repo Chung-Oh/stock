@@ -1,3 +1,8 @@
+<?php
+use Src\Helpers\Convert;
+use Src\Helpers\Date;
+?>
+
 <section class="row detail-body">
 	<div class="info-body">
 		<?php foreach($catList->products as $product) : ?>
@@ -8,12 +13,12 @@
 				<p><strong class="info-body-strong">Peso :</strong><em><?php echo $product->getWeight() ?></em></p>
 				<p><strong class="info-body-strong">Cor :</strong><em><?php echo $product->getColor() ?></em></p>
 				<p>
-					<strong class="info-body-strong">Criado :</strong><em><?php echo dateFull($product->getCreatedAt()) ?></em>
-					<strong class="info-body-strong"> &rArr; Autor :</strong><em><?php echo afterFirst($product->getCreatedBy()) ?></em>
+					<strong class="info-body-strong">Criado :</strong><em><?php echo Date::dateFull($product->getCreatedAt()) ?></em>
+					<strong class="info-body-strong"> &rArr; Autor :</strong><em><?php echo Convert::afterFirst($product->getCreatedBy()) ?></em>
 				</p>
 				<p>
-					<strong class="info-body-strong">Atualizado :</strong><em><?php echo dateFull($product->getUpdatedAt()) ?></em>
-					<strong class="info-body-strong"> &rArr; Autor :</strong><em><?php echo afterFirst($product->getUpdatedBy()) ?></em>
+					<strong class="info-body-strong">Atualizado :</strong><em><?php echo Date::dateFull($product->getUpdatedAt()) ?></em>
+					<strong class="info-body-strong"> &rArr; Autor :</strong><em><?php echo Convert::afterFirst($product->getUpdatedBy()) ?></em>
 				</p>
 				<p hidden><?php echo $product->getCategoryId() ?></p>
 				<p hidden><?php echo $product->getCategoryName() ?></p>

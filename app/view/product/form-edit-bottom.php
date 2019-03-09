@@ -17,5 +17,5 @@
 				<input class="btn-form" type="submit" value="Editar">
 			</form>
 		</div>
-	</div>	
+	</div>
 </section>
