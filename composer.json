@@ -15,11 +15,7 @@
     	"files": [
     		"src/global.php",
             "src/Config/conf.php",
-            "src/Helpers/convert.php", 
-            "src/Helpers/date.php", 
-            "src/Helpers/services.php",
             "src/Helpers/show-alert.php",
-            "src/Session/category-session.php",
             "src/Session/log-session.php",
             "src/Session/user-session.php",
             "src/Validation/operation.php",

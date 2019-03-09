@@ -4,9 +4,10 @@ require_once '../../vendor/autoload.php';
 
 use Src\Config\Erro;
 use Src\Dao\CategoryDao;
+use Src\Session\CategorySession;
 
 try {
-	cleanSessionCategory();
+	CategorySession::cleanSessionCategory();
 	// Verifica tempo da Sessão
 	sessionExist();
 	// Destruindo authorized para redefinir nova senha

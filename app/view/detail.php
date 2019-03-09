@@ -4,6 +4,7 @@ require_once '../../vendor/autoload.php';
 
 use Src\Config\Erro;
 use Src\Dao\CategoryDao;
+use Src\Session\CategorySession;
 
 try {
 	// Session abaixo serve para redirecionar os Form criação e edição
@@ -13,7 +14,7 @@ try {
 	// Destruindo authorized para redefinir nova senha
 	unset($_SESSION['authorized']);
 	$categorys = CategoryDao::list();
-	if (haveSessionCategory()) {
+	if (CategorySession::haveSessionCategory()) {
 		$catList = new CategoryDao($_SESSION['name'], $_SESSION['id']);
 		$catList->loadDetails();
 	} else {

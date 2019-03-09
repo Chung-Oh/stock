@@ -1,11 +1,13 @@
 <?php
 
+use Src\Helpers\Services;
+
 function validateUserNameLength($op, $consult)
 {
 	if (strlen($_POST['name']) <= 50) {
 		validatePasswordLength($op, $consult);
 	} else {
-		testPath(
+		Services::testPath(
 			$_SESSION['path'],
 			"Nome inválido, acima do exigido. Máximo 50 letras."
 		);
@@ -17,7 +19,7 @@ function validatePasswordLength($op, $consult)
 	if (strlen($_POST['password']) <= 50) {
 		verifyDirectory($op, $consult);
 	} else {
-		testPath(
+		Services::testPath(
 			$_SESSION['path'],
 			"Senha inválida, acima do exigido. Máximo 50 caracteres."
 		);
@@ -39,7 +41,7 @@ function validateIsUser($op, $consult)
 {
 	$user = $consult->verifyUser();
 	if ($user->getUser()->getId() == null) {
-		testPath(
+		Services::testPath(
 			$_SESSION['path'],
 			"Usuário ou senha inválido."
 		);
@@ -52,7 +54,7 @@ function validateUserExist($op, $consult)
 {
 	$user = $consult->confirmUser($_SESSION['user_id']);
 	if (empty($user->getUser()->getId())) {
-		testPath(
+		Services::testPath(
 			$_SESSION['path'],
 			"Usuário ou senha inválido."
 		);
@@ -65,7 +67,7 @@ function validateNewUserData($op, $consult)
 {
 	$user = $consult->verifyUser();
 	if (!empty($user->getUser()->getId())) {
-		testPath(
+		Services::testPath(
 			$_SESSION['path'],
 			"Usuário e senha já existe."
 		);

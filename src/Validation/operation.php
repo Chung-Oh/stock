@@ -3,6 +3,7 @@
 use Src\Dao\CategoryDao;
 use Src\Dao\LoggerDao;
 use Src\Helpers\Convert;
+use Src\Session\CategorySession;
 /*** Usuário ***/
 function logInUser($current)
 {
@@ -21,18 +22,18 @@ function logInUser($current)
 		$_SESSION['log_in']
 	);
 	$logger->in();
-	$name = afterFirst($_POST['name']);
+	$name = Convert::afterFirst($_POST['name']);
 	$_SESSION['success'] = "Usuário <span>{$name}</span> logado com sucesso.";
 }
 
 function logOutUser($current)
 {
-	header("Location: ../../index.php");
 	// Registra saída do Usuário
 	endAccess();
 	$current->out($_SESSION['log_out']);
 	// Destrói a sessão do Usuário
 	userLogOut();
+	header("Location: ../../index.php");
 	$_SESSION['success'] = 'Deslogado com sucesso.';
 }
 
@@ -59,7 +60,7 @@ function loadCategory($current)
 	// Personalizando retorno do nome na Session com 25 caracteres
 	$name = Convert::customString($category->getName(), 25);
 	// Setando id e nome na session, abaixo
-	setCategory($category->getId(), $category->getName());
+	CategorySession::setCategory($category->getId(), $category->getName());
 	header("Location: ../../../app/view/detail.php");
 	$_SESSION['success'] = "Segue abaixo lista detalhada de <span>{$name}</span>";
 }
@@ -123,7 +124,7 @@ function newProductDetail($current)
 	$category = CategoryDao::load($_POST['category_id']);
 	if ($current->new()) {
 		header("Location: ../../app/view/detail.php");
-		setCategory($category->getId(), $category->getName());
+		CategorySession::setCategory($category->getId(), $category->getName());
 		$name = Convert::customString($_POST['name'], 25);
 		$_SESSION['success'] = "<span>{$name}</span> cadastrado com sucesso";
 	}
@@ -134,7 +135,7 @@ function updateProductDetail($current)
 	$category = CategoryDao::load($_POST['category_id']);
 	if ($current->update()) {
 		header("Location: ../../app/view/detail.php");
-		setCategory($category->getId(), $category->getName());
+		CategorySession::setCategory($category->getId(), $category->getName());
 		$name = Convert::customString($_POST['name'], 25);
 		$_SESSION['success'] = "<span>{$name}</span> alterado com sucesso";
 	}
@@ -145,7 +146,7 @@ function deleteProductDetail($current)
 	$category = CategoryDao::load($_POST['category_id']);
 	if ($current->delete()) {
 		header("Location: ../../app/view/detail.php");
-		setCategory($category->getId(), $category->getName());
+		CategorySession::setCategory($category->getId(), $category->getName());
 		$name = Convert::customString($_POST['name'], 25);
 		$_SESSION['success'] = "<span>{$name}</span> removido com sucesso";
 	}

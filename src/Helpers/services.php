@@ -9,20 +9,30 @@ class Services
 	public static function testPath($path, $msg)
 	{
 		if ($path == "index.php") {
+
 			header("Location: ../../index.php");
 			$_SESSION['danger'] = $msg;
+
 		} elseif ($path == "product.php") {
+
 			header("Location: ../../app/view/product.php");
 			$_SESSION['danger'] = $msg;
+
 		} elseif ($path == "detail.php") {
+
 			header("Location: ../../app/view/detail.php");
 			$_SESSION['danger'] = $msg;
+
 		} elseif ($path == "user.php") {
+
 			header("Location: ../../app/view/user.php");
 			$_SESSION['danger'] = $msg;
+
 		} elseif ($path == "redefine.php") {
+
 			header("Location: ../../app/view/user.php");
 			$_SESSION['danger'] = $msg;
+
 		}
 	}
 
@@ -30,6 +40,7 @@ class Services
 	{
 		$category = new CategoryDao($name, $id);
 		$list = $category->loadDetails();
+
 		return count($list->products);
 	}
 }

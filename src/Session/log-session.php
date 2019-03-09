@@ -12,7 +12,7 @@ function endAccess()
 
 function getOut()
 {
-	header("Location: ../Route/login-out.php");
+	header("Location: ../../src/Route/login-out.php");
 }
 
 function getTime()
