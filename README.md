@@ -22,8 +22,3 @@ Aplicação com 6 telas, desenvolvido sem uso de frameworks (usado apenas arquiv
 **Automatizador** - Gulp
 
 **Pré-processador** CSS - SASS
-
-Segue link, da aplicação em produção: https://stocksystem2019.000webhostapp.com
-
-**Nome**: usuario
-**Senha**: usuario
